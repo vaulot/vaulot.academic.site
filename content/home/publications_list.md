@@ -11,11 +11,11 @@ title = "Recent publications"
 subtitle = "2012-2018"
 
 # Order that this section will appear in.
-weight = 10
+weight = 20
 
 +++
 
-You can see the full list and download reprints from Research Gate.
+You can download reprints from [Research Gate](https://www.researchgate.net/profile/Daniel_Vaulot).
 
 ## Submitted papers
 * Magalhães, K., Vaulot, D., and Oliveira, M.C. (2018) Hemiselmis aquamarina sp . nov . (Cryptomonadales , Cryptophyceae), a cryptomonad with a novel phycobiliprotein type (Cr-PC 564). Protist submitted:
