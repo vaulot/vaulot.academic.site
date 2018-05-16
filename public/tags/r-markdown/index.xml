@@ -1,25 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>R Markdown on Daniel Vaulot</title>
-    <link>/tags/r-markdown/</link>
-    <description>Recent content in R Markdown on Daniel Vaulot</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
-    
-	<atom:link href="/tags/r-markdown/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Hello R Markdown</title>
-      <link>/post/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>/post/2015-07-23-r-rmarkdown/</guid>
-      <description>---title: &#34;Hello R Markdown&#34;author: &#34;Frida Gomam&#34;date: 2015-07-23T21:13:14-05:00categories: [&#34;R&#34;]tags: [&#34;R Markdown&#34;, &#34;plot&#34;, &#34;regression&#34;]------title: &#34;Hello R Markdown&#34;author: &#34;Frida Gomam&#34;date: 2015-07-23T21:13:14-05:00categories: [&#34;R&#34;]tags: [&#34;R Markdown&#34;, &#34;plot&#34;, &#34;regression&#34;]---Hello R Markdowncode{white-space: pre;}pre:not([class]) {background-color: white;}if (window.hljs) {hljs.configure({languages: []});hljs.initHighlightingOnLoad();if (document.readyState &amp;&amp; document.readyState === &#34;complete&#34;) {window.setTimeout(function() { hljs.initHighlighting(); }, 0);}}h1 {font-size: 34px;}h1.</description>
-    </item>
-    
-  </channel>
-</rss>
