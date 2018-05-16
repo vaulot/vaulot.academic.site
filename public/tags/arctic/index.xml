@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arctic on Daniel Vaulot</title>
+    <link>/tags/arctic/</link>
+    <description>Recent content in Arctic on Daniel Vaulot</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="/tags/arctic/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Green Edge</title>
+      <link>/project/green-edge/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0200</pubDate>
+      
+      <guid>/project/green-edge/</guid>
+      <description>Climate change has triggered fundamental modifications of marine biotopes in the Arctic Ocean (AO). The decrease in the extent of the ice pack during summer has led to a 20% increase in pan-Arctic primary production (PP) over the last decade. Phytoplankton blooms now occur earlier in several parts of the AO. In other parts, the structure of the phytoplankton community is shifting toward smaller species, typical of more oligotrophic conditions and some species found in warmer waters now migrate into the Arctic Ocean.</description>
+    </item>
+    
+  </channel>
+</rss>
