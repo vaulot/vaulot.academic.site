@@ -18,7 +18,7 @@
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
       <guid>/post/2015-07-23-r-rmarkdown/</guid>
-      <description>---title: &#34;Hello R Markdown&#34;author: &#34;Frida Gomam&#34;date: 2015-07-23T21:13:14-05:00categories: [&#34;R&#34;]tags: [&#34;R Markdown&#34;, &#34;plot&#34;, &#34;regression&#34;]---Hello R Markdowncode{white-space: pre;}pre:not([class]) {background-color: white;}if (window.hljs) {hljs.configure({languages: []});hljs.initHighlightingOnLoad();if (document.readyState &amp;&amp; document.readyState === &#34;complete&#34;) {window.setTimeout(function() { hljs.initHighlighting(); }, 0);}}h1 {font-size: 34px;}h1.title {font-size: 38px;}h2 {font-size: 30px;}h3 {font-size: 24px;}h4 {font-size: 18px;}h5 {font-size: 16px;}h6 {font-size: 12px;}.</description>
+      <description>---title: &#34;Hello R Markdown&#34;author: &#34;Frida Gomam&#34;date: 2015-07-23T21:13:14-05:00categories: [&#34;R&#34;]tags: [&#34;R Markdown&#34;, &#34;plot&#34;, &#34;regression&#34;]------title: &#34;Hello R Markdown&#34;author: &#34;Frida Gomam&#34;date: 2015-07-23T21:13:14-05:00categories: [&#34;R&#34;]tags: [&#34;R Markdown&#34;, &#34;plot&#34;, &#34;regression&#34;]---Hello R Markdowncode{white-space: pre;}pre:not([class]) {background-color: white;}if (window.hljs) {hljs.configure({languages: []});hljs.initHighlightingOnLoad();if (document.readyState &amp;&amp; document.readyState === &#34;complete&#34;) {window.setTimeout(function() { hljs.initHighlighting(); }, 0);}}h1 {font-size: 34px;}h1.</description>
     </item>
     
   </channel>

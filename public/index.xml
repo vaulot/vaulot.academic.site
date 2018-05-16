@@ -253,6 +253,14 @@ categories: [&#34;R&#34;]
 tags: [&#34;R Markdown&#34;, &#34;plot&#34;, &#34;regression&#34;]
 ---
 
+---
+title: &#34;Hello R Markdown&#34;
+author: &#34;Frida Gomam&#34;
+date: 2015-07-23T21:13:14-05:00
+categories: [&#34;R&#34;]
+tags: [&#34;R Markdown&#34;, &#34;plot&#34;, &#34;regression&#34;]
+---
+
 &lt;!DOCTYPE html&gt;
 
 &lt;html xmlns=&#34;http://www.w3.org/1999/xhtml&#34;&gt;
