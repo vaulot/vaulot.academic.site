@@ -1,8 +1,6 @@
 .Rproj.user/*
-archetypes/*
-data/*
-layouts/*
-themes/*
 hugo.exe
 README.md
 *.Rproj
+public/*
+public/talk/*

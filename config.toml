@@ -237,6 +237,11 @@ enableGitInfo = false
     link = "https://www.researchgate.net/profile/Daniel_Vaulot"
 
   [[params.social]]
+    icon = "mendeley"
+    icon_pack = "ai"
+    link = "https://www.mendeley.com/profiles/daniel-vaulot/"
+
+  [[params.social]]
     icon = "github"
     icon_pack = "fa"
     link = "//github.com/vaulot"
@@ -276,9 +281,14 @@ enableGitInfo = false
   weight = 5
 
 [[menu.main]]
+  name = "Supervision"
+  url = "#supervision"
+  weight = 6
+
+[[menu.main]]
   name = "Contact"
   url = "#contact"
-  weight = 6
+  weight = 7
 
 # Taxonomies.
 [taxonomies]

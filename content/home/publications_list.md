@@ -8,10 +8,10 @@ date = 2016-04-20T00:00:00
 
 # Note: a full width section format can be enabled by commenting out the `title` and `subtitle` with a `#`.
 title = "Recent publications"
-subtitle = ""
+subtitle = "2012-2018"
 
 # Order that this section will appear in.
-weight = 60
+weight = 10
 
 +++
 
