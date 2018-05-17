@@ -29,23 +29,22 @@ filter_default = 0
 # Use "*" tag to show all projects or an existing tag prefixed with "." to filter by specific tag.
 # To remove toolbar, delete/comment all instances of `[[filter]]` below.
 [[filter]]
+  name = "Current"
+  tag = ".current"
+  
+[[filter]]
   name = "All"
   tag = "*"
 
-[[filter]]
-  name = "Metabarcoding"
-  tag = ".metabarcoding"
 
-[[filter]]
-  name = "Culture"
-  tag = ".culture"
+
 +++
 
 ## Major current research projects
-* Diversity and oceanic distribution of marine green algae, with a focus on oceanic prasinophytes from clade VII
-* Diversity and distribution of Bolidophytes and Parmales (collaboration with A. Kuwata, Japan)
-* Analysis of eukaryotic communities using metabarcoding of the 18S rRNA gene, especially on populations sorted by flow cytometry (cooperation with USP, São Paulo, Brazil)
-* Polar picoplankton communities (projects GreenEdge, TaxMArc and MicroPolar, cooperation with Chile) and their adapatation to the long winter polar night (ANR PhytoPol)
+* Diversity and oceanic distribution of marine phytoplankton, in particular green algae and Bolidophyceae.
+* Analysis of marine eukaryotic communities using metabarcoding of the 18S rRNA gene, especially on populations sorted by flow cytometry.
+* Polar picoplankton communities and their adapatation to the long winter polar night.
+* Maintenance of the PR2 database of 18S rRNA sequences
 
 ## Current postdocs
 * Margot Tragin, Post-doc. Genetic transformation of  eukaryotic picoplankton (Moore Foundation)
@@ -55,6 +54,8 @@ filter_default = 0
 ## Collaborations
 * Akira Kuwata, Sendai, Japan
 * Bente Edvardsen and Wenche Eikrem, Oslo, Norway
-* Rodrigo de la Iglesia and Nicole Trefaut, Santiago, Chile
+* Nicole Trefaut, Santiago, Chile
 * Marcel Babin, Takuvik, Québec
 * Hervé Moreau, Banyuls, France
+* Adriana Lopes dos Santos, Singapore
+* Andres Gutierrez Rodriguez, New Zealand

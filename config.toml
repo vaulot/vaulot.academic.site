@@ -59,7 +59,8 @@ enableGitInfo = false
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
-  organizations = [ { name = "CNRS", url = "" }, { name = "Sorbonne Université", url = "" } ]
+  organizations = [ { name = "Station Biologique de Roscoff", url = "http://www.sb-roscoff.fr/en/team-diversity-and-interactions-oceanic-plankton" }, 
+  { name = "CNRS", url = "http://www.cnrs.fr" }, { name = "Sorbonne Université", url = "" } ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "daniel_antarctica_2015_square.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
@@ -262,8 +263,9 @@ enableGitInfo = false
 
 [[menu.main]]
   name = "Publications"
-  url = "#publications_list"
+  url = "#publications"
   weight = 3
+
 
 # [[menu.main]]
 #  name = "Posts"
@@ -284,6 +286,11 @@ enableGitInfo = false
   name = "Supervision"
   url = "#supervision"
   weight = 5
+
+[[menu.main]]
+  name = "CV"
+  url = "/files/vaulot_cv_2018.pdf"
+  weight = 6
 
 [[menu.main]]
   name = "Contact"

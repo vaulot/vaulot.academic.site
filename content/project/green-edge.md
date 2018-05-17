@@ -2,18 +2,21 @@
 # Date this page was created.
 date = 2016-04-27T00:00:00
 
+# Weight
+weight = 3
+
 # Project title.
 title = "Green Edge"
 
 # Project summary to display on homepage.
-summary = "Undertanding the development of the Arctic Spring Bloom."
+summary = "The Arctic Spring Bloom."
 
 # Optional image to display on homepage (relative to `static/img/` folder).
-image_preview = "green-edge-ice-camp-2015.jpg"
+image_preview = "green-edge-ice-camp-2015_small.jpg"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["arctic", "phytoplankton", "metabarcoding"]
+tags = ["arctic", "phytoplankton", "metabarcoding",  "current"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = ""

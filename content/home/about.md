@@ -31,6 +31,6 @@ weight = 5
  
 +++
 
-I did my PhD with Penny Chisholm at MIT working on the cell cycle regulation of phytoplankton.  Since 1985, I have been working at the Station Biologique of Roscoff since 1985. I am focusing on the diversity and ecology of eukaryotic picophytoplankton, more specifically the green algae, but also of other groups like bolidophytes and haptophytes involved in symbioses with cyanobacteria.  I am also the scientific director of the Roscoff Culture Collection.
+I did my PhD with Penny Chisholm at MIT, Cambridge, USA, working on the cell cycle regulation of phytoplankton.  Since 1985, I have been part of CNRS, working at the Station Biologique of Roscoff (France). I am focusing on the diversity and ecology of eukaryotic picophytoplankton, more specifically the green algae, but also of other groups like bolidophytes and haptophytes involved in symbioses with cyanobacteria.  I am also the creator and scientific director of the Roscoff Culture Collection.
 
 {{% staticref "files/vaulot_cv_2018.pdf" %}}Download  CV{{% /staticref %}}
