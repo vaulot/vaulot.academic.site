@@ -1,7 +1,7 @@
 +++
 title = "An annotated checklist of Marine Phytoplankton taxa at the SOMLIT-Astan time series off Roscoff (Western Channel, France): data collected from 2000 to 2010"
 date = "2013-01-01"
-authors = ["LoA�c Guilloux", "Fabienne Rigaut-Jalabert", "Fabien Jouenne", "Stephanie Ristori", "Manon Viprey", "Fabrice Not", "Daniel Vaulot", "Nathalie Simon"]
+authors = ["Loic Guilloux", "Fabienne Rigaut-Jalabert", "Fabien Jouenne", "Stephanie Ristori", "Manon Viprey", "Fabrice Not", "Daniel Vaulot", "Nathalie Simon"]
 publication_types = ["2"]
 publication = "Cahiers de Biologie Marine, (54), _pp. 247–256_"
 publication_short = "Cahiers de Biologie Marine, (54), _pp. 247–256_"

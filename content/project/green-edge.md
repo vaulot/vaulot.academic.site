@@ -16,7 +16,7 @@ image_preview = "green-edge-ice-camp-2015_small.jpg"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["arctic", "phytoplankton", "metabarcoding",  "current"]
+tags = ["arctic", "phytoplankton", "metabarcoding",  "current projects", "Canada"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = ""

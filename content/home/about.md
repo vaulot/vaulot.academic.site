@@ -5,7 +5,7 @@ active = true
 date = 2016-04-20T00:00:00
 
 # Order that this section will appear in.
-weight = 5
+weight = 1
 
 # List your academic interests.
 [interests]
@@ -31,6 +31,6 @@ weight = 5
  
 +++
 
-I did my PhD with Penny Chisholm at MIT, Cambridge, USA, working on the cell cycle regulation of phytoplankton.  Since 1985, I have been part of CNRS, working at the Station Biologique of Roscoff (France). I am focusing on the diversity and ecology of eukaryotic picophytoplankton, more specifically the green algae, but also of other groups like bolidophytes and haptophytes involved in symbioses with cyanobacteria.  I am also the creator and scientific director of the Roscoff Culture Collection.
+After attending the Ecole Polytechnique in Paris and working for a few years, I did a PhD with Penny Chisholm at MIT, Cambridge, USA, working on the cell cycle regulation of phytoplankton.  Since 1985, I have been part of CNRS, working at the Station Biologique of Roscoff (France). I am focusing on the diversity and ecology of eukaryotic picophytoplankton, more specifically the green algae, but also of other groups like bolidophytes and haptophytes involved in symbioses with cyanobacteria.  I am also the creator and scientific director of the Roscoff Culture Collection.
 
 {{% staticref "files/vaulot_cv_2018.pdf" %}}Download  CV{{% /staticref %}}

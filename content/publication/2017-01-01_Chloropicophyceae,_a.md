@@ -1,7 +1,7 @@
 +++
 title = "Chloropicophyceae, a new class of picophytoplanktonic prasinophytes"
 date = "2017-01-01"
-authors = ["Adriana Lopes dos Santos", "Thibaut Pollina", "Priscillia Gourvil", "Erwan Corre", "Dominique Marie", "Jose Luis Garrido", "Francisco Rodriguez", "Mary-HelA¨ne Noel", "Daniel Vaulot", "Wenche Eikrem"]
+authors = ["Adriana Lopes dos Santos", "Thibaut Pollina", "Priscillia Gourvil", "Erwan Corre", "Dominique Marie", "Jose Luis Garrido", "Francisco Rodriguez", "Mary-Helene Noel", "Daniel Vaulot", "Wenche Eikrem"]
 publication_types = ["2"]
 publication = "Scientific Reports, (7), 1, _pp. 14019_, https://doi.org/10.1038/s41598-017-12412-5"
 publication_short = "Scientific Reports, (7), 1, _pp. 14019_, https://doi.org/10.1038/s41598-017-12412-5"

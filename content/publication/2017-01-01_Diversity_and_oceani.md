@@ -1,7 +1,7 @@
 +++
 title = "Diversity and oceanic distribution of prasinophytes clade VII, the dominant group of green algae in oceanic waters"
 date = "2017-01-01"
-authors = ["Adriana Lopes dos Santos", "Priscillia Gourvil", "Margot Tragin", "Mary-HelA�ne Noel", "Johan Decelle", "Sarah Romac", "Daniel Vaulot"]
+authors = ["Adriana Lopes dos Santos", "Priscillia Gourvil", "Margot Tragin", "Mary-Helene Noel", "Johan Decelle", "Sarah Romac", "Daniel Vaulot"]
 publication_types = ["2"]
 publication = "The ISME Journal, (11), 2, _pp. 512–528_, https://doi.org/10.1038/ismej.2016.120"
 publication_short = "The ISME Journal, (11), 2, _pp. 512–528_, https://doi.org/10.1038/ismej.2016.120"

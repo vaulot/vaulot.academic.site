@@ -30,7 +30,7 @@ filter_default = 0
 # To remove toolbar, delete/comment all instances of `[[filter]]` below.
 [[filter]]
   name = "Current"
-  tag = ".current"
+  tag = ".current project"
   
 [[filter]]
   name = "All"

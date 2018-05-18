@@ -16,7 +16,7 @@ image_preview = "macumba-logo.png"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["culture", "phytoplankton", "bacteria", "macumba"]
+tags = ["culture", "phytoplankton", "EU"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = ""

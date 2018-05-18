@@ -13,6 +13,9 @@ list_format = 3
 
 # Optional featured image (relative to `static/img/` folder).
 [header]
-image = "carbom.png"
-caption = "ISME 2018"
+image = "paper_Bathycoccus.png"
+caption = "Sci Rep 2016"
 +++
+
+Pdf files are available on [Research Gate](https://www.researchgate.net/profile/Daniel_Vaulot)
+

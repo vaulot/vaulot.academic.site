@@ -16,7 +16,7 @@ image_preview = "carbom_cruise_small.png"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["phytoplankton", "collaborations", "current"]
+tags = ["phytoplankton", "current projects", "arctic", "taxonomy", "antarctic", "New Zealand", "Brazil", "Chile"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = ""

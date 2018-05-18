@@ -16,7 +16,7 @@ image_preview = "logo-rcc.png"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["culture", "phytoplankton",  "current"]
+tags = ["culture", "phytoplankton",  "current projects"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = "http://www.roscoff-culture-collection.org/"
