@@ -16,7 +16,7 @@ image_preview = "pr2_small.png"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["database", "current projects", "18S rRNA", "metabarcoding"]
+tags = ["database", "current_projects", "18S rRNA", "metabarcoding"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = "https://github.com/vaulot/pr2_database"
