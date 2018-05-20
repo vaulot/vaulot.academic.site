@@ -4,3 +4,4 @@ README.md
 *.Rproj
 public/*
 public/talk/*
+.Rproj.user

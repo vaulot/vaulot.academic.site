@@ -15,6 +15,8 @@ weight = 30
 
 +++
 
+![](img/asiame2.png)
+
 ## Courses organized
 
 * 2017 - Co-organizer of ASIAME 2 (South Asia Workshop in Aquatic Microbial Ecology) in Andaman Islands, India - 15 days - November 2017

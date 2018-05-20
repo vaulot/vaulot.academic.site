@@ -262,6 +262,16 @@ enableGitInfo = false
   weight = 1
 
 [[menu.main]]
+  name = "Research"
+  url = "#research"
+  weight = 1.8
+
+[[menu.main]]
+  name = "Projects"
+  url = "#projects"
+  weight = 2
+  
+[[menu.main]]
   name = "Publications"
   url = "#publications"
   weight = 3
@@ -272,10 +282,6 @@ enableGitInfo = false
 #  url = "#posts"
 #  weight = 3
 
-[[menu.main]]
-  name = "Projects"
-  url = "#projects"
-  weight = 2
 
 [[menu.main]]
   name = "Teaching"
@@ -284,7 +290,7 @@ enableGitInfo = false
 
 [[menu.main]]
   name = "Supervision"
-  url = "#supervision"
+  url = "supervision"
   weight = 5
 
 [[menu.main]]

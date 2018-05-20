@@ -6,7 +6,7 @@ active = true
 date = 2016-04-20T00:00:00
 
 title = "Recent Publications"
-subtitle = ""
+subtitle = "including submitted papers"
 
 # Order that this section will appear in.
 weight = 20
