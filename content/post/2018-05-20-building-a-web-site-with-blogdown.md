@@ -1,29 +1,27 @@
 ---
-title: Building a web site with Blogdown
-author: Daniel Vaulot
-date: '2018-05-20'
-slug: building-a-web-site-with-blogdown
-categories:
-  - R
-tags: ["private"]
-header:
-  caption: ''
-  image: ''
+title: "New web site..."
+
+date: 2018-05-20
+lastmod: 2018-05-20
+
+draft: false
+categories: ["R"]
+tags: ["R"]
+
+summary: "Notes to create Blogdown website."
 ---
-
-# Academic web site
-
 * Use Academic template : https://sourcethemes.com/academic/
 * Use Netlifly : https://app.netlify.com/sites/vaulot/overview
-* If there are errors, run on command line `hugo -v` within the root of the web site
+* If there are errors, run on command line `hugo -v` in the root of the web site
 * Images for project vignettes are 150 px high
-* For bibliography
-     * Use function from : 
+* For bibliography from Mendeley
      * In Mendeley export using bibtex style (do not use the bibtex export because this will result in escaped caracters that do not work)
-     * Must correct quite a few things
+     * Use function from [Lorenzo](https://lbusett.netlify.com/post/automatically-importing-publications-from-bibtex-to-a-hugo-academic-blog/) to import the bibtex file and trasnform to MD files.
+     * Must correct quite a few things before however
         1. change bibtex reference name that may contain space or other characters causing problems for import
         1. change accentuated characters
         1. remove {} that are around composite names
         1. In the bibtex_2academic comment out lines that correspond to field that do not exist (e.g. for submitted)
         1. Add tags and projects
         1. Add abstracts and short abstracts (short abstracts are need for the home page)
+        1. Add images
