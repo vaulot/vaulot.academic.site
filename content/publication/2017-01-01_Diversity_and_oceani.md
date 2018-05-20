@@ -9,8 +9,8 @@ abstract = ""
 abstract_short = ""
 image_preview = ""
 selected = false
-projects = []
-tags = []
+projects = ["macumba"]
+tags = ["green algae", "metabarcoding", "phytoplankton", "18S rRNA"]
 url_pdf = ""
 url_preprint = ""
 url_code = ""
@@ -23,6 +23,6 @@ url_source = ""
 math = true
 highlight = true
 [header]
-image = ""
+image = "cladeVII_isme.png"
 caption = ""
 +++

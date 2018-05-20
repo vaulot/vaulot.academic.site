@@ -6,7 +6,7 @@ date = 2016-04-27T00:00:00
 weight = 20
 
 # Project title.
-title = "MaCuMBA"
+title = "MaCuMBA (2012-2016)"
 
 # Project summary to display on homepage.
 summary = "Marine microorganisms cultivation."
