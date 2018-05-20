@@ -1,6 +1,6 @@
 +++
 title = "Hemiselmis aquamarina sp . nov . (Cryptomonadales , Cryptophyceae), a cryptomonad with a novel phycobiliprotein type (Cr-PC 564)"
-date = "2018-01-01"
+date = "2018-05-01"
 authors = ["Karoline Magalhaes", "Daniel Vaulot", "Mariana Cabral de Oliveira"]
 publication_types = ["2"]
 publication = "Protist, (**submitted**)"

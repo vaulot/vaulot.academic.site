@@ -1,6 +1,6 @@
 +++
 title = "The cyanobacterium Acaryochloris thomasi sp. nov. contains Chlorophyll a and b but no Chlorophyll d"
-date = "2018-01-01"
+date = "2018-05-01"
 authors = ["Frédéric Partensky", "Christophe Six", "Morgane Ratin", "Laurence Garczarek", "Daniel Vaulot", "Théophile Grebert", "Dominique Marie", "Priscillia Gourvil", "Ian Probert", "Sophie Le Panse", "et al."]
 publication_types = ["2"]
 publication = "Scientific reports, (**submitted**)"

@@ -16,6 +16,7 @@ header:
 * Use Academic template : https://sourcethemes.com/academic/
 * Use Netlifly : https://app.netlify.com/sites/vaulot/overview
 * If there are errors, run on command line `hugo -v` within the root of the web site
+* Images for project vignettes are 150 px high
 * For bibliography
      * Use function from : 
      * In Mendeley export using bibtex style (do not use the bibtex export because this will result in escaped caracters that do not work)
@@ -25,4 +26,4 @@ header:
         1. remove {} that are around composite names
         1. In the bibtex_2academic comment out lines that correspond to field that do not exist (e.g. for submitted)
         1. Add tags and projects
-        1. Add abstracts and short abstracts
+        1. Add abstracts and short abstracts (short abstracts are need for the home page)
