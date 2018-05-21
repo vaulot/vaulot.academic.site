@@ -25,3 +25,12 @@ summary: "Notes to create Blogdown website."
         1. Add tags and projects
         1. Add abstracts and short abstracts (short abstracts are need for the home page)
         1. Add images
+* There is definite problem with Rmd files.  
+        1. Include in the header
+        
+```r
+        output:
+           blogdown::html_page
+```
+        2. They need to be knitted to an html file
+        3. At each knitting iteration the yaml header is added again and again....

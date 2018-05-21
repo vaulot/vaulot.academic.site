@@ -32,5 +32,5 @@ weight = 9
 * Nicole Trefaut, Santiago, Chile
 * Marcel Babin, Takuvik, Québec
 * Hervé Moreau, Banyuls, France
-* Adriana Lopes dos Santos, Singapore
+* [Adriana Lopes dos Santos](https://ase.ntu.edu.sg/people/faculty?page=1#.WwLPLe6FOUl), Singapore
 * Andres Gutierrez Rodriguez, New Zealand

@@ -23,7 +23,7 @@ paginate = 10
 disqusShortname = ""
 
 # Enable analytics by entering your Google Analytics tracking ID
-googleAnalytics = ""
+googleAnalytics = "UA-119627906-1"
 
 # Default language to use (if you setup multilingual support)
 defaultContentLanguage = "en"
@@ -95,10 +95,10 @@ enableGitInfo = false
   #   1: Google Maps
   #   2: OpenStreetMap (Mapnik)
   #   3: OpenStreetMap (Mapbox)
-  map = 0
+  map = 2
   map_api_key = ""
-  latitude = "37.4275"
-  longitude = "-122.1697"
+  latitude = "48.726819"
+  longitude = "-3.987543"
   zoom = 15
 
   # Date and time format (refer to Go's date format: http://fuckinggodateformat.com )
