@@ -27,10 +27,10 @@ summary: "Notes to create Blogdown website."
         1. Add images
 * There is definite problem with Rmd files.  
         1. Include in the header
-        
+        2. They need to be knitted to an html file
+        3. At each knitting iteration the yaml header is added again and again....
+        1. Still not working... so stick with md files...
 ```r
         output:
            blogdown::html_page
 ```
-        2. They need to be knitted to an html file
-        3. At each knitting iteration the yaml header is added again and again....
