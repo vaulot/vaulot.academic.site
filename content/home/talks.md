@@ -1,14 +1,14 @@
 +++
 # Recent and Upcoming Talks widget.
 widget = "talks"
-active = false
+active = true
 date = 2016-04-20T00:00:00
 
-title = "Recent & Upcoming Talks"
+title = "Recent Talks"
 subtitle = ""
 
 # Order that this section will appear in.
-weight = 30
+weight = 25
 
 # Number of talks to list.
 count = 10
@@ -16,7 +16,7 @@ count = 10
 # List format.
 #   0 = Simple
 #   1 = Detailed
-list_format = 0
+list_format = 1
 
 +++
 
