@@ -16,7 +16,7 @@ summary: "Notes to create Blogdown website."
 
 * Purchase domain name with GoDaddy and set up DNS on goDaddy side - works fine
 
-![](dns-setup-1.png)
+![](img/dns-setup-1.png)
 
 * If there are errors, run on command line `hugo -v` in the root of the web site
 
