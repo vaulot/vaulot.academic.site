@@ -38,8 +38,7 @@ weight = 40
 
 ## PhD Students
 
-* 2014-2017 Solenn Mordret, Statione Zoologica di Napoli, PhD committee
-* 2014-2017 Margot Tragin, Université de Pierre et Marie Curie (Paris-06), PhD
+* 2014-2017 [Margot Tragin](https://tel.archives-ouvertes.fr/tel-01720494), Université de Pierre et Marie Curie (Paris-06), PhD
 * 2014-2015 Catherine Ribeiro-Gerikas, Universidade de São Paulo, PhD co-supervision
 * 2005-2009 Sylvie Masquelier, Université de Paris 6 PhD
 * 2004-2007 Manon Viprey, Université de Paris 6 PhD
@@ -49,6 +48,12 @@ weight = 40
 * 1995-1998 Laure Guillou, Université de Paris 6, PhD
 * 1991-1995 Nathalie Simon, Université de Paris 6, PhD
 * 1986-1988 Fréderic Partensky, Université de Paris 6, PhD
+
+
+## PhD Committee or jury
+
+* 2014-2018 Solenn Mordret, Statione Zoologica di Napoli - PhD Committee
+* 2013-2017 Thomas Vannier, Genoscope - PhD Committee
 
 
 ## Master Students
