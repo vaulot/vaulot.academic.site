@@ -1,6 +1,6 @@
 +++
 title = "Rhythmicity of coastal marine picoeukaryotes, bacteria and archaea despite irregular environmental perturbations"
-date = "2018-01-01"
+date = "2018-06-01"
 authors = ["Stefan Lambert", "Margot Tragin",  "Jean-Claude Lozano",  "Jean-Francois Ghiglione", "Daniel Vaulot",  "Francois-Yves Bouget",  "Pierre Galand"]
 publication_types = ["2"]
 publication = "The ISME journal, (**submitted**)"
