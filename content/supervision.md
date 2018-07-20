@@ -44,10 +44,10 @@ weight = 40
 * 2005-2009 [Sylvie Masquelier](https://hal.sorbonne-universite.fr/tel-01111020/document), Université de Paris 6 PhD - now [R&D director, InoculumPlus](https://inoculumplus.eu/qui-sommes-nous/)
 * 2004-2007 [Manon Viprey](https://www.theses.fr/2008PA066098), Université de Paris 6 PhD - now Primary School Teacher
 * 2000-2004 [Fabrice Not](https://hal.sorbonne-universite.fr/tel-01111001/document), Université de Paris 6 PhD (co-direction with N. Simon) - now [Directeur de Recherche (Senior Scientist), CNRS](http://www.sb-roscoff.fr/fr/not-fabrice/192)
-* 1999-2003 Isabelle Mary, Université de Rennes PhD - now [Assistant Professor, Clermond-Ferrand Université](http://www.lmge.univ-bpclermont.fr/spip.php?article195)
+* 1999-2003 Isabelle Mary, Université de Rennes PhD - now [Associate Professor, Clermond-Ferrand Université](http://www.lmge.univ-bpclermont.fr/spip.php?article195)
 * 1996-1999 Stéphan Jacquet, Université de Paris 6, PhD - now [Directeur de Recherche (Senior Scientist), INRA](https://www6.dijon.inra.fr/thonon/Infos-utiles/Le-personnel-de-la-station/CVs-du-personnel/Jacquet-Stephan)
 * 1995-1998 Laure Guillou, Université de Paris 6, PhD - now  [Directeur de Recherche (Senior Scientist) - CNRS](http://www.sb-roscoff.fr/fr/guillou-laure/182)
-* 1991-1995 Nathalie Simon, Université de Paris 6, PhD - now [Assistant Professor, Sorbonne Université](http://www.sb-roscoff.fr/fr/simon-nathalie/198)
+* 1991-1995 Nathalie Simon, Université de Paris 6, PhD - now [Associate Professor, Sorbonne Université](http://www.sb-roscoff.fr/fr/simon-nathalie/198)
 * 1986-1988 Fréderic Partensky, Université de Paris 6, PhD - now  [Directeur de Recherche (Senior Scientist), CNRS](http://www.sb-roscoff.fr/en/partensky-frederic/353)
 
 
