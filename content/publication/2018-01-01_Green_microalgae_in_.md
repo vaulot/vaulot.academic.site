@@ -2,7 +2,7 @@
 title = "Green microalgae in marine coastal waters : The Ocean Sampling Day (OSD) dataset"
 date = "2018-05-01"
 authors = ["Margot Tragin", "Daniel Vaulot"]
-publication_types = ["2"]
+publication_types = ["3"]
 publication = "Scientific reports, (**submitted**)"
 publication_short = "Scientific reports, (**submitted**)"
 abstract = ""
