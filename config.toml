@@ -294,17 +294,17 @@ enableGitInfo = false
 [[menu.main]]
   name = "Posts"
   url = "#posts"
-  weight = 5.5
+  weight = 6
 
 [[menu.main]]
   name = "CV"
   url = "/files/vaulot_cv_2018.pdf"
-  weight = 6
+  weight = 7
 
 [[menu.main]]
   name = "Contact"
   url = "#contact"
-  weight = 7
+  weight = 8
 
 # Taxonomies.
 [taxonomies]
