@@ -17,20 +17,20 @@ weight = 9
 
 ## Major research topics
 * Diversity and oceanic distribution of marine phytoplankton, in particular green algae and Bolidophyceae.
-* Analysis of marine eukaryotic communities using metabarcoding of the 18S rRNA gene, especially on populations sorted by flow cytometry.
-* Polar picoplankton communities and their adapatation to the long winter polar night.
-* Maintenance of the PR2 database of 18S rRNA sequences
+* Analysis of marine eukaryotic communities using metabarcoding (nuclear 18S rRNA, plastid 16S rRN), especially on populations sorted by flow cytometry.
+* Polar picoplankton communities and their adaptation to the long winter polar night.
+* Development of databases for the analysis of eukaryotic metabarcodes: [PR2](https://github.com/vaulot/pr2database)
 
 ## Postdocs
-* **Margot Tragin**, Post-doc. Genetic transformation of  eukaryotic picoplankton (Moore Foundation)
-* **Catherine Ribeiro-Gerikas**, Post-doc. Bloom dynamics at the ice edge in the Arctic : culturing and metabarcoding approaches (ANR Green Edge + CG 29)
-* **Valeria Jimenez**, Post-doc. Survival of phytoplankton during the polar winter (ANR PhytoPol + Region Bretagne)
+* **[Margot Tragin](http://www.sb-roscoff.fr/en/tragin-margot/706)**, Post-doc. Genetic transformation of  eukaryotic picoplankton (Moore Foundation)
+* **[Catherine Ribeiro-Gerikas](http://www.sb-roscoff.fr/fr/gerikas-ribeiro-catherine/1909)**, Post-doc. Bloom dynamics at the ice edge in the Arctic : culturing and metabarcoding approaches (ANR Green Edge + CG 29)
+* **[Valeria Jimenez](http://www.sb-roscoff.fr/en/jimenez-valeria/1910)**, Post-doc. Survival of phytoplankton during the polar winter (ANR PhytoPol + Region Bretagne)
 
 ## Collaborations
-* Akira Kuwata, Sendai, Japan
-* Bente Edvardsen and Wenche Eikrem, Oslo, Norway
-* Nicole Trefaut, Santiago, Chile
-* Marcel Babin, Takuvik, Québec
-* Hervé Moreau, Banyuls, France
-* [Adriana Lopes dos Santos](https://ase.ntu.edu.sg/people/faculty?page=1#.WwLPLe6FOUl), Singapore
-* Andres Gutierrez Rodriguez, New Zealand
+* [Akira Kuwata](https://www.researchgate.net/profile/Akira_Kuwata), Sendai, Japan
+* [Bente Edvardsen](https://www.researchgate.net/profile/Bente_Edvardsen) and [Wenche Eikrem](https://www.researchgate.net/profile/Wenche_Eikrem), Oslo, Norway
+* [Nicole Trefaut](https://www.researchgate.net/profile/Nicole_Trefault), Santiago, Chile
+* [Marcel Babin](http://www.takuvik.ulaval.ca/team/marcel_babin.php), Takuvik, Québec
+* [Hervé Moreau](http://biom.obs-banyuls.fr/fr/equipe-genophy/equipe/chercheurs_et_enseignats_chercheurs/herve_moreau.html), Banyuls, France
+* [Adriana Lopes dos Santos](https://www.researchgate.net/profile/Adriana_Lopes_Dos_Santos), Singapore
+* [Andres Gutierrez Rodriguez](https://www.researchgate.net/profile/Andres_Gutierrez-Rodriguez3), New Zealand
