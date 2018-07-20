@@ -35,5 +35,3 @@ publication_type = "3"
 # Exclude publications that are shown in the Selected Publications widget?
 exclude_selected = true
 +++
-
-Pdf files are available on [Research Gate](https://www.researchgate.net/profile/Daniel_Vaulot)
