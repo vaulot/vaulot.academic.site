@@ -26,11 +26,11 @@ list_format = 3
 #  0: Uncategorized
 #  1: Conference proceedings
 #  2: Journal
-#  3: Work in progress
-#  4: Technical report
+#  3: Submitted
+#  4: Other articles
 #  5: Book
 #  6: Book chapter
-publication_type = "2"
+publication_type = "2, 3"
 
 # Exclude publications that are shown in the Selected Publications widget?
 exclude_selected = true

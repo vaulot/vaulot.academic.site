@@ -59,7 +59,7 @@ enableGitInfo = false
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
-  organizations = [ { name = "Station Biologique de Roscoff", url = "http://www.sb-roscoff.fr/en/team-diversity-and-interactions-oceanic-plankton" }, 
+  organizations = [ { name = "Station Biologique de Roscoff", url = "http://www.sb-roscoff.fr/en/team-diversity-and-interactions-oceanic-plankton" },
   { name = "CNRS", url = "http://www.cnrs.fr" }, { name = "Sorbonne Université", url = "" } ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
@@ -175,8 +175,8 @@ enableGitInfo = false
     'Uncategorized',  # 0
     'Conference paper',  # 1
     'Journal article',  # 2
-    'Manuscript',  # 3
-    'Report',  # 4
+    'Submitted',  # 3
+    'Other article',  # 4
     'Book',  # 5
     'Book section'  # 6
   ]
@@ -270,7 +270,7 @@ enableGitInfo = false
   name = "Projects"
   url = "#projects"
   weight = 2
-  
+
 [[menu.main]]
   name = "Publications"
   url = "#publications"
