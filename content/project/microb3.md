@@ -16,7 +16,7 @@ image_preview = "microb3_logo.png"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["metagenomics", "metabarcoding", "OSD","phytoplankton", "EU"]
+tags = ["metagenomics", "metabarcoding", "Ocean Sampling Day","phytoplankton", "EU"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = "https://www.microb3.eu/"
