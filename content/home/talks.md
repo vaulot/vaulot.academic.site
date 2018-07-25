@@ -5,7 +5,7 @@ active = true
 date = 2016-04-20T00:00:00
 
 title = "Recent Talks"
-subtitle = ""
+subtitle = "Slides available on Speaker Desk"
 
 # Order that this section will appear in.
 weight = 25
@@ -19,4 +19,3 @@ count = 10
 list_format = 1
 
 +++
-

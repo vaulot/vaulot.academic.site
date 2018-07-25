@@ -33,9 +33,9 @@ caption = "Phytoplankton"
 
 Marine microorganisms: Cultivation methods for improving their biotechnological applications.
 
-Macumba was a european FP7 collaborative project
+Macumba was a European FP7 collaborative project (FP7-KBBE 311975)
 
-* Duration:  August 2012 – July 2016 (48 months)
+* Period:  August 2012 – July 2016 (48 months)
 * Consortium:  22 partners from 11 countries
 * Coordinator:  Stichting Koninklijk Netherlands Instituut voor Zeeonderzoek (NIOZ), The Netherlands
 
