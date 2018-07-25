@@ -46,6 +46,8 @@ In addition to filling a fundamental knowledge gap, joint-field research project
 * Ross Sea - Feb 2018
 * Salp - Oct - Nov 2018
 
+***
+
 ## 2017-2019 - MicrAntar (ECOS-Chili)
 **Inter-annual variation of Microbial Eukaryotic Communities in Antarctica**
 
@@ -58,6 +60,8 @@ ECOS-Sud grant number C16B02
 ### Partners
 * Chili -  Universidad Mayor (Nicole Trefault) / Pontifical Universidad de Chile (Rodrigo de la Iglesia)
 * France - Station Biologique de Roscoff (Daniel Vaulot, Adriana Lopes dos Santos)
+
+***
 
 ## 2015-2018 - PicoBras (COFECUB, CAPES France- Brasil)
 **Picophytoplankton in the tropical South West Atlantic off Brazil**
