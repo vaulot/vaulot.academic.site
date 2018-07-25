@@ -9,7 +9,7 @@ weight = 18
 title = "Micro B3 (2012-2015)"
 
 # Project summary to display on homepage.
-summary = "Marine Microbial Biodiversity, Bioinformatics, Biotechnology."
+summary = "Marine Microbial Biodiversity, Bioinformatics, Biotechnology"
 
 # Optional image to display on homepage (relative to `static/img/` folder).
 image_preview = "microb3_logo.png"

@@ -9,7 +9,7 @@ weight = 20
 title = "MaCuMBA (2012-2016)"
 
 # Project summary to display on homepage.
-summary = "Marine microorganisms cultivation."
+summary = "Marine Microorganisms: Cultivation Methods for Improving their Biotechnological Applications"
 
 # Optional image to display on homepage (relative to `static/img/` folder).
 image_preview = "macumba-logo.png"
