@@ -15,7 +15,7 @@ summary = "The Beaufort Sea ecosystem."
 image_preview = "malina_web_site_small.png"
 
 # Tags: can be used for filtering projects.
-tags = ["Arctic", "phytoplankton", "metabarcoding",  "Canada"]
+tags = ["Arctic", "phytoplankton", "Canada"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = "http://malina.obs-vlfr.fr/"
