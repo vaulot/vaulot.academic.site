@@ -262,31 +262,37 @@ enableGitInfo = false
   weight = 1
 
 [[menu.main]]
+  identifier = "Research"
   name = "Research"
   url = "#research"
   weight = 1.8
 
 [[menu.main]]
+  parent = "Research"
   name = "Projects"
   url = "#projects"
   weight = 2
 
 [[menu.main]]
+  identifier = "Publications"
   name = "Publications"
   url = "#publications_selected"
   weight = 3
 
 [[menu.main]]
+  parent = "Publications"
   name = "Talks"
   url = "#talks"
   weight = 3.5
 
 [[menu.main]]
+  identifier = "Teaching"
   name = "Teaching"
   url = "#teaching"
   weight = 4
 
 [[menu.main]]
+  parent = "Teaching"
   name = "Supervision"
   url = "supervision"
   weight = 5
