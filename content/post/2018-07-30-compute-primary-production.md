@@ -29,7 +29,7 @@ $SA$ = Standard activity in 100 µL
 
 $V$ = Volume incubation (mL)
 
-1.05 is to account for differential uptake between $^{14}C$ and $^{12}C$
+1.05 is to account for differential uptake between $^{14}$C and $^{12}$C
 
 1000 is to go from from $L^{-1}$ to $m^{-3}$ since DIC is in $mgC \cdot L^{-1}$
 
