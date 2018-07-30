@@ -7,7 +7,6 @@ lastmod: 2018-05-20
 draft: false
 categories: ["phytoplankton"]
 tags: ["phytoplankton"]
-math = true
 
 summary: "After fighting a bit with maths..."
 ---
