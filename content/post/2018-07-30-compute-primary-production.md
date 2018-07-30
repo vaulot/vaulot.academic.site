@@ -31,7 +31,7 @@ $V$ = Volume incubation (mL)
 
 1.05 is to account for differential uptake between $C_{14}$ and $C_{12}$
 
-1000 is to go from from L to $m^{-3}$ since DIC is in $mg \cdot L\{-1}$
+1000 is to go from from L_{-1}$ to $m^{-3}$ since DIC is in $mg \cdot L_{-1}$
 
 $$\text{softmax}(z)_j = \frac{e^{z_j}}{\sum_i^{\text{dim}(z)}e^{z_i}}$$
 
