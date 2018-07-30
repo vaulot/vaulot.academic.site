@@ -19,7 +19,7 @@ $$P = DIC\cdot\frac{DPM\tiny{measured}}{DPM\tiny{added}}\cdot1.05\cdot1000$$
 
 $P$ = Primary Productivity in $mgC \cdot m^{-3} \cdot d^{-1}$
 
-$DIC$ = Dissolved inorganic carbon in  $mg \cdot L\^{-1}$
+$DIC$ = Dissolved inorganic carbon in  $mg \cdot L^{-1}$
 
 $DPM\tiny{measured}$ during 24 h
 
@@ -42,7 +42,7 @@ $$P = \frac{DIC}{1000}\cdot\frac{DPM\tiny{measured}}{SA\cdot10}\cdot\frac{1}{N}\
 
 $P$ = Primary Productivity per cell in $fC \cdot cell^{-1} \cdot h^{-1}$
 
-$DIC$ = Dissolved inorganic carbon in  $mg \cdot L\^{-1}$
+$DIC$ = Dissolved inorganic carbon in  $mg \cdot L^{-1}$
 
 $DPM\tiny{measured}$ during 24 h for the cells sorted
 
