@@ -19,6 +19,15 @@ summary: "Notes to create Blogdown website."
 ![](/img/dns-setup-1.png)
 
 * If there are errors, run on command line `hugo -v` in the root of the web site
+![](/img/hugo_v.png)
+    * If there is no error, the site should compile and give the stats of the site
+    ![](/img/hugo_valid.png)
+    * If there is an error then hugo will point to the file that causes problem (and the line) with a description (sometimes cryptic) of the error
+     ![](/img/hugo_error.png)
+    * In this case, the error was caused by a missing comma between two tags (keywords)
+     ![](/img/hugo_error_file.png)
+
+
 
 * Images for project vignettes are 150 px high
 
