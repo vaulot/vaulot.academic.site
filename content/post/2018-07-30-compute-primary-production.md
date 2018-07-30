@@ -19,7 +19,7 @@ $$P = DIC\cdot\frac{DPM\tiny{measured}}{DPM\tiny{added}}\cdot1.05\cdot1000$$
 
 $P$ = Primary Productivity in $mgC \cdot m^{-3} \cdot d^{-1}$
 
-$DIC$ = Dissolved inorganic carbon in  $mg \cdot L^{-1}$
+$DIC$ = Dissolved inorganic carbon in  $mgC \cdot L^{-1}$
 
 $DPM\tiny{measured}$ during 24 h
 
@@ -31,7 +31,7 @@ $V$ = Volume incubation (mL)
 
 1.05 is to account for differential uptake between C$\tiny{14}$ and C$\tiny{12}$
 
-1000 is to go from from $L^{-1}$ to $m^{-3}$ since DIC is in $mg \cdot L^{-1}$
+1000 is to go from from $L^{-1}$ to $m^{-3}$ since DIC is in $mgC \cdot L^{-1}$
 
 
 ### For cells sorted by flow cytometry
@@ -40,9 +40,9 @@ After doing a bit of maths...
 
 $$P = \frac{DIC}{1000}\cdot\frac{DPM\tiny{measured}}{SA\cdot10}\cdot\frac{1}{N}\cdot\frac{1}{24}$$
 
-$P$ = Primary Productivity per cell in $fC \cdot cell^{-1} \cdot h^{-1}$
+$P$ = Primary Productivity per cell in $fgC \cdot cell^{-1} \cdot h^{-1}$
 
-$DIC$ = Dissolved inorganic carbon in  $mg \cdot L^{-1}$
+$DIC$ = Dissolved inorganic carbon in  $mgC \cdot L^{-1}$
 
 $DPM\tiny{measured}$ during 24 h for the cells sorted
 
