@@ -15,7 +15,7 @@ summary: "After fighting a bit with maths..."
 
 The classical formula can be found [here](http://hahana.soest.hawaii.edu/hot/protocols/chap14.html) or [here](http://www.montana.edu/priscu/documents/LTER-methods-web-page/Method_Manual_AC_22_Feb_2017.pdf)
 
-$$P = DIC\cdot\frac{DPM{measured}}{DPM{added}}\cdot1.05\cdot1000$$
+$$P = DIC\cdot\frac{DPM\tiny{measured}}{DPM\tiny{added}}\cdot1.05\cdot1000$$
 
 $P$ = Primary Productivity in $mgC \cdot m^{-3} \cdot d^{-1}$
 
