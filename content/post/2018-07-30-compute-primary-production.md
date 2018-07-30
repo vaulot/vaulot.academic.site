@@ -15,22 +15,22 @@ summary: "After fighting a bit with maths..."
 
 The classical formula can be found [here](http://hahana.soest.hawaii.edu/hot/protocols/chap14.html) or [here](http://www.montana.edu/priscu/documents/LTER-methods-web-page/Method_Manual_AC_22_Feb_2017.pdf)
 
-$$P = DIC * \frac{DPM_{measured}}DPM_{added} \cdot 1.05  \cdot 1000$$
+$$P = DIC * \frac{DPM_{measured}}{DPM_{added}} \cdot 1.05  \cdot 1000$$
 
-$P$ = Primary Productivity in $mgC \cdot m^-3 \cdot d^-1$
+$P$ = Primary Productivity in $mgC \cdot m^{-3} \cdot d^{-1}$
 
-$DIC$ = Dissolved inorganic carbon in  $mg \cdot L\-1$
+$DIC$ = Dissolved inorganic carbon in  $mg \cdot L\{-1}$
 
-$DPM\{measured}$
+$DPM_{measured}$
 
-$DPM\{added} = SA \times 10 \times  V$
+$DPM_{added} = SA \times 10 \times  V$
 
 $SA$ = Standard activity in 100 µL
 
 $V$ = Volume incubation (mL)
 
-1.05 is to account for diffrential uptake between $C_14$ and $C_12$
+1.05 is to account for diffrential uptake between $C_{14}$ and $C{_12}$
 
-1000 is to go from from L to $m^-3$ since DIC is in $mg \cdot L\-1$
+1000 is to go from from L to $m^{-3}$ since DIC is in $mg \cdot L\{-1}$
 
 $$\text{softmax}(z)_j = \frac{e^{z_j}}{\sum_i^{\text{dim}(z)}e^{z_i}}$$
