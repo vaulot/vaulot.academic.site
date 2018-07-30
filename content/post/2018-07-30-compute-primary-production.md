@@ -7,6 +7,7 @@ lastmod: 2018-05-20
 draft: false
 categories: ["phytoplankton"]
 tags: ["phytoplankton"]
+math = true
 
 summary: "After fighting a bit with maths..."
 ---
@@ -23,3 +24,5 @@ DPM\{measured}
 DPM\{added} = SA \times 10 \times  V
 SA = Standard activitiy in 100 µL
 V = Volume incubation (mL)
+
+$$\text{softmax}(z)_j = \frac{e^{z_j}}{\sum_i^{\text{dim}(z)}e^{z_i}}$$
