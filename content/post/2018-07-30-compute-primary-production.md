@@ -17,9 +17,9 @@ The classical formula can be found [here](http://hahana.soest.hawaii.edu/hot/pro
 
 P (mgC m-3 d-1) = DIC (mg L-1) * DPM measure /DPM added * 1.05 * 1000 (to go from L to m-3)
 
-P = Primary Productivity in mgC \cdot m^-3 \cdot d^-1
+$$P = Primary Productivity in mgC \cdot m^-3 \cdot d^-1
 
-DPM\{measured} 
+DPM\{measured}
 DPM\{added} = SA \times 10 \times  V
 SA = Standard activitiy in 100 µL
-V = Volume incubation (mL)
+V = Volume incubation (mL)$$
