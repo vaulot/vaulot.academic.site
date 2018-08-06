@@ -23,6 +23,6 @@ url_source = ""
 math = true
 highlight = true
 [header]
-image = ""
+image = "paper_marie_2014.png"
 caption = ""
 +++
