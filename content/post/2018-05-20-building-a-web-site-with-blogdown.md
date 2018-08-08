@@ -47,6 +47,19 @@ video {
 }
 ```
 
+### Adding permanent links
+
+* Add these lines to config.toml
+```console
+[permalinks]
+  post = "/:year/:month/:day/:slug"
+```
+ * Add at top of blog entry (change web-site to whatever)
+ ```console
+ slug: "web-site"
+ ```
+
+
 ### Bibliography imported from Mendeley
 
  * In Mendeley export using bibtex style (do not use the bibtex export because this will result in escaped caracters that do not work)
