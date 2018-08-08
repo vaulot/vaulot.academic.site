@@ -10,6 +10,8 @@ tags: ["R"]
 
 summary: "Notes to create Blogdown website."
 ---
+
+### Create the web site
 * Use Academic template : https://sourcethemes.com/academic/
 
 * Use Netlifly : https://app.netlify.com/sites/vaulot/overview
@@ -18,42 +20,57 @@ summary: "Notes to create Blogdown website."
 
 ![](/img/dns-setup-1.png)
 
-* If there are errors, run on command line `hugo -v` in the root of the web site
+### Find errors
+If there are errors, run on command line `hugo -v` in the root of the web site
 ![](/img/hugo_v.png)
-    * If there is no error, the site should compile and give the stats of the site
-    ![](/img/hugo_valid.png)
-    * If there is an error then hugo will point to the file that causes problem (and the line) with a description (sometimes cryptic) of the error
-     ![](/img/hugo_error.png)
-    * In this case, the error was caused by a missing comma between two tags (keywords)
-     ![](/img/hugo_error_file.png)
+* If there is no error, the site should compile and give the stats of the site
+![](/img/hugo_valid.png)
+* If there is an error then hugo will point to the file that causes problem (and the line) with a description (sometimes cryptic) of the error
+ ![](/img/hugo_error.png)
+* In this case, the error was caused by a missing comma between two tags (keywords)
+ ![](/img/hugo_error_file.png)
 
 
-
+### Images
 * Images for project vignettes are 150 px high
 
-* For bibliography from Mendeley
+* Customize the header image size to 800 px by using the a [custom css](https://sourcethemes.com/academic/docs/customization/#customize-style-css) copied to /static/css/ and modifying the config.toml. This template needs only to contain the code that has been changed in my [case](https://github.com/gcushen/hugo-academic/issues/84):
+```console
+img,
+video {
+  height: auto;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+```
 
-     * In Mendeley export using bibtex style (do not use the bibtex export because this will result in escaped caracters that do not work)
+### Bibliography imported from Mendeley
 
-     * Use function from [Lorenzo](https://lbusett.netlify.com/post/automatically-importing-publications-from-bibtex-to-a-hugo-academic-blog/) to import the bibtex file and trasnform to MD files.
+ * In Mendeley export using bibtex style (do not use the bibtex export because this will result in escaped caracters that do not work)
 
-     * Must correct quite a few things before however
+ * Use function from [Lorenzo](https://lbusett.netlify.com/post/automatically-importing-publications-from-bibtex-to-a-hugo-academic-blog/) to import the bibtex file and trasnform to MD files.
 
-        1. change bibtex reference name that may contain space or other characters causing problems for import
+ * Must correct quite a few things before however
 
-        1. change accentuated characters
+    1. change bibtex reference name that may contain space or other characters causing problems for import  
 
-        1. remove {} that are around composite names
+    1. change accentuated characters
 
-        1. In the bibtex_2academic comment out lines that correspond to field that do not exist (e.g. for submitted)
+    1. remove {} that are around composite names
 
-        1. Add tags and projects
+    1. In the bibtex_2academic comment out lines that correspond to field that do not exist (e.g. for submitted)
 
-        1. Add abstracts and short abstracts (short abstracts are need for the home page)
+    1. Add tags and projects
 
-        1. Add images
+    1. Add abstracts and short abstracts (short abstracts are need for the home page)
 
-* There is definite problem with Rmd files.   
+    1. Add images
+
+### Rmd files
+
+There is definite problem with Rmd files.   
 
     1. Include in the header the R code below
 
