@@ -1,5 +1,6 @@
 ---
-title: "New web site..."
+title: "Building an academic web site with Hugo"
+slug = "web-site"
 
 date: 2018-05-20
 lastmod: 2018-05-20
