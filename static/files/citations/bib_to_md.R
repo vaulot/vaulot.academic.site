@@ -121,11 +121,16 @@ bibtex_2academic <- function(bibfile,
   apply(mypubs, FUN = function(x) create_md(x), MARGIN = 1)
 }
 
-setwd("c:/users/vaulot/google drive/web site/vaulot.academic.site/")
-bibfile <- "static/files/citations/lambert_2018.bib"
+setwd("c:/daniel.vaulot@gmail.com/web site/vaulot.academic.site/static/files/citations/")
+bibfile <- "lambert_2018.bib"
 out_fold   <- "content/publication"
 
-bibtex_2academic(bibfile  = bibfile, 
-                 outfold   = out_fold, 
-                 abstract  = TRUE,
-                 overwrite=TRUE)
+# bibtex_2academic(bibfile  = bibfile, 
+#                  outfold   = out_fold, 
+#                  abstract  = TRUE,
+#                  overwrite=TRUE)
+
+library("bib2academic")
+
+bib2acad(bibfile, copybib = TRUE, abstract = TRUE, overwrite = FALSE)
+

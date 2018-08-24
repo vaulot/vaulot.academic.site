@@ -82,6 +82,8 @@ video {
 
     1. Add images
 
+* There is also a special library recently developped for R `devtools::install_github("petzi53/bib2academic", build_vignettes = TRUE)` - See https://github.com/gcushen/hugo-academic/issues/146
+
 ### Rmd files
 
 There is definite problem with Rmd files.   
