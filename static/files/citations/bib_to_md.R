@@ -1,17 +1,17 @@
 bibtex_2academic <- function(bibfile,
                              outfold,
-                             abstract = FALSE, 
+                             abstract = FALSE,
                              overwrite = FALSE) {
-  
+
   require(RefManageR)
   require(dplyr)
   require(stringr)
   require(anytime)
-  
+
   # Import the bibtex file and convert to data.frame
   mypubs   <- ReadBib(bibfile, check = "warn", .Encoding = "UTF-8") %>%
-    as.data.frame() %>% tibble::rownames_to_column(var = "bib_id") 
-  
+    as.data.frame() %>% tibble::rownames_to_column(var = "bib_id")
+
   # assign "categories" to the different types of publications
   mypubs   <- mypubs %>%
     dplyr::mutate(
@@ -30,55 +30,55 @@ bibtex_2academic <- function(bibfile,
                                  bibtype == "InBook" ~ "6",
                                  bibtype == "Misc" ~ "0",
                                  TRUE ~ "0"))
-  
+
   # create a function which populates the md template based on the info
   # about a publication
   create_md <- function(x) {
-    
+
     # define a date and create filename by appending date and start of title
     if (!is.na(x[["year"]])) {
       x[["date"]] <- paste0(x[["year"]], "-01-01")
     } else {
       x[["date"]] <- "2999-01-01"
     }
-    
+
     filename <- paste(x[["date"]], x[["title"]] %>%
                         str_replace_all("[{}]", "") %>%
                         str_replace_all(fixed(" "), "_") %>%
                         str_remove_all(fixed(":")) %>%
                         str_sub(1, 20) %>%
                         paste0(".md"), sep = "_")
-    
+
     # filename <- str_c(x[["date"]],"_",x[["bib_id"]],".md")
     # start writing
     if (!file.exists(file.path(outfold, filename)) | overwrite) {
       fileConn <- file.path(outfold, filename)
       write("+++", fileConn)
-      
+
       # Title and date
       write(paste0("title = \"", x[["title"]], "\""), fileConn, append = T)
       write(paste0("date = \"", anydate(x[["date"]]), "\""), fileConn, append = T)
-      
+
       # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
       auth_hugo <- str_replace_all(x["author"], " and ", "\", \"")
       auth_hugo <- stringi::stri_trans_general(auth_hugo, "latin-ascii")
       write(paste0("authors = [\"", auth_hugo,"\"]"), fileConn, append = T)
-      
+
       # Publication type. Legend:
       # 0 = Uncategorized, 1 = Conference paper, 2 = Journal article
       # 3 = Manuscript, 4 = Report, 5 = Book,  6 = Book section
       write(paste0("publication_types = [\"", x[["pubtype"]],"\"]"), fileConn, append = T)
-      
+
       # Publication details: journal, volume, issue, page numbers and doi link
       publication <- x[["journal"]]
       if (!is.na(x[["volume"]])) publication <- paste0(publication,", (", x[["volume"]], ")")
       # if (!is.na(x[["number"]])) publication <- paste0(publication, ", ", x[["number"]])
       # if (!is.na(x[["pages"]])) publication <- paste0(publication, ", _pp. ", x[["pages"]], "_")
       # if (!is.na(x[["doi"]])) publication <- paste0(publication,", ", paste0("https://doi.org/",x[["doi"]]))
-      
+
       write(paste0("publication = \"", publication,"\""), fileConn, append = T)
       write(paste0("publication_short = \"", publication,"\""),fileConn, append = T)
-      
+
       # Abstract and optional shortened version.
       if (abstract) {
         write(paste0("abstract = \"", x[["abstract"]],"\""), fileConn, append = T)
@@ -86,10 +86,10 @@ bibtex_2academic <- function(bibfile,
         write("abstract = \"\"", fileConn, append = T)
       }
       write(paste0("abstract_short = \"","\""), fileConn, append = T)
-      
-      # other possible fields are kept empty. They can be customized later by 
+
+      # other possible fields are kept empty. They can be customized later by
       # editing the created md
-      
+
       write("image_preview = \"\"", fileConn, append = T)
       write("selected = false", fileConn, append = T)
       write("projects = []", fileConn, append = T)
@@ -111,26 +111,26 @@ bibtex_2academic <- function(bibfile,
       write("[header]", fileConn, append = T)
       write("image = \"\"", fileConn, append = T)
       write("caption = \"\"", fileConn, append = T)
-      
+
       write("+++", fileConn, append = T)
     }
   }
   # apply the "create_md" function over the publications list to generate
   # the different "md" files.
-  
+
   apply(mypubs, FUN = function(x) create_md(x), MARGIN = 1)
 }
 
-setwd("c:/daniel.vaulot@gmail.com/web site/vaulot.academic.site/static/files/citations/")
-bibfile <- "lambert_2018.bib"
+setwd("c:/daniel.vaulot@gmail.com/web site/vaulot.academic.site/")
+bibfile <- "static/files/citations/lambert_2018.bib"
 out_fold   <- "content/publication"
 
-# bibtex_2academic(bibfile  = bibfile, 
-#                  outfold   = out_fold, 
-#                  abstract  = TRUE,
-#                  overwrite=TRUE)
+bibtex_2academic(bibfile  = bibfile,
+                 outfold   = out_fold,
+                 abstract  = TRUE,
+                 overwrite=TRUE)
 
-library("bib2academic")
+# The next lines use the bin2academic library but do not format the authors correctly
 
-bib2acad(bibfile, copybib = TRUE, abstract = TRUE, overwrite = FALSE)
-
+# library("bib2academic")
+# bib2acad(bibfile, copybib = TRUE, abstract = TRUE, overwrite = FALSE)
