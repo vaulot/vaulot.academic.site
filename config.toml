@@ -324,7 +324,7 @@ enableGitInfo = false
 
 [[menu.main]]
   name = "CV"
-  url = "/files/vaulot_cv_2018.pdf"
+  url = "/files/CV_English_Vaulot.pdf"
   weight = 7
 
 [[menu.main]]
