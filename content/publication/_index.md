@@ -13,9 +13,8 @@ list_format = 3
 
 # Optional featured image (relative to `static/img/` folder).
 [header]
-image = "paper_Bathycoccus.png"
-caption = "Sci Rep 2016"
+image = "Tragin_Chlorophyta_2018.png"
+caption = "Sci Rep 2018"
 +++
 
 Pdf files are available on [Research Gate](https://www.researchgate.net/profile/Daniel_Vaulot)
-
