@@ -26,7 +26,7 @@ math = false
 
 # Optional featured image (relative to `static/img/` folder).
 [header]
-image = "carbom.jpg"
+image = "carbom_cruise.png"
 caption = "CARBOM"
 
 +++
