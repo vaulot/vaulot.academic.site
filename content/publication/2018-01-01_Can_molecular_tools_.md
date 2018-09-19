@@ -1,6 +1,6 @@
 +++
 title = "Can molecular tools enhance long-term monitoring of marine protists?"
-date = "2018-09-01"
+date = "2018-09-19"
 authors = ["Rowena Stern", "Alexandra Kraberg", "Eileen Bresnan", "Wiebe H.C.F. Kooistra", "Connie Lovejoy", "Marina Montresor", "Xose Anxelu G. Moran", "Fabrice Not", "Rafael Salas", "Raffaele Siano", "Daniel Vaulot", "Linda Amaral-Zettler", "Adriana Zingone", "Katja Metfies"]
 publication_types = ["2"]
 publication = "Journal of Plankton Research, in press"
