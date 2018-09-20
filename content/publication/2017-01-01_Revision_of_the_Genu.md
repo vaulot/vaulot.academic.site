@@ -1,7 +1,7 @@
 +++
-title = "Revision of the Genus Micromonas Manton et Parke (Chlorophyta, Mamiellophyceae), of the Type Species M. pusilla (Butcher) Manton & Parke and of the Species M. commoda van Baren, Bachy and Worden and Description of Two New Species Based on the Genetic and Phenotypic Characterization of Cultured Isolates"
-date = "2017-01-01"
-authors = ["Nathalie Simon", "Elodie Foulon", "Daphne Grulois", "Christophe Six", "Yves Desdevises", "Marie Latimier", "Florence Le Gall", "Margot Tragin", "Aude Houdan", "Evelyne Derelle", "et al."]
+title = "Revision of the Genus *Micromonas Manton* et Parke (Chlorophyta, Mamiellophyceae), of the Type Species *M. pusilla* (Butcher) Manton & Parke and of the Species *M. commoda* van Baren, Bachy and Worden and Description of Two New Species Based on the Genetic and Phenotypic Characterization of Cultured Isolates"
+date = "2017-08-01"
+authors = ["Nathalie Simon", "Elodie Foulon", "Daphne Grulois", "Christophe Six", "Yves Desdevises", "Marie Latimier", "Florence Le Gall", "Margot Tragin", "Aude Houdan", "Evelyne Derelle", "Fabien Jouenne", "Dominique Marie", "Sophie Le Panse", "Daniel Vaulot", "Birger Marin"]
 publication_types = ["2"]
 publication = "Protist, (168), 5, _pp. 612–635_, https://doi.org/10.1016/j.protis.2017.09.002"
 publication_short = "Protist, (168), 5, _pp. 612–635_, https://doi.org/10.1016/j.protis.2017.09.002"
@@ -11,7 +11,7 @@ image_preview = ""
 selected = false
 projects = ["rcc", "pr2"]
 tags = ["green algae", "taxonomy", "phytoplankton", "18S rRNA", "ITS", "Micromonas", "rcc"]
-url_pdf = ""
+url_pdf = "files/papers/Simon_2017.pdf"
 url_preprint = ""
 url_code = ""
 url_dataset = ""
@@ -19,10 +19,10 @@ url_project = ""
 url_slides = ""
 url_video = ""
 url_poster = ""
-url_source = ""
+url_source = "https://www.sciencedirect.com/science/article/pii/S1434461017300780?via%3Dihub"
 math = true
 highlight = true
 [header]
-image = "simon_ITS.png"
+image = "simon_18S.png"
 caption = "Micromonas ITS"
 +++
