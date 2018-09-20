@@ -1,5 +1,5 @@
 +++
-title = "Revision of the Genus *Micromonas Manton* et Parke (Chlorophyta, Mamiellophyceae), of the Type Species *M. pusilla* (Butcher) Manton & Parke and of the Species *M. commoda* van Baren, Bachy and Worden and Description of Two New Species Based on the Genetic and Phenotypic Characterization of Cultured Isolates"
+title = "Revision of the Genus _Micromonas_ Manton et Parke (Chlorophyta, Mamiellophyceae), of the Type Species _M. pusilla_ (Butcher) Manton & Parke and of the Species _M. commoda_ van Baren, Bachy and Worden and Description of Two New Species Based on the Genetic and Phenotypic Characterization of Cultured Isolates"
 date = "2017-08-01"
 authors = ["Nathalie Simon", "Elodie Foulon", "Daphne Grulois", "Christophe Six", "Yves Desdevises", "Marie Latimier", "Florence Le Gall", "Margot Tragin", "Aude Houdan", "Evelyne Derelle", "Fabien Jouenne", "Dominique Marie", "Sophie Le Panse", "Daniel Vaulot", "Birger Marin"]
 publication_types = ["2"]
