@@ -24,5 +24,5 @@ math = true
 highlight = true
 [header]
 image = "simon_18S.png"
-caption = "Micromonas ITS"
+caption = "Micromonas 18S secondary structure"
 +++
