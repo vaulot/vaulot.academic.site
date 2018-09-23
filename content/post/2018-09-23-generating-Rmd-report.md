@@ -39,6 +39,7 @@ output:
 ```
 
 ### Figures
+* If you want to have the figures at the same place than the text, use HTML output, if this is not critical use pdf.
 * Give a name to each chunk that generate the figures because this name will be given to the png figures (e.g. abundant_species-1.png for a chunk named `r abundant_species`).  It is better to use - than _ because _ will cause problem in Latex
 * Use the following code for inserting the figures in the reports
 
