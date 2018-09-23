@@ -22,6 +22,7 @@ For the last paper of Margot thesis on the diversity of Mamiellophyceae in the O
 * Get the link for Git (in the share menu) - see here: https://www.overleaf.com/blog/195-new-collaborate-online-and-offline-with-overleaf-and-git-beta#.W51LHM4zaUk)
 * On your computer using git clone the repository in a directory
 * Use GitHub desktop to add this repository to the list of repository
+`git clone https://git.overleaf.com/2029559gkypzx`
 * Now you can very easily synchronize between your computer and Overleaf. Just be careful not to change things in both location at the same time.
 
 ### Supplementary material
