@@ -13,6 +13,8 @@ summary: "Some notes about how to write a paper for Scientific Reports using Ove
 
 For the last paper of Margot thesis on the diversity of Mamiellophyceae in the OSD dataset I decided to switch from Word to Latex using the Overleaf web site. It took some effort and adjustment, but the effort might be really worthwhile.
 
+![](/img/overleaf-interface.png)
+
 ### Steps
 * Open an Overleaf account
 * Swtich to Overleaf 1 (Overleaf 2 misses some of the necessary feature and has not such a nice interface)
