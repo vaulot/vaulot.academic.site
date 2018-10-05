@@ -17,18 +17,30 @@ For the last paper of Margot thesis on the diversity of Mamiellophyceae in the O
 
 ### Steps
 * Open an Overleaf account
-* Swtich to Overleaf 1 (Overleaf 2 misses some of the necessary feature and has not such a nice interface)
-* Create a new project based on the Scientific Reports template
+* Swtich to Overleaf 1 or Overleaf 2 . Overleaf 2 is better for tracking changes but misses some of the necessary feature for auxiliary files.  It does not have direct Git support and one has to go through GitHub
+* Create a new project based on the Scientific Reports template.
 * Main text is in file **main.tex**
 * Begin to fill in the template
+
+### Synchronizing with computer
+#### Version Overleaf 1
 * Get the link for Git (in the share menu) - see here: https://www.overleaf.com/blog/195-new-collaborate-online-and-offline-with-overleaf-and-git-beta#.W51LHM4zaUk)
 * On your computer using git clone the repository in a directory
 * Use GitHub desktop to add this repository to the list of repository
 `git clone https://git.overleaf.com/2029559gkypzx`
 * Now you can very easily synchronize between your computer and Overleaf. Just be careful not to change things in both location at the same time.
 
+#### Version Overleaf 2
+* From Overleaf : Menu -> Synchronize with GitHub
+    * Create new repository
+* Go to GitHub
+    * Clone repository on your computer using GitHub desktop
+* Updates
+    * from Overleaf -> Push or Pull changes to/from GitHub
+    * from your computer - > Use GitHub desktop to push or pull
+
 ### Supplementary material
-* Create a new file called **main-sup.etx** which contains all the Supplementary
+* Create a new file called **main-sup.tex** which contains all the Supplementary
 * Need to change the name of the Figures and tables
 * Cannot use \maketitle because it requires abstract
 * In order to be able to reference the figures and tables from the supplementary material, you need to put some helper code in the main document (main.tex - see code below), reference the Supplementary file in main.tex and refresh the Supplementary file each time you restart the Overleaf session.
@@ -53,7 +65,6 @@ For the last paper of Margot thesis on the diversity of Mamiellophyceae in the O
 * Export the group you are working in as a bib file
 * Run small R routine to change the HTML codes for Italics to the Latex code for italics.
 * Place the file into your git directory and push to Overleaf
-
 
 ### Latex Code
 #### Main document - header
