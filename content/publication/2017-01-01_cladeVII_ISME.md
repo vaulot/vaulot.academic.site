@@ -23,6 +23,6 @@ url_source = ""
 math = true
 highlight = true
 [header]
-image = "cladeVII_isme.png"
+image = "paper_2017_cladeVII_isme.png"
 caption = ""
 +++
