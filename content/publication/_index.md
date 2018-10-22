@@ -13,7 +13,7 @@ list_format = 3
 
 # Optional featured image (relative to `static/img/` folder).
 [header]
-image = "Tragin_Chlorophyta_2018.png"
+image = "paper_Tragin_Chlorophyta_2018.png"
 caption = "Sci Rep 2018"
 +++
 

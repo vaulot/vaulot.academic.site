@@ -7,3 +7,5 @@ public/talk/*
 .Rproj.user
 sandbox/*
 .Rhistory
+*.bib
+*git*

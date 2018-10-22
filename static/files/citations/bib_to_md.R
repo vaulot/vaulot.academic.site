@@ -122,12 +122,12 @@ bibtex_2academic <- function(bibfile,
 }
 
 setwd("c:/daniel.vaulot@gmail.com/web site/vaulot.academic.site/")
-bibfile <- "static/files/citations/lambert_2018.bib"
+bibfile <- "static/files/citations/Margot_2018.bib"
 out_fold   <- "content/publication"
 
 bibtex_2academic(bibfile  = bibfile,
                  outfold   = out_fold,
-                 abstract  = TRUE,
+                 abstract  = FALSE,
                  overwrite=TRUE)
 
 # The next lines use the bin2academic library but do not format the authors correctly
