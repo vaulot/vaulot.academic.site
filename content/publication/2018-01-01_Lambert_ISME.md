@@ -19,7 +19,7 @@ url_project = "http://www.cnrs.fr/inee/communication/breves/b407.html"
 url_slides = ""
 url_video = ""
 url_poster = ""
-url_source = "https://www-nature-com.inee.bib.cnrs.fr/articles/s41396-018-0281-z"
+url_source = "https://www.nature.com/articles/s41396-018-0281-z"
 math = true
 highlight = true
 [header]
