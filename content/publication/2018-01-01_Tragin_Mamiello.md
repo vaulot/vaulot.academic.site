@@ -1,6 +1,6 @@
 +++
 title = "{Novel diversity within marine Mamiellophyceae (Chlorophyta) unveiled by metabarcoding}"
-date = "2018-10-22"
+date = "2018-10-21"
 authors = ["Margot Tragin", "Daniel Vaulot"]
 publication_types = ["3"]
 publication = "Scientific Reports, (**submitted**)"
