@@ -58,12 +58,13 @@ enableGitInfo = false
 
   # Your details.
   name = "Daniel Vaulot"
-  role = "Directeur de Recherche"
+  role = "Directeur de Recherche (CNRS) - Visiting Professor (NTU)"
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
   organizations = [ { name = "Station Biologique de Roscoff", url = "http://www.sb-roscoff.fr/en/team-diversity-and-interactions-oceanic-plankton" },
-  { name = "CNRS", url = "http://www.cnrs.fr" }, { name = "Sorbonne Université", url = "" } ]
+  { name = "CNRS", url = "http://www.cnrs.fr" }, { name = "Sorbonne Université", url = "http://www.sorbonne-universite.fr/" },
+  { name = "Nanyang Technological University, Singapore", url = "http://www.ntu.edu.sg" } ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "daniel_antarctica_2015_square.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
