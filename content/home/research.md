@@ -22,7 +22,6 @@ weight = 9
 * Development of databases for the analysis of eukaryotic metabarcodes: [PR2](https://github.com/vaulot/pr2database)
 
 ## Postdocs
-* [Margot Tragin](http://www.sb-roscoff.fr/en/tragin-margot/706), Post-doc. Genetic transformation of  eukaryotic picoplankton (Moore Foundation)
 * [Catherine Ribeiro-Gerikas](http://www.sb-roscoff.fr/fr/gerikas-ribeiro-catherine/1909), Post-doc. Bloom dynamics at the ice edge in the Arctic : culturing and metabarcoding approaches (ANR Green Edge + CG 29)
 * [Valeria Jimenez](http://www.sb-roscoff.fr/en/jimenez-valeria/1910), Post-doc. Survival of phytoplankton during the polar winter (ANR PhytoPol + Region Bretagne)
 

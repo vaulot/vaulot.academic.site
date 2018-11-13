@@ -39,7 +39,7 @@ weight = 40
 
 ## PhD Students
 
-* 2014-2017 [Margot Tragin](https://tel.archives-ouvertes.fr/tel-01720494), Université de Pierre et Marie Curie (Paris-06), PhD - now Post-doc, Station Biologique de Roscoff
+* 2014-2017 [Margot Tragin](https://tel.archives-ouvertes.fr/tel-01720494), Université de Pierre et Marie Curie (Paris-06), PhD - now Post-doc, Observatoire Océanologique de Banyuls
 * 2014-2015 Catherine Ribeiro-Gerikas, Universidade de São Paulo, PhD co-supervision - now Post-doc, Station Biologique de Roscoff
 * 2005-2009 [Sylvie Masquelier](https://hal.sorbonne-universite.fr/tel-01111020/document), Université de Paris 6 PhD - now [R&D director, InoculumPlus](https://inoculumplus.eu/qui-sommes-nous/)
 * 2004-2007 [Manon Viprey](https://www.theses.fr/2008PA066098), Université de Paris 6 PhD - now Primary School Teacher
