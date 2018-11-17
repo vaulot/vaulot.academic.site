@@ -28,9 +28,9 @@ weight = 1
   course = "PhD in Oceanography"
   institution = "Massachusetts Institute of Technology"
   year = 1985
- 
+
 +++
 
-After attending the Ecole Polytechnique in Paris and working for a few years, I did a PhD with Penny Chisholm at MIT, Cambridge, USA, working on the cell cycle regulation of phytoplankton.  Since 1985, I have been part of CNRS, working at the Station Biologique of Roscoff (France). I am focusing on the diversity and ecology of eukaryotic picophytoplankton, more specifically the green algae, but also of other groups like bolidophytes and haptophytes involved in symbioses with cyanobacteria.  I am also the creator and scientific director of the Roscoff Culture Collection.
+After attending the Ecole Polytechnique in Paris and working for a few years, I did a PhD with Penny Chisholm at MIT, Cambridge, USA, working on the cell cycle regulation of phytoplankton.  Since 1985, I have been part of CNRS, working at the Station Biologique of Roscoff (France). I am focusing on the diversity and ecology of eukaryotic picophytoplankton, more specifically the green algae, but also of other groups like bolidophytes and haptophytes involved in symbioses with cyanobacteria.  I am also the creator and scientific director of the Roscoff Culture Collection. I am currently spending one year at Nanyang Technological University in Singapore as a visiting Professor.
 
 {{% staticref "files/CV_English_Vaulot.pdf" %}}Download  CV{{% /staticref %}}
