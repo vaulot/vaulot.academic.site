@@ -1,10 +1,10 @@
 +++
 title = "High contribution of Rhizaria (Radiolaria) to vertical export in the California Current Ecosystem revealed by DNA metabarcoding"
-date = "2018-05-01"
-authors = ["Andres Gutierrez-rodriguez", "Michael R. Stukel", "Adriana Lopes dos Santos", "Tristan Biard", "Daniel Vaulot", "Michael R. Landry", "Fabrice Not"]
+date = "2018-11-01"
+authors = ["Andres Gutierrez-Rodriguez", "Michael R. Stukel", "Adriana Lopes dos Santos", "Tristan Biard", "Daniel Vaulot", "Michael R. Landry", "Fabrice Not"]
 publication_types = ["2"]
-publication = "The ISME Journal (in press)"
-publication_short = "The ISME Journal (in press)"
+publication = "The ISME Journal, in press"
+publication_short = "The ISME Journal, in press"
 abstract = ""
 abstract_short = ""
 image_preview = ""
