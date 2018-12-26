@@ -23,6 +23,6 @@ url_source = ""
 math = true
 highlight = true
 [header]
-image = ""
+image = "paper_yau_mantoniella_2019.png"
 caption = ""
 +++
