@@ -1,7 +1,7 @@
 +++
 title = "Mantoniella beaufortii and Mantoniella baffinensis sp. nov. (Mamiellales, Mamiellophyceae), two new green algal species from the high Arctic"
 date = "2018-12-25"
-authors = ["Sheree Yau", "Adriana Lopes dos Santos", "Wenche Eikrem, "Catherine Gérikas Ribeiro", "Priscillia Gourvil", "Marie-Line Escande",  "Sergio Balzano", "Hervé Moreau", "Daniel Vaulot"]
+authors = ["Sheree Yau", "Adriana Lopes dos Santos", "Wenche Eikrem", "Catherine Gérikas Ribeiro", "Priscillia Gourvil", "Marie-Line Escande",  "Sergio Balzano", "Hervé Moreau", "Daniel Vaulot"]
 publication_types = ["3"]
 publication = "Journal of Phycology (**submitted**)"
 publication_short = "Journal of Phycology (**submitted**)"
