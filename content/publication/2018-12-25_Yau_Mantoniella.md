@@ -1,6 +1,6 @@
 +++
 title = "{_Mantoniella beaufortii_ and _Mantoniella baffinensis_ sp. nov. (Mamiellales, Mamiellophyceae), two new green algal species from the high Arctic}"
-date = "2019-01-01"
+date = "2018-12-25"
 authors = ["Sheree Yau"]
 publication_types = ["3"]
 publication = "Journal of Phycology (**submitted**)"
