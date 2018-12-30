@@ -1,7 +1,5 @@
 +++
-date = 2018-05-23T00:00:00  # Schedule page publish date.
-time_start = 2018-05-23T00:00:00
-time_end = 2018-05-23T00:00:00
+date = 2018-12-10T00:00:00  # Schedule page publish date.
 title = "The Roscoff Culture Collection - Annual report 2018"
 abstract = ""
 abstract_short = ""
