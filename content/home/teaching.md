@@ -27,6 +27,7 @@ weight = 30
 
 ## Courses taught
 
+* 2019 [R course](https://github.com/vaulot/R-course-NTU-2019) - part of ES7023 & ES0002: Fundamentals of Data Science for Earth and Environmental Systems Science ASE, Nanyang Technological University, Singapore
 * 2018  Using phyloseq for metabarcode data analysis, Formation metabarcoding, Roscoff
 * 2017  R for microbial ecology, ASIAME 2, South Asia Workshop in Aquatic Microbial Ecology, India
 * 2012-2017  Metagenomics of marine microbes (6 h lecture, 4 h practical session), Marine Ecological and Evolutionary Genomics, Roscoff
@@ -43,4 +44,3 @@ weight = 30
 
 ### Metabarcoding
 * [Download the tutorials from GitHub](https://github.com/vaulot/metabarcodes_tutorials)
-
