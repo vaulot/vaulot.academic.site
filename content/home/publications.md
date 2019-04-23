@@ -30,7 +30,7 @@ list_format = 3
 #  4: Other articles
 #  5: Book
 #  6: Book chapter
-publication_type = "2, 6"
+publication_type = "2"
 
 # Exclude publications that are shown in the Selected Publications widget?
 exclude_selected = true
