@@ -1,6 +1,6 @@
 +++
 title = "DNA, RNA analysis of phytoplankton by flow cytometry"
-date = "1999-01-01"
+date = "2000-01-01"
 authors = ["Dominique Marie", " Nathalie Simon", "Laure Guillou", "Fréderic Partensky", "Daniel Vaulot"]
 publication_types = ["2"]
 publication = "In Robinson, J. P. [Ed.] Current Protocols in Cytometry. John Wiley & Sons, Inc, New York, pp. 1–18."
