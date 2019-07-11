@@ -11,7 +11,7 @@ image_preview = ""
 selected = false
 projects = ["collaborations", "rcc", "macumba", "microb3"]
 tags = ["bolidophytes","18S rRNA", "plastid 16S rRNA", "ITS", "metabarcoding", "rcc"]
-url_pdf = ""
+url_pdf = "files/papers/Ichinomiya_2016.pdf"
 url_preprint = ""
 url_code = ""
 url_dataset = ""
@@ -23,6 +23,6 @@ url_source = ""
 math = true
 highlight = true
 [header]
-image = ""
-caption = ""
+image = "bolido.png"
+caption = "Different Triparma species"
 +++
