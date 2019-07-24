@@ -1,6 +1,6 @@
 +++
 title = "Temporal dynamics of Bacteria, Archaea and protists in equatorial coastal waters"
-authors = ["Caroline Chénard", "Winona Wijaya", "Daniel Vaulot", "Adriana {Lopes dos Santos}", "Patrick Martin", "Avneet Kaur", "Federico M Lauro"]
+authors = ["Caroline Chénard", "Winona Wijaya", "Daniel Vaulot", "Adriana Lopes dos Santos", "Patrick Martin", "Avneet Kaur", "Federico M Lauro"]
 date = "2019-06-15"
 publication_types = ["3"]
 publication = "Scientific Reports (**submitted**)"
