@@ -71,7 +71,7 @@ bibtex_2academic <- function(bibfile,
 
       # Publication details: journal, volume, issue, page numbers and doi link
       publication <- x[["journal"]]
-      if (!is.na(x[["volume"]])) publication <- paste0(publication,", (", x[["volume"]], ")")
+      if (!is.null(x[["volume"]])) publication <- paste0(publication,", (", x[["volume"]], ")")
       # if (!is.na(x[["number"]])) publication <- paste0(publication, ", ", x[["number"]])
       # if (!is.na(x[["pages"]])) publication <- paste0(publication, ", _pp. ", x[["pages"]], "_")
       # if (!is.na(x[["doi"]])) publication <- paste0(publication,", ", paste0("https://doi.org/",x[["doi"]]))
@@ -122,7 +122,8 @@ bibtex_2academic <- function(bibfile,
 }
 
 setwd("c:/daniel.vaulot@gmail.com/web site/vaulot.academic.site/")
-bibfile <- "static/files/citations/Ribeiro2019.bib"
+
+bibfile <- "static/files/citations/Chenard.bib"
 out_fold   <- "content/publication"
 
 bibtex_2academic(bibfile  = bibfile,
