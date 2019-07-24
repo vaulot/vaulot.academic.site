@@ -22,13 +22,12 @@ weight = 9
 * Development of databases for the analysis of eukaryotic metabarcodes: [PR2](https://github.com/vaulot/pr2database)
 
 ## Postdocs
-* [Catherine Ribeiro-Gerikas](http://www.sb-roscoff.fr/fr/gerikas-ribeiro-catherine/1909), Post-doc. Bloom dynamics at the ice edge in the Arctic : culturing and metabarcoding approaches (ANR Green Edge + CG 29)
 * [Valeria Jimenez](http://www.sb-roscoff.fr/en/jimenez-valeria/1910), Post-doc. Survival of phytoplankton during the polar winter (ANR PhytoPol + Region Bretagne)
 
 ## Collaborations
 * [Akira Kuwata](https://www.researchgate.net/profile/Akira_Kuwata), Sendai, Japan
 * [Bente Edvardsen](https://www.researchgate.net/profile/Bente_Edvardsen) and [Wenche Eikrem](https://www.researchgate.net/profile/Wenche_Eikrem), Oslo, Norway
-* [Nicole Trefaut](https://www.researchgate.net/profile/Nicole_Trefault), Santiago, Chile
+* [Nicole Trefaut](https://www.researchgate.net/profile/Nicole_Trefault) and [Catherine Ribeiro-Gerikas](http://orcid.org/0000-0003-0531-2313), Santiago, Chile
 * [Marcel Babin](http://www.takuvik.ulaval.ca/team/marcel_babin.php), Takuvik, Québec
 * [Hervé Moreau](http://biom.obs-banyuls.fr/fr/equipe-genophy/equipe/chercheurs_et_enseignats_chercheurs/herve_moreau.html), Banyuls, France
 * [Adriana Lopes dos Santos](https://www.researchgate.net/profile/Adriana_Lopes_Dos_Santos), Singapore
