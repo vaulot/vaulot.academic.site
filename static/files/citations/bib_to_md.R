@@ -42,11 +42,11 @@ bibtex_2academic <- function(bibfile,
       x[["date"]] <- "2999-01-01"
     }
 
-    filename <- paste(x[["date"]], x[["title"]] %>%
+    filename <- paste(x[["date"]], x[["bib_id"]] %>%
                         str_replace_all("[{}]", "") %>%
                         str_replace_all(fixed(" "), "_") %>%
                         str_remove_all(fixed(":")) %>%
-                        str_sub(1, 20) %>%
+                        str_sub(1, 6) %>%
                         paste0(".md"), sep = "_")
 
     # filename <- str_c(x[["date"]],"_",x[["bib_id"]],".md")
@@ -72,9 +72,9 @@ bibtex_2academic <- function(bibfile,
       # Publication details: journal, volume, issue, page numbers and doi link
       publication <- x[["journal"]]
       if (!is.null(x[["volume"]])) publication <- paste0(publication,", (", x[["volume"]], ")")
-      # if (!is.na(x[["number"]])) publication <- paste0(publication, ", ", x[["number"]])
-      # if (!is.na(x[["pages"]])) publication <- paste0(publication, ", _pp. ", x[["pages"]], "_")
-      # if (!is.na(x[["doi"]])) publication <- paste0(publication,", ", paste0("https://doi.org/",x[["doi"]]))
+      if (!is.null(x[["number"]])) publication <- paste0(publication, ", ", x[["number"]])
+      if (!is.null(x[["pages"]])) publication <- paste0(publication, ", _pp. ", x[["pages"]], "_")
+      if (!is.null(x[["doi"]])) publication <- paste0(publication,", ", paste0("https://doi.org/",x[["doi"]]))
 
       write(paste0("publication = \"", publication,"\""), fileConn, append = T)
       write(paste0("publication_short = \"", publication,"\""),fileConn, append = T)
@@ -124,10 +124,10 @@ bibtex_2academic <- function(bibfile,
 setwd("c:/daniel.vaulot@gmail.com/web site/vaulot.academic.site/")
 
 bibfile <- "static/files/citations/Chenard.bib"
-out_fold   <- "content/publication"
+outfold   <- "content/publication"
 
 bibtex_2academic(bibfile  = bibfile,
-                 outfold   = out_fold,
+                 outfold   = outfold,
                  abstract  = TRUE,
                  overwrite=TRUE)
 
