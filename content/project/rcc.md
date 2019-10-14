@@ -3,7 +3,7 @@
 date = 2016-04-27T00:00:00
 
 # Weight
-weight = 10
+weight = 7
 
 # Project title.
 title = "RCC"

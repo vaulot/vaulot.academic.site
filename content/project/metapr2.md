@@ -3,7 +3,7 @@
 date = 2016-04-27T00:00:00
 
 # Weight
-weight = 8
+weight = 9
 
 # Project title.
 title = "metaPR2"
@@ -12,7 +12,7 @@ title = "metaPR2"
 summary = "18S rRNA metabarcode database"
 
 # Optional image to display on homepage (relative to `static/img/` folder).
-image_preview = "metapr2_small.png"
+image_preview = "metapr2_logo.png"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
