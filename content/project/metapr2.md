@@ -3,16 +3,16 @@
 date = 2016-04-27T00:00:00
 
 # Weight
-weight = 7
+weight = 8
 
 # Project title.
-title = "PR2"
+title = "metaPR2"
 
 # Project summary to display on homepage.
-summary = "18S rRNA sequence database"
+summary = "18S rRNA metabarcode database"
 
 # Optional image to display on homepage (relative to `static/img/` folder).
-image_preview = "pr2_small.png"
+image_preview = "metapr2_small.png"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
@@ -25,3 +25,5 @@ external_link = "https://github.com/pr2database/pr2database"
 math = false
 
 +++
+
+This is a new project which aims at making publicly available a database of curated metabarcodes processed with dada2 and for which taxonomy is assigned with PR2. If you are interested please contact me.
