@@ -71,10 +71,11 @@ bibtex_2academic <- function(bibfile,
 
       # Publication details: journal, volume, issue, page numbers and doi link
       publication <- x[["journal"]]
+      print(publication)
       if (!is.null(x[["volume"]])) publication <- paste0(publication,", (", x[["volume"]], ")")
-      if (!is.null(x[["number"]])) publication <- paste0(publication, ", ", x[["number"]])
-      if (!is.null(x[["pages"]])) publication <- paste0(publication, ", _pp. ", x[["pages"]], "_")
-      if (!is.null(x[["doi"]])) publication <- paste0(publication,", ", paste0("https://doi.org/",x[["doi"]]))
+      # if (!is.null(x[["number"]])) publication <- paste0(publication, ", ", x[["number"]])
+      # if (!is.null(x[["pages"]])) publication <- paste0(publication, ", _pp. ", x[["pages"]], "_")
+      # if (!is.null(x[["doi"]])) publication <- paste0(publication,", ", paste0("https://doi.org/",x[["doi"]]))
 
       write(paste0("publication = \"", publication,"\""), fileConn, append = T)
       write(paste0("publication_short = \"", publication,"\""),fileConn, append = T)
@@ -117,16 +118,16 @@ bibtex_2academic <- function(bibfile,
   }
   # apply the "create_md" function over the publications list to generate
   # the different "md" files.
-
   apply(mypubs, FUN = function(x) create_md(x), MARGIN = 1)
+  return(mypubs)
 }
 
 setwd("c:/daniel.vaulot@gmail.com/web site/vaulot.academic.site/")
 
-bibfile <- "static/files/citations/Chenard.bib"
+bibfile <- "static/files/citations/2019_Massicote.bib"
 outfold   <- "content/publication"
 
-bibtex_2academic(bibfile  = bibfile,
+mypubs <- bibtex_2academic(bibfile  = bibfile,
                  outfold   = outfold,
                  abstract  = TRUE,
                  overwrite=TRUE)
