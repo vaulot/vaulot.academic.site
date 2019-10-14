@@ -12,7 +12,7 @@ title = "metaPR2"
 summary = "18S rRNA metabarcode database"
 
 # Optional image to display on homepage (relative to `static/img/` folder).
-image_preview = "metapr2_logo.png"
+image_preview = "metapr2_logo_small.png"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
