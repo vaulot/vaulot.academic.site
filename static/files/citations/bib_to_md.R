@@ -56,11 +56,13 @@ bibtex_2academic <- function(bibfile,
       write("+++", fileConn)
 
       # Title and date
-      write(paste0("title = \"", x[["title"]], "\""), fileConn, append = T)
+      title_hugo <-  str_replace_all(x[["title"]], "[{}]", "")
+      write(paste0("title = \"",title_hugo, "\""), fileConn, append = T)
       write(paste0("date = \"", anydate(x[["date"]]), "\""), fileConn, append = T)
 
       # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
       auth_hugo <- str_replace_all(x["author"], " and ", "\", \"")
+      auth_hugo <- str_replace_all(auth_hugo, "[{}]", "")
       auth_hugo <- stringi::stri_trans_general(auth_hugo, "latin-ascii")
       write(paste0("authors = [\"", auth_hugo,"\"]"), fileConn, append = T)
 
@@ -74,8 +76,8 @@ bibtex_2academic <- function(bibfile,
       print(publication)
       if (!is.null(x[["volume"]])) publication <- paste0(publication,", (", x[["volume"]], ")")
       # if (!is.null(x[["number"]])) publication <- paste0(publication, ", ", x[["number"]])
-      # if (!is.null(x[["pages"]])) publication <- paste0(publication, ", _pp. ", x[["pages"]], "_")
-      # if (!is.null(x[["doi"]])) publication <- paste0(publication,", ", paste0("https://doi.org/",x[["doi"]]))
+      if (!is.null(x[["pages"]])) publication <- paste0(publication, ", _pp. ", x[["pages"]], "_")
+      if (!is.null(x[["doi"]])) publication <- paste0(publication,", ", paste0("https://doi.org/",x[["doi"]]))
 
       write(paste0("publication = \"", publication,"\""), fileConn, append = T)
       write(paste0("publication_short = \"", publication,"\""),fileConn, append = T)
