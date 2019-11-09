@@ -17,30 +17,30 @@ weight = 40
 
 ## Post docs
 
-* 2018 [Margot Tragin](http://www.sb-roscoff.fr/en/tragin-margot/706)
-* 2016-2019 [Catherine Ribeiro-Gerikas](http://www.sb-roscoff.fr/fr/gerikas-ribeiro-catherine/1909)
+* 2018 [Margot Tragin](https://www.linkedin.com/in/margot-tragin-5a630aa4)
+* 2016-2019 [Catherine Ribeiro-Gerikas](https://www.researchgate.net/profile/Catherine_Ribeiro)
 * 2016-2019 [Valeria Jimenez](http://www.sb-roscoff.fr/en/jimenez-valeria/1910)
 * 2012-2017 [Adriana Lopes dos Santos](https://www.researchgate.net/profile/Adriana_Lopes_Dos_Santos)
-* 2009-2012 Sergio Balzano
+* 2009-2012 [Sergio Balzano](https://www.researchgate.net/profile/Sergio_Balzano)
 * 2008-2009 Shuhei Ota
-* 2008-2009 Cécile Lepère
-* 2006-2008 Xiaoli Shi
-* 2006-2008 Fabien Jouenne
-* 2005 Aude Houdan (co-direction with N. Simon)
+* 2008-2009 [Cécile Lepère](http://www.lmge.univ-bpclermont.fr/spip.php?article464)
+* 2006-2008 [Xiaoli Shi](https://www.researchgate.net/profile/Xiaoli_Shi3)
+* 2006-2008 [Fabien Jouenne](http://www.scrol.fr/fr)
+* 2005 [Aude Houdan](https://www.linkedin.com/in/aude-houdan-fourmont-7409b94) (co-direction with N. Simon)
 * 2002-2004 Francisco Rodriguez (co-direction with L. Guillou)
 * 2002-2003 Fei Zhu
 * 2002-2003 Agnès Groisillier
-* 2000-2002 Khadidja Romari, Université de Montpellier
-* 1997-1999 Michael Rappé, Oregon State University
+* 2000-2002 [Khadidja Romari](https://www.linkedin.com/in/khadidja-romari-phd-mba-4055713/)
+* 1997-1999 [Michael Rappé][https://rappelab.wordpress.com]
 * 1996-1997 Seung-Yeo Moon, University of Seoul
-* 1991 Raffella Casotti, visiting researcher
+* 1991 Raffaella Casotti, visiting researcher
 * 1987 Ning Xiu Ren, visiting scientist from China.
 
 
 ## PhD Students
 
-* 2014-2017 [Margot Tragin](https://tel.archives-ouvertes.fr/tel-01720494), Université de Pierre et Marie Curie (Paris-06), PhD - now Post-doc, Observatoire Océanologique de Banyuls
-* 2014-2015 Catherine Ribeiro-Gerikas, Universidade de São Paulo, PhD co-supervision - now Post-doc, Station Biologique de Roscoff
+* 2014-2017 [Margot Tragin](https://tel.archives-ouvertes.fr/tel-01720494), Université de Pierre et Marie Curie (Paris-06), PhD - now Post-doc, IFREMER
+* 2014-2015 Catherine Ribeiro-Gerikas, Universidade de São Paulo, PhD co-supervision - now Post-doc, U. Mayor, Santiago, Chile
 * 2005-2009 [Sylvie Masquelier](https://hal.sorbonne-universite.fr/tel-01111020/document), Université de Paris 6 PhD - now [R&D director, InoculumPlus](https://inoculumplus.eu/qui-sommes-nous/)
 * 2004-2007 [Manon Viprey](https://www.theses.fr/2008PA066098), Université de Paris 6 PhD - now Primary School Teacher
 * 2000-2004 [Fabrice Not](https://hal.sorbonne-universite.fr/tel-01111001/document), Université de Paris 6 PhD (co-direction with N. Simon) - now [Directeur de Recherche (Senior Scientist), CNRS](http://www.sb-roscoff.fr/fr/not-fabrice/192)
