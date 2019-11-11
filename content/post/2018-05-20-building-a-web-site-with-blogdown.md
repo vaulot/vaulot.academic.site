@@ -13,7 +13,9 @@ summary: "Notes to create Blogdown website."
 ---
 
 ### Create the web site
-* Use Academic template : https://sourcethemes.com/academic/
+* Use Academic template:
+  * https://sourcethemes.com/academic/
+  * https://themes.gohugo.io/theme/academic/post/getting-started/
 
 * Use Netlifly : https://app.netlify.com/sites/vaulot/overview
 
