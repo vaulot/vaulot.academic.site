@@ -26,6 +26,7 @@ summary: "Notes to create Blogdown website."
   ![](/img/hugo_create_project.png)
   * `library(blogdown)`
   * `blogdown::install_hugo(force = TRUE)`
+
 ```console
 The latest Hugo version is 0.59.1
 trying URL 'https://github.com/gohugoio/hugo/releases/download/v0.59.1/hugo_extended_0.59.1_Windows-64bit.zip'
@@ -33,7 +34,9 @@ trying URL 'https://github.com/gohugoio/hugo/releases/download/v0.59.1/hugo_exte
 downloaded 28.3 MB
 Hugo has been installed to C:\Users\vaulot\AppData\Roaming\Hugo
 ```
+
   * `blogdown::serve_site()`
+
   ```console
   Rendering content/post/2015-07-23-r-rmarkdown.Rmd
   Building sites â€¦
@@ -52,6 +55,7 @@ Hugo has been installed to C:\Users\vaulot\AppData\Roaming\Hugo
   To stop the server, run servr::daemon_stop(1) or restart your R session
   Serving the directory C:\daniel.vaulot@gmail.com\Databases\_PR2\pr2_website at http://127.0.0.1:4321
   ```
+
   * Drag and drop into Netifly new project
     ![](/img/hugo_deploy_simple.png)
   * Change the name
