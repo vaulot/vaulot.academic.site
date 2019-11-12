@@ -12,12 +12,55 @@ tags: ["R"]
 summary: "Notes to create Blogdown website."
 ---
 
-### Create the web site
-* Use Academic template:
+### Academic template
+* Follow Quintana blog
+  * https://www.dsquintana.blog/free-website-in-r-easy/
+* Academic template help
   * https://sourcethemes.com/academic/
   * https://themes.gohugo.io/theme/academic/post/getting-started/
 
-* Use Netlifly : https://app.netlify.com/sites/vaulot/overview
+### Steps:
+* Open R studio
+  * `install.packages("blogdown")`
+  * Create a new project following
+  ![](/img/hugo_create_project.png)
+  * `library(blogdown)`
+  * `blogdown::install_hugo(force = TRUE)`
+```console
+The latest Hugo version is 0.59.1
+trying URL 'https://github.com/gohugoio/hugo/releases/download/v0.59.1/hugo_extended_0.59.1_Windows-64bit.zip'
+ length 29627443 bytes (28.3 MB)
+downloaded 28.3 MB
+Hugo has been installed to C:\Users\vaulot\AppData\Roaming\Hugo
+```
+  * `blogdown::serve_site()`
+  ```console
+  Rendering content/post/2015-07-23-r-rmarkdown.Rmd
+  Building sites â€¦
+                     | EN  
+  +------------------+----+
+    Pages            | 85  
+    Paginator pages  |  0  
+    Non-page files   | 21  
+    Static files     |  9  
+    Processed images | 31  
+    Aliases          | 18  
+    Sitemaps         |  1  
+    Cleaned          |  0  
+
+  Total in 15387 ms
+  To stop the server, run servr::daemon_stop(1) or restart your R session
+  Serving the directory C:\daniel.vaulot@gmail.com\Databases\_PR2\pr2_website at http://127.0.0.1:4321
+  ```
+  * Drag and drop into Netifly new project
+    ![](/img/hugo_deploy_simple.png)
+  * Change the name
+    ![](/img/hugo_change_name.png)
+DONE
+
+### Netifly
+  * https://app.netlify.com/sites/vaulot/overview
+  * https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/
 
 * Purchase domain name with GoDaddy and set up DNS on goDaddy side - works fine
 
