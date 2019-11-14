@@ -60,11 +60,19 @@ Hugo has been installed to C:\Users\vaulot\AppData\Roaming\Hugo
     ![](/img/hugo_deploy_simple.png)
   * Change the name
     ![](/img/hugo_change_name.png)
-DONE
+
+  * On the long run better to link to GitHub
+  1. Link to GitHUb from netifly
+  2. If error this can be due to HUGO version that can be changed in the site settings
+  ![](/img/hugo_version.png)
+  ![](/img/hugo_add_name_server_goddy.png)
+  ![](/img/hugo_add_name_server_netifly.png)
+  ![](/img/hugo_add_name_server_netifly_success.png)  
 
 ### Netifly
   * https://app.netlify.com/sites/vaulot/overview
   * https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/
+  * https://docs.netlify.com/domains-https/custom-domains/#assign-a-domain-to-a-site
 
 * Purchase domain name with GoDaddy and set up DNS on goDaddy side - works fine
 
