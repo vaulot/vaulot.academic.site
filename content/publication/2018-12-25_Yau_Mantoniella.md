@@ -20,6 +20,9 @@ url_slides = ""
 url_video = ""
 url_poster = ""
 url_source = "https://onlinelibrary.wiley.com/doi/abs/10.1111/jpy.12932"
+[[url_custom]]
+    name = "Supplementary material"
+    url = "files/papers/Yau_2019_Supp.pdf"
 math = true
 highlight = true
 [header]
