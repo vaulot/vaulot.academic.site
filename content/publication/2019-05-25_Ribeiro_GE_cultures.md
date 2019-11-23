@@ -1,6 +1,6 @@
 +++
 title = "Culturable diversity of Arctic phytoplankton during pack ice melting"
-date = "2019-05-25"
+date = "2019-11-15"
 authors = ["Catherine Gérikas Ribeiro", "Adriana Lopes dos Santos", "Dominique Marie", "Florence Le Gall", "Ian Probert", "Margot Tragin", "Priscillia Gourvil", "Daniel Vaulot"]
 publication_types = ["2"]
 publication = "Elementa: Science of the Anthropocene (**in press**)"
