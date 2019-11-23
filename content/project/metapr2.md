@@ -30,10 +30,26 @@ caption = "Current coverage of metapr2"
 
 +++
 
-This is a new project which aims at making publicly available a database of curated metabarcodes processed with [dada2](https://benjjneb.github.io/dada2/tutorial.html) and for which taxonomy is assigned with [PR2](https://github.com/pr2database/pr2database). If you are interested please contact me.  The currently processed database includes:
+This is a new project which aims at making publicly available a database of curated metabarcodes processed with [dada2](https://benjjneb.github.io/dada2/tutorial.html) and for which taxonomy is assigned with [PR2](https://github.com/pr2database/pr2database).
+
+The currently processed public data sets include:
+
 * OSD 2014 V4 LGC
 * OSD 2014 V4 LW
 * OSD 2015 V4
 * Arctic - Beaufort Sea - MALINA cruise - Monier 2014
 * Baltic Sea 2012-2013
 * Oslo fjord 2009-2011
+
+Other non-public data sets include:
+
+* Cruises
+  * Arctic - Green Edge project 2015-2016 in Baffin Bay (Ice Camp and Amundsen Cruise)
+  * Antarctic - Fieldes Bay
+  * North West Pacific (data from Korea)
+  * Brazil coastal lagoons
+* Time series
+  * Roscoff (2009-2016)
+  * Penzé estuary (2004-2012)
+
+If you are interested please [contact me](mailto:vaulot@gmail.com).

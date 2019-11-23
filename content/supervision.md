@@ -17,15 +17,15 @@ weight = 40
 
 ## Post docs
 
-* 2018 [Margot Tragin](https://www.linkedin.com/in/margot-tragin-5a630aa4)
-* 2016-2019 [Catherine Ribeiro-Gerikas](https://www.researchgate.net/profile/Catherine_Ribeiro)
-* 2016-2019 [Valeria Jimenez](http://www.sb-roscoff.fr/en/jimenez-valeria/1910)
-* 2012-2017 [Adriana Lopes dos Santos](https://www.researchgate.net/profile/Adriana_Lopes_Dos_Santos)
-* 2009-2012 [Sergio Balzano](https://www.researchgate.net/profile/Sergio_Balzano)
+* 2018 [Margot Tragin](https://www.linkedin.com/in/margot-tragin-5a630aa4) - now post-doc at IFREMER
+* 2016-2019 [Catherine Ribeiro-Gerikas](https://www.researchgate.net/profile/Catherine_Ribeiro) - now post-doc at U. Mayor (Santiago, Chile)
+* 2016-2019 [Valeria Jimenez](http://www.sb-roscoff.fr/en/jimenez-valeria/1910) - now post-doc in Roscoff
+* 2012-2017 [Adriana Lopes dos Santos](https://www.researchgate.net/profile/Adriana_Lopes_Dos_Santos) - now Assistant Professor at Nanyang Technological University in Singapore
+* 2009-2012 [Sergio Balzano](https://www.researchgate.net/profile/Sergio_Balzano) - now Researcher at Stazione Zoologica in Naples
 * 2008-2009 Shuhei Ota
-* 2008-2009 [Cécile Lepère](http://www.lmge.univ-bpclermont.fr/spip.php?article464)
-* 2006-2008 [Xiaoli Shi](https://www.researchgate.net/profile/Xiaoli_Shi3)
-* 2006-2008 [Fabien Jouenne](http://www.scrol.fr/fr)
+* 2008-2009 [Cécile Lepère](http://www.lmge.univ-bpclermont.fr/spip.php?article464) - now Professor at the Université of Clermont Ferrand (France)
+* 2006-2008 [Xiaoli Shi](https://www.researchgate.net/profile/Xiaoli_Shi3) - now Researcher at Chinese Academy of Science in Nanjing.
+* 2006-2008 [Fabien Jouenne](http://www.scrol.fr/fr) - now at SCROL (web development)
 * 2005 [Aude Houdan](https://www.linkedin.com/in/aude-houdan-fourmont-7409b94) (co-direction with N. Simon)
 * 2002-2004 Francisco Rodriguez (co-direction with L. Guillou)
 * 2002-2003 Fei Zhu
