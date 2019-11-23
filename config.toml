@@ -58,20 +58,23 @@ enableGitInfo = false
 
   # Your details.
   name = "Daniel Vaulot"
-  role = "Directeur de Recherche (CNRS) - Visiting Professor (NTU)"
+  role = "Visiting Professor (NTU) - Directeur de Recherche emeritus (CNRS)"
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
-  organizations = [ { name = "Station Biologique de Roscoff", url = "http://www.sb-roscoff.fr/en/team-ecomap" },
-  { name = "CNRS", url = "http://www.cnrs.fr" }, { name = "Sorbonne Université", url = "http://www.sorbonne-universite.fr/" },
-  { name = "Nanyang Technological University, Singapore", url = "https://www.ase.ntu.edu.sg/" } ]
+  organizations = [ { name = "Nanyang Technological University, Singapore", url = "https://www.ase.ntu.edu.sg/" },
+  { name = "Station Biologique de Roscoff", url = "http://www.sb-roscoff.fr/en/team-ecomap" },
+  { name = "CNRS", url = "http://www.cnrs.fr" },
+  { name = "Sorbonne Université", url = "http://www.sorbonne-universite.fr/" }
+  ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "daniel_antarctica_2015_square.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
-  email = "vaulot@sb-roscoff.fr"
+  email = "vaulot@gmail.com"
   address = "Station Biologique de Roscoff, FRANCE"
-  phone = "+33 6 75 54 20 41"
-  skype = "danielguip"
+#  phone = "+33 6 75 54 20 41"
+  phone = "+65 9149 9049"
+#  skype = "danielguip"
 
   # Enable Keybase in Contact widget by entering your keybase.io username.
   keybase = ""

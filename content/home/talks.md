@@ -11,7 +11,7 @@ subtitle = "Slides available on Speaker Desk"
 weight = 25
 
 # Number of talks to list.
-count = 10
+count = 4
 
 # List format.
 #   0 = Simple
