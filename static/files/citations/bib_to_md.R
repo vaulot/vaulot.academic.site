@@ -76,7 +76,7 @@ bibtex_2academic <- function(bibfile,
       print(publication)
       if (!is.null(x[["volume"]])) publication <- paste0(publication,", (", x[["volume"]], ")")
       # if (!is.null(x[["number"]])) publication <- paste0(publication, ", ", x[["number"]])
-      if (!is.null(x[["pages"]])) publication <- paste0(publication, ", _pp. ", x[["pages"]], "_")
+      # if (!is.null(x[["pages"]])) publication <- paste0(publication, ", _pp. ", x[["pages"]], "_")
       if (!is.null(x[["doi"]])) publication <- paste0(publication,", ", paste0("https://doi.org/",x[["doi"]]))
 
       write(paste0("publication = \"", publication,"\""), fileConn, append = T)
@@ -126,7 +126,7 @@ bibtex_2academic <- function(bibfile,
 
 setwd("c:/daniel.vaulot@gmail.com/web site/vaulot.academic.site/")
 
-bibfile <- "static/files/citations/2019_Massicote.bib"
+bibfile <- "static/files/citations/saint-beat.bib"
 outfold   <- "content/publication"
 
 mypubs <- bibtex_2academic(bibfile  = bibfile,
