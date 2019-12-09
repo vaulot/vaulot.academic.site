@@ -1,8 +1,6 @@
 +++
-date = 2018-12-10T00:00:00  # Schedule page publish date.
-time_start = 2018-12-10T00:00:00
-time_end = 2018-12-10T00:00:00
-title = "The Roscoff Culture Collection - Annual report 2018"
+date = 2019-12-05T00:00:00  # Schedule page publish date.
+title = "The Roscoff Culture Collection - Annual report 2019"
 abstract = ""
 abstract_short = ""
 event = "RCC User meeting"
@@ -19,7 +17,7 @@ projects = ["rcc"]
 
 # Links (optional).
 url_pdf = ""
-url_slides = ""
+url_slides = "https://speakerdeck.com/vaulot/roscoff-culture-collection-user-committee-2019"
 url_video = ""
 url_code = ""
 
