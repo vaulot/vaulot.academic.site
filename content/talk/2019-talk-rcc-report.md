@@ -1,5 +1,7 @@
 +++
-date = 2019-12-05T00:00:00  # Schedule page publish date.
+date = 2019-12-05  # Schedule page publish date.
+time_start = 2019-12-05T00:00:00
+time_end = 2019-12-05T00:00:00
 title = "The Roscoff Culture Collection - Annual report 2019"
 abstract = ""
 abstract_short = ""
