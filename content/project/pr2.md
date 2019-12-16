@@ -19,7 +19,7 @@ image_preview = "pr2_small.png"
 tags = ["database", "current_projects", "18S rRNA", "metabarcoding"]
 
 # Optional external URL for project (replaces project detail page).
-external_link = "https://github.com/pr2database/pr2database"
+external_link = "https://pr2-database.org/"
 
 # Does the project detail page use math formatting?
 math = false
