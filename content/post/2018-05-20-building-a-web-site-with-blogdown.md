@@ -121,10 +121,9 @@ With the new Academic template version, one can had internal links but it is a b
 ```console
 * [The team]({{< ref "home#team.md" >}})
 * [EukRef annotation pipeline and workshops]({{< ref "eukref/about.md" >}})
-```
-
 
 Please get back to [us]({{< ref "home#contact.md" >}}) for any problem you may find on the web site.
+```
 
 ### Bibliography imported from Mendeley
 
