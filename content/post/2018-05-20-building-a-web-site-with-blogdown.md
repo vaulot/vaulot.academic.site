@@ -120,7 +120,9 @@ video {
  ```
 
 ### Internal links
-With the new Academic template version, one can had internal links but it is a bit a pain to figure out.  Here are examples for the home directory (ref "home#team.md" ) and another directory (ref "eukref/about.md" ) which must enclosed by double braces and `<`
+With the new Academic template version, one can had internal links but it is a bit a pain to figure out.  
+
+Here are examples for the home directory (`ref "home#team.md" `) and another directory (`ref "eukref/about.md"` ) which must enclosed by double braces (`{`) and `<`
 
 
 ### Bibliography imported from Mendeley
