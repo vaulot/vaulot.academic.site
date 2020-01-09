@@ -114,7 +114,7 @@ video {
 ```
 
  * Add at top of blog entry (change web-site to whatever)
- 
+
  ```console
  slug: "web-site"
  ```
@@ -122,7 +122,7 @@ video {
 ### Internal links
 With the new Academic template version, one can had internal links but it is a bit a pain to figure out.  Here are examples for the home directory and another directory
 
-```console
+```
 * [The team]({{< ref "home#team.md" >}})
 * [EukRef annotation pipeline and workshops]({{< ref "eukref/about.md" >}})
 
