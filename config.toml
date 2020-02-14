@@ -293,15 +293,21 @@ enableGitInfo = false
 
 [[menu.main]]
   parent = "Publications"
-  name = "Papers"
+  name = "Papers recent"
   url = "#publications_selected"
   weight = 1
 
 [[menu.main]]
   parent = "Publications"
+  name = "Papers all"
+  url = "#publications"
+  weight = 5
+
+[[menu.main]]
+  parent = "Publications"
   name = "Talks"
   url = "#talks"
-  weight = 2
+  weight = 10
 
 
 [[menu.main]]

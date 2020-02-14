@@ -36,4 +36,4 @@ publication_type = "2"
 exclude_selected = true
 +++
 
-Pdf files are available on [Research Gate](https://www.researchgate.net/profile/Daniel_Vaulot)
+Pdf files not found here are available on [Research Gate](https://www.researchgate.net/profile/Daniel_Vaulot)
