@@ -6,16 +6,21 @@ lastmod: 2020-01-01
 
 draft: false
 categories: ["courses"]
-tags: ["R", "time series", phytoplankton]
+tags: ["R", "time series", "phytoplankton"]
 
-summary: "Intro to R and scales in marine systems"
+summary: ""
 ---
 
-__Title__: Experimental Design and Analysis
+__Course__: Experimental Design and Analysis
+
 __Code__: ES3307
+
 __Main instructor__: Eleanor Slade
+
 __Academic Year__: 2019-2020 - Second semester
-__Instituttion__: Nanyang Technological University, Singapore
+
+__Institution__: Nanyang Technological University, Singapore
+
 __School__: Asian School of the Environment
 
 
