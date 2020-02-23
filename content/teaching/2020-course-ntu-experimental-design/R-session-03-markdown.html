@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Experimental design</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Daniel Vaulot" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="metropolis-dv.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+layout: true
+background-image: url(img//R-logo.png)
+background-position: middle center 
+background-size: 25%
+
+# Experimental Design and Analysis
+
+
+
+
+---
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+## R session 03 - R markdown
+
+.font120[**Daniel Vaulot**]
+
+2020-01-19
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+.pull-left[
+&lt;img src="img/NTU-Logo-full-colour.png" width="50%" style="display: block; margin: auto auto auto 0;" /&gt;
+]
+
+.pull-right[
+&lt;img src="img/logo_SBR.png" width="50%" style="display: block; margin: auto 0 auto auto;" /&gt;
+]
+
+---
+
+class: middle
+
+## Outline
+
+
+.font150[
+* What is Markown ?
+* R markdown
+]
+
+---
+layout: true
+
+# Installation and Resources
+
+.pull-left[
+## Packages
+
+* rmarkdown (will install also knitr)
+* tinytex (Latex)
+    
+
+## Resources
+* On-line Book: https://bookdown.org/yihui/rmarkdown
+
+* Cheat sheet: https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf
+]
+
+.pull-right[
+
+&lt;img src="img/R-markdown-book.png" width="65%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+layout: false
+background: url(img/logo-markdown.png)
+
+# What is markdown ?
+
+.center[
+&lt;img src="img/markdown-John_Gruber.jpg" width="20%" /&gt;&lt;img src="img/markdown-Aaron_Swartz.jpg" width="20%" /&gt;
+]
+
+* Created in 2004 by [John Gruber](https://en.wikipedia.org/wiki/John_Gruber) and [Aaron Swartz](https://en.wikipedia.org/wiki/Aaron_Swartz)
+
+* Goal : "to write using an easy-to-read and easy-to-write plain text format, optionally convert it to structurally valid HTML".
+
+--
+
+## Many flavors...
+
+* MultiMarkdown
+* GitHub Flavored Markdown (GFM)
+* Pandoc
+* CommonMark
+
+---
+
+# Rmarkdown
+
+&lt;img src="img/package-rmarkdown-flow.png" width="70%" /&gt;
+
+## Mix
+
+* Markdown
+    - paragraph structure
+    - comments
+    - links
+
+* R code ("chunks")
+
+* Output of R code
+
+---
+
+layout: true
+
+# Your first Rmarkdown file
+
+---
+.student[Who has not been able to install Rmarkdown and Latex ?]
+
+--
+
+&lt;img src="img/package-rmarkdown-new-01.png" width="40%" /&gt;&lt;img src="img/package-rmarkdown-new-02.png" width="40%" /&gt;
+
+---
+
+![](img/R-markdown_new.gif)
+
+---
+
+## Knit to HTML
+
+&lt;img src="img/package-rmarkdown-knit.png" width="80%" /&gt;
+
+.warning[Save to "xxx.Rmd"]
+
+---
+
+&lt;img src="img/package-rmarkdown-HTML.png" width="100%" /&gt;
+
+---
+
+## Knit of pdf
+
+&lt;img src="img/package-rmarkdown-knit-pdf.png" width="40%" /&gt;
+
+---
+&lt;img src="img/package-rmarkdown-pdf-output.png" width="100%" /&gt;
+
+
+
+---
+layout: true
+# Markdown syntax
+
+---
+
+* Quick guide: https://www.markdownguide.org/basic-syntax/
+
+## Headings
+
+
+```r
+# Heading - level 1
+
+## Heading - level 2
+```
+--
+ 
+## Heading - level 1
+ 
+### Heading - level 2
+
+---
+
+## Paragraphs
+
+
+```r
+Paragraphs are separated
+by a blank line.
+
+Two spaces at the end of a line  
+produces a line break.
+```
+--
+
+Paragraphs are separated
+by a blank line.
+
+Two spaces at the end of a line  
+produces a line break.
+
+---
+
+## Formatting
+
+
+```r
+_italic_, *italic*, **bold**, `monospace`.
+```
+
+--
+
+_italic_, *italic*, **bold**, `monospace`.
+
+.warning[Do not mix straight and backward quotes]
+
+---
+
+## Bullet lists
+  
+
+```r
+Bullet list:
+
+  * apples
+  * oranges
+  * pears
+      * passe crassane (4 spaces to indent)
+```
+
+--
+
+* apples
+* oranges
+* pears
+    * passe crassane
+
+---
+
+## Numbered lists
+
+
+```r
+Numbered list:
+
+1. wash
+1. rinse
+1. repeat
+```
+--
+
+1. wash
+1. rinse
+1. repeat
+
+---
+
+## Hyperlinks
+    
+
+```r
+  [Text of the link](URL of the link)
+
+# Example
+  [Markdown syntax](https://www.markdownguide.org/basic-syntax/)
+```
+
+--
+
+  [Markdown syntax](https://www.markdownguide.org/basic-syntax/)
+
+---
+
+## Images
+
+
+```r
+  ![Image name](URL of the link - can also be a local file on your computer)
+
+# Example
+  ![](https://i.pinimg.com/originals/1c/b7/24/1cb724b545de717ed0430e9d46e78eea.jpg)
+```
+
+--
+
+ ![](https://i.pinimg.com/originals/1c/b7/24/1cb724b545de717ed0430e9d46e78eea.jpg)
+
+---
+
+## Tables
+
+
+```r
+ID | First | Last
+--- | --- | ---
+1 | Donald | Trump
+```
+
+--
+
+ID | First | Last
+--- | --- | ---
+1 | Donald | Trump
+
+
+
+---
+
+layout: false
+
+# Rmarkdown conversion
+
+&lt;img src="img/R-markdown-flow.png" width="70%" style="display: block; margin: auto;" /&gt;
+
+--
+
+
+.pull-left[
+* [knitr](https://yihui.name/knitr/) : R library
+
+* [Pandoc](https://pandoc.org/) : command line tool
+
+    * Converts from **md** to **pdf**, **html**, **docx**...
+
+
+```r
+# HTML
+&gt; pandoc test1.md -f markdown -t html -s -o test1.html
+
+# pdf
+&gt; pandoc test1.md -s -o test1.pdf
+```
+]
+
+.pull-right[
+
+
+&lt;img src="img/package-knitr-logo.png" width="30%" style="display: block; margin: auto;" /&gt;
+
+&lt;img src="img/pandoc.png" width="100%" style="display: block; margin: auto auto auto 0;" /&gt;
+]
+---
+
+layout: true
+
+# The Rmarkdown file
+
+---
+
+## File structure
+
+&lt;img src="img/package-rmarkdown-structure.png" width="80%" /&gt;
+
+---
+
+## Knit process
+
+&lt;img src="img/package-rmarkdown-md-window.png" width="80%" /&gt;
+
+
+---
+
+## Output
+
+&lt;img src="img/package-rmarkdown-output.png" width="80%" /&gt;
+
+---
+
+layout: true
+
+# Chunks
+
+---
+
+## Insert chunk
+
+&lt;img src="img/package-rmarkdown-chunk-01.png" width="80%" /&gt;
+
+---
+
+## Options
+
+&lt;img src="img/package-rmarkdown-chunk-options.png" width="80%" /&gt;
+
+---
+
+## Run chunk
+
+* Two options
+
+&lt;img src="img/package-rmarkdown-chunk-write.png" width="80%" /&gt;
+
+---
+
+## Run chunk inside Rmd file
+
+&lt;img src="img/package-rmarkdown-chunk-run.png" width="80%" /&gt;
+
+---
+
+## Knit chunk to HTML
+
+&lt;img src="img/package-rmarkdown-chunk-run-knit.png" width="50%" /&gt;
+
+---
+exclude: true
+
+## Useful options
+
+&lt;br&gt;
+
+Options | Default value | Aim
+--- | --- | ---
+echo | TRUE | Print code (= FALSE in a report for example)
+eval | TRUE | Evaluate code (= FALSE if want to show code only)
+warning  | TRUE | Warning message (= FALSE to remove long warnings)
+message  | TRUE | Messages (= FALSE to remove long messages)
+cache   | FALSE | If TRUE only modified chunks will be evaluated
+   |  |  very useful for computing heavy codes
+fig.height  |  |  inches
+fig.width  |  |  inches
+
+---
+exclude: true
+
+## Set defaults options
+
+* Insert in a R chunk at the beginning of your Rmarkdownn file
+
+
+```r
+knitr::opts_chunk$set(fig.width = 6, fig.height = 6, eval = TRUE, cache = TRUE, echo = TRUE, 
+    )
+```
+
+
+---
+exclude: false
+
+layout: true
+
+# What can you do with Rmarkdown ?
+
+---
+exclude: false
+## Presentation
+
+.left-column[
+&lt;img src="img/package-xaringan-logo.png" width="45%" /&gt;
+
+]
+
+.right-column[
+
+https://github.com/yihui/xaringan
+ 
+&lt;img src="img/package-xaringan-example.png" width="60%" /&gt;
+]
+
+
+---
+exclude: true
+## Posters
+
+.left-column[
+&lt;img src="img/package-posterdown-logo.png" width="45%" /&gt;
+
+]
+
+.right-column[
+
+https://github.com/brentthorne/posterdown
+ 
+&lt;img src="img/package-posterdown-example.png" width="80%" /&gt;
+]
+
+---
+exclude: true
+## Curriculum vitae
+
+.left-column[
+&lt;img src="img/package-vitae-logo.png" width="45%" /&gt;
+
+]
+
+.right-column[
+
+https://cloud.r-project.org/web/packages/vitae/index.html
+ 
+&lt;img src="img/package-vitae-example-02.png" width="70%" /&gt;
+]
+---
+background-image: url(img//web-site-dv.png), url(img//web-site-pr2.png)
+background-position: top 200px right 600px, top 200px right 100px  
+background-size: 40%, 40%
+exclude: false
+
+## Website
+
+.left-column[
+&lt;img src="img/package-blogdown-logo.png" width="45%" /&gt;
+
+]
+
+.right-column[
+
+https://bookdown.org/yihui/blogdown/
+ 
+]
+
+---
+layout: false
+
+# What did you learn ?
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+.font150[
+- Rmarkdown: mix text, R chunk, R output
+]
+--
+.font150[
+- Compile to HTML or to PDF
+]
+
+--
+.font150[
+- Can be used for many different purposes
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="libs/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "tomorrow-night-blue",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

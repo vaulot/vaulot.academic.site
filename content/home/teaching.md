@@ -27,8 +27,8 @@ weight = 30
 * 2013 - Co-organizer of the UPMC Daniel-Jouvance School in Marine-Biology - Arraial do Cabo, Brasil -  March 2013
 
 ## Courses taught
-* 2020 Introduction to R / Scales in Marine Ecoystems - ES7023 & ES0002: Experimental Design and Analysis, coordinated by E. Slade, ASE, Nanyang Technological University, Singapore
-* 2019-2020 [Introduction to R / Data wrangling and plotting with R](https://github.com/vaulot/R-course-NTU-2019) - ES7023 & ES0002: Fundamentals of Data Science for Earth and Environmental Systems Science , coordinated by D. Lallemant, ASE, Nanyang Technological University, Singapore
+* 2020 [Introduction to R / Scales in Marine Ecoystems](./teaching/2020-experimental-design) - ES7023 & ES0002: Experimental Design and Analysis, coordinated by E. Slade, ASE, Nanyang Technological University, Singapore
+* 2019-2020 [Introduction to R / Data wrangling, plotting and mapping with R](https://github.com/vaulot/R-course-NTU-2019) - ES7023 & ES0002: Fundamentals of Data Science for Earth and Environmental Systems Science , coordinated by D. Lallemant, ASE, Nanyang Technological University, Singapore
 * 2018  Using phyloseq for metabarcode data analysis, Formation metabarcoding, Roscoff
 * 2019-2020 [R course](https://github.com/vaulot/R-course-NTU-2019) - ES7023 & ES0002: Fundamentals of Data Science for Earth and Environmental Systems Science ASE, coordinated by D. Lallemant, Nanyang Technological University, Singapore
 * 2018  Using phyloseq for metabarcode data analysis, Formation metabarcoding, Roscoff
