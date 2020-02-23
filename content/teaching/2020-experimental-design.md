@@ -1,6 +1,5 @@
 ---
 title: "ES3307, supervised by Eleanor Slade - Experimental Design and Analysis"
-slug: "2020-ES3307"
 
 date: 2020-01-01
 lastmod: 2020-01-01
@@ -9,7 +8,7 @@ draft: false
 categories: ["courses"]
 tags: ["R", "time series", phytoplankton]
 
-summary: "Intro R and scales in marine systems"
+summary: "Intro to R and scales in marine systems"
 ---
 
 
