@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fundamental of Data Science for EESS</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Daniel Vaulot" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="metropolis-dv.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+layout: true
+background-image: url(img/course-logo.png)
+background-position: right top 30px 
+background-size: 45%
+
+# Fundamental of Data Science for EESS
+
+---
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+## R session 06 - Git
+
+.font120[**Daniel Vaulot**]
+
+2019-03-15
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+.pull-left[
+&lt;img src="img/NTU-Logo-full-colour.png" width="50%" style="display: block; margin: auto auto auto 0;" /&gt;
+]
+
+.pull-right[
+&lt;img src="img/logo_SBR.png" width="50%" style="display: block; margin: auto 0 auto auto;" /&gt;
+]
+
+---
+layout: false
+class: middle, inverse
+
+# Outline
+
+
+.font150[
+* Git
+* Commit and uncommit
+* Branching and merging
+* GitHub
+]
+
+---
+layout: true
+
+# Intro to Git
+
+---
+
+background-image: url(img/Linus_Torvalds.jpg),url(img/git-logo.png) 
+background-position: right 10px top 10px, right 50px top 300px 
+background-size: 15%,10%
+
+## What is Git
+
+* VCS: Version control system
+* Created by Linus Torvald in 2005
+
+--
+
+## What is Git useful for
+
+### Keep traces of all changes done to your work
+
+--
+* On your computer
+    * Undo changes
+    * Perform test on software you are developing 
+    * Backup your work (`GitHub`)
+* Team work
+    * Collaborate with a small team (`GitHub`)
+    * Participate into software development (`GitHub`)
+    * Write paper in collaborative way (`Overleaf` - On-line Latex)
+    * Provide supplementary data for your papers (`Figshare`)
+...
+
+---
+
+.pull-left[
+## Resources
+
+* Pro GIT: https://git-scm.com/book/en/v2
+* GitHub guide: https://guides.github.com
+* Happy Git with R: https://happygitwithr.com/
+
+## Software
+
+* Git: https://git-scm.com
+* Git desktop: https://github.com
+* GitHub account: https://desktop.github.com
+
+]
+
+.pull-right[
+
+&lt;img src="img/Git-progit2.png" width="70%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+## Version control system (VCS) - Traditional
+
+&lt;img src="img/git-storage-traditional.png" width="60%" style="display: block; margin: auto;" /&gt;
+&lt;br&gt;
+* Store data as changes to a base version of each file
+---
+
+## Version control system (VCS) - Git
+
+&lt;img src="img/git-storage-git.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+&lt;br&gt;
+* Git takes a snapshot at each time
+* Only stores what has changed
+--
+
+* Changes are stored in a **local database** inside your directory (.git)
+
+---
+
+## Three states for a file: committed, modified, and staged
+
+
+&lt;img src="img/git-structure.png" width="30%" style="display: block; margin: auto;" /&gt;
+* Need to be familiar with the vocabulary
+--
+
+* **Committed**: data is safely stored in your local database. 
+--
+
+* **Modified**: file changed BUT not committed in your database yet. 
+--
+
+* **Staged**: modified file is marked to go into your next commit snapshot.
+
+---
+layout: true
+
+# Local Git - Committing
+
+---
+## Three different ways of committing
+* Using R studio interface
+* Using GitHub Desktop (my prefered)
+* Using Git bash - The hard way
+
+---
+background-image: url(img/git-R.png)
+background-position: right 20px top 20px
+background-size: 20%
+
+## Create R project and initialize Git
+
+.student[
+* Create a directory : git_01
+* Create a new project
+* Change Projet Options (Tools/Project Options/Git/Git)
+* Restart the project
+* Create a new Rmd file and save it
+]
+--
+
+.student[
+* On top-right window go Git tab
+* Stage the files you want to commit
+* gitignore
+    * list file you do not want to save 
+    * open it in Rstudio
+    * Add 2 lines
+* Commit
+    * Must write a message explaining what you changed
+]
+---
+background-image: url(img/git-R.png)
+background-position: right 20px top 20px
+background-size: 20%
+
+## Commiting changes with R
+.student[
+* Make a new change to the Rmd file
+* Stage and Commit
+* R shows the differences
+* Enter new comment and commit
+]
+
+--
+
+.student[
+* Click on history
+* Each commit has a **hash** value
+    * a80df29cc709e25db49cdfed11c0c1b0399d4a72
+* Can open first version of the Rmd file
+]
+---
+background-image: url(img/git-github-desktop.png)
+background-position: right 20px top 20px
+background-size: 25%
+
+
+## Commit with GitHub Desktop
+.student[
+* Make a new change under R
+* Save
+* Open GitHub Desktop
+]
+
+--
+.student[
+* File/New repository
+* Add existing repository
+* Navigate to directory
+]
+--
+.student[
+* Commit change
+* You can check in R the Commit
+]
+---
+background-image: url(img/git-bash.png)
+background-position: right 20px top 20px
+background-size: 25%
+
+## Commit with Git bash
+
+.student[
+* Make another change in the Rmd file
+* Go to Git tab
+* More / Shell...
+]
+--
+
+.pull-left[
+
+```shell
+$ git status
+$ git add git-01.Rmd
+$ git status
+$ git commit
+```
+.student[
+* Surprise, surprise you are in the VIM editor
+  * Enter the commit message
+  * ESC - : - x - ENTER
+* Check in GitHub Desktop
+]
+]
+
+---
+layout: true
+
+# Local Git - Reverting
+
+---
+background-image: url(img/git-github-desktop.png)
+background-position: right 20px top 20px
+background-size: 25%
+
+
+## Revert Commit with GitHub Desktop
+
+.student[
+* History
+* Right-click : Revert Commit
+]
+--
+.student[
+* Go back to R
+* Magic the changes have been reverted...
+* Examine history (refresh if necessary)
+* In fact revert is a **new commit**
+]
+---
+
+background-image: url(img/git-bash.png)
+background-position: right 20px top 20px
+background-size: 25%
+
+## Revert Commit with Git bash
+
+.student[
+* Find the hash of the commit you want to remove
+]
+
+.pull-left[
+
+
+```shell
+$ git log
+$ git revert &lt;hash&gt;
+$ git revert a80df29cc709e25db49cdfed11c0c1b0399d4a72
+```
+.student[
+* Check in Rstudio the reversal
+]
+]
+
+---
+layout: true
+
+# Local Git - Branching
+
+---
+
+## Why create branches
+
+
+.font150[
+* Testing
+* Collaborative work
+    * Different people can contribute and fix bugs
+]
+
+---
+## How the data are stored
+
+&lt;img src="img/git-commit-00.png" width="40%" style="display: block; margin: auto;" /&gt;
+&lt;br&gt;
+Three elements:
+* **blobs** - contain the contents of the different files
+* **tree** - pointer to the list of the blobs
+* **commit** - pointer to the tree
+---
+
+## Commit
+
+&lt;img src="img/git-commit-01.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## The master branch
+
+&lt;img src="img/git-commit-02.png" width="60%" style="display: block; margin: auto;" /&gt;
+&lt;br&gt;
+A branch in Git is simply a movable **pointer** to one commit. 
+
+---
+
+## Create a new branch
+
+&lt;img src="img/git-branch-01.png" width="45%" style="display: block; margin: auto;" /&gt;
+
+
+```shell
+$ git branch testing
+```
+
+---
+
+## Move the HEAD to the new branch
+
+&lt;img src="img/git-branch-02.png" width="45%" style="display: block; margin: auto;" /&gt;
+
+
+```shell
+$ git checkout testing
+```
+
+---
+
+## Make one commit on the testing branch
+
+&lt;img src="img/git-branch-03.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Move the HEAD back to the master branch
+
+&lt;img src="img/git-branch-04.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+
+```shell
+$ git checkout master
+```
+
+---
+
+## Do one commit on the master branch
+
+&lt;img src="img/git-branch-05.png" width="50%" style="display: block; margin: auto;" /&gt;
+&lt;br&gt;
+* Now we have two diverging branches
+
+---
+background-image: url(img/git-branch-06.png)
+background-position: right 20px top 20px
+background-size: 50%
+
+## Merging
+
+.pull-left[
+* Make sure you are on the master branch
+
+```shell
+$ git checkout master
+```
+
+* Merging
+
+
+```shell
+$ git merge testing
+Auto-merging README
+Merge made by the 'recursive' strategy.
+ README | 1 +
+ 1 file changed, 1 insertion(+)
+```
+]
+
+---
+
+## After merging
+
+&lt;img src="img/git-branch-07.png" width="50%" style="display: block; margin: auto;" /&gt;
+&lt;br&gt;
+
+--
+
+* Now can delete the branch `testing`
+&lt;br&gt;
+
+```shell
+$ git branch -d testing
+```
+
+---
+background-image: url(img/git-R.png)
+background-position: right 20px top 20px
+background-size: 20%
+
+## Let's do it using R studio
+Could be done also with GitHub Desktop or Git bash
+
+.student[
+* Go to Git tab
+* Create a new branch `test`or the name you want
+]
+--
+* Notice that R creates the branch and switch to the branch
+
+--
+
+.student[
+* Make some change in the Rmd file and save
+* While on branch `test`, commit
+* Go back and forth between the two branches `master` and `test`
+]
+--
+* Observe how the Rmd file changes back and forth...
+--
+.student[
+* Go to branch `master`
+* Make some change in the Rmd file (elsewhere e.g. Plot) and save
+* While on branch `master`, commit
+]
+
+
+---
+background-image: url(img/git-github-desktop.png)
+background-position: right 20px top 20px
+background-size: 20%
+
+## Merge back
+Could be done also with Git bash
+
+.student[
+* Make sure you are on branch `master`
+* Go to GitHub Desktop
+* Branch / Merge into Current Branch
+* Select the `master`
+]
+
+--
+
+.student[
+* Branch/Delete
+* Choose `test`
+* Look at history
+]
+
+* There can be conflicts
+    * You need to edit file to solve the conflict
+    
+
+---
+layout: true
+
+# GitHub
+
+---
+
+## Upload your project to GitHub
+
+.student[
+* Go to GitHub Desktop
+* Publish to Github
+* Give a name
+]
+
+&lt;img src="img/git-github-publish.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## GitHub
+
+.student[
+* Go to your GitHub account
+* You should have a new repository
+]
+
+&lt;img src="img/git-github-web.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+background-image: url(img/git-github-web-02.png)
+background-position: right 20px top 20px
+background-size: 50%
+
+## Edit on GitHub
+
+.student[
+* Click on file Rmd
+* Edit
+* Commit
+]
+
+---
+
+## Computer &lt;--&gt; Server synchronization
+
+* How are we going to synchronize these changes back to our computer ?
+
+--
+
+&lt;img src="img/git-push-pull.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+* **Pull**: from server to computer
+* **Push**: from computer to server
+
+---
+
+## Pull from server
+
+.student[
+* Go to GitHub desktop
+* Fetch
+* Pull
+* Go to RStudio - What happened to your Rmd file
+]
+&lt;img src="img/git-pull.png" width="55%" style="display: block; margin: auto;" /&gt;
+
+* If you make commits locally you need to **push** to server
+* You can push several commits at once
+
+---
+background-image: url(img/git-pull-request.png)
+background-position: center right 30px 
+background-size: 55%
+
+## Cloning a project from GitHub
+
+&lt;img src="img/git-clone.png" width="55%" style="display: block; margin: auto;" /&gt;
+
+---
+background-image: url(img/git-pull-request.png)
+background-position: center right 30px 
+background-size: 55%
+
+## Pull request
+* You work on a project with someone else
+* You cloned the project into your computer
+* You created a new branch and made some change
+* You want to merge back into the project
+
+--
+
+.student[
+* R
+    * Create a new branch `test2` and switch
+    * Make some changes
+    * Save and commit
+* GitHub Desktop
+    * Push changes to GitHub
+    * Branch / Create a Pull Request
+* GitHub
+    * Validate the Changes and Merge into `master`
+    * Delete the branch `test2`
+]    
+---
+layout: false
+class: middle, inverse
+
+# Recap
+
+
+.font150[
+* Save and Commit
+* Push and Pull
+* Branching and merging (use only in multiuser projects)
+]
+
+---
+layout: false
+background-image: url(img/course-logo.png)
+background-position: center bottom 30px 
+background-size: 45%
+class: center, inverse
+
+.font200[**C'est fini...**]
+    </textarea>
+<script src="libs/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "tomorrow-night-blue",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

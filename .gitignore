@@ -3,9 +3,7 @@ hugo.exe
 README.md
 *.Rproj
 public/*
-public/talk/*
-.Rproj.user
 sandbox/*
 .Rhistory
 *.bib
-*git*
+.git*

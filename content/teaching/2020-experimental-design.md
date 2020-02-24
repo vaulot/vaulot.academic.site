@@ -24,7 +24,7 @@ __Institution__: Nanyang Technological University, Singapore
 __School__: Asian School of the Environment
 
 
-* [Session 01 - 2020-01-21 - Introduction to R](../2020-course-ntu-experimental-design/R-session-01-intro.html)
+* [Session 01 - 2020-01-21 - Introduction to R](../../files/static/2020-course-ntu-experimental-design/R-session-01-intro.html)
 * [Session 02 - 2020-01-23 - Data visualization with R](../2020-course-ntu-experimental-design/R-session-02-data_visualization.html)
 * [Session 03 - 2020-01-23 - R markdown](../2020-course-ntu-experimental-design/R-session-03-markdown.html)
 * [Session 04 - 2020-01-18 - Scales in marine systems](../2020-course-ntu-experimental-design/Marine-systems-scales.pdf)
