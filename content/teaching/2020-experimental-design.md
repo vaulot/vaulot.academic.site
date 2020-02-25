@@ -23,7 +23,10 @@ __Institution__: Nanyang Technological University, Singapore
 
 __School__: Asian School of the Environment
 
+### Objectives
+This course introduces you to the basic principles of experimental design and analysis of ecological experiments. It introduces you to methods and key concepts for designing and implementing experiments in both the field and laboratory. You will learn how to plan and execute an experiment, key concepts in designing experiments, and how to analyse and present your results.
 
+### Lectures
 * [Session 01 - 2020-01-21 - Introduction to R](https://vaulot.github.io/course-ntu-experimental-design-2020/R-session-01-intro.html)
 * [Session 02 - 2020-01-23 - Data visualization with R](https://vaulot.github.io/course-ntu-experimental-design-2020/R-session-02-data_visualization.html)
 * [Session 03 - 2020-01-23 - R markdown](https://vaulot.github.io/course-ntu-experimental-design-2020/2020-course-ntu-experimental-design/R-session-03-markdown.html)
