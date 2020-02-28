@@ -11,7 +11,7 @@ tags: ["R", "data science"]
 summary: "R"
 ---
 
-{{< figure src="img/2020-course-data-science.png" title="" lightbox="false" width="500" >}}
+{{< figure src="img/2020-course-data-science.png" title="" lightbox="false" width="600" >}}
 
 __Course__: Fundamentals of Data Science for Earth and Environmental Systems Science
 
