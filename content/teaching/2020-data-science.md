@@ -9,12 +9,9 @@ categories: ["courses"]
 tags: ["R", "data science"]
 
 summary: "R"
-
-[header]
-image: "2020-course-data-science.png"
-
 ---
 
+![](img/2020-course-data-science.png)
 __Course__: Fundamentals of Data Science for Earth and Environmental Systems Science
 
 __Code__: ES7023 & ES0002
