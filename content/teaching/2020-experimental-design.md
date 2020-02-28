@@ -11,6 +11,8 @@ tags: ["R", "time series", "phytoplankton"]
 summary: ""
 ---
 
+{{< figure src="img/2020-course-experimental-design.png" title="" lightbox="false"  width="200">}}
+
 __Course__: Experimental Design and Analysis
 
 __Code__: ES3307

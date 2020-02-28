@@ -11,7 +11,7 @@ tags: ["R", "data science"]
 summary: "R"
 ---
 
-{{< figure src="img/2020-course-data-science.png" title="" lightbox="true" >}}
+{{< figure src="img/2020-course-data-science.png" title="" lightbox="false" width="200" >}}
 
 __Course__: Fundamentals of Data Science for Earth and Environmental Systems Science
 
@@ -34,4 +34,4 @@ Modeling using statistical learning and data science methods are powerful tools 
 * [Session 03 - 2020-01-24 - Git](https://vaulot.github.io/course-ntu-data-science-2020/R-session-03-Git.html)
 * [Session 04 - 2020-02-07 - Data wrangling](https://vaulot.github.io/course-ntu-data-science-2020/R-session-04-data_wrangling.html)
 * [Session 05 - 2020-02-14 - Data viz](https://vaulot.github.io/course-ntu-data-science-2020/R-session-05-data_visualization.html)
-* [Session 05 - 2020-02-28 - Mapping](https://vaulot.github.io/course-ntu-data-science-2020/R-session-06-mapping.html)
+* [Session 06 - 2020-02-28 - Mapping](https://vaulot.github.io/course-ntu-data-science-2020/R-session-06-mapping.html)
