@@ -11,7 +11,7 @@ tags: ["R", "time series", "phytoplankton"]
 summary: ""
 ---
 
-{{< figure src="img/2020-course-experimental-design.png" title="" lightbox="false"  width="200">}}
+{{< figure src="img/2020-course-experimental-design.png" title="" lightbox="false"  width="500">}}
 
 __Course__: Experimental Design and Analysis
 
