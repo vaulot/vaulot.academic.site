@@ -11,7 +11,7 @@ tags: ["R", "data science"]
 summary: "R"
 
 [header]
-image = "2020-course-data-science.png"
+image: "2020-course-data-science.png"
 
 ---
 
