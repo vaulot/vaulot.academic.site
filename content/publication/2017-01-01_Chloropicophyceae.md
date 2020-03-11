@@ -11,7 +11,7 @@ image_preview = "chloropico.png"
 selected = false
 projects = ["rcc", "macumba"]
 tags = ["green algae", "taxonomy", "phytoplankton", "ITS", "18S rRNA", "transcriptomes", "rcc"]
-url_pdf = "files/papers/Lopes_2017b.pdf"
+url_pdf = "files/papers/Lopes_2017_SciRep.pdf"
 url_preprint = ""
 url_code = ""
 url_dataset = "https://figshare.com/articles/Chloropicophyceae_a_new_class_of_picophytoplanktonic_prasinophytes_/5027375"
@@ -20,6 +20,9 @@ url_slides = ""
 url_video = ""
 url_poster = ""
 url_source = ""
+[[url_custom]]
+    name = "Supplementary material"
+    url = "files/papers/Lopes_2017_SciRep_supp.pdf"
 math = true
 highlight = true
 [header]
