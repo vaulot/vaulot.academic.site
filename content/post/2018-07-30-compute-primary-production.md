@@ -50,4 +50,6 @@ $SA$ = Standard activity in 100 µL
 
 $N$ = number of cells sorted
 
+---
+
 With contributions from [Adriana Lopes dos Santos](https://adriana.netlify.com/) (ASE, NTU) and Andres Gutierrez-Rodriguez (NIWA)
