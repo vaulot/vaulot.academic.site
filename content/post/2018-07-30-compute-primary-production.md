@@ -38,7 +38,7 @@ $V$ = Volume incubation (mL)
 
 After doing a bit of maths...
 
-$$P = \frac{DIC}{1000}\cdot\frac{DPM\tiny{measured}}{SA\cdot10}\cdot\frac{1}{N}\cdot\frac{1}{24}$$
+$$P = \frac{DIC}{1000}\cdot\frac{DPM\tiny{measured}}{SA\cdot10}\cdot\frac{1}{N}\cdot\frac{1}{24}\cdot 10^{-12}$$
 
 $P$ = Primary Productivity per cell in $fgC \cdot cell^{-1} \cdot h^{-1}$
 
