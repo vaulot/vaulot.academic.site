@@ -15,7 +15,7 @@ summary: "After fighting a bit with maths..."
 
 The classical formula can be found [here](http://hahana.soest.hawaii.edu/hot/protocols/chap14.html) or [here](http://www.montana.edu/priscu/documents/LTER-methods-web-page/Method_Manual_AC_22_Feb_2017.pdf)
 
-$$P\tiny{vol} = DIC \cdot \frac{DPM\tiny{vol}}{DPM\tiny{added}} \cdot 1.05 \cdot 1000$$
+$$P\tiny{vol} = \textstyle DIC \cdot \frac{DPM\tiny{vol}}{DPM\tiny{added}} \cdot 1.05 \cdot 1000$$
 
 which simplifies to:
 
@@ -27,7 +27,7 @@ where:
 
 * $DIC$ = Dissolved inorganic carbon in  $mgC \cdot L^{-1}$
 
-* $DPM\tiny{vol}$: DPM measured during 24 h for volume $V$ (filtered)
+* $DPM\tiny{vol}$ = DPM measured during 24 h for volume $V$ (filtered)
 
 * $DPM\tiny{added}$ = $SA \cdot 10 \cdot  V$
 
@@ -44,23 +44,25 @@ where:
 
 Let us define:
 
-* $DPM\tiny{cells}: DPM measured  during 24 h for $N$ cells$
+* $DPM\tiny{cells}$ = DPM measured  during 24 h for $N$ cells
 
 * $N$ = number of cells sorted
 
-* $C$: cell concentration per mL
+* $C$ = cell concentration per mL
 
-* $P\tiny{cell}$: Primary productivity per cell ($fgC \cdot cell^{-1} \cdot h^{-1}$)
+* $P\tiny{cell}$ = Primary productivity per cell ($fgC \cdot cell^{-1} \cdot h^{-1}$)
 
 $$P\tiny{cell} = P\tiny{vol} \cdot \frac{1}{C \cdot 10^{6} } \cdot \frac{1}{24} \cdot 10^{12}$$
 
+Which simplifies
+
 $$P\tiny{cell} = P\tiny{vol} \cdot \frac{1}{C} \cdot \frac{1}{24}\cdot 10^{6}$$
 
-* $10^{12}$ = To convert from milligrams to femtograms
+* $10^{12}$ is to convert from milligrams to femtograms
 
-* $\frac{1}{24}$ to convert from day to hours
+* $\frac{1}{24}$ is to convert from day to hours
 
-* $\frac{1}{C \cdot10^{6} }$ to compute the number of cells per  m^{-3}
+* $\frac{1}{C \cdot10^{6} }$ is to compute the number of cells per  $m^{-3}$
 
 Using the formula for $P\tiny{vol}$ at the top :
 
