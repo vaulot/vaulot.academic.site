@@ -23,7 +23,7 @@ $$Pvol = DIC \cdot \frac{DPMvol}{SA \cdot  V} \cdot 1.05 \cdot 100$$
 
 where:
 
-* $Pvol$ = Primary Productivity in $mgC \cdot m^{-3} \cdot d^{-1}$
+* $Pvol$ = Primary Productivity per unit volume in $mgC \cdot m^{-3} \cdot d^{-1}$
 
 * $DIC$ = Dissolved inorganic carbon in  $mgC \cdot L^{-1}$
 
@@ -70,20 +70,20 @@ $$Pcell = DIC \cdot \frac{DPMvol}{SA \cdot  V} \cdot 1.05 \cdot 100 \cdot \frac{
 
 Simplifies to :
 
-$$Pcell = DIC \cdot \frac{DPMvol}{SA \cdot  V \cdot  C} \cdot 1.05 \cdot \cdot \frac{1}{24} \cdot 10^{8}$$
+$$Pcell = DIC \cdot \frac{DPMvol}{SA \cdot  V \cdot  C} \cdot 1.05 \cdot \frac{1}{24} \cdot 10^{8}$$
 
-DPMvol can be computed from the individual DPM in cells ($DPMcell$) as:
+$DPMvol$ can be computed from the individual DPM in cells ($DPMcell$) as:
 
-DPMvol = \frac{DPMcells \cdot C  \cdot V }{N}
+$$DPMvol = \frac{DPMcells \cdot C  \cdot V }{N}$$
 
 So that:
 
-$$Pcell = DIC \cdot \frac{DPMcells \cdot C  \cdot V}{SA \cdot  V \cdot  C  \cdot  N} \cdot 1.05 \cdot \cdot \frac{1}{24} \cdot 10^{8}$$
+$$Pcell = DIC \cdot \frac{DPMcells \cdot C  \cdot V}{SA \cdot  V \cdot  C  \cdot  N} \cdot 1.05 \cdot \frac{1}{24} \cdot 10^{8}$$
 
 
 which simplifies to
 
-$$Pcell = \frac{DIC \cdot\ DPMcells}{SA \cdot N \cdot 24} \cdot 10^{8}\cdot1.05$$
+$$Pcell = DIC \cdot \frac{DPMcells}{SA \cdot N \cdot 24} \cdot 10^{8}\cdot 1.05$$
 
 
 
