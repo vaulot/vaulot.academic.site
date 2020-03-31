@@ -60,9 +60,9 @@ $$Pcell = Pvol \cdot \frac{1}{C} \cdot \frac{1}{24}\cdot 10^{6}$$
 
 * $10^{12}$ is to convert from milligrams to femtograms
 
-* $\frac{1}{24}$ is to convert from day to hours
+* ${24}$ is to convert from day to hours
 
-* $\frac{1}{C \cdot10^{6} }$ is to compute the number of cells per  $m^{-3}$
+* $C \cdot 10^{6}$ is the number of cells per  $m^{-3}$
 
 Using the formula for $Pvol$ at the top :
 
