@@ -72,7 +72,7 @@ Simplifies to :
 
 $$Pcell = DIC \cdot \frac{DPMvol}{SA \cdot  V \cdot  C} \cdot 1.05 \cdot \frac{1}{24} \cdot 10^{8}$$
 
-$DPMvol$ can be computed from the individual DPM in cells ($DPMcell$) as:
+$DPMvol$ can be computed from the individual DPM in cells ($DPMcells$) as:
 
 $$DPMvol = \frac{DPMcells \cdot C  \cdot V }{N}$$
 
