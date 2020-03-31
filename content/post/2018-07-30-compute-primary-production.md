@@ -83,7 +83,7 @@ $$Pcell = DIC \cdot \frac{DPMcells \cdot C  \cdot V}{SA \cdot  V \cdot  C  \cdot
 
 which simplifies finally to:
 
-$$Pcell = DIC \cdot \frac{DPMcells}{SA \cdot N \cdot 24} \cdot 10^{9}\cdot 1.05$$
+$$Pcell = DIC \cdot \frac{DPMcells}{SA \cdot N \cdot 24} \cdot 1.05 \cdot 10^{9}$$
 
 
 ---
