@@ -15,7 +15,7 @@ summary: "After fighting a bit with maths..."
 
 The classical formula can be found [here](http://hahana.soest.hawaii.edu/hot/protocols/chap14.html) or [here](http://www.montana.edu/priscu/documents/LTER-methods-web-page/Method_Manual_AC_22_Feb_2017.pdf)
 
-$$P\sb{vol} = DIC \cdot \frac{DPM\sb{vol}}{DPM\sb{added}} \cdot 1.05 \cdot 1000$$
+$$Pvol = DIC \cdot \frac{DPMvol}{DPMadded} \cdot 1.05 \cdot 1000$$
 
 which simplifies to:
 
