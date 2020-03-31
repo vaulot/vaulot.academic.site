@@ -15,7 +15,7 @@ summary: "After fighting a bit with maths..."
 
 The classical formula can be found [here](http://hahana.soest.hawaii.edu/hot/protocols/chap14.html) or [here](http://www.montana.edu/priscu/documents/LTER-methods-web-page/Method_Manual_AC_22_Feb_2017.pdf)
 
-$$P\tiny{vol} = \textstyle DIC \cdot \frac{DPM\tiny{vol}}{DPM\tiny{added}} \cdot 1.05 \cdot 1000$$
+$$P_{vol} = DIC \cdot \frac{DPM_{vol}}{DPM_{added}} \cdot 1.05 \cdot 1000$$
 
 which simplifies to:
 
