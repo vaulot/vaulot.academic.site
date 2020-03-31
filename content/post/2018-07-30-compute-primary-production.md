@@ -17,9 +17,9 @@ The classical formula can be found [here](http://hahana.soest.hawaii.edu/hot/pro
 
 $$Pvol = DIC \cdot \frac{DPMvol}{DPMadded} \cdot 1.05 \cdot 1000$$
 
-which simplifies to:
+and plugging the value for $DPMadded$ (see below):
 
-$$Pvol = DIC \cdot \frac{DPMvol}{SA \cdot  V} \cdot 1.05 \cdot 100$$
+$$Pvol = DIC \cdot \frac{DPMvol}{SA \cdot  V} \cdot 1.05 \cdot 1000$$
 
 where:
 
@@ -29,9 +29,9 @@ where:
 
 * $DPMvol$ = DPM measured during 24 h for volume $V$ (filtered)
 
-* $DPMadded$ = $SA \cdot 10 \cdot  V$
+* $DPMadded$ = $SA \cdot  V$
 
-* $SA$ = Standard activity in 100 µL
+* $SA$ = Standard activity in 1 mL (DPM per mL)
 
 * $V$ = Volume of incubation (mL)
 
@@ -66,11 +66,11 @@ $$Pcell = Pvol \cdot \frac{1}{C} \cdot \frac{1}{24}\cdot 10^{6}$$
 
 Using the formula for $Pvol$ at the top :
 
-$$Pcell = DIC \cdot \frac{DPMvol}{SA \cdot  V} \cdot 1.05 \cdot 100 \cdot \frac{1}{C} \cdot \frac{1}{24} \cdot 10^{6}$$
+$$Pcell = DIC \cdot \frac{DPMvol}{SA \cdot  V} \cdot 1.05 \cdot 1000 \cdot \frac{1}{C} \cdot \frac{1}{24} \cdot 10^{6}$$
 
 Simplifies to :
 
-$$Pcell = DIC \cdot \frac{DPMvol}{SA \cdot  V \cdot  C} \cdot 1.05 \cdot \frac{1}{24} \cdot 10^{8}$$
+$$Pcell = DIC \cdot \frac{DPMvol}{SA \cdot  V \cdot  C} \cdot 1.05 \cdot \frac{1}{24} \cdot 10^{9}$$
 
 $DPMvol$ can be computed from the individual DPM in cells ($DPMcells$) as:
 
@@ -78,12 +78,12 @@ $$DPMvol = \frac{DPMcells \cdot C  \cdot V }{N}$$
 
 So that:
 
-$$Pcell = DIC \cdot \frac{DPMcells \cdot C  \cdot V}{SA \cdot  V \cdot  C  \cdot  N} \cdot 1.05 \cdot \frac{1}{24} \cdot 10^{8}$$
+$$Pcell = DIC \cdot \frac{DPMcells \cdot C  \cdot V}{SA \cdot  V \cdot  C  \cdot  N} \cdot 1.05 \cdot \frac{1}{24} \cdot 10^{9}$$
 
 
-which simplifies to
+which simplifies finally to:
 
-$$Pcell = DIC \cdot \frac{DPMcells}{SA \cdot N \cdot 24} \cdot 10^{8}\cdot 1.05$$
+$$Pcell = DIC \cdot \frac{DPMcells}{SA \cdot N \cdot 24} \cdot 10^{9}\cdot 1.05$$
 
 
 ---
