@@ -15,42 +15,77 @@ summary: "After fighting a bit with maths..."
 
 The classical formula can be found [here](http://hahana.soest.hawaii.edu/hot/protocols/chap14.html) or [here](http://www.montana.edu/priscu/documents/LTER-methods-web-page/Method_Manual_AC_22_Feb_2017.pdf)
 
-$$P = DIC\cdot\frac{DPM\tiny{measured}}{DPM\tiny{added}}\cdot1.05\cdot1000$$
+$$P\tiny{vol} = DIC \cdot \frac{DPM\tiny{vol}}{DPM\tiny{added}} \cdot 1.05 \cdot 1000$$
 
-$P$ = Primary Productivity in $mgC \cdot m^{-3} \cdot d^{-1}$
+which simplifies to:
 
-$DIC$ = Dissolved inorganic carbon in  $mgC \cdot L^{-1}$
+$$P\tiny{vol} = DIC \cdot \frac{DPM\tiny{vol}}{SA \cdot  V} \cdot 1.05 \cdot 100$$
 
-$DPM\tiny{measured}$ during 24 h
+where:
 
-$DPM\tiny{added}$ = $SA \times 10 \times  V$
+* $P\tiny{vol}$ = Primary Productivity in $mgC \cdot m^{-3} \cdot d^{-1}$
 
-$SA$ = Standard activity in 100 µL
+* $DIC$ = Dissolved inorganic carbon in  $mgC \cdot L^{-1}$
 
-$V$ = Volume incubation (mL)
+* $DPM\tiny{vol}$: DPM measured during 24 h for volume $V$ (filtered)
 
-1.05 is to account for differential uptake between $^{14}$C and $^{12}$C
+* $DPM\tiny{added}$ = $SA \cdot 10 \cdot  V$
 
-1000 is to go from from $L^{-1}$ to $m^{-3}$ since DIC is in $mgC \cdot L^{-1}$
+* $SA$ = Standard activity in 100 µL
+
+* $V$ = Volume incubation (mL)
+
+* 1.05 is to account for differential uptake between $^{14}$C and $^{12}$C
+
+* 1000 is to go from from $L^{-1}$ to $m^{-3}$ since DIC is in $mgC \cdot L^{-1}$
 
 
 ### For cells sorted by flow cytometry
 
-After doing a bit of maths...
+Let us define:
 
-$$P = \frac{DIC}{1000}\cdot\frac{DPM\tiny{measured}}{SA\cdot10}\cdot\frac{1}{N}\cdot\frac{1}{24}\cdot 10^{12}\cdot1.05$$
+* $DPM\tiny{cells}: DPM measured  during 24 h for $N$ cells$
 
-$P$ = Primary Productivity per cell in $fgC \cdot cell^{-1} \cdot h^{-1}$
+* $N$ = number of cells sorted
 
-$DIC$ = Dissolved inorganic carbon in  $mgC \cdot L^{-1}$
+* $C$: cell concentration per mL
 
-$DPM\tiny{measured}$ during 24 h for the cells sorted
+* $P\tiny{cell}$: Primary productivity per cell ($fgC \cdot cell^{-1} \cdot h^{-1}$)
 
-$SA$ = Standard activity in 100 µL
+$$P\tiny{cell} = P\tiny{vol} \cdot \frac{1}{C \cdot 10^{6} } \cdot \frac{1}{24} \cdot 10^{12}$$
 
-$N$ = number of cells sorted
+$$P\tiny{cell} = P\tiny{vol} \cdot \frac{1}{C} \cdot \frac{1}{24}\cdot 10^{6}$$
 
-$10^{12}$ = To convert from milligrams to femtograms
+* $10^{12}$ = To convert from milligrams to femtograms
+
+* $\frac{1}{24}$ to convert from day to hours
+
+* $\frac{1}{C \cdot10^{6} }$ to compute the number of cells per  m^{-3}
+
+Using the formula for $P\tiny{vol}$ at the top :
+
+$$P\tiny{cell} = DIC \cdot \frac{DPM\tiny{vol}}{SA \cdot  V} \cdot 1.05 \cdot 100 \cdot \frac{1}{C} \cdot \frac{1}{24} \cdot 10^{6}$$
+
+Simplifies to :
+
+$$P\tiny{cell} = DIC \cdot \frac{DPM\tiny{vol}}{SA \cdot  V \cdot  C} \cdot 1.05 \cdot \cdot \frac{1}{24} \cdot 10^{8}$$
+
+DPM\tiny{vol} can be computed from the individual DPM in cells ($DPM\tiny{cell}$) as:
+
+DPM\tiny{vol} = \frac{DPM\tiny{cells} \cdot C  \cdot V }{N}
+
+So that:
+
+$$P\tiny{cell} = DIC \cdot \frac{DPM\tiny{cells} \cdot C  \cdot V}{SA \cdot  V \cdot  C  \cdot  N} \cdot 1.05 \cdot \cdot \frac{1}{24} \cdot 10^{8}$$
+
+
+which simplifies to
+
+$$P\tiny{cell} = \frac{DIC \cdot\ DPM\tiny{cell}}{SA \cdot N \cdot 24}} \cdot 10^{8}\cdot1.05$$
+
+
+
+
 
 ---
 
