@@ -35,9 +35,9 @@ where:
 
 * $V$ = Volume of incubation (mL)
 
-* 1.05 is to account for differential uptake between $^{14}$C and $^{12}$C
+* $1.05$ is to account for differential uptake between $^{14}$C and $^{12}$C
 
-* 1000 is to go from from $L^{-1}$ to $m^{-3}$ since DIC is in $mgC \cdot L^{-1}$
+* $1000$ is to go from from $L^{-1}$ to $m^{-3}$ since DIC is in $mgC \cdot L^{-1}$
 
 
 ### For cells sorted by flow cytometry
@@ -52,11 +52,9 @@ Let us define:
 
 * $Pcell$ = Primary productivity per cell ($fgC \cdot cell^{-1} \cdot h^{-1}$)
 
+$Pcell$ can be computed from $Pvol$ by dividing it by the total number of cells in 1 $m^{-3}$:
+
 $$Pcell = Pvol \cdot \frac{1}{C \cdot 10^{6} } \cdot \frac{1}{24} \cdot 10^{12}$$
-
-Which simplifies
-
-$$Pcell = Pvol \cdot \frac{1}{C} \cdot \frac{1}{24}\cdot 10^{6}$$
 
 * $10^{12}$ is to convert from milligrams to femtograms
 
@@ -64,7 +62,12 @@ $$Pcell = Pvol \cdot \frac{1}{C} \cdot \frac{1}{24}\cdot 10^{6}$$
 
 * $C \cdot 10^{6}$ is the number of cells per  $m^{-3}$
 
-Using the formula for $Pvol$ at the top :
+
+Which simplifies to:
+
+$$Pcell = Pvol \cdot \frac{1}{C} \cdot \frac{1}{24}\cdot 10^{6}$$
+
+We now replace $Pvol$ by the formula provived at the top :
 
 $$Pcell = DIC \cdot \frac{DPMvol}{SA \cdot  V} \cdot 1.05 \cdot 1000 \cdot \frac{1}{C} \cdot \frac{1}{24} \cdot 10^{6}$$
 
@@ -72,7 +75,7 @@ Simplifies to :
 
 $$Pcell = DIC \cdot \frac{DPMvol}{SA \cdot  V \cdot  C} \cdot 1.05 \cdot \frac{1}{24} \cdot 10^{9}$$
 
-$DPMvol$ can be computed from the individual DPM in cells ($DPMcells$) as:
+$DPMvol$ can be computed from the individual DPM per cell ($DPMcells/N$) as:
 
 $$DPMvol = \frac{DPMcells \cdot C  \cdot V }{N}$$
 
