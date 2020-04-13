@@ -35,4 +35,4 @@ Modeling using statistical learning and data science methods are powerful tools 
 * [Session 04 - 2020-02-07 - Data wrangling](https://vaulot.github.io/course-ntu-data-science-2020/R-session-04-data_wrangling.html)
 * [Session 05 - 2020-02-14 - Data viz](https://vaulot.github.io/course-ntu-data-science-2020/R-session-05-data_visualization.html)
 * [Session 06 - 2020-02-28 - Mapping](https://vaulot.github.io/course-ntu-data-science-2020/R-session-06-mapping.html)
-* [Session 07 - 2020-04-15 - Time series](https://vaulot.github.io/course-ntu-data-science-2020/R-session-07-time_series.html)
+* [Session 07 - 2020-04-15 - Time series](https://vaulot.github.io/course-ntu-data-science-2020/R-session-07-time_series)
