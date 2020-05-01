@@ -17,7 +17,7 @@ weight = 9
 
 ## Major research topics
 * Diversity and oceanic distribution of marine phytoplankton, in particular green algae and Bolidophyceae.
-* Analysis of marine eukaryotic communities using metabarcoding (nuclear 18S rRNA, plastid 16S rRN), especially on populations sorted by flow cytometry.
+* Analysis of marine eukaryotic communities using metabarcoding (nuclear 18S rRNA, plastid 16S rRNA), especially on populations sorted by flow cytometry.
 * Polar picoplankton communities and their adaptation to the long winter polar night.
 * Development of databases for the analysis of eukaryotic metabarcodes: [PR2](https://github.com/vaulot/pr2database) and metaPR2 (in progress)
 

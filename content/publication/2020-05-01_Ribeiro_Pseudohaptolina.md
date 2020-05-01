@@ -1,5 +1,5 @@
 +++
-title = "Taxonomic reassignment of *Pseudohaptolina birgeri* comb. nov. (Haptophyta)"
+title = "Taxonomic reassignment of Pseudohaptolina birgeri comb. nov. (Haptophyta)"
 date = "2020-05-01"
 authors = ["Catherine Gérikas Ribeiro", "Adriana Lopes dos Santos", "Daniel Vaulot", "Bente Edvardsen"]
 publication_types = ["3"]
