@@ -21,7 +21,7 @@ url_poster = ""
 url_source = ""
 [[url_custom]]
     name = "Supplementary material"
-    url = ""
+    url = "https://github.com/vaulot/Paper-2020-Ribeiro-Pseudohaptolina"
 math = true
 highlight = true
 [header]
