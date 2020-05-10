@@ -33,5 +33,5 @@ list_format = 3
 publication_type = "3"
 
 # Exclude publications that are shown in the Selected Publications widget?
-exclude_selected = true
+exclude_selected = false
 +++
