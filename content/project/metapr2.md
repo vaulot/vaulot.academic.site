@@ -34,12 +34,30 @@ This is a new project which aims at making publicly available a database of cura
 
 The currently processed public data sets include:
 
-* OSD 2014 V4 LGC
-* OSD 2014 V4 LW
-* OSD 2015 V4
-* Arctic - Beaufort Sea - MALINA cruise - Monier 2014
-* Baltic Sea 2012-2013
-* Oslo fjord 2009-2011
+* Arctic Ocean - Polarstern expedition ARK-XXVII/3 - 2012
+* Arctic Ocean Survey - 2005-2011
+* Arctic Ocean, Beaufort Sea, MALINA cruise - 2009
+* Baffin Bay - 2013
+* Bay of Naples - 2011
+* Biomarks
+* Blanes Time Series - 2004-2013
+* Central Arctic Ocean - 2012
+* Chukchi Sea - ICESCAPE - 2010
+* Fieldes Bay, Antarctic - 2013
+* Gdansk Gulf - 2012
+* Gdansk Gulf - 2012 Hapto
+* Gulf of Finland - 2012-2013
+* Malaspina expedition - surface - 2010-2011
+* Malaspina expedition - vertical profiles - 2010-2011
+* Nansen Basin - 2012
+* Nares Strait - 2014
+* Ocean Sampling Day - 2014 - V4 LGC
+* Ocean Sampling Day - 2014 - V4 LW
+* Ocean Sampling Day - 2015 - V4
+* Oslo fjord - 2009-2011
+* Tara Oceans - 2009-2012
+* Tsunami deposits 18S R1
+* White Sea - 2013-2015
 
 Other non-public data sets include:
 
