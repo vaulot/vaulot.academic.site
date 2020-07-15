@@ -301,7 +301,7 @@ enableGitInfo = false
   parent = "Publications"
   name = "Submitted papers"
   url = "#publications_submitted"
-  weight = 2
+  weight = 3
 
 [[menu.main]]
   parent = "Publications"
