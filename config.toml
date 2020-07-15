@@ -293,13 +293,19 @@ enableGitInfo = false
 
 [[menu.main]]
   parent = "Publications"
-  name = "Papers recent"
+  name = "Recent papers"
   url = "#publications_selected"
   weight = 1
 
 [[menu.main]]
   parent = "Publications"
-  name = "Papers all"
+  name = "Submitted papers"
+  url = "#publications_submitted"
+  weight = 2
+
+[[menu.main]]
+  parent = "Publications"
+  name = "Full list of papers"
   url = "publication"
   weight = 5
 
