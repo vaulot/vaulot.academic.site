@@ -126,7 +126,7 @@ bibtex_2academic <- function(bibfile,
 
 setwd("c:/daniel.vaulot@gmail.com/web site/vaulot.academic.site/")
 
-bibfile <- "static/files/citations/saint-beat.bib"
+bibfile <- "static/files/citations/2020_1.bib"
 outfold   <- "content/publication"
 
 mypubs <- bibtex_2academic(bibfile  = bibfile,
