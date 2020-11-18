@@ -24,8 +24,7 @@ weight = 9
 ## Current Collaborations
 * [Bente Edvardsen](https://www.researchgate.net/profile/Bente_Edvardsen) and [Wenche Eikrem](https://www.researchgate.net/profile/Wenche_Eikrem), Oslo, Norway
 * [Nicole Trefaut](https://www.researchgate.net/profile/Nicole_Trefault) and [Catherine Ribeiro-Gerikas](http://orcid.org/0000-0003-0531-2313), Santiago, Chile
-* [Hervé Moreau](http://biom.obs-banyuls.fr/fr/equipe-genophy/equipe/chercheurs_et_enseignats_chercheurs/herve_moreau.html), Banyuls, France
-* [Adriana Lopes dos Santos](https://www.researchgate.net/profile/Adriana_Lopes_Dos_Santos), Singapore
+* [Adriana Lopes dos Santos](https://adriana.netlify.app), Singapore
 * [Andres Gutierrez Rodriguez](https://www.researchgate.net/profile/Andres_Gutierrez-Rodriguez3), New Zealand
 
 ## Recent Collaborations
