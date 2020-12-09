@@ -20,7 +20,7 @@ weight = 30
 ## Courses organized
 
 * 2019 - Co-organizer of APC 12 ([Advanced Phytoplankton Course](https://sites.google.com/view/apc12/home)) in Roscoff, France - 3 weeks - May-June 2019
-* 2017 - Co-organizer of ASIAME 2 (South Asia Workshop in Aquatic Microbial Ecology) in Andaman Islands, India - 15 days - November 2017
+* 2017 - Co-organizer of [ASIAME 2](https://sites.google.com/view/asiame2) (South Asia Workshop in Aquatic Microbial Ecology) in Andaman Islands, India - 15 days - November 2017
 * 2015-2017 - Metagenomics of marine microbes (6 h lecture, 4 h practical session) - Organizing Committee.  Marine Ecological and Evolutionary Genomics, Roscoff, June 2015
 * 2014 - Organizer of International Phytoplankton course, Macaé, Brasil (2 weeks) -  December 2014
 * 2013 - Co-organizer of ASIAME (First South East Asia Workshop in Aquatic Microbial Ecology) in Vietnam, Nha Trang- 10 days - October 2013
