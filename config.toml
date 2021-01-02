@@ -107,8 +107,8 @@ enableGitInfo = false
   #  latitude = "48.726819"
   #  longitude = "-3.987543"
 
-  latitude = "1.347563673337115"
-  longitude = "103.67904515395878"
+  latitude = "1.3466988998368865"
+  longitude = "103.67916451228079"
   zoom = 15
 
   # Date and time format (refer to Go's date format: http://fuckinggodateformat.com )
