@@ -10,7 +10,7 @@ title = "Daniel Vaulot"
 
 # Your copyright notice - appears in site footer.
 # To display a copyright symbol, type `&copy;`.
-copyright = "&copy; 2019"
+copyright = "&copy; 2021"
 
 theme = "hugo-academic"
 enableEmoji = true
@@ -71,7 +71,7 @@ enableGitInfo = false
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "daniel_antarctica_2015_square.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
   email = "vaulot@gmail.com"
-  address = "Station Biologique de Roscoff, FRANCE"
+  address = "Asian School of the Environment, Nanyang Technological University, Singapore"
 #  phone = "+33 6 75 54 20 41"
   phone = "+65 9149 9049"
 #  skype = "danielguip"
