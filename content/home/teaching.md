@@ -27,10 +27,10 @@ weight = 30
 * 2013 - Co-organizer of the UPMC Daniel-Jouvance School in Marine-Biology - Arraial do Cabo, Brasil -  March 2013
 
 ## Courses taught
-* 2021 [Introduction to R / Data wrangling, plotting and mapping with R]({{< ref "/teaching/2021-data-science.md">}}) - ES7023 & ES0002: Fundamentals of Data Science for Earth and Environmental Systems Science , coordinated by D. Lallemant, ASE, Nanyang Technological University, Singapore - 9 h
+* 2021 [Introduction to R / Data wrangling, plotting and mapping with R]({{< ref "/teaching/2021-data-science">}}) - ES7023 & ES0002: Fundamentals of Data Science for Earth and Environmental Systems Science , coordinated by D. Lallemant, ASE, Nanyang Technological University, Singapore - 9 h
 * 2020 [Introduction to R / Scales in Marine Ecoystems]({{< ref "/teaching/2020-experimental-design.md">}}) - ES3307: Experimental Design and Analysis, coordinated by E. Slade, ASE, Nanyang Technological University, Singapore - 6 h
 * 2020 [Introduction to R / Data wrangling, plotting and mapping with R]({{< ref "/teaching/2020-data-science.md">}}) - ES7023 & ES0002: Fundamentals of Data Science for Earth and Environmental Systems Science , coordinated by D. Lallemant, ASE, Nanyang Technological University, Singapore - 9 h
-* 2019 [Introduction to R / Data wrangling, plotting and mapping with R]({{< ref "/teaching/2019-data-science.md">}}) - ES7023 & ES0002: Fundamentals of Data Science for Earth and Environmental Systems Science , coordinated by D. Lallemant, ASE, Nanyang Technological University, Singapore - 9 h
+* 2019 [Introduction to R / Data wrangling, plotting and mapping with R]({{< ref "/teaching/2019-data-science">}}) - ES7023 & ES0002: Fundamentals of Data Science for Earth and Environmental Systems Science , coordinated by D. Lallemant, ASE, Nanyang Technological University, Singapore - 9 h
 * 2018  Using phyloseq for metabarcode data analysis, Formation metabarcoding, Roscoff - 3 h
 * 2017  R for microbial ecology, ASIAME 2, South Asia Workshop in Aquatic Microbial Ecology, India
 * 2012-2017  Metagenomics of marine microbes (6 h lecture, 4 h practical session), Marine Ecological and Evolutionary Genomics, Roscoff
