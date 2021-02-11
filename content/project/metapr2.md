@@ -37,6 +37,7 @@ The currently processed public data sets include:
 * Arctic Ocean - Polarstern expedition ARK-XXVII/3 - 2012
 * Arctic Ocean Survey - 2005-2011
 * Arctic Ocean, Beaufort Sea, MALINA cruise - 2009
+* Antarctic - Fieldes Bay - 2015
 * Baffin Bay - 2013
 * Bay of Naples - 2011
 * Biomarks
@@ -56,14 +57,12 @@ The currently processed public data sets include:
 * Ocean Sampling Day - 2015 - V4
 * Oslo fjord - 2009-2011
 * Tara Oceans - 2009-2012
-* Tsunami deposits 18S R1
 * White Sea - 2013-2015
 
 Other non-public data sets include:
 
 * Cruises
   * Arctic - Green Edge project 2015-2016 in Baffin Bay (Ice Camp and Amundsen Cruise)
-  * Antarctic - Fieldes Bay
   * North West Pacific (data from Korea)
   * Brazil coastal lagoons
 * Time series
@@ -71,3 +70,6 @@ Other non-public data sets include:
   * Penzé estuary (2004-2012)
 
 If you are interested please [contact me](mailto:vaulot@gmail.com).
+
+### Related projects
+* [Ocean Barcode Atlas](http://oba.mio.osupytheas.fr/ocean-atlas/OBA_analyse)
