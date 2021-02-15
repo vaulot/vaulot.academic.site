@@ -4,6 +4,7 @@
     <title>Fundamental of Data Science for EESS</title>
     <meta charset="utf-8" />
     <meta name="author" content="Daniel Vaulot" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
     <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
@@ -36,7 +37,7 @@ background-size: 45%, 25%, 20%
 
 .font120[**Daniel Vaulot**]
 
-2021-01-26
+2021-02-05
 
 ---
 layout: false
@@ -1300,6 +1301,15 @@ readr::write_tsv(samples, "data/CARBOM data fixed.tsv")
 openxlsx::write.xlsx(samples, "data/CARBOM data fixed.xlsx")
 ```
 
+---
+
+# Write data
+
+## Library rio
+* Many output formats
+* import() / export()
+
+&lt;iframe src="https://cran.r-project.org/web/packages/rio/vignettes/rio.html" width="100%" height="400px"&gt;&lt;/iframe&gt;
 
 ---
 
@@ -3338,6 +3348,43 @@ samples &lt;- samples %&gt;% dplyr::arrange(transect, station)
 
 ---
 
+## Summarize rows - count
+
+* Compute number of stations per transect
+
+
+```r
+  stations_count &lt;- samples %&gt;% 
+    dplyr::count(transect) 
+```
+
+--
+
+&lt;table class="table table-striped table-hover table-condensed" style="font-size: 9px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:right;"&gt; transect &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; n &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;background-color: lightyellow !important;"&gt; 5 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;background-color: lightyellow !important;"&gt; 5 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;background-color: lightyellow !important;"&gt; 18 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
 ## Summarize rows - group_by / summarize
 
 * Group by transect and station
@@ -4761,7 +4808,9 @@ We want to have a column with type of phytoplankton and one column with abundanc
 
 ```r
   samples_long &lt;- samples_select  %&gt;% 
-    tidyr::pivot_longer(picoeuks:nanoeuks, names_to="population", values_to="cell_ml" )
+    tidyr::pivot_longer(picoeuks:nanoeuks, 
+                        names_to="population", 
+                        values_to="cell_ml" )
 ```
 
 --
@@ -4929,7 +4978,8 @@ We want to have a column with type of phytoplankton and one column with abundanc
 
 ```r
   samples_wide &lt;- samples_long  %&gt;% 
-    tidyr::pivot_wider(names_from = "population", values_from="cell_ml")
+    tidyr::pivot_wider(names_from = "population", 
+                       values_from="cell_ml")
 ```
 
 --
@@ -5085,6 +5135,1238 @@ We want to have a column with type of phytoplankton and one column with abundanc
 &lt;/table&gt;
 
 ---
+layout: true
+
+# Display tables
+
+---
+
+## Default
+
+
+```r
+  samples_wide
+```
+
+```
+# A tibble: 28 x 11
+   sample_number transect station date                time  depth level latitude
+   &lt;chr&gt;            &lt;dbl&gt;   &lt;dbl&gt; &lt;dttm&gt;              &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;    &lt;dbl&gt;
+ 1 1                    0       6 2013-10-31 00:00:00 5:20     45 Deep     -23.6
+ 2 2                    0       6 2013-10-31 00:00:00 5:20     45 Deep     -23.6
+ 3 3                    0      19 2013-11-02 00:00:00 13:30     5 Surf     -25.8
+ 4 5                    0      21 2013-11-02 00:00:00 0:0       5 Surf     -26.2
+ 5 7                    0      26 2013-11-03 00:00:00 19:30     5 Surf     -27.3
+ 6 10                   1      81 2013-11-13 00:00:00 1:0     140 Deep     -27.4
+ 7 9                    1      81 2013-11-13 00:00:00 1:0     140 Deep     -27.4
+ 8 11                   1      85 2013-11-13 00:00:00 13:30   110 Deep     -26.8
+ 9 13                   1      86 2013-11-13 00:00:00 17:0    105 Deep     -26.3
+10 15                   1      87 2013-11-13 00:00:00 19:30   105 Deep     -26.2
+# ... with 18 more rows, and 3 more variables: longitude &lt;dbl&gt;, picoeuks &lt;dbl&gt;,
+#   nanoeuks &lt;dbl&gt;
+```
+
+---
+
+## Package kableExtra
+
+
+```r
+library(kableExtra)
+
+kbl(samples_wide) %&gt;%
+  kable_styling(font_size = 9) 
+```
+
+&lt;table class="table" style="font-size: 9px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; sample_number &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; transect &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; station &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; date &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; time &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; depth &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; level &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; latitude &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; longitude &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; picoeuks &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; nanoeuks &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-10-31 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 5:20 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 45 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -23.58 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -41.78 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 7651 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4845 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-10-31 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 5:20 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 45 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -23.58 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -41.78 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 7343 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3258 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 19 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-02 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 13:30 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Surf &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -25.79 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -40.36 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1005 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 898 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 21 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-02 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0:0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Surf &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -26.23 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -40.09 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 793 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 660 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 7 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 26 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-03 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 19:30 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Surf &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.31 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -39.38 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 907 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 856 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 10 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 81 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-13 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1:0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 140 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.42 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -44.72 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3278 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1232 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 9 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 81 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-13 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1:0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 140 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.42 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -44.72 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3181 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1235 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 11 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 85 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-13 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 13:30 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 110 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -26.80 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -45.30 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 16312 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1615 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 13 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 86 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-13 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 17:0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 105 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -26.33 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -45.41 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6366 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1007 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 15 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 87 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-13 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 19:30 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 105 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -26.22 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -45.48 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6189 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 622 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 120 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 96 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-18 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 23:50 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Surf &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.39 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -47.82 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1150 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 75 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 121 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 96 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-18 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 23:50 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 30 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.39 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -47.82 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1737 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 218 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 122 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 96 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-18 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 23:50 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 50 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.39 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -47.82 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 853 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 234 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 125 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 98 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-18 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 5:0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Surf &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.59 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -47.39 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3086 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1300 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 126 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 98 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-18 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 5:0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 50 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.59 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -47.39 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1217 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 782 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 127 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 98 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-18 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 5:0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 85 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.59 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -47.39 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3420 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 226 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 140 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 101 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-18 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 12:0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Surf &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.79 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -46.96 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 500 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 366 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 141 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 101 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-18 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 12:0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 60 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.79 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -46.96 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1046 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 485 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 142 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 101 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-18 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 12:0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 110 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.79 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -46.96 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 641 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 159 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 155 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 106 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-19 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2:30 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Surf &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -28.12 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -46.17 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 355 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 18 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 156 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 106 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-19 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2:30 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 60 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -28.12 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -46.17 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1800 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 300 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 157 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 106 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-19 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2:30 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -28.12 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -46.17 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6910 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1152 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 165 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 114 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-19 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 21:40 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Surf &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -28.65 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -44.99 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 728 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 226 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 166 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 114 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-19 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 21:40 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 60 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -28.65 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -44.99 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 660 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 578 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 167 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 114 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-19 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 21:40 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 80 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -28.65 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -44.99 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 722 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 390 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Trichod.1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Surf &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.80 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -47.10 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1002 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 194 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Trichod.2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Surf &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.80 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -47.10 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 744 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 206 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Trichod.3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Surf &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.80 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -47.10 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 600 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 218 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+
+---
+
+## Package kableExtra
+
+
+```r
+kbl(samples_wide, 
+    col.names = c("sample", "transect", "station", "date", "time", "depth", 
+                 "level", "lat", "long", "pico", "nano")) %&gt;%
+  kable_styling(font_size = 9) 
+```
+
+&lt;table class="table" style="font-size: 9px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; sample &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; transect &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; station &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; date &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; time &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; depth &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; level &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; lat &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; long &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; pico &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; nano &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-10-31 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 5:20 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 45 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -23.58 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -41.78 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 7651 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4845 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-10-31 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 5:20 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 45 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -23.58 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -41.78 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 7343 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3258 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 19 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-02 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 13:30 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Surf &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -25.79 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -40.36 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1005 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 898 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 21 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-02 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0:0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Surf &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -26.23 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -40.09 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 793 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 660 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 7 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 26 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-03 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 19:30 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Surf &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.31 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -39.38 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 907 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 856 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 10 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 81 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-13 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1:0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 140 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.42 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -44.72 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3278 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1232 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 9 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 81 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-13 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1:0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 140 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.42 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -44.72 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3181 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1235 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 11 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 85 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-13 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 13:30 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 110 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -26.80 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -45.30 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 16312 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1615 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 13 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 86 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-13 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 17:0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 105 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -26.33 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -45.41 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6366 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1007 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 15 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 87 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-13 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 19:30 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 105 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -26.22 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -45.48 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6189 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 622 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 120 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 96 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-18 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 23:50 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Surf &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.39 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -47.82 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1150 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 75 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 121 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 96 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-18 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 23:50 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 30 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.39 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -47.82 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1737 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 218 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 122 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 96 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-18 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 23:50 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 50 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.39 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -47.82 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 853 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 234 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 125 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 98 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-18 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 5:0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Surf &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.59 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -47.39 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3086 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1300 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 126 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 98 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-18 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 5:0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 50 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.59 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -47.39 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1217 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 782 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 127 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 98 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-18 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 5:0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 85 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.59 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -47.39 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3420 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 226 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 140 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 101 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-18 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 12:0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Surf &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.79 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -46.96 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 500 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 366 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 141 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 101 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-18 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 12:0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 60 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.79 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -46.96 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1046 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 485 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 142 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 101 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-18 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 12:0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 110 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.79 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -46.96 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 641 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 159 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 155 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 106 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-19 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2:30 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Surf &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -28.12 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -46.17 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 355 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 18 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 156 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 106 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-19 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2:30 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 60 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -28.12 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -46.17 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1800 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 300 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 157 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 106 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-19 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2:30 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -28.12 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -46.17 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6910 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1152 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 165 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 114 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-19 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 21:40 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Surf &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -28.65 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -44.99 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 728 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 226 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 166 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 114 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-19 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 21:40 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 60 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -28.65 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -44.99 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 660 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 578 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 167 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 114 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-19 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 21:40 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 80 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -28.65 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -44.99 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 722 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 390 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Trichod.1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Surf &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.80 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -47.10 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1002 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 194 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Trichod.2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Surf &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.80 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -47.10 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 744 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 206 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Trichod.3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Surf &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.80 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -47.10 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 600 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 218 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+## Package kableExtra
+
+
+```r
+kbl(samples_wide, linesep = "", 
+    col.names = c("sample", "transect", "station", "date", "time", "depth", 
+                 "level", "lat", "long", "pico", "nano")) %&gt;%
+  kable_styling(font_size = 9,
+                bootstrap_options = c("condensed") ) %&gt;%
+  add_header_above(header = c(" " = 9, "cell/ml"=2)) %&gt;% 
+  scroll_box(width = "600px", height = "300px") 
+```
+
+&lt;div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:300px; overflow-x: scroll; width:600px; "&gt;&lt;table class="table table-condensed" style="font-size: 9px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="empty-cells: hide;border-bottom:hidden;position: sticky; top:0; background-color: #FFFFFF;" colspan="9"&gt;&lt;/th&gt;
+&lt;th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; position: sticky; top:0; background-color: #FFFFFF;" colspan="2"&gt;&lt;div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; "&gt;cell/ml&lt;/div&gt;&lt;/th&gt;
+&lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"&gt; sample &lt;/th&gt;
+   &lt;th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"&gt; transect &lt;/th&gt;
+   &lt;th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"&gt; station &lt;/th&gt;
+   &lt;th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"&gt; date &lt;/th&gt;
+   &lt;th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"&gt; time &lt;/th&gt;
+   &lt;th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"&gt; depth &lt;/th&gt;
+   &lt;th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"&gt; level &lt;/th&gt;
+   &lt;th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"&gt; lat &lt;/th&gt;
+   &lt;th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"&gt; long &lt;/th&gt;
+   &lt;th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"&gt; pico &lt;/th&gt;
+   &lt;th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"&gt; nano &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-10-31 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 5:20 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 45 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -23.58 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -41.78 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 7651 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4845 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-10-31 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 5:20 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 45 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -23.58 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -41.78 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 7343 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3258 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 19 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-02 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 13:30 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Surf &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -25.79 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -40.36 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1005 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 898 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 21 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-02 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0:0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Surf &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -26.23 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -40.09 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 793 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 660 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 7 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 26 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-03 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 19:30 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Surf &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.31 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -39.38 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 907 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 856 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 10 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 81 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-13 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1:0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 140 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.42 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -44.72 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3278 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1232 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 9 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 81 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-13 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1:0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 140 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.42 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -44.72 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3181 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1235 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 11 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 85 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-13 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 13:30 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 110 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -26.80 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -45.30 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 16312 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1615 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 13 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 86 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-13 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 17:0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 105 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -26.33 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -45.41 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6366 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1007 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 15 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 87 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-13 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 19:30 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 105 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -26.22 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -45.48 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6189 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 622 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 120 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 96 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-18 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 23:50 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Surf &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.39 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -47.82 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1150 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 75 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 121 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 96 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-18 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 23:50 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 30 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.39 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -47.82 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1737 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 218 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 122 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 96 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-18 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 23:50 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 50 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.39 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -47.82 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 853 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 234 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 125 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 98 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-18 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 5:0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Surf &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.59 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -47.39 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3086 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1300 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 126 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 98 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-18 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 5:0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 50 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.59 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -47.39 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1217 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 782 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 127 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 98 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-18 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 5:0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 85 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.59 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -47.39 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3420 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 226 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 140 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 101 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-18 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 12:0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Surf &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.79 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -46.96 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 500 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 366 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 141 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 101 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-18 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 12:0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 60 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.79 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -46.96 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1046 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 485 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 142 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 101 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-18 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 12:0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 110 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.79 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -46.96 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 641 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 159 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 155 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 106 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-19 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2:30 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Surf &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -28.12 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -46.17 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 355 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 18 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 156 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 106 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-19 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2:30 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 60 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -28.12 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -46.17 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1800 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 300 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 157 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 106 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-19 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2:30 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -28.12 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -46.17 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6910 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1152 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 165 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 114 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-19 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 21:40 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Surf &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -28.65 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -44.99 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 728 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 226 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 166 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 114 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-19 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 21:40 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 60 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -28.65 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -44.99 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 660 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 578 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 167 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 114 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2013-11-19 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 21:40 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 80 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Deep &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -28.65 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -44.99 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 722 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 390 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Trichod.1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Surf &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.80 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -47.10 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1002 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 194 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Trichod.2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Surf &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.80 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -47.10 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 744 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 206 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Trichod.3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Surf &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -27.80 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -47.10 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 600 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 218 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;&lt;/div&gt;
+
+
+
+---
+
 layout: false
 
 class: inverse
@@ -5101,6 +6383,8 @@ class: inverse
 - Joining
 
 - Long vs. Wide format
+
+- Displaying tables
 
 ---
 layout: false
@@ -5123,7 +6407,7 @@ layout: false
 .student[
 * Please install the following packages and their dependencies
     * ggplot2
-    * cowplot
+    * patchwork
 * Download data files (links on slack)
 
 ]
@@ -5132,10 +6416,13 @@ layout: false
 * [Chapter 28 of R for data science](https://r4ds.had.co.nz/graphics-for-communication.html)
 * *[Fundamental of data visualization](https://serialmentor.com/dataviz/)*
 * *[Data visualization: practical introduction](http://socviz.co/lookatdata.html#what-makes-bad-figures-bad)*
+
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="libs/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
+"ratio": "16:9",
 "highlightStyle": "tomorrow-night-blue",
 "highlightLines": true,
 "countIncrementalSlides": false
