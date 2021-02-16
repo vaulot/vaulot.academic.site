@@ -1,68 +1,56 @@
 ---
-title: "Finally switching from Word to latex... Should have done years ago"
+title: "Switching from Word to latex... a leap in prodcutivity"
 
 date: 2018-09-15
-lastmod: 2018-09-15
+lastmod: 2021-02-16
 
 draft: false
 categories: [""]
 tags: ["papers"]
 
-summary: "Some notes about how to write a paper for Scientific Reports using Overleaf."
+summary: "Some notes about how to write a paper using Overleaf."
 ---
 
-For the last paper of Margot thesis on the diversity of Mamiellophyceae in the OSD dataset I decided to switch from Word to Latex using the Overleaf web site. It took some effort and adjustment, but the effort might be really worthwhile.
+For the last paper of Margot thesis on the diversity of Mamiellophyceae in the OSD dataset in 2018, I decided to switch from Word to Latex using the Overleaf web site. It took some effort and adjustment, but the effort might be really worthwhile.  All papers written since then have been written using Overleaf and Latex.
 
 ![](/img/overleaf-interface.png)
 
 ### Steps
 * Open an Overleaf account
-* Swtich to Overleaf 1 or Overleaf 2 . Overleaf 2 is better for tracking changes but misses some of the necessary feature for auxiliary files.  It does not have direct Git support and one has to go through GitHub
-* Create a new project based on the Scientific Reports template.
+* Create a new project based on the Scientific Reports template or alternate template for the journal you are targeting.  
+* You can also use this [general template](https://daniel-vaulot.fr/files/latex/paper_template.zip)
 * Main text is in file **main.tex**
 * Begin to fill in the template
 
 ### Synchronizing with computer
-#### Version Overleaf 1
-* Get the link for Git (in the share menu) - see here: https://www.overleaf.com/blog/195-new-collaborate-online-and-offline-with-overleaf-and-git-beta#.W51LHM4zaUk)
-* On your computer using git clone the repository in a directory
+* Get the link for Git (in the left menu) - see here
+* On your computer start git in the commande window 
+* Navigate to the directory you want to use
+* Clone the repository in a subdirectory called `my_paper`
+`git clone https://git.overleaf.com/2029559gkypzx my_paper`
 * Use GitHub desktop to add this repository to the list of repository
-`git clone https://git.overleaf.com/2029559gkypzx`
 * Now you can very easily synchronize between your computer and Overleaf. Just be careful not to change things in both location at the same time.
 
-#### Version Overleaf 2
-* From Overleaf : Menu -> Synchronize with GitHub
-    * Create new repository
-* Go to GitHub
-    * Clone repository on your computer using GitHub desktop
-* Updates
-    * from Overleaf -> Push or Pull changes to/from GitHub
-    * from your computer - > Use GitHub desktop to push or pull
-
 ### Supplementary material
-* Create a new file called **main-sup.tex** which contains all the Supplementary
-* Need to change the name of the Figures and tables
-* Cannot use \maketitle because it requires abstract
-* In order to be able to reference the figures and tables from the supplementary material, you need to put some helper code in the main document (main.tex - see code below), reference the Supplementary file in main.tex and refresh the Supplementary file each time you restart the Overleaf session.
+* The best strategy is to put the supplementary material at the end of the main file and then to split the produced pdf into 2 parts for journals that require the Supplementary to be in a different file
 
 ### Figures (directory \fig)
 * Do the figures under R (using an Rmd file) and save as pdf
-* If necessary improve with Corel Draw or Illustrator
+* If necessary improve with Corel Draw or Illustrator or best **Affinity Designer**
 * Reexport as pdf
-* Open pdf and select area of figures
-* Save as png in the directory \fig
+* Save as pdf in the directory \fig
 
 ### Tables (directory \tables)
 * Store tables in Excel file
-* Read Excel in R and export as Latex using xtable library
+* Read Excel in R and export as Latex using kableExtra library
 * Choose the option to have the caption on top
-* If the table is too big use `scalebox = 0.75`
-* If the table is too long, use the longtable option `tabular.environment = "longtable", floating=FALSE` (note: floating must be set to FALSE in this case)
+* If the table is too big use `latex_options = c("scale_down")`
+* If the table is too long, use the longtable option `kbl(..., longtable = TRUE)` 
 * File is stored in \table
 
 ### Bibliography
 * Do not use the Overleaf Mendeley importer because it does not handle the italics (coded in HTML in Mendeley <i>Micromonas</i>)
-* Export the group you are working in as a bib file
+* Export the group you are working with as a bib file
 * Run small R routine to change the HTML codes for Italics to the Latex code for italics.
 * Place the file into your git directory and push to Overleaf
 
