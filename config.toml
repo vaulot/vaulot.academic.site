@@ -248,9 +248,9 @@ enableGitInfo = false
     link = "https://www.researchgate.net/profile/Daniel_Vaulot"
 
   [[params.social]]
-    icon = "mendeley"
+    icon = "zotero"
     icon_pack = "ai"
-    link = "https://www.mendeley.com/profiles/daniel-vaulot/"
+    link = "https://www.zotero.org/groups/2777404/daniel_vaulot/library"
 
   [[params.social]]
     icon = "github"
