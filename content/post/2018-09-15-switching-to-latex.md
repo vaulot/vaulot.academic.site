@@ -18,7 +18,7 @@ For the last paper of Margot thesis on the diversity of Mamiellophyceae in the O
 ### Steps
 * Open an Overleaf account
 * Create a new project based on the Scientific Reports template or alternate template for the journal you are targeting.  
-* You can also use this [general template](https://daniel-vaulot.fr/files/latex/paper_template.zip)
+* You can also use this [general template](https://daniel-vaulot.fr/files/latex/template_paper.zip)
 * Main text is in file **main.tex**
 * Begin to fill in the template
 
@@ -54,65 +54,5 @@ For the last paper of Margot thesis on the diversity of Mamiellophyceae in the O
 * Run small R routine to change the HTML codes for Italics to the Latex code for italics.
 * Place the file into your git directory and push to Overleaf
 
-### Latex Code
-#### Main document - header
-```latex
-\documentclass[fleqn,12pt]{wlscirep}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-
-\usepackage{setspace} % for spacing of paragraphs
-\usepackage{lineno} % for line numbers
-\usepackage{gensymb} % for degree sign \degree
-
-%%% HELPER CODE FOR DEALING WITH EXTERNAL REFERENCES
-% (See http://tex.stackexchange.com/a/69832/226)
-%%%
-\usepackage{xcite}
-\usepackage{xr}
-\makeatletter
-\newcommand*{\addFileDependency}[1]{% argument=file name and extension
-  \typeout{(#1)}
-  \@addtofilelist{#1}
-  \IfFileExists{#1}{}{\typeout{No file #1.}}
-}
-\makeatother
-
-\newcommand*{\myexternaldocument}[1]{%
-    \externaldocument{#1}%
-    \addFileDependency{#1.tex}%
-    \addFileDependency{#1.aux}%
-}
-%%% END HELPER CODE
-\externaldocument{main_sup} % This is the supplementary material
-
-% Title and authors
-\title{Novel diversity within GOT Mamiellophyceae }
-\author[1]{Jon Snow}
-\author[1,*]{Daniel Vaulot}
-\affil[1]{Landfall}
-\affil[*]{Corresponding author: (ORCID 0000-0002-0717-5685) vaulot@landfall.got}
-\keywords{phytoplankton, xxx}
-
-\begin{document}
-```
-#### Supplementary - header
-
-```latex
-\documentclass[fleqn,12pt]{wlscirep}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-
-\usepackage{setspace} % for spacing of paragraphs
-\usepackage{lineno} % for line numbers
-\usepackage{gensymb} % for degree  \degree
-\usepackage{longtable} % for long tables
-\usepackage{hanging} % for hanging indents
-
-% To change the name of the Figure to Fig. S1 etc...
-\DeclareCaptionLabelFormat{addS}{#1 S#2}
-\captionsetup[table]{labelformat=addS}
-\captionsetup[figure]{labelformat=addS}
-
-\begin{document}
-```
+### Latex Templates
+* [Paper](https://daniel-vaulot.fr/files/latex/template_paper.zip)
