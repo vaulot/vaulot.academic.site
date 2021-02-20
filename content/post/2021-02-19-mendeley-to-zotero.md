@@ -14,7 +14,7 @@ summary: "Since it has been bought back by Elsevier, the performance and capabil
 My Mendeley database contains about 20,000 references neatly organized in folders and some with notes in the pdf. I do not care too much about the notes but I care about the folder structure especially as I am dealing with taxonomy and have folders for different taxonomy levels.  One key issue is that starting from version 1.19 of the Mendeley desktop manager, Mendeley encrypeted the Mendeley database that resides on your computer and therefore other applications cannot access the SQlite Mendeley database which makes any transfer to another reference manager painful.
 
 
-{{< figure src="img/mendeley_folder_structure.png" title="Mendeley file structure"  height="200">}}
+{{< figure src="img/mendeley_folder_structure.png" title="Mendeley file structure"  height="200px">}}
 
 One caveat is that I do not use Word or Google docs to write up papers.  I switched completely to Latex using Oveleaf for collaborative work and have no intent whatsoever to switch back to Word.  So basically, I am exporting references as Bibtex.  
 
