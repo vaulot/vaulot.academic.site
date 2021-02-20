@@ -35,8 +35,13 @@ _The following instructions are valid for Mendeley 1.19.  If you have version 1.
 #### Install and configure Zotero
 * Install [Zotero and Chrome connectro](https://www.zotero.org/download/)
 * Install [DOI plugin](https://github.com/bwiernik/zotero-shortdoi) for managing DOIs.
-* Install [Zotfile plugin](http://zotfile.com/) to manage file.
+* Install [Zotfile plugin](http://zotfile.com/) to manage pdf file storage.
 * [Configure Zotfile](https://tomsaunders.co.nz/zotero-with-google-drive/#:~:text=Head%20over%20to%20Google%20Drive,to%20be%20on%20your%20PC.) to be link your Zotero pdf with Google drive (this way your files will be synchronized without having to pay for space on Zotero server)
+* Install and configure [Better bibtex plugin](https://retorque.re/zotero-better-bibtex/). This allows to customize bibtex citation keys and drag and drop citations from Zotero to any editor such as overleaf.
+
+{{< figure src="img/zotero_better_bibtex.png" title="Better bibtex define keys" width=200 >}}
+
+{{< figure src="img/zotero_export.png" title="Zotero quick export" >}}
 
 #### In Mendeley:
 
