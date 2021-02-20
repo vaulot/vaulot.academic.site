@@ -14,7 +14,7 @@ summary: "Since it has been bought back by Elsevier, the performance and capabil
 My Mendeley database contains about 20,000 references neatly organized in folders and some with notes in the pdf. I do not care too much about the notes but I care about the folder structure especially as I am dealing with taxonomy and have folders for different taxonomy levels.  One key issue is that starting from version 1.19 of the Mendeley desktop manager, Mendeley encrypeted the Mendeley database that resides on your computer and therefore other applications cannot access the SQlite Mendeley database which makes any transfer to another reference manager painful.
 
 
-{{< figure src="img/mendeley_folder_structure.png" title="Mendeley file structure" >}}
+{{< figure src="img/mendeley_folder_structure.png" title="Mendeley file structure"  height="200">}}
 
 One caveat is that I do not use Word or Google docs to write up papers.  I switched completely to Latex using Oveleaf for collaborative work and have no intent whatsoever to switch back to Word.  So basically, I am exporting references as Bibtex.  
 
@@ -39,7 +39,7 @@ _The following instructions are valid for Mendeley 1.19.  If you have version 1.
 * [Configure Zotfile](https://tomsaunders.co.nz/zotero-with-google-drive/#:~:text=Head%20over%20to%20Google%20Drive,to%20be%20on%20your%20PC.) to be link your Zotero pdf with Google drive (this way your files will be synchronized without having to pay for space on Zotero server)
 * Install and configure [Better bibtex plugin](https://retorque.re/zotero-better-bibtex/). This allows to customize bibtex citation keys and drag and drop citations from Zotero to any editor such as overleaf.
 
-{{< figure src="img/zotero_better_bibtex.png" title="Better bibtex define keys" width=200 >}}
+{{< figure src="img/zotero_better_bibtex.png" title="Better bibtex define keys">}}
 
 {{< figure src="img/zotero_export.png" title="Zotero quick export" >}}
 
