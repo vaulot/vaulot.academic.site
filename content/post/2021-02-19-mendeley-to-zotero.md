@@ -29,4 +29,7 @@ I have tried a couple of alternatives:
 * Install [Zotero and Chrome connectro](https://www.zotero.org/download/)
 * Install [DOI plugin](https://github.com/bwiernik/zotero-shortdoi) for managing DOIs.
 * Install [Zotfile plugin](http://zotfile.com/) to manage file.
-* [Configure Zotfile]() to be linked with Google drive (this way your files will be synchronized without having to pay for space on Zotero server)
+* [Configure Zotfile](https://tomsaunders.co.nz/zotero-with-google-drive/#:~:text=Head%20over%20to%20Google%20Drive,to%20be%20on%20your%20PC.) to be linked with Google drive (this way your files will be synchronized without having to pay for space on Zotero server)
+* In Mendeley, select all your references, left click and press update (see image below). This will use the DOI to update all your Mendeley references.  Zotero lacks this capacity.
+
+{{< figure src="img/mendeley_update.png" title="Mendeley update references" >}}
