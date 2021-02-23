@@ -33,7 +33,7 @@ I have tried a couple of alternatives:
 
 _The following instructions are valid for Mendeley 1.19.  If you have version 1.18, things will be more easy_
 
-Just as a foreword, it is a very painful process if you have a lot of references and you are bound to loose some references in the process...
+Just as a foreword, **it is a very painful process if you have a lot of references and you are bound to loose some references in the process**...
 
 [Detailed instructions](https://www.zotero.org/support/kb/mendeley_import) can be found on the Zotero web site.
 
