@@ -24,19 +24,25 @@ I have tried a couple of alternatives:
 
 * **Papers from ReadCube**.  It is owned by a big company related to the Nature group.  I did not like really the interface and it lacked some of capabilities of Mendeley.  Also does not import easily Mendeley folder structure.
 * **Paperpile**.  It imports very easily the Mendeley database and data structure by going directly to the Mendeley web interface (it does not read your local Mendeley database) but I do not really like the interface and the search capacities are super limited. It only interface at present with Google docs, not Word nor Overleaf
-* **Zotero**. It is open source and has many plugins which add a lot of functions.  It is more complex to master than Mendeley, but finally I decided to switch to Zotero because it has more or less all the functions I need in particular, creating public and private groups.  Moreover it can be linked to Overleaf.
+* **Zotero**. It is open source and has many plugins which add a lot of functions.  It is more complex to master than Mendeley, but finally I decided to switch to Zotero because it has more or less all the functions I need in particular, creating public and private groups.  Moreover it can be linked to Overleaf.  Some nice tutorials:
+    * [Offcial Zotero manual](https://www.zotero.org/support/start)
+    * [Extensive tutorial about Zotero](https://guides.library.oregonstate.edu/c.php?g=359201&p=2426080) (a bit outdated for some aspects).
+    * [How to make the most of Zotero](https://tomsaunders.co.nz/zotero-guide/).
 
 ### Moving from Mendeley 1.19 to Zotero
 
 _The following instructions are valid for Mendeley 1.19.  If you have version 1.18, things will be more easy_
+
+Just as a foreword, it is a very painful process if you have a lot of references and you are bound to loose some references in the process...
 
 [Detailed instructions](https://www.zotero.org/support/kb/mendeley_import) can be found on the Zotero web site.
 
 #### Install and configure Zotero
 * Install [Zotero and Chrome connectro](https://www.zotero.org/download/)
 * Install [DOI plugin](https://github.com/bwiernik/zotero-shortdoi) for managing DOIs.
-* Install [Zotfile plugin](http://zotfile.com/) to manage pdf file storage.
-* [Configure Zotfile](https://tomsaunders.co.nz/zotero-with-google-drive/#:~:text=Head%20over%20to%20Google%20Drive,to%20be%20on%20your%20PC.) to be link your Zotero pdf with Google drive (this way your files will be synchronized without having to pay for space on Zotero server)
+* Install [Zotfile plugin](http://zotfile.com/) to manage pdf file storage.  Once you have it installed you can configure Zotfile:
+  * to attach the files to the database and synchronize them to the Zotero server.  For a medium size database (about 2500 files) the best Zotero deal is "unlimited storage" which costz is 120US$ per year.
+  * [to link your pdf files to a folder on your Google drive](https://tomsaunders.co.nz/zotero-with-google-drive/#:~:text=Head%20over%20to%20Google%20Drive,to%20be%20on%20your%20PC.) (this way your files will be synchronized without having to pay for space on Zotero server)
 * Install and configure [Better bibtex plugin](https://retorque.re/zotero-better-bibtex/). This allows to customize bibtex citation keys and drag and drop citations from Zotero to any editor such as overleaf.
 
 {{< figure src="img/zotero_better_bibtext.png" title="Better bibtex define keys">}}
@@ -63,6 +69,21 @@ _The following instructions are valid for Mendeley 1.19.  If you have version 1.
 
 * Move this database to a safe location
 * Install [Mendeley 1.18](https://www.zotero.org/support/kb/mendeley_import)
-* Resynchronize your entire database with the pdf files. I use the following organization
+* Resynchronize your entire database with the pdf files. I use the following organization for the file but this really does not matter.  This step may take several hours depending on the size of library and the speed of your connection.
 
 {{< figure src="img/mendeley_folders.png" title="Mendeley database" >}}
+
+* Finally import into Zotero. This took a long time especially with 20,000 references and crashed a few times... In my case it crashed after 5,600 import.  One thing that helped is to move some references that were "Unsorted" to trash. You can recover them later to import them through bibtex.
+
+### Groups
+
+Groups from Mendeley are not imported into Zotero. 
+* Save all the pdf from the Group in a directory
+* If you have files in subfolders, use tags to mark the subfolders (eg. 18SV4, 18SV9)
+* Export as bibtex (making sure that in the Mendeley settings you **do not escape the characters for Latex**)
+* Import into Zotero
+* Note: files in Groups have to be attached and cannot be linked.  So you if you want to move some references from your Library to a Group Library you will need first to attach them (Menu Tools/Manage attachment/Convert Files to Stored files).
+
+### Conclusion...
+
+What a pain, should have moved to Zotero a few years ago....
