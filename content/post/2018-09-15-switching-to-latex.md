@@ -23,9 +23,9 @@ In 2018, I decided to switch from Word to Latex using the Overleaf web site. It 
 * Begin to fill in the template
 
 ### Synchronizing with computer
-* Get the link for Git (in the left menu) - see here
-* On your computer start git in the commande window 
-* Navigate to the directory you want to use
+* Get the link for Git (in the left menu)
+* On your computer start a Powershell window 
+* Navigate to the directory you want to use (using cd)
 * Clone the repository in a subdirectory called `my_paper`
 `git clone https://git.overleaf.com/2029559gkypzx my_paper`
 * Use GitHub desktop to add this repository to the list of repository
@@ -51,9 +51,10 @@ In 2018, I decided to switch from Word to Latex using the Overleaf web site. It 
   * If the table is too long, use the longtable option `kbl(..., longtable = TRUE)` 
 
 ### Bibliography
-* Do not use the Overleaf Mendeley importer because it does not handle the italics (coded in HTML in Mendeley <i>Micromonas</i>)
-* Export the group you are working with as a bib file
-* Run small R routine to change the HTML codes for Italics to the Latex code for italics.
+* Do not use the Overleaf Mendeley or Zotero importer because it will get your all database.
+* Export the group you are working with as a bibtex file
+  * With Mendeley, run small R routine to change the HTML codes for Italics to the Latex code for italics.
+  * With Zotero, using the Better BibTex (BBT) plugin, HTML codes are converted to Latex.
 * Place the file into your git directory and push to Overleaf
 
 ### Converting to Word (docx)
