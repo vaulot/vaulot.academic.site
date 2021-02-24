@@ -33,5 +33,5 @@ Modelling using statistical learning and data science methods are powerful tools
 * [Session 02 - 2021-01-22 - R markdown](https://daniel-vaulot.fr/html/course-data-science-2021/R-session-02-markdown.html)
 * [Session 03 - 2021-01-22 - Git](https://daniel-vaulot.fr/html/course-data-science-2021/R-session-03-Git.html)
 * [Session 04 - 2021-01-29 - Data wrangling](https://daniel-vaulot.fr/html/course-data-science-2021/R-session-04-data_wrangling.html) - [data](https://daniel-vaulot.fr/html/course-data-science-2021/R-session-04.zip)
-* [Session 05 - 2021-02-19 - Data viz](https://daniel-vaulot.fr/html/course-data-science-2021//R-session-05-data_visualization.html) - [data](https://daniel-vaulot.fr/html/course-data-science-2021/R-session-05.zip)
-* [Session 06 - 2021-xx-xx - Mapping](https://vaulot.github.io/course-ntu-data-science-2020/R-session-06-mapping.html)
+* [Session 05 - 2021-02-19 - Data viz](https://daniel-vaulot.fr/html/course-data-science-2021/R-session-05-data_visualization.html) - [data](https://daniel-vaulot.fr/html/course-data-science-2021/R-session-05.zip)
+* [Session 06 - 2021-02-26 - Creating maps](https://daniel-vaulot.fr/html/course-data-science-2021/R-session-06-mapping.html)- [data](https://daniel-vaulot.fr/html/course-data-science-2021/R-session-06.zip)
