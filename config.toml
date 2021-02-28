@@ -250,7 +250,7 @@ enableGitInfo = false
   [[params.social]]
     icon = "zotero"
     icon_pack = "ai"
-    link = "https://www.zotero.org/groups/2777404/daniel_vaulot/library"
+    link = "https://www.zotero.org/vaulot"
 
   [[params.social]]
     icon = "github"
