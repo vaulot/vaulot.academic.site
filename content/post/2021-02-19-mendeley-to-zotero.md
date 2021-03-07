@@ -38,8 +38,9 @@ Just as a foreword, **it is a very painful process if you have a lot of referenc
 [Detailed instructions](https://www.zotero.org/support/kb/mendeley_import) can be found on the Zotero web site.
 
 #### Install and configure Zotero
-* Install [Zotero and Chrome connectro](https://www.zotero.org/download/)
+* Install [Zotero and Chrome connector](https://www.zotero.org/download/)
 * Install [DOI plugin](https://github.com/bwiernik/zotero-shortdoi) for managing DOIs.
+* Install [Zutilo mlugin](https://github.com/wshanks/Zutilo/blob/master/docs/COMMANDS.md#item-menu-functions) that allows to correct very quickly a lot of references together e.g. to change the Journal Name.
 * Install [Zotfile plugin](http://zotfile.com/) to manage pdf file storage.  Once you have it installed you can configure Zotfile:
   * to attach the files to the database and synchronize them to the Zotero server.  For a medium size database (about 2500 files) the best Zotero deal is "unlimited storage" which costz is 120US$ per year.
   * [to link your pdf files to a folder on your Google drive](https://tomsaunders.co.nz/zotero-with-google-drive/#:~:text=Head%20over%20to%20Google%20Drive,to%20be%20on%20your%20PC.) (this way your files will be synchronized without having to pay for space on Zotero server)
@@ -78,6 +79,7 @@ Just as a foreword, **it is a very painful process if you have a lot of referenc
 ### Groups
 
 Groups from Mendeley are not imported into Zotero. 
+
 * Save all the pdf from the Group in a directory
 * If you have files in subfolders, use tags to mark the subfolders (eg. 18SV4, 18SV9)
 * Export as bibtex (making sure that in the Mendeley settings you **do not escape the characters for Latex**)
