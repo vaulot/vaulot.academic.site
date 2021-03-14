@@ -12,7 +12,7 @@ projects = ["phytopol", "rcc"]
 tags = ["transcriptomes", "phagotrophy", "Micromonas", "rcc", "Arctic"]
 url_pdf = "files/papers/Jimenez_Micromonas_2020.pdf"
 url_preprint = "https://www.biorxiv.org/content/10.1101/2020.05.26.117895v1"
-url_code = ""
+url_code = "https://github.com/burnsajohn/predictTrophicMode"
 url_dataset = ""
 url_project = ""
 url_slides = ""
@@ -21,7 +21,7 @@ url_poster = ""
 url_source = ""
 [[url_custom]]
     name = "Supplementary material"
-    url = "https://github.com/burnsajohn/predictTrophicMode"
+    url = "files/papers/Jimenez_Micromonas_2020_supp_mat.pdf"
 math = true
 highlight = true
 [header]
