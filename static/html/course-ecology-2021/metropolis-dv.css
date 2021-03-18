@@ -1,0 +1,114 @@
+/*.remark-code-line {
+  background: #d6d6d6; 
+  border-radius: 0px;
+  padding: 4px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 50px;
+  margin-left: 50px;
+  border-width: 0px 0px 0px 0px;
+  outline-offset: 0px;
+} */
+
+.remark-code-line-highlighted { 
+	background-color: rgba(247, 247, 54, 0.3); 
+}
+
+.student {
+  /* background-color: #f7f736; */
+  /* text-shadow: 0 0 20px #333; */
+  font-size: 100%;
+  font-style: italic;
+  text-align: center;
+  /* margin-top: 2px;
+  margin-bottom: 2px;
+  margin-right: 50px;
+  margin-left: 10px;
+  border-style: solid;
+  border-width: 0px 0px 0px 2px;
+  border-color: blue;
+  border-radius: 3px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 10px;
+  padding-left: 10px;*/
+  color: blue
+}
+
+.warning {
+  /* background-color: #f7f736; */
+  /* text-shadow: 0 0 20px #333; */
+  font-size: 100%;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-right: 50px;
+  margin-left: 10px;
+  border-style: solid;
+  border-width: 0 0 0 2px;
+  border-color: red;
+  border-radius: 3px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 10px;
+  padding-left: 10px;
+  color: red
+}
+
+
+
+a, a > code {
+  color: #1a22ff; /*default: rgb(249, 38, 114); || sets color of links */
+  text-decoration: none; /* turns off background coloring of links */
+}
+
+/* Two-column layout */
+.left-column {
+  color: #777;
+  width: 20%;
+  height: 92%;
+  float: left;
+}
+.left-column h2:last-of-type, .left-column h3:last-child {
+  color: #000;
+}
+.right-column {
+  width: 75%;
+  float: right;
+  padding-top: 1em;
+}
+.pull-left {
+  float: left;
+  width: 47%;
+}
+.pull-right {
+  float: right;
+  width: 47%;
+}
+.pull-right ~ * {
+  clear: both;
+}
+
+
+/* custom.css */
+.left-code {
+  color: #777;
+  width: 38%;
+  height: 92%;
+  float: left;
+}
+.right-plot {
+  width: 60%;
+  float: right;
+  padding-left: 1%;
+}
+
+.footnote {
+  position: absolute;
+  bottom: 1.5em;
+  padding-right: 4em;
+  font-size: 0.7em;
+}
+
+.bold {
+  font-weight: bold;
+}
