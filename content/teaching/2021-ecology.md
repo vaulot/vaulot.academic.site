@@ -11,6 +11,8 @@ tags: [ "ecology"]
 summary: "lecture on scales in plankton ecology"
 ---
 
+{{< figure src="img/2020-course-experimental-design.png" title="" lightbox="false"  width="600">}}
+
 __Course__: Current Issues in Ecology
 
 __Code__: ES3305-ES7022
