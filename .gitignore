@@ -7,3 +7,4 @@ sandbox/*
 .Rhistory
 *.bib
 .git*
+.Rproj.user
