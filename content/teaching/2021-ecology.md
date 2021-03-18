@@ -1,5 +1,5 @@
 ---
-title: "Data Science - 2021"
+title: "Current Issues in Ecology - 2021"
 
 date: 2021-02-17
 lastmod: 2021-02-17
