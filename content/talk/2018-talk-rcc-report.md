@@ -37,4 +37,4 @@ caption = ""
 
 +++
 
-{{< speakerdeck 2b5e2543d13742b19b70a2dadf60a8e9 >}}
+<script async class="speakerdeck-embed" data-id="2b5e2543d13742b19b70a2dadf60a8e9" data-ratio="1.77469670710572" src="//speakerdeck.com/assets/embed.js"></script>

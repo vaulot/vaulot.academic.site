@@ -38,4 +38,4 @@ caption = ""
 +++
 ![](/img/2018-04-02_talk_puc.png)
 
-{{< speakerdeck 1f39ec9e128f405e9f472b7614d19b55>}}
+<script async class="speakerdeck-embed" data-id=" 1f39ec9e128f405e9f472b7614d19b55" data-ratio="1.77469670710572" src="//speakerdeck.com/assets/embed.js"></script>
