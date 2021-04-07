@@ -8,3 +8,4 @@ sandbox/*
 *.bib
 .git*
 .Rproj.user
+static/files/citations/bib_to_md.R
