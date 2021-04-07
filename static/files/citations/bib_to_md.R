@@ -1,12 +1,19 @@
-bibtex_2academic <- function(bibfile,
-                             outfold,
-                             abstract = FALSE,
-                             overwrite = FALSE) {
+# bibtex_2academic <- function(bibfile,
+#                              outfold,
+#                              abstract = FALSE,
+#                              overwrite = FALSE) {
 
   require(RefManageR)
   require(dplyr)
   require(stringr)
   require(anytime)
+  
+  # Export as bibtex not as Biblatex
+  
+  bibfile <- "c:/daniel.vaulot@gmail.com/web site/vaulot.academic.site/static/files/citations/Gujardo.bib"
+  outfold   <- "c:/daniel.vaulot@gmail.com/web site/vaulot.academic.site/content/publication"
+  abstract  = FALSE
+  overwrite=TRUE
 
   # Import the bibtex file and convert to data.frame
   mypubs   <- ReadBib(bibfile, check = "warn", .Encoding = "UTF-8") %>%
@@ -77,7 +84,7 @@ bibtex_2academic <- function(bibfile,
       if (!is.null(x[["volume"]])) publication <- paste0(publication,", (", x[["volume"]], ")")
       # if (!is.null(x[["number"]])) publication <- paste0(publication, ", ", x[["number"]])
       # if (!is.null(x[["pages"]])) publication <- paste0(publication, ", _pp. ", x[["pages"]], "_")
-      if (!is.null(x[["doi"]])) publication <- paste0(publication,", ", paste0("https://doi.org/",x[["doi"]]))
+      # if (!is.null(x[["doi"]])) publication <- paste0(publication,", ", paste0("https://doi.org/",x[["doi"]]))
 
       write(paste0("publication = \"", publication,"\""), fileConn, append = T)
       write(paste0("publication_short = \"", publication,"\""),fileConn, append = T)
@@ -121,18 +128,22 @@ bibtex_2academic <- function(bibfile,
   # apply the "create_md" function over the publications list to generate
   # the different "md" files.
   apply(mypubs, FUN = function(x) create_md(x), MARGIN = 1)
-  return(mypubs)
-}
 
-setwd("c:/daniel.vaulot@gmail.com/web site/vaulot.academic.site/")
-
-bibfile <- "static/files/citations/2020_1.bib"
-outfold   <- "content/publication"
-
-mypubs <- bibtex_2academic(bibfile  = bibfile,
-                 outfold   = outfold,
-                 abstract  = TRUE,
-                 overwrite=TRUE)
+  
+  
+  
+# return(mypubs)
+# }
+# 
+# # setwd("c:/daniel.vaulot@gmail.com/web site/vaulot.academic.site/")
+# 
+# bibfile <- "c:/daniel.vaulot@gmail.com/web site/vaulot.academic.site/static/files/citations/Gujardo.bib"
+# outfold   <- "c:/daniel.vaulot@gmail.com/web site/vaulot.academic.site/content/publication"
+# 
+# mypubs <- bibtex_2academic(bibfile  = bibfile,
+#                  outfold   = outfold,
+#                  abstract  = TRUE,
+#                  overwrite=TRUE)
 
 # The next lines use the bin2academic library but do not format the authors correctly
 
