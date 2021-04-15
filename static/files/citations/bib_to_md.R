@@ -10,7 +10,7 @@
   
   # Export as bibtex not as Biblatex
   
-  bibfile <- "c:/daniel.vaulot@gmail.com/web site/vaulot.academic.site/static/files/citations/Gujardo.bib"
+  bibfile <- "c:/daniel.vaulot@gmail.com/web site/vaulot.academic.site/static/files/citations/malina.bib"
   outfold   <- "c:/daniel.vaulot@gmail.com/web site/vaulot.academic.site/content/publication"
   abstract  = FALSE
   overwrite=TRUE
