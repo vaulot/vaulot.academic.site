@@ -3,13 +3,13 @@
 date = 2016-04-27T00:00:00
 
 # Weight
-weight = 1
+weight = 2
 
 # Project title.
 title = "Phytopol"
 
 # Project summary to display on homepage.
-summary = "Phytoplankton survival in the polar night."
+summary = "Phytoplankton survival in the polar night"
 
 # Optional image to display on homepage (relative to `static/img/` folder).
 image_preview = "micropolar_small.jpg"

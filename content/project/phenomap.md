@@ -9,7 +9,7 @@ weight = 1
 title = "PhenoMap"
 
 # Project summary to display on homepage.
-summary = "Characterize unknown phytoplankton species."
+summary = "Characterize unknown phytoplankton species"
 
 # Optional image to display on homepage (relative to `static/img/` folder).
 image_preview = "phenomap_small.jpg"
