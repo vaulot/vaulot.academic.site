@@ -19,7 +19,7 @@ url_project = ""
 url_slides = ""
 url_video = ""
 url_poster = ""
-url_source = ""
+url_source = "http://www.nature.com/articles/s41598-017-12412-5"
 [[url_custom]]
     name = "Supplementary material"
     url = "files/papers/Lopes_2017_SciRep_supp.pdf"

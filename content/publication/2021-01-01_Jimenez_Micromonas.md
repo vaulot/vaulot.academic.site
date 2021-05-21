@@ -18,7 +18,7 @@ url_project = ""
 url_slides = ""
 url_video = ""
 url_poster = ""
-url_source = ""
+url_source = "http://onlinelibrary.wiley.com/doi/abs/10.1111/jpy.13125"
 [[url_custom]]
     name = "Supplementary material"
     url = "files/papers/Jimenez_Micromonas_2020_supp_mat.pdf"

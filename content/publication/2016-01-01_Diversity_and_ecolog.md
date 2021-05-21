@@ -19,7 +19,7 @@ url_project = ""
 url_slides = ""
 url_video = ""
 url_poster = ""
-url_source = ""
+url_source = "http://www.schweizerbart.de/papers/pip/detail/prepub/86204/Diversity_and_ecology_of_green_microalgae_in_marin?af=crossref"
 math = true
 highlight = true
 [header]

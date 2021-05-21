@@ -19,10 +19,10 @@ url_project = ""
 url_slides = ""
 url_video = ""
 url_poster = ""
-url_source = ""
+url_source = "http://doi.wiley.com/10.1111/1755-0998.12781"
 math = true
 highlight = true
 [header]
 image = "osd_v4_v9.png"
-caption = "Comparison of Chlorophyta compoisition during OSD with V4 vs V9"
+caption = "Comparison of Chlorophyta composition during OSD with V4 vs V9"
 +++

@@ -19,7 +19,7 @@ url_project = ""
 url_slides = ""
 url_video = ""
 url_poster = ""
-url_source = ""
+url_source = "https://www.schweizerbart.de/papers/pip/detail/3/85671/Diversity_and_distribution_of_haptophytes_revealed?af=crossref"
 math = true
 highlight = true
 [header]

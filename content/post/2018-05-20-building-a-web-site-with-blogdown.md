@@ -18,6 +18,8 @@ summary: "Notes to create Blogdown website."
 * Academic template help
   * https://sourcethemes.com/academic/
   * https://themes.gohugo.io/theme/academic/post/getting-started/
+* Other resources
+  * https://alison.rbind.io/post/new-year-new-blogdown/
 
 ### Steps:
 * Open R studio
