@@ -1,6 +1,6 @@
 +++
 title = "Phytoplankton (version 2.0)"
-date = "2006"
+date = "2006-05-01"
 publication_types = ["6"]
 authors = ["D Vaulot"]
 publication = "In: Encyclopedia of Life Sciences, Wiley"

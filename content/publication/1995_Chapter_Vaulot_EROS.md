@@ -1,6 +1,6 @@
 +++
 title = "Photosynthetic prokaryotes Prochlorococcus, Synechococcus in the western Mediterranean Sea in summer"
-date = "1995"
+date = "1995-01-01"
 publication_types = ["6"]
 authors = ["D Vaulot", "D Marie", "N Simon"]
 publication = "In: EROS 2000 fifth Workshop Hambug, Water Pollution Research Report"

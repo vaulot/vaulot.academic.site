@@ -223,6 +223,8 @@ bib2acad <- function(bibfile = "",
   pbapply::pbapply(mypubs, FUN = function(x) create_md(x), MARGIN = 1)
   pbapply::closepb(pb)
   
+  return(mypubs)
+  
 }
 
 cleanStr <- function(str) {

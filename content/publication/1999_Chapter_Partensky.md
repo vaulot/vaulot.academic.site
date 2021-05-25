@@ -1,6 +1,6 @@
 +++
 title = "Differential distribution and ecology of Prochlorococcus and Synechococcus in oceanic waters: a review"
-date = "1999"
+date = "1999-05-01"
 publication_types = ["6"]
 authors = ["F Partensky", "J Blanchot", "D Vaulot"]
 publication = "In: Marine Cyanobacteria, Bulletin de l'Institut Océanographique de Monaco. Numéro spécial 19, _pp. 457--475_"

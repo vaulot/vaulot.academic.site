@@ -1,6 +1,6 @@
 +++
 title = "Diversity and ecology of eukaryotic marine phytoplankton"
-date = "2012"
+date = "2012-09-01"
 publication_types = ["6"]
 authors = ["Fabrice Not", "Raffaele Siano", "Wiebe H C F Kooistra", "Nathalie Simon", "Daniel Vaulot", "Ian Probert"]
 publication = "In: Genomic insights gained into the Diversity, Biology and Evolution of Microbial Photosynthetic Eukaryotes, Elsevier, Amsterdam, _pp. 1--53_"

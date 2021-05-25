@@ -1,6 +1,6 @@
 +++
 title = "Cell cycle controls in phytoplankton: comparative physiology and ecology"
-date = "1984"
+date = "1984-05-01"
 publication_types = ["6"]
 authors = ["S W Chisholm", "D Vaulot", "R J Olson"]
 publication = "In: Cell Cycle Clocks, Marcel Dekker, New York and Basel, _pp. 365--394_"

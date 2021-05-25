@@ -1,6 +1,6 @@
 +++
 title = "Photosynthetic picoplankton in the western Alboran Sea in March 1992"
-date = "1993"
+date = "1993-01-01"
 publication_types = ["6"]
 authors = ["D Vaulot", "D Marie"]
 publication = "In: EROS 2000 (European River Ocean System) Project Fourth Workshop, CEC, Brussels, _pp. 173--181_"

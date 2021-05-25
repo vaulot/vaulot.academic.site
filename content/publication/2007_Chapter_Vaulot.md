@@ -1,6 +1,6 @@
 +++
 title = "Chap 14. Biologie de la cellule eucaryote et micro-organismes eucaryotes"
-date = "2007"
+date = "2007-05-01"
 publication_types = ["6"]
 authors = ["D Vaulot"]
 publication = "In: Brock - Biologie des Microorganismes, Pearson - Prentice Hall, Upper Saddle River"

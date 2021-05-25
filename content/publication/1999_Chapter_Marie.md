@@ -1,6 +1,6 @@
 +++
 title = "Flow cytometric analysis of phytoplankton, bacteria and viruses"
-date = "1999"
+date = "1999-05-01"
 publication_types = ["6"]
 authors = ["D Marie", "C P D Brussaard", "F Partensky", "D Vaulot"]
 publication = "In: Current protocols in cytometry, John Wiley \\& Sons, New York, _pp. 1--15_"

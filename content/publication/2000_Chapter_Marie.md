@@ -1,6 +1,6 @@
 +++
 title = "Flow cytometry analysis of marine picoplankton"
-date = "2000"
+date = "2000-01-01"
 publication_types = ["6"]
 authors = ["D Marie", "F Partensky", "N Simon", "L Guillou", "D Vaulot"]
 publication = "In: In living colors: protocols in flow cytometry and cell sorting, Springer Verlag, _pp. 421--454_"

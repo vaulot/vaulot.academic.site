@@ -1,6 +1,6 @@
 +++
 title = "Photosynthetic picoplankton of the North West Mediterranean Sea in summer: comparison with the winter situation"
-date = "1992"
+date = "1992-05-01"
 publication_types = ["6"]
 authors = ["D Vaulot", "F Partensky"]
 publication = "In: EROS 2000 Third Workshop, CEC, Brussels, _pp. 173--181_"

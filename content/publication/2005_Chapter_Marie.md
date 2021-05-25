@@ -1,6 +1,6 @@
 +++
 title = "Phytoplankton cell counting by flow cytometry"
-date = "2005"
+date = "2005-05-01"
 publication_types = ["6"]
 authors = ["D Marie", "N Simon", "D Vaulot"]
 publication = "In: Algal Culturing Techniques, Academic Press, _pp. 253--267_"

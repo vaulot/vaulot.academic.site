@@ -1,6 +1,6 @@
 +++
 title = "The cell cycle of phytoplankton: coupling cell growth to population growth"
-date = "1995"
+date = "1995-05-01"
 publication_types = ["6"]
 authors = ["D Vaulot"]
 publication = "In: Molecular Ecology of Aquatic Microbes, Springer-Verlag, Berlin Heidelberg New York, _pp. 303--322_"
