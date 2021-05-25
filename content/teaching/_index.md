@@ -14,8 +14,6 @@ caption = "The ASIAME 2 course in Port Blair, Andaman Islands (nov 2019)"
 
 +++
 
-![](img/asiame2.png)
-
 ## Courses organized
 
 * 2019 - Co-organizer of APC 12 ([Advanced Phytoplankton Course](https://sites.google.com/view/apc12/home)) in Roscoff, France - 3 weeks - May-June 2019
@@ -48,5 +46,5 @@ caption = "The ASIAME 2 course in Port Blair, Andaman Islands (nov 2019)"
 ### Metabarcoding
 * [Download the tutorials from GitHub](https://github.com/vaulot/metabarcodes_tutorials)
 
-
-
+---
+# Course content

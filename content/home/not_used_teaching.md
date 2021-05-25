@@ -15,6 +15,8 @@ weight = 30
 
 +++
 
+**DO NOT USE REMOVED FROM HOME**
+
 ![](img/asiame2.png)
 
 ## Courses organized

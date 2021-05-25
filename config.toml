@@ -315,7 +315,7 @@ enableGitInfo = false
 [[menu.main]]
   parent = "Publications"
   name = "Talks"
-  url = "#talks"
+  url = "talk"
   weight = 10
 
 
