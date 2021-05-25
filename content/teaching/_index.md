@@ -1,9 +1,4 @@
 +++
-# Custom widget.
-# An example of using the custom widget to create your own homepage section.
-# To create more sections, duplicate this file and edit the values below as desired.
-widget = "custom"
-active = true
 date = 2016-04-20T00:00:00
 
 # Note: a full width section format can be enabled by commenting out the `title` and `subtitle` with a `#`.
@@ -12,6 +7,10 @@ subtitle = "Recent teaching activity"
 
 # Order that this section will appear in.
 weight = 30
+
+[header]
+image = "asiame2.png"
+caption = "The ASIAME 2 course in Port Blair, Andaman Islands (nov 2019)"
 
 +++
 
@@ -48,3 +47,6 @@ weight = 30
 
 ### Metabarcoding
 * [Download the tutorials from GitHub](https://github.com/vaulot/metabarcodes_tutorials)
+
+
+
