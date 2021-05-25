@@ -1,5 +1,5 @@
 ---
-title: "Experimental Design and Analysis - 2020"
+title: "NTU - Experimental Design and Analysis - 2020"
 
 date: 2020-01-01
 lastmod: 2020-01-01
@@ -8,7 +8,7 @@ draft: false
 categories: ["courses"]
 tags: ["R", "time series", "phytoplankton"]
 
-summary: ""
+summary: "Introduction to R; R markdown; Git; Data visualization; Scales in marine systems"
 ---
 
 {{< figure src="img/2020-course-experimental-design.png" title="" lightbox="false"  width="600">}}

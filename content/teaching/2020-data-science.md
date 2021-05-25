@@ -1,5 +1,5 @@
 ---
-title: "Data Science - 2020"
+title: "NTU - R for Data Science - 2020"
 
 date: 2020-01-02
 lastmod: 2020-01-02
@@ -8,7 +8,7 @@ draft: false
 categories: ["courses"]
 tags: ["R", "data science"]
 
-summary: "R"
+summary: "Introduction to R; R markdown; Git; Data wrangling; Making maps; Time series"
 ---
 
 {{< figure src="img/2020-course-data-science.png" title="" lightbox="false" width="600" >}}

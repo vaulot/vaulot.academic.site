@@ -1,5 +1,5 @@
 ---
-title: "Current Issues in Ecology - 2021"
+title: "NTU - Current Issues in Ecology - 2021"
 
 date: 2021-02-17
 lastmod: 2021-02-17
@@ -8,7 +8,7 @@ draft: false
 categories: ["courses"]
 tags: [ "ecology"]
 
-summary: "lecture on scales in plankton ecology"
+summary: "Scales in plankton ecology"
 ---
 
 {{< figure src="img/2020-course-experimental-design.png" title="" lightbox="false"  width="600">}}

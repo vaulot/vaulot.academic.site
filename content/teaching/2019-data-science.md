@@ -1,5 +1,5 @@
 ---
-title: "Data Science - 2019"
+title: "NTU - R for Data Science - 2019"
 
 date: 2019-01-02
 lastmod: 2020-01-02
@@ -8,7 +8,7 @@ draft: false
 categories: ["courses"]
 tags: ["R"]
 
-summary: "R"
+summary: "An introduction to R for data science"
 ---
 
 __Course__: Fundamentals of Data Science for Earth and Environmental Systems Science
