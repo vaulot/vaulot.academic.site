@@ -10,9 +10,9 @@
   
   # Export as bibtex not as Biblatex
   
-  bibfile <- "c:/daniel.vaulot@gmail.com/web site/vaulot.academic.site/static/files/citations/malina.bib"
-  outfold   <- "c:/daniel.vaulot@gmail.com/web site/vaulot.academic.site/content/publication"
-  abstract  = FALSE
+  bibfile <- "c:/daniel.vaulot@gmail.com/web site/vaulot.academic.site/static/files/citations/Chapters.bib"
+  outfold   <- "c:/daniel.vaulot@gmail.com/web site/vaulot.academic.site/static/files/citations/tmp"
+  abstract  = TRUE
   overwrite=TRUE
 
   # Import the bibtex file and convert to data.frame
@@ -44,7 +44,7 @@
 
     # define a date and create filename by appending date and start of title
     if (!is.na(x[["year"]])) {
-      x[["date"]] <- paste0(x[["year"]], "-01-01")
+      x[["date"]] <- x[["year"]]
     } else {
       x[["date"]] <- "2999-01-01"
     }
@@ -79,6 +79,7 @@
       write(paste0("publication_types = [\"", x[["pubtype"]],"\"]"), fileConn, append = T)
 
       # Publication details: journal, volume, issue, page numbers and doi link
+      if 
       publication <- x[["journal"]]
       print(publication)
       if (!is.null(x[["volume"]])) publication <- paste0(publication,", (", x[["volume"]], ")")
@@ -87,7 +88,7 @@
       # if (!is.null(x[["doi"]])) publication <- paste0(publication,", ", paste0("https://doi.org/",x[["doi"]]))
 
       write(paste0("publication = \"", publication,"\""), fileConn, append = T)
-      write(paste0("publication_short = \"", publication,"\""),fileConn, append = T)
+      # write(paste0("publication_short = \"", publication,"\""),fileConn, append = T)
 
       # Abstract and optional shortened version.
       if (abstract) {
