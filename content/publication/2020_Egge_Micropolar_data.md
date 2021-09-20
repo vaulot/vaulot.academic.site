@@ -1,6 +1,6 @@
 +++
 title = "An 18S V4 rDNA metabarcoding dataset of protist diversity in the Atlantic inflow to the Arctic Ocean, through the year and down to 1000 m depth."
-date = "2021-03-15"
+date = "2021-09-15"
 authors = ["Elianne Egge",  "Stephanie Elferink", "Daniel Vaulot",  "Uwe John",  "Gunnar Bratbak",  "Aud Larsen",  "Bente Edvardsen"]
 publication_types = ["2"]
 publication = "Earth System Science Data (**in press**)"
