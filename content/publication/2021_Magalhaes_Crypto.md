@@ -20,6 +20,9 @@ url_slides = ""
 url_video = ""
 url_poster = ""
 url_source = ""
+[[url_custom]]
+    name = "Supplementary material"
+    url = "files/papers/Magalhaes_Crypto_2021_supp.pdf"
 math = true
 highlight = true
 [header]
