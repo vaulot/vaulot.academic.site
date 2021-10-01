@@ -6,7 +6,7 @@ date = 2021-04-27T00:00:00
 weight = 1
 
 # Project title.
-title = "PhenoMap"
+title = "PhenoMap (2020-2023)"
 
 # Project summary to display on homepage.
 summary = "Characterize unknown phytoplankton species"

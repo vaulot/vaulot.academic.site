@@ -6,7 +6,7 @@ date = 2016-04-27T00:00:00
 weight = 3
 
 # Project title.
-title = "Green Edge"
+title = "Green Edge (2015-2016)"
 
 # Project summary to display on homepage.
 summary = "The Arctic Spring Bloom."

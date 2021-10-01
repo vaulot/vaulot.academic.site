@@ -6,7 +6,7 @@ date = 2016-04-27T00:00:00
 weight = 2
 
 # Project title.
-title = "TaxMarc"
+title = "TaxMarc (2018-2021)"
 
 # Project summary to display on homepage.
 summary = "Marine protists in a changing Arctic"
