@@ -24,6 +24,7 @@ caption = "The ASIAME 2 course in Port Blair, Andaman Islands (nov 2019)"
 * 2013 - Co-organizer of the UPMC Daniel-Jouvance School in Marine-Biology - Arraial do Cabo, Brasil -  March 2013
 
 ## Courses taught
+* 2021 [R for Microbial Ecology]({{< ref "/teaching/2021-microbes.md">}}) - ES2304/ES7027: Microbes on Earth Systems, coordinated by A. Lopes dos Santos, ASE, Nanyang Technological University, Singapore - 6 h + final presentations
 * 2021 [Scales in Plankton Ecology]({{< ref "/teaching/2021-ecology.md">}}) - ES3305/ES7022: Currents Issues in Ecology, coordinated by D. Wardle, ASE, Nanyang Technological University, Singapore - 3 h
 * 2021 [Introduction to R / Data wrangling, plotting and mapping with R]({{< ref "/teaching/2021-data-science.md">}}) - ES7023 & ES0002: Fundamentals of Data Science for Earth and Environmental Systems Science , coordinated by D. Lallemant, ASE, Nanyang Technological University, Singapore - 9 h
 * 2020 [Introduction to R / Scales in Marine Ecoystems]({{< ref "/teaching/2020-experimental-design.md">}}) - ES3307: Experimental Design and Analysis, coordinated by E. Slade, ASE, Nanyang Technological University, Singapore - 6 h
