@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Microbes on Earth - ES2304 &amp; ES7027 - 2021</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Daniel Vaulot" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="metropolis-dv.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+layout: true
+background-image: url(img/logo-course-microbe.jpg), url(img/logo_SBR.png), url(img//NTU-Logo-full-colour.png)
+background-position: right 10px top 30px,  right 50px bottom 50px,left 50px bottom 50px, top 350px left 500px 
+background-size: 45%, 25%, 20%
+
+# Microbes on Earth
+
+---
+
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+## R session 05 - Phyloseq
+
+.font120[**Daniel Vaulot**]
+
+2021-09-28
+
+---
+
+layout: false
+class: middle, inverse
+
+# Outline
+
+
+.font150[
+* Introduction to the data
+* Read the data
+* Format and save as Phyloseq objects
+* Filter data
+* Bar graphs
+* Alpha diversity
+* Beta diversity
+]
+
+---
+background-image: url(img/phyloseq-logo.png), url(img/phyloseq-gallery.png)
+background-position: top 20px right 500px, top 20px right 20px
+background-size: 15%, 35% 
+
+# Phyloseq R library
+
+.left-code[
+* [Phyloseq web site](https://joey711.github.io/phyloseq/index.html)
+
+* See in particular tutorials for
+
+    - [importing data](https://joey711.github.io/phyloseq/import-data.html)
+    
+    - [bar plots](https://joey711.github.io/phyloseq/plot_bar-examples.html)
+
+* Get ASVs, read abundance and metadata all together
+
+* Filter and regroup the data
+
+* Bar plots, Alpha and Beta diversity computations
+]
+
+---
+layout: true
+
+# Data  
+
+---
+This tutorial uses a reduced metabarcoding dataset obtained by C. Ribeiro and A. Lopes dos Santos.  This dataset originates from the CARBOM cruise in 2013 off Brazil and corresponds to the 18S V4 region amplified on flow cytometry sorted samples (see pptx file for details) and sequenced on an Illumina run 2*250 bp analyzed with mothur.
+
+
+&lt;img src="img/carbom_cruise.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+---
+
+**Reference**
+
+* Gérikas Ribeiro, C., Dos Santos, A.L., Marie, D., Brandini, F.P. &amp; Vaulot, D. 2018. Small eukaryotic phytoplankton communities in tropical waters off Brazil are dominated by symbioses between Haptophyta and nitrogen-fixing cyanobacteria. ISME Journal. 12:1360–74.
+
+&lt;img src="img/carbom_isme.png" width="70%" style="display: block; margin: auto;" /&gt;
+
+---
+layout: false
+
+# Libraries
+
+
+
+```r
+library("phyloseq")
+library("ggplot2")      # graphics
+library("readxl")       # necessary to import the data from Excel file
+library("dplyr")        # filter and reformat data frames
+library("tibble")       # Needed for converting column to row names
+```
+
+---
+
+
+layout: true
+# Import and format data
+
+---
+
+Three tables are needed
+
+* OTU
+* Taxonomy
+* Samples
+
+They are read from a single Excel file where each sheet contains one of the tables
+
+---
+### OTU
+* rows = OTUs or ASVs
+* cols = samples
+* cells = number of reads
+&lt;br&gt;
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="img/table_otu.png" alt="Table OTU - OTU abundance" width="100%" /&gt;
+&lt;p class="caption"&gt;Table OTU - OTU abundance&lt;/p&gt;
+&lt;/div&gt;
+
+---
+### Taxonomy
+* rows = OTUs or ASVs
+* cols = taxonomy ranks
+* cells = taxon name
+&lt;br&gt;
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="img/table_taxo.png" alt="Table Taxo - OTU taxonomy" width="100%" /&gt;
+&lt;p class="caption"&gt;Table Taxo - OTU taxonomy&lt;/p&gt;
+&lt;/div&gt;
+
+---
+### Samples
+* rows = samples
+* cols = metadata type
+* cells = metadata values
+&lt;br&gt;
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="img/table_sample.png" alt="Table Samples" width="100%" /&gt;
+&lt;p class="caption"&gt;Table Samples&lt;/p&gt;
+&lt;/div&gt;
+
+---
+
+## Read Excel files
+
+
+```r
+  otu_mat&lt;- read_excel("../data/CARBOM metabarcodes.xlsx", sheet = "OTU matrix")
+  tax_mat&lt;- read_excel("../data/CARBOM metabarcodes.xlsx", sheet = "Taxonomy table")
+  samples_df &lt;- read_excel("../data/CARBOM metabarcodes.xlsx", sheet = "Samples")
+```
+
+---
+
+## Phyloseq objects need to have row.names
+
+* define the row names from the otu column
+
+
+```r
+  otu_mat &lt;- otu_mat %&gt;%
+    tibble::column_to_rownames("otu") 
+```
+
+* Idem for the two other matrixes 
+
+
+```r
+  tax_mat &lt;- tax_mat %&gt;% 
+    tibble::column_to_rownames("otu")
+
+  samples_df &lt;- samples_df %&gt;% 
+    tibble::column_to_rownames("sample") 
+```
+
+---
+
+## Transform to matrixes
+
+Sample table can be left as data frame
+
+
+```r
+  otu_mat &lt;- as.matrix(otu_mat)
+  tax_mat &lt;- as.matrix(tax_mat)
+```
+
+## Transform to phyloseq objects
+
+
+```r
+  OTU = otu_table(otu_mat, taxa_are_rows = TRUE)
+  TAX = tax_table(tax_mat)
+  samples = sample_data(samples_df)
+  
+  carbom &lt;- phyloseq(OTU, TAX, samples)
+  carbom
+```
+
+```
+phyloseq-class experiment-level object
+otu_table()   OTU Table:         [ 287 taxa and 55 samples ]
+sample_data() Sample Data:       [ 55 samples by 27 sample variables ]
+tax_table()   Taxonomy Table:    [ 287 taxa by 7 taxonomic ranks ]
+```
+
+---
+  
+## Check data
+
+```r
+  sample_names(carbom)
+```
+
+```
+ [1] "X10n"   "X10p"   "X11n"   "X11p"   "X120n"  "X120p"  "X121n"  "X121p" 
+ [9] "X122n"  "X122p"  "X125n"  "X125p"  "X126n"  "X126p"  "X127n"  "X13n"  
+[17] "X13p"   "X140n"  "X140p"  "X141n"  "X141p"  "X142n"  "X142p"  "X155n" 
+[25] "X155p"  "X156n"  "X156p"  "X157n"  "X157p"  "X15n"   "X15p"   "X165n" 
+[33] "X165p"  "X166n"  "X166p"  "X167n"  "X167p"  "X1n"    "X1p"    "X2n"   
+[41] "X2p"    "X3n"    "X3p"    "X5n"    "X5p"    "X7n"    "X7p"    "X9n"   
+[49] "X9p"    "tri01n" "tri01p" "tri02n" "tri02p" "tri03n" "tri03p"
+```
+
+```r
+  rank_names(carbom)
+```
+
+```
+[1] "Domain"     "Supergroup" "Division"   "Class"      "Order"     
+[6] "Family"     "Genus"     
+```
+
+```r
+  sample_variables(carbom)
+```
+
+```
+ [1] "fraction"          "Select_18S_nifH"   "total_18S"        
+ [4] "total_16S"         "total_nifH"        "sample_number"    
+ [7] "transect"          "station"           "depth"            
+[10] "latitude"          "longitude"         "picoeuks"         
+[13] "nanoeuks"          "bottom_depth"      "level"            
+[16] "transect_distance" "date"              "time"             
+[19] "phosphates"        "silicates"         "ammonia"          
+[22] "nitrates"          "nitrites"          "temperature"      
+[25] "fluorescence"      "salinity"          "sample_label"     
+```
+---
+
+
+layout: true
+# Filter and normalize data
+
+---
+
+### Keep only samples to be analyzed
+
+```r
+  carbom &lt;- subset_samples(carbom, Select_18S_nifH =="Yes")
+  carbom
+```
+
+```
+phyloseq-class experiment-level object
+otu_table()   OTU Table:         [ 287 taxa and 54 samples ]
+sample_data() Sample Data:       [ 54 samples by 27 sample variables ]
+tax_table()   Taxonomy Table:    [ 287 taxa by 7 taxonomic ranks ]
+```
+
+---
+
+### Keep only photosynthetic taxa
+
+```r
+  carbom &lt;- subset_taxa(carbom, Division %in% c("Chlorophyta", "Dinophyta", "Cryptophyta", 
+                                                "Haptophyta", "Ochrophyta", "Cercozoa"))
+  carbom &lt;- subset_taxa(carbom, !(Class %in% c("Syndiniales", "Sarcomonadea")))
+  carbom
+```
+
+```
+phyloseq-class experiment-level object
+otu_table()   OTU Table:         [ 205 taxa and 54 samples ]
+sample_data() Sample Data:       [ 54 samples by 27 sample variables ]
+tax_table()   Taxonomy Table:    [ 205 taxa by 7 taxonomic ranks ]
+```
+
+---
+
+Normalize number of reads in each sample using median number of reads.
+
+
+```r
+  total = median(sample_sums(carbom))
+  standf = function(x, t=total) round(t * (x / sum(x)))
+  carbom = transform_sample_counts(carbom, standf)
+```
+
+The number of reads used for normalization is **44903**. 
+
+---
+
+
+layout: true
+# Bar graphs
+
+---
+
+
+.left-code[
+
+Basic bar graph based on Division
+
+
+```r
+plot_bar(carbom, fill = "Division")
+```
+]
+
+.right-plot[
+&lt;img src="R-session-05-phyloseq_files/figure-html/unnamed-chunk-22-1.png" width="75%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+.left-code[
+Remove OTUs boundaries.  
+
+This is done by adding ggplot2 modifier.
+
+
+```r
+plot_bar(carbom, fill = "Division") + 
+ geom_bar(aes(color=Division, 
+              fill=Division), 
+          stat="identity", 
+          position="stack")
+```
+]
+
+.right-plot[
+&lt;img src="R-session-05-phyloseq_files/figure-html/unnamed-chunk-23-1.png" width="75%" style="display: block; margin: auto;" /&gt;
+]
+---
+
+
+.left-code[
+Group together Pico vs Nano samples.
+
+
+```r
+carbom_fraction &lt;- merge_samples(carbom, "fraction")
+
+plot_bar(carbom_fraction, fill = "Division") + 
+  geom_bar(aes(color=Division, 
+               fill=Division), 
+           stat="identity", 
+           position="stack")
+```
+]
+
+.right-plot[
+&lt;img src="R-session-05-phyloseq_files/figure-html/unnamed-chunk-24-1.png" width="75%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+.left-code[
+* Keep only Chlorophyta
+* Color according to genus. 
+* Pico vs Nano/Surface vs Deep.
+
+
+
+```r
+# Filter Chlorophyta
+  carbom_chloro_ps &lt;- subset_taxa(carbom, 
+                               Division %in% c("Chlorophyta"))
+# Transform from phylseq to dataframe
+  carbom_chloro_df &lt;- psmelt(carbom_chloro_ps) %&gt;% 
+# Group by fraction and level
+   group_by(fraction, level) %&gt;%
+# Compute relative % for each group
+   mutate(Abundance_pct = Abundance/sum(Abundance) * 100) 
+
+# Use ggplot directly 
+  ggplot(carbom_chloro_df)  +
+    geom_bar(aes(x= Division, y = Abundance_pct, fill=Genus), 
+           stat="identity", 
+           position="stack") +
+    facet_grid(rows = vars(level), cols=vars(fraction))
+```
+]
+
+.right-plot[
+&lt;img src="R-session-05-phyloseq_files/figure-html/unnamed-chunk-25-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+
+layout: true
+# Alpha diversity
+---
+
+
+.left-code[
+* **Chao1**: richness estimator
+* **Shannon**: diversity estimator.
+
+Other include: "Observed",  "ACE", "Simpson", "InvSimpson", "Fisher"
+
+
+
+```r
+plot_richness(carbom, 
+              measures=c("Chao1", "Shannon"))
+```
+]
+
+.right-plot[
+&lt;img src="R-session-05-phyloseq_files/figure-html/unnamed-chunk-26-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+]
+
+
+---
+
+.left-code[
+
+Regroup together samples by level and fraction.
+
+
+
+```r
+  plot_richness(carbom, measures=c("Chao1", "Shannon"), 
+                x="level", 
+                color="fraction")
+```
+]
+
+.right-plot[
+&lt;img src="R-session-05-phyloseq_files/figure-html/unnamed-chunk-27-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+
+
+layout: true
+# Beta diversity
+
+---
+
+
+
+.left-code[
+Ordination: NMDS
+Distance: Bray
+
+
+```r
+carbom.ord &lt;- ordinate(carbom, 
+                       method ="NMDS", 
+                       distance ="bray")
+```
+]
+
+.right-plot[
+
+```
+Square root transformation
+Wisconsin double standardization
+Run 0 stress 0.2317058 
+Run 1 stress 0.2434282 
+Run 2 stress 0.2518364 
+Run 3 stress 0.2336963 
+Run 4 stress 0.2610581 
+Run 5 stress 0.2294631 
+... New best solution
+... Procrustes: rmse 0.09891983  max resid 0.3902268 
+Run 6 stress 0.2490844 
+Run 7 stress 0.2528563 
+Run 8 stress 0.2427709 
+Run 9 stress 0.2418987 
+Run 10 stress 0.2597176 
+Run 11 stress 0.2370944 
+Run 12 stress 0.2294626 
+... New best solution
+... Procrustes: rmse 0.0005427461  max resid 0.00283235 
+... Similar to previous best
+Run 13 stress 0.2485507 
+Run 14 stress 0.2479295 
+Run 15 stress 0.2358392 
+Run 16 stress 0.2385162 
+Run 17 stress 0.2601798 
+Run 18 stress 0.2578494 
+Run 19 stress 0.2512572 
+Run 20 stress 0.2503546 
+*** Solution reached
+```
+]
+
+---
+
+
+.left-code[
+
+## Plot OTUs
+
+* Ordination: NMDS  
+* Distance: Bray
+
+
+```r
+plot_ordination(carbom, 
+                carbom.ord, 
+                type="taxa", 
+                color="Division", 
+                title="OTUs")
+```
+]
+
+.right-plot[
+&lt;img src="R-session-05-phyloseq_files/figure-html/unnamed-chunk-29-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+]
+
+
+---
+exclude: true 
+
+.left-code[
+
+## Plot OTUs
+A bit confusing, so make it more easy to visualize by breaking according to taxonomic division.
+
+
+```r
+plot_ordination(carbom, 
+                carbom.ord, 
+                type="taxa", 
+                color="Class", 
+                title="OTUs", 
+                label="Class") +
+  facet_wrap(vars(Division), 3)
+```
+]
+
+.right-plot[
+&lt;img src="R-session-05-phyloseq_files/figure-html/unnamed-chunk-30-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+
+.left-code[
+
+## Plot Samples
+
+Enlarge the points to make it more easy to read.
+
+
+```r
+plot_ordination(carbom, 
+                carbom.ord, 
+                type="samples", 
+                color="fraction", 
+                shape="level", 
+                title="Samples") + 
+  geom_point(size=3)
+```
+]
+
+.right-plot[
+&lt;img src="R-session-05-phyloseq_files/figure-html/unnamed-chunk-31-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+
+
+.left-code[
+## Plot both OTUs and Samples
+Two different panels
+
+
+```r
+plot_ordination(carbom, 
+                carbom.ord, 
+                type="split", 
+                color="Division", 
+                shape="level", 
+                title="biplot", 
+                label = "station") +  
+  geom_point(size=3)
+```
+]
+
+.right-plot[
+&lt;img src="R-session-05-phyloseq_files/figure-html/unnamed-chunk-32-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+## Methods
+
+**CCA** - 
+Performs correspondence analysis, or optionally, constrained correspondence analysis (a.k.a. canonical correspondence analysis), via cca
+
+**RDA** -
+Performs redundancy analysis, or optionally principal components analysis, via rda
+
+**NMDS** - 
+Performs Non-metric MultiDimenstional Scaling of a sample-wise ecological distance matrix onto a user-specified number of axes, k. By default, k=2, but this can be modified as a supplementary argument. 
+
+**MDS/PCoA** - 
+Performs principal coordinate analysis (also called principle coordinate decomposition, multidimensional scaling (MDS), or classical scaling) of a distance matrix (Gower 1966), including two correction methods for negative eigenvalues. See pcoa for further details.
+
+---
+
+## Distances
+
+* manhattan
+* euclidean
+* canberra
+* bray
+* kulczynski
+* jaccard
+* gower
+* altGower
+* morisita  
+* horn
+* mountford
+* raup
+* binomial
+* chao
+* cao
+* unifrac
+
+---
+
+
+layout: false
+class: inverse
+
+# What did we learn ?
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+.font150[
+- Create file
+]
+--
+.font150[
+- Bar graphs
+]
+
+--
+.font150[
+- Alpha diversity
+]
+
+--
+.font150[
+- Beta diversity
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="libs/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "tomorrow-night-blue",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

@@ -241,7 +241,7 @@ cleanStr <- function(str) {
 }
 
 setwd("c:/daniel.vaulot@gmail.com/web site/vaulot.academic.site/static/files/citations/")
-bibfile <- "Chapters.bib"
+bibfile <- "vaulot_2021.bib"
 
 mypubs <- bib2acad(bibfile  = bibfile,
                  copybib   = FALSE,
