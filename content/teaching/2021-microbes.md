@@ -30,8 +30,8 @@ During the first half of this course, we will walk through some basics concepts 
 
 ### Lectures
 * [Session 01 - Introduction to R](https://daniel-vaulot.fr/html/course-microbes-2021/R-session-01-intro.html)
-* [Session 02 - Data wrangling](https://daniel-vaulot.fr/html/course-microbes-2021/R-session-02-data_wrangling.html) - [data](https://daniel-vaulot.fr/html/course-microbes-2021/R-session-04.zip)
-* [Session 03 - Data viz](https://daniel-vaulot.fr/html/course-microbes-2021/R-session-03-data_visualization.html) - [data](https://daniel-vaulot.fr/html/course-microbes-2021/R-session-05.zip)
+* [Session 02 - Data wrangling](https://daniel-vaulot.fr/html/course-microbes-2021/R-session-02-data_wrangling.html)
+* [Session 03 - Data viz](https://daniel-vaulot.fr/html/course-microbes-2021/R-session-03-data_visualization.html)
 * [Session 04 - R markdown](https://daniel-vaulot.fr/html/course-microbes-2021/R-session-04-markdown.html)
 * [Session 05 - Metabarcode analyses with Phyloseq](https://daniel-vaulot.fr/html/course-microbes-2021/R-session-05-phyloseq.html) 
 
