@@ -21,8 +21,8 @@
 
 layout: true
 background-image: url(img/logo-course-microbe.jpg), url(img/logo_SBR.png), url(img//NTU-Logo-full-colour.png)
-background-position: right 10px top 30px,  right 50px bottom 50px,left 50px bottom 50px, top 350px left 500px 
-background-size: 45%, 25%, 20%
+background-position: right 10px top 20px,  right 50px bottom 50px,left 50px bottom 50px, top 350px left 500px 
+background-size: 35%, 25%, 20%
 
 # Microbes on Earth
 
@@ -37,7 +37,7 @@ background-size: 45%, 25%, 20%
 
 .font120[**Daniel Vaulot**]
 
-2021-09-26
+2021-10-12
 
 ---
 layout: false
@@ -116,12 +116,12 @@ name: data_frames
 
 ```
   label id      value  flag
-1     a  1 -1.2914207  TRUE
-2     b  2  1.1866659 FALSE
-3     c  3 -1.2575659  TRUE
-4     d  4  0.3705164 FALSE
-5     e  5  0.2223109  TRUE
-6     f  6 -0.8839524 FALSE
+1     a  1  1.2682572  TRUE
+2     b  2  1.8706980 FALSE
+3     c  3 -1.0296620  TRUE
+4     d  4  0.8709814 FALSE
+5     e  5 -1.1437683  TRUE
+6     f  6  0.6079145 FALSE
 ```
 .warning[
 * We will NOT use factors: `stringsAsFactors = FALSE` (default in R &gt; 4.0)
@@ -134,7 +134,7 @@ name: data_frames
 
 
 ```r
-dim(df)  # returns the dimensions of data frame
+dim(df)   # returns the dimensions of data frame
 ```
 
 ```
@@ -164,19 +164,19 @@ exclude: true
 
 
 ```r
-str(df)  # structure of data frame - name, type and preview of data in each column
+str(df)   # structure of data frame - name, type and preview of data in each column
 ```
 
 ```
 'data.frame':	6 obs. of  4 variables:
  $ label: chr  "a" "b" "c" "d" ...
  $ id   : int  1 2 3 4 5 6
- $ value: num  -1.291 1.187 -1.258 0.371 0.222 ...
+ $ value: num  1.268 1.871 -1.03 0.871 -1.144 ...
  $ flag : logi  TRUE FALSE TRUE FALSE TRUE FALSE
 ```
 
 ```r
-colnames(df)  # columns names
+colnames(df) # columns names
 ```
 
 ```
@@ -189,22 +189,22 @@ colnames(df)  # columns names
 * Use the `df[i,j]` notation, first index corresponds to row, second index to column
 
 ```r
-df[5, 3]
+  df[5,3]
 ```
 
 ```
-[1] 0.2223109
+[1] -1.143768
 ```
 --
 
 * Specify the name of the column
 
 ```r
-df[5, "value"]
+  df[5,"value"]
 ```
 
 ```
-[1] 0.2223109
+[1] -1.143768
 ```
 .warning[
 * The result is a **vector**
@@ -216,19 +216,19 @@ df[5, "value"]
 * Use the `df[i,j]` notation
 
 ```r
-df[, 3]
+  df[,3]
 ```
 
 ```
-[1] -1.2914207  1.1866659 -1.2575659  0.3705164  0.2223109 -0.8839524
+[1]  1.2682572  1.8706980 -1.0296620  0.8709814 -1.1437683  0.6079145
 ```
 
 ```r
-df[, "value"]
+  df[,"value"]
 ```
 
 ```
-[1] -1.2914207  1.1866659 -1.2575659  0.3705164  0.2223109 -0.8839524
+[1]  1.2682572  1.8706980 -1.0296620  0.8709814 -1.1437683  0.6079145
 ```
 .warning[
 * The result is a **vector**
@@ -243,11 +243,11 @@ exclude: true
 
 
 ```r
-df$value
+  df$value
 ```
 
 ```
-[1] -1.2914207  1.1866659 -1.2575659  0.3705164  0.2223109 -0.8839524
+[1]  1.2682572  1.8706980 -1.0296620  0.8709814 -1.1437683  0.6079145
 ```
 
 ---
@@ -258,11 +258,11 @@ df$value
 
 
 ```r
-df$value[5]
+  df$value[5]
 ```
 
 ```
-[1] 0.2223109
+[1] -1.143768
 ```
 
 ---
@@ -271,12 +271,12 @@ df$value[5]
 * Use the `df[i,j]` notation
 
 ```r
-df[1, ]
+  df[1,]
 ```
 
 ```
-  label id     value flag
-1     a  1 -1.291421 TRUE
+  label id    value flag
+1     a  1 1.268257 TRUE
 ```
 .warning[
 * The result is a **data frame**
@@ -294,9 +294,9 @@ df[1, ]
 
 ```
   label id     value  flag
-1     a  1 -1.291421  TRUE
-2     b  2  1.186666 FALSE
-3     c  3 -1.257566  TRUE
+1     a  1  1.268257  TRUE
+2     b  2  1.870698 FALSE
+3     c  3 -1.029662  TRUE
 ```
 
 
@@ -306,12 +306,12 @@ df[1, ]
 
 
 ```r
-df[df$label == "c", ]
+   df[df$label ==  "c",]
 ```
 
 ```
   label id     value flag
-3     c  3 -1.257566 TRUE
+3     c  3 -1.029662 TRUE
 ```
 
 .warning[This syntax is complicated - tidyverse packages make it much more easy to manipulate and remember]
@@ -372,16 +372,16 @@ background-size: 30%
 
 
 ```r
-library("readxl")  # Import the data from Excel file
+library("readxl") # Import the data from Excel file
 library("readr")  # Import the data from Excel file
 
 library("dplyr")  # filter and reformat data frames
 library("tidyr")  # make data tidy
 
-library("stringr")  # manipulate strings
-library("lubridate")  # manipulate date 
+library("stringr") # manipulate strings
+library("lubridate") # manipulate date 
 
-library("ggplot2")  # graphics
+library("ggplot2") # graphics
 ```
 
 ---
@@ -448,7 +448,7 @@ layout: true
 
 
 ```r
-samples &lt;- readr::read_tsv("data/CARBOM data.txt")
+  samples &lt;- readr::read_tsv("data/CARBOM data.txt")
 ```
 
 --
@@ -667,7 +667,8 @@ samples &lt;- readr::read_tsv("data/CARBOM data.txt")
 
 
 ```r
-samples &lt;- readxl::read_excel("data/CARBOM data.xlsx", sheet = "Samples_boat")
+  samples &lt;- readxl::read_excel("data/CARBOM data.xlsx", 
+                           sheet = "Samples_boat")
 ```
 
 --
@@ -1077,7 +1078,7 @@ exclude: true
 ## Filling missing values - fill
 
 ```r
-samples &lt;- tidyr::fill(samples, station)
+  samples &lt;- tidyr::fill(samples, station)
 ```
 
 --
@@ -1291,7 +1292,7 @@ layout: false
 
 
 ```r
-readr::write_tsv(samples, "data/CARBOM data fixed.tsv")
+  readr::write_tsv(samples, "data/CARBOM data fixed.tsv")
 ```
 
 --
@@ -1304,7 +1305,7 @@ readr::write_tsv(samples, "data/CARBOM data fixed.tsv")
 
 
 ```r
-openxlsx::write.xlsx(samples, "data/CARBOM data fixed.xlsx")
+  openxlsx::write.xlsx(samples, "data/CARBOM data fixed.xlsx")
 ```
 
 ---
@@ -1338,14 +1339,12 @@ layout: true
 
 
 ```r
-colnames(samples)
+  colnames(samples)
 ```
 
 ```
- [1] "sample number" "transect"      "station"       "date"         
- [5] "time"          "depth"         "level"         "latitude"     
- [9] "longitude"     "picoeuks"      "nanoeuks"      "phosphates"   
-[13] "nitrates"      "temperature"   "salinity"     
+ [1] "sample number" "transect"      "station"       "date"          "time"          "depth"         "level"         "latitude"      "longitude"     "picoeuks"      "nanoeuks"     
+[12] "phosphates"    "nitrates"      "temperature"   "salinity"     
 ```
 
 ---
@@ -1354,7 +1353,7 @@ colnames(samples)
 
 
 ```r
-summary(samples$depth)
+  summary(samples$depth)
 ```
 
 ```
@@ -1368,8 +1367,9 @@ summary(samples$depth)
 
 
 ```r
-samples_select &lt;- dplyr::select(samples, transect, `sample number`, station, depth, 
-    latitude, longitude, picoeuks, nanoeuks)
+samples_select &lt;- dplyr::select(samples, transect, `sample number`,
+                                 station, depth, latitude, longitude, 
+                                 picoeuks, nanoeuks)
 ```
 
 --
@@ -1499,7 +1499,7 @@ samples_select &lt;- dplyr::select(samples, transect, `sample number`, station, 
 
 
 ```r
-samples_select &lt;- dplyr::select(samples, transect:nanoeuks)
+  samples_select &lt;- dplyr::select(samples, transect:nanoeuks)
 ```
 
 --
@@ -1650,7 +1650,7 @@ samples_select &lt;- dplyr::select(samples, transect:nanoeuks)
 
 
 ```r
-samples_select &lt;- dplyr::select(samples, -nitrates, -phosphates)
+  samples_select &lt;- dplyr::select (samples, -nitrates, -phosphates)
 ```
 
 --
@@ -1833,8 +1833,7 @@ samples_select &lt;- dplyr::select(samples, -nitrates, -phosphates)
 
 
 ```r
-samples_select &lt;- samples %&gt;%
-    dplyr::select(transect:nanoeuks)
+  samples_select &lt;- samples %&gt;% dplyr::select(transect:nanoeuks)
 ```
 
 --
@@ -1992,7 +1991,7 @@ samples_select &lt;- samples %&gt;%
 
 
 ```r
-samples &lt;- samples %&gt;%
+  samples &lt;- samples %&gt;% 
     dplyr::rename(sample_number = `sample number`)
 ```
 
@@ -2924,7 +2923,7 @@ layout: true
 
 
 ```r
-samples &lt;- samples %&gt;%
+  samples &lt;- samples %&gt;% 
     dplyr::arrange(transect, station)
 ```
 
@@ -3493,8 +3492,8 @@ exclude: true
 
 
 ```r
-samples_surf &lt;- samples %&gt;%
-    dplyr::filter(level == "Surf")
+  samples_surf &lt;- samples %&gt;% 
+    dplyr::filter(level == "Surf" ) 
 ```
 
 --

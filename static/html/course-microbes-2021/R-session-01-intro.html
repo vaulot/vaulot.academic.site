@@ -17,15 +17,10 @@
 
 
 
-
-
-
-
-
 layout: true
 background-image: url(img/logo-course-microbe.jpg), url(img/logo_SBR.png), url(img//NTU-Logo-full-colour.png)
-background-position: right 10px top 30px,  right 50px bottom 50px,left 50px bottom 50px, top 350px left 500px 
-background-size: 45%, 25%, 20%
+background-position: right 10px top 20px,  right 50px bottom 50px,left 50px bottom 50px, top 350px left 500px 
+background-size: 35%, 25%, 20%
 
 # Microbes on Earth
 
@@ -42,7 +37,7 @@ background-size: 45%, 25%, 20%
 
 .font120[**Daniel Vaulot**]
 
-2021-09-26
+2021-10-12
 
 &lt;br&gt;
 &lt;br&gt;
@@ -381,9 +376,9 @@ layout: true
 
 
 ```r
-&gt; x &lt;- 1
-&gt; y &lt;- 2
-&gt; x + y
+&gt;  x &lt;- 1
+&gt;  y &lt;- 2
+&gt;  x + y
 ```
 
 ```
@@ -392,8 +387,8 @@ layout: true
 --
 
 ```r
-&gt; z &lt;- x + y
-&gt; z
+&gt;  z &lt;- x + y
+&gt;  z
 ```
 
 ```
@@ -405,7 +400,7 @@ layout: true
 **=** can be used instead of **&lt;-** but refrain from it (not good style)
 
 ```r
-&gt; z = x + y
+&gt;  z = x + y
 ```
 
 --
@@ -420,14 +415,14 @@ You can view the values of the objects in R-studio environment window (top-right
 
 
 ```r
-&gt; Z
+&gt;  Z
 ```
 
 --
 
 
 ```r
-&gt; Z
+&gt;  Z
 ```
 
 ```
@@ -527,8 +522,8 @@ A vector can contain only a single element
 ## Assign a value to a vector
 
 ```r
-x &lt;- 10
-x
+ x &lt;- 10
+ x
 ```
 
 ```
@@ -541,8 +536,8 @@ x
 
 
 ```r
-x &lt;- c(10, 20, 30)
-x
+ x &lt;- c(10,20,30)
+ x
 ```
 
 ```
@@ -554,8 +549,8 @@ x
 
 
 ```r
-x &lt;- 10:30
-x
+ x &lt;- 10:30
+ x
 ```
 
 ```
@@ -568,8 +563,8 @@ x
 
 
 ```r
-PoTU &lt;- c("Jo", "Biden")
-PoTU
+ PoTU &lt;- c("Jo", "Biden")
+ PoTU
 ```
 
 ```
@@ -582,8 +577,8 @@ PoTU
 
 
 ```r
-flags &lt;- c(TRUE, FALSE, TRUE)
-flags
+ flags &lt;- c(TRUE, FALSE, TRUE)
+ flags
 ```
 
 ```
@@ -597,7 +592,7 @@ flags
 ### First
 
 ```r
-x[1]
+ x[1] 
 ```
 
 ```
@@ -610,7 +605,7 @@ x[1]
 ### Range
 
 ```r
-x[1:5]
+ x[1:5] 
 ```
 
 ```
@@ -622,7 +617,7 @@ x[1:5]
 ### Remove one element
 
 ```r
-x[-1]
+ x[-1] 
 ```
 
 ```
@@ -641,10 +636,11 @@ Apply functions (we will come back to functions latter)
 
 
 ```r
-typeof(x)
-length(x)
+ typeof(x)
+ length(x)
 ```
 --
+exclude: true
 
 
 ```
@@ -656,7 +652,8 @@ length(x)
 ```
 
 --
-   
+exclude: true
+
 .student[
 What is the type and length of **PoTU** ?
 * https://app.wooclap.com/R01
@@ -745,10 +742,10 @@ What happens when the vectors have different number of elements ?
 
 
 ```r
-x &lt;- 1:9
-y &lt;- 1
-z &lt;- x + y
-z
+ x &lt;- 1:9
+ y &lt;- 1
+ z &lt;- x + y
+ z
 ```
 
 --
@@ -766,7 +763,7 @@ Equivalent to
 
 
 ```r
-y &lt;- c(1, 1, 1, 1, 1, 1, 1, 1, 1)
+ y &lt;- c(1,1,1,1,1,1,1,1,1)
 ```
 
 The recycling rule...
@@ -777,10 +774,10 @@ exclude: true
 
 
 ```r
-x &lt;- TRUE
-y &lt;- FALSE
-z &lt;- x + y
-z
+ x &lt;- TRUE
+ y &lt;- FALSE
+ z &lt;- x + y
+ z
 ```
 
 --
@@ -808,7 +805,7 @@ exclude: true
 
 
 ```r
-typeof(x)
+ typeof(x)
 ```
 
 ```
@@ -816,7 +813,7 @@ typeof(x)
 ```
 
 ```r
-typeof(z)
+ typeof(z) 
 ```
 
 ```
@@ -845,10 +842,10 @@ typeof(z)
 
 
 ```r
-x &lt;- TRUE
-y &lt;- FALSE
-z1 &lt;- x | y
-z2 &lt;- x == y
+ x &lt;- TRUE
+ y &lt;- FALSE
+ z1 &lt;- x | y
+ z2 &lt;- x == y
 ```
 
 --
@@ -875,9 +872,9 @@ exclude: true
 
 
 ```r
-first &lt;- "Jo"
-last &lt;- "Biden"
-full &lt;- first + last
+ first &lt;- "Jo"
+ last &lt;- "Biden"
+ full &lt;- first + last
 ```
 
 --
@@ -911,7 +908,7 @@ Functions perform specific task on objects
 
 
 ```r
-paste(first, last)
+  paste(first,last)
 ```
 
 ```
@@ -959,7 +956,7 @@ Let's apply paste :
 
 
 ```r
-paste(first, last)
+  paste(first,last)
 ```
 
 ```
@@ -977,7 +974,7 @@ exclude: true
 
 
 ```r
-paste(first, last, sep = "_")
+  paste(first,last, sep="_")
 ```
 
 ```
@@ -992,10 +989,10 @@ paste(first, last, sep = "_")
 
 
 ```r
-my_sum &lt;- function(a, b) {
-    c &lt;- a + b
-    return(c)
-}
+ my_sum &lt;- function(a, b) {
+   c &lt;-a + b
+   return (c)
+ }
 ```
 * __my_sum__ : function name
 * __first_number, second_number__ : arguments
@@ -1018,7 +1015,7 @@ exclude: true
 
 
 ```r
-my_sum(10, 20)
+ my_sum(10, 20)
 ```
 
 ```
@@ -1030,7 +1027,7 @@ my_sum(10, 20)
 
 
 ```r
-my_sum(a = 10, b = 20)
+ my_sum(a = 10, b = 20)
 ```
 
 ```
@@ -1052,8 +1049,8 @@ Most of the time you do not have to write functions because someone has already 
 
 
 ```r
-x &lt;- 1:100
-sum(x)
+ x &lt;- 1:100
+ sum(x)
 ```
 
 ```
@@ -1066,12 +1063,12 @@ sum(x)
 
 
 ```r
-y &lt;- rnorm(10, mean = 0, sd = 1)
-y
+ y &lt;- rnorm(10, mean = 0, sd = 1)
+ y
 ```
 
 ```
- [1] -0.1295582 -0.1554880  0.5729649 -1.4131329  1.9990624  1.6787927  0.1012240 -0.0206285  1.0882673 -1.9168449
+ [1]  0.18698515 -1.90285690  1.06906481 -0.55548326  0.59540370 -0.04581134  0.38981055  0.92785608 -0.81038363 -0.08401824
 ```
 
 ---
@@ -1082,19 +1079,19 @@ y
 
 
 ```r
-mean(y)
+ mean(y)
 ```
 
 ```
-[1] 0.1804659
+[1] -0.02294331
 ```
 
 ```r
-sd(y)
+ sd(y)
 ```
 
 ```
-[1] 1.234882
+[1] 0.8903981
 ```
 
 --
@@ -1103,20 +1100,20 @@ Sample more points... 10,000 instead of 100
 
 
 ```r
-y &lt;- rnorm(10000, mean = 0, sd = 1)
-mean(y)
+ y &lt;- rnorm(10000, mean = 0, sd = 1)
+ mean(y)
 ```
 
 ```
-[1] 0.01287394
+[1] 0.003199685
 ```
 
 ```r
-sd(y)
+ sd(y)
 ```
 
 ```
-[1] 0.995876
+[1] 1.003417
 ```
 
 ---
@@ -1128,14 +1125,14 @@ Histogram
 
 
 ```r
-library(graphics)
-hist(y)
+  library(graphics)
+  hist(y)
 ```
 ]
 
 .pull-right[
 
-&lt;img src="R-session-01-intro_files/figure-html/unnamed-chunk-47-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="R-session-01-intro_files/figure-html/unnamed-chunk-48-1.png" style="display: block; margin: auto;" /&gt;
 ]
 
 .student[
@@ -1181,7 +1178,7 @@ To use functions from the package
 
 
 ```r
-stringr::str_c(first, last, sep = " ")
+ stringr::str_c(first,last, sep= " ")
 ```
 
 ```
@@ -1194,8 +1191,8 @@ stringr::str_c(first, last, sep = " ")
 
 
 ```r
-library(stringr)
-str_c(first, last, sep = " ")
+ library(stringr)
+ str_c(first,last, sep= " ")
 ```
 
 ```
