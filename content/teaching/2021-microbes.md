@@ -44,6 +44,6 @@ During the first half of this course, we will walk through some basics concepts 
 
 ### metapr2 package
 
-* [metapr2-shiny-main.zip](https://daniel-vaulot.fr/html/course-microbes-2021/metapr2-shiny-main.zip)
+* [Instructions](https://daniel-vaulot.fr/html/course-microbes-2021/README.html)
 
 
