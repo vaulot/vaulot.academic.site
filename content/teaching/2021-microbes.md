@@ -13,7 +13,7 @@ summary: "Introduction to R; Data wrangling; R markdown; Metabarcode analyses"
 
 {{< figure src="img/logo-course-microbe.jpg" title="" lightbox="false" width="600" >}}
 
-__Course__: Microbes on Earth Systems
+__Course__: Microbes on Natural Ecosystems
 
 __Code__: ES2304 & ES7027
 
