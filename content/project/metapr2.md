@@ -25,14 +25,16 @@ tags = ["database", "current_projects", "18S rRNA", "metabarcoding"]
 math = false
 
 [header]
-image = "metapr2_map_samples.png"
+image = "metapr2_shiny_map.png"
 caption = "Current coverage of metapr2"
 
 +++
 
 This is a new project which aims at making publicly available a database of curated metabarcodes processed with [dada2](https://benjjneb.github.io/dada2/tutorial.html) and for which taxonomy is assigned with [PR2](https://github.com/pr2database/pr2database).
 
-The currently processed public data sets include:
+We have developed an interactive web site which allows to visualize, analyze and download the processed data.  This includes treemaps of taxonomy, barplots as a function of environmental variables, abundance maps as well as alpha and beta diversity analyses.
+
+The first version of the database (1.0.0) will be released by the end of 2021  and will contain 41 public data sets including:
 
 * Arctic Ocean - Polarstern expedition ARK-XXVII/3 - 2012
 * Arctic Ocean Survey - 2005-2011
@@ -56,18 +58,11 @@ The currently processed public data sets include:
 * Ocean Sampling Day - 2014 - V4 LW
 * Ocean Sampling Day - 2015 - V4
 * Oslo fjord - 2009-2011
-* Tara Oceans - 2009-2012
+* Tara Oceans - V4 and V9 - 2009-2012
+* Tara Arctic - V4
 * White Sea - 2013-2015
 
-Other non-public data sets include:
-
-* Cruises
-  * Arctic - Green Edge project 2015-2016 in Baffin Bay (Ice Camp and Amundsen Cruise)
-  * North West Pacific (data from Korea)
-  * Brazil coastal lagoons
-* Time series
-  * Roscoff (2009-2016)
-  * Penzé estuary (2004-2012)
+The database contains also other non-public data sets from our own work, in particular in the Arctic (Green Edge, MicroPolar).
 
 If you are interested please [contact me](mailto:vaulot@gmail.com).
 
