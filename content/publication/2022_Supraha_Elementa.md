@@ -1,5 +1,5 @@
 +++
-title = "Diversity and biogeography of planktonic diatoms in Svalbard fjords: the Role of tispersal and Arctic endemism in phytoplankton community structuring"
+title = "Diversity and biogeography of planktonic diatoms in Svalbard fjords: the Role of dispersal and Arctic endemism in phytoplankton community structuring"
 date = "2021-12-09"
 publication_types = ["3"]
 authors = ["Luka {Supraha}", "Kerstin Klemm", "Sandra Gran-Stadniczeko", "Daniel Vaulot", "Uwe John", "Bente Edvardsen"]
