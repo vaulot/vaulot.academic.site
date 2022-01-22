@@ -35,6 +35,6 @@ After attending the Ecole Polytechnique in Paris, the Ecole Nationale du Génie 
 
 I have served as an editor for the Journal of Phycology and Aquatic Environmental Microbiology and am currently on the editorial board of [Scientific Reports](https://www.nature.com/srep/about/editors#ecologyevolutionary) and a senior editor of the [ISME Journal](https://www.nature.com/ismej/editors).  
 
-I am an Emeritus Senior Scientist at CNRS and currently a Visiting Professor at the Asian School of the Environment, Nanyang Technological University, Singapore.
+I am an Emeritus Senior Scientist at CNRS and currently a Visiting Professor at the Asian School of the Environment, Nanyang Technological University, Singapore where I work inside the [GEEK Lab](https://the-geek-lab.netlify.app).
 
 {{% staticref "files/CV_English_Vaulot.pdf" %}}Download  CV{{% /staticref %}}
