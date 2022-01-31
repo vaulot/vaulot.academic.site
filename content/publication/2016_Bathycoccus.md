@@ -11,7 +11,7 @@ image_preview = ""
 selected = false
 projects = ["microb3"]
 tags = ["green algae", "Bathycoccus", "metagenomics", "metatranscriptomics", "rcc"]
-url_pdf = ""
+url_pdf = "files/papers/Vannier_et al_2016.pdf"
 url_preprint = ""
 url_code = ""
 url_dataset = ""
@@ -20,6 +20,10 @@ url_slides = ""
 url_video = ""
 url_poster = ""
 url_source = "http://www.nature.com/articles/srep37900"
+[[url_custom]]
+    name = "Supplementary material"
+    url = "files/papers/Vannier_et al_2016_Supp.pdf"
+
 math = true
 highlight = true
 [header]

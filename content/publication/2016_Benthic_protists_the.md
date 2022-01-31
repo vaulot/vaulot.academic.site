@@ -11,7 +11,7 @@ image_preview = ""
 selected = false
 projects = []
 tags = []
-url_pdf = ""
+url_pdf = "files/papers/Forster_et al_2016.pdf"
 url_preprint = ""
 url_code = ""
 url_dataset = ""
@@ -20,6 +20,9 @@ url_slides = ""
 url_video = ""
 url_poster = ""
 url_source = "http://femsec.oxfordjournals.org/lookup/doi/10.1093/femsec/fiw120"
+[[url_custom]]
+    name = "Supplementary material"
+    url = "files/papers/Forster_et al_2016_Benthic protists.zip"
 math = true
 highlight = true
 [header]

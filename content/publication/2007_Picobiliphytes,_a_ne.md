@@ -11,7 +11,7 @@ image_preview = ""
 selected = false
 projects = []
 tags = []
-url_pdf = ""
+url_pdf = "files/papers/Not_et al_2007.pdf"
 url_preprint = ""
 url_code = ""
 url_dataset = ""
@@ -20,6 +20,10 @@ url_slides = ""
 url_video = ""
 url_poster = ""
 url_source = ""
+[[url_custom]]
+    name = "Supplementary material"
+    url = "files/papers/Not_et al_2007_Supp.pdf"
+
 math = true
 highlight = true
 [header]

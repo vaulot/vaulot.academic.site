@@ -11,7 +11,7 @@ image_preview = ""
 selected = false
 projects = ["rcc"]
 tags = ["rcc"]
-url_pdf = ""
+url_pdf = "files/papers/Le_Gall et al_2008.pdf"
 url_preprint = ""
 url_code = ""
 url_dataset = ""
@@ -20,6 +20,10 @@ url_slides = ""
 url_video = ""
 url_poster = ""
 url_source = ""
+[[url_custom]]
+    name = "Supplementary material"
+    url = "files/papers/Le_Gall et al_2008_Supp.pdf"
+
 math = true
 highlight = true
 [header]

@@ -11,7 +11,7 @@ image_preview = ""
 selected = false
 projects = ["collaborations"]
 tags = ["phytoplankton", "flow cytometry", "Brazil", "tropical ecosystems", "Prochlorococcus", "Synechococcus"]
-url_pdf = ""
+url_pdf = "files/papers/Ribeiro_et al_2016a.pdf"
 url_preprint = ""
 url_code = ""
 url_dataset = ""
@@ -20,6 +20,10 @@ url_slides = ""
 url_video = ""
 url_poster = ""
 url_source = "http://doi.wiley.com/10.1002/lom3.10135"
+[[url_custom]]
+    name = "Supplementary material"
+    url = "files/papers/Ribeiro_et al_2016a_Supp.pdf"
+
 math = true
 highlight = true
 [header]
