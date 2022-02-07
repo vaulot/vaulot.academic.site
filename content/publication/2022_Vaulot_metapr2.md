@@ -22,6 +22,6 @@ url_source = ""
 math = true
 highlight = true
 [header]
-image = ""
+image = "metapr2_shiny_01.png"
 caption = ""
 +++
