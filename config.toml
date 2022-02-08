@@ -235,12 +235,17 @@ enableGitInfo = false
   [[params.social]]
     icon = "envelope"
     icon_pack = "fa"
-    link = "mailto:vaulot@sb-roscoff.fr"
+    link = "mailto:vaulot@gmail.com"
 
   [[params.social]]
     icon = "twitter"
     icon_pack = "fa"
     link = "//twitter.com/daniel_vaulot"
+  
+  [[params.social]]
+  icon = "google-scholar"
+  icon_pack = "ai"
+  link = "https://scholar.google.com/citations?hl=fr&user=kcwZqRwAAAAJ"
 
   [[params.social]]
     icon = "researchgate"
