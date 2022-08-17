@@ -1,6 +1,6 @@
 +++
 title = "Global patterns and rates of habitat transitions across the eukaryotic tree of life"
-date = "2022-08-04"
+date = "2022-08-10"
 publication_types = ["2"]
 authors = ["Mahwash Jamy", "Charlie Biwer", "Daniel Vaulot", "Aleix Obiol", "Hongmei Jing", "Sari Peura", "Ramon Massana", "Fabien Burki"]
 publication = "Nature Ecology and Evolution"
@@ -10,7 +10,7 @@ selected = true
 projects = ["pr2", "metapr2"]
 tags = ["metabarcoding", "18S rRNA", "primers", "protists"]
 url_pdf = "files/papers/Jamy_2022.pdf"
-url_preprint = "https://www.biorxiv.org/content/10.1101/2021.11.01.466765v1"
+url_preprint = ""
 url_code = "https://github.com/burki-lab/Transitions"
 url_dataset = "https://figshare.com/articles/dataset/Global_patterns_and_rates_of_habotat_transitions_across_the_eukaryotic_tree_of_life/15164772"
 url_project = ""
