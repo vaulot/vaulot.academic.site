@@ -1,6 +1,6 @@
 +++
 title = "pr2-primer: an 18S rRNA primer database for protists"
-date = "2021-07-11"
+date = "2022-01-11"
 authors = ["Daniel Vaulot", "Stefan Geisen", "Frédéric Mahé", "David Bass"]
 publication_types = ["2"]
 publication = "Molecular Ecology Resources 22:168-179"
