@@ -30,11 +30,17 @@ caption = "Current coverage of metapr2"
 
 +++
 
-This is a new project which aims at making publicly available a database of curated metabarcodes processed with [dada2](https://benjjneb.github.io/dada2/tutorial.html) and for which taxonomy is assigned with [PR2](https://github.com/pr2database/pr2database).
+This project aims at making publicly available a database of curated metabarcodes processed with [dada2](https://benjjneb.github.io/dada2/tutorial.html) and for which taxonomy is assigned with [PR2](https://github.com/pr2database/pr2database).
 
 We have developed an interactive web site which allows to visualize, analyze and download the processed data.  This includes treemaps of taxonomy, barplots as a function of environmental variables, abundance maps as well as alpha and beta diversity analyses.
 
-The first version of the database (1.0.0) will be released by the end of 2021  and will contain 41 public data sets including:
+The first version of the database (1.1) has been released in Spring 2022 (https://shiny.metapr2.org).
+
+THe paper presenting the database is now published.
+
+Vaulot, D., Sim, C.W.H., Ong, D., Teo, B., Biwer, C., Jamy, M., Lopes dos Santos, A., 2022. metaPR2: a database of eukaryotic 18S rRNA metabarcodes with an emphasis on protists. Molecular Ecology Resources. https://doi.org/10.1111/1755-0998.13674
+
+It contains 41 public data sets including:
 
 * Arctic Ocean - Polarstern expedition ARK-XXVII/3 - 2012
 * Arctic Ocean Survey - 2005-2011
