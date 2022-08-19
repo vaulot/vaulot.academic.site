@@ -40,31 +40,13 @@ Please cite: Vaulot, D., Sim, C.W.H., Ong, D., Teo, B., Biwer, C., Jamy, M., Lop
 
 The latest version of the database (1.1) has been released in Spring 2022 and contains 41 public data sets including:
 
-* Arctic Ocean - Polarstern expedition ARK-XXVII/3 - 2012
-* Arctic Ocean Survey - 2005-2011
-* Arctic Ocean, Beaufort Sea, MALINA cruise - 2009
-* Antarctic - Fieldes Bay - 2015
-* Baffin Bay - 2013
-* Bay of Naples - 2011
 * Biomarks
 * Blanes Time Series - 2004-2013
-* Central Arctic Ocean - 2012
-* Chukchi Sea - ICESCAPE - 2010
-* Fieldes Bay, Antarctic - 2013
-* Gdansk Gulf - 2012
-* Gdansk Gulf - 2012 Hapto
-* Gulf of Finland - 2012-2013
-* Malaspina expedition - surface - 2010-2011
-* Malaspina expedition - vertical profiles - 2010-2011
-* Nansen Basin - 2012
-* Nares Strait - 2014
-* Ocean Sampling Day - 2014 - V4 LGC
-* Ocean Sampling Day - 2014 - V4 LW
-* Ocean Sampling Day - 2015 - V4
-* Oslo fjord - 2009-2011
-* Tara Oceans - V4 and V9 - 2009-2012
+* Malaspina - 2010-2011
+* Ocean Sampling Day - 2014 and 2015
+* Tara Oceans - V4 and V9 - 2009-2012 - The Tara V4 data have been reprocessed with dada2
 * Tara Arctic - V4
-* White Sea - 2013-2015
+* Many Arctic datasets
 
 The database contains also other non-public data sets from our own work, in particular in the Arctic (Green Edge, MicroPolar). If you are interested please [contact me](mailto:vaulot@gmail.com).
 
