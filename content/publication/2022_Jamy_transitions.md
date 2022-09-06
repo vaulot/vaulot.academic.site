@@ -18,6 +18,9 @@ url_slides = ""
 url_video = ""
 url_poster = ""
 url_source = "https://www.nature.com/articles/s41559-022-01838-4"
+[[url_custom]]
+    name = "Press release Uppsala"
+    url = "https://www.uu.se/en/press/press-release/?id=5960&typ=pm&lang=en"
 
 math = true
 highlight = true

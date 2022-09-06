@@ -22,6 +22,9 @@ url_source = "https://onlinelibrary.wiley.com/doi/abs/10.1111/1755-0998.13674"
 [[url_custom]]
     name = "Supplementary material"
     url = "Vaulot_2022_metapr2_MER_supp_mat.pdf"
+[[url_custom]]
+    name = "Review"
+    url = "https://www.qeios.com/read/51KD06"
 math = true
 highlight = true
 [header]
