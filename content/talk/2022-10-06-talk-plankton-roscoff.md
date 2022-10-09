@@ -1,5 +1,7 @@
 +++
 date = 2022-10-06T00:00:00  # Schedule page publish date.
+time_start = 2022-10-06T00:00:00
+time_end = 2022-10-06T00:00:00
 title = "A brief (personal) history of Plankton in Roscoff"
 abstract = ""
 abstract_short = ""
