@@ -10,3 +10,4 @@ sandbox/*
 .Rproj.user
 static/files/citations
 static/files/pdf_clean
+static/files/citations/bib_to_md_v2.R
