@@ -20,7 +20,7 @@ projects = []
 # Links (optional).
 url_pdf = ""
 url_slides = "https://speakerdeck.com/vaulot/a-brief-history-of-plankton-in-roscoff"
-url_video = ""
+url_video = "https://www.youtube.com/watch?v=YoAyhwm8oPA&list=PLgwvxk6eJAihMpCqw43FXchBTh368tkKj&index=9"
 url_code = ""
 
 # Does the content use math formatting?
@@ -38,3 +38,5 @@ caption = ""
 +++
 
 <script async class="speakerdeck-embed" data-id="f39f689bec4c4e6997c5b3e9a94003ab" data-ratio="1.77631578947368" src="//speakerdeck.com/assets/embed.js"></script>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YoAyhwm8oPA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
