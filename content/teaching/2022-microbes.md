@@ -31,8 +31,8 @@ During the first half of this course, we will walk through some basics concepts 
 
 
 ### Lecture
-* [Session 10 - Metabarcode analyses with metapr2](https://daniel-vaulot.fr/html/course-microbes-2021/Metapr2.html) 
-* [pdf](https://daniel-vaulot.fr/html/course-microbes-2021/Metapr2.pdf) 
+* [Session 10 - Metabarcode analyses with metapr2](https://daniel-vaulot.fr/html/course-microbes-2022/Metapr2.html) 
+* [pdf](https://daniel-vaulot.fr/html/course-microbes-2022/Metapr2.pdf) 
 
 
 ### metapr2
