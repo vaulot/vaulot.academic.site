@@ -1,0 +1,604 @@
+---
+format: 
+  revealjs:
+    theme: [default, default.scss]
+    slide-number: true
+    mouse-wheel: true
+    smaller: false
+    fig-align: center
+    center: false
+    scrollable: true
+    margin: 0
+    height: 700
+    width: 1200
+---
+
+# Microbes {.title-slide background-image="img/course_background.png" background-size="100%" background-opacity=0.3}
+
+Week 11 - Analyzing protist communities
+
+------------------------------------------------------------------------
+
+## MetaPR2
+
+### A database of metabarcodes
+
+![](img/metapr2_map_samples_cropped.png){.absolute height="400" right="150"}
+
+[Daniel Vaulot]{.absolute .smaller bottom="150"}
+
+[`r Sys.Date()`]{.absolute .smaller bottom="100"}
+
+![](img/metapr2_logo.png){.absolute right="0" top="100" height="150"}
+
+![](img/logo_SBR.png){.absolute left="0" bottom="20" height="50"}
+
+![](img/NTU-Logo-full-colour.png){.absolute right="0" bottom="20" height="50"}
+
+
+## Outline {.outline-slide background="DarkBlue"}
+
+::: incremental
+
+* Metabarcoding data
+
+* Factors affecting protist communities
+
+* Diversity
+
+* Visualization/Analysis
+
+* MetaPR2 in practice
+
+* Final presentation
+
+:::
+
+## Metabarcoding
+
+![](img/metabarcoding.png)
+
+
+## Metabarcoding
+
+::: {.panel-tabset}
+### Sequences
+
+Fastq files
+
+![](img/fastq.png)
+
+### Cluster
+
+![](img/asvs.png)
+
+
+### Assign
+![](img/phylogenetic-placement.png){.absolute left="200"}
+
+::: 
+
+## Metabarcoding
+
+![](img/metabarcoding_pipeline_cropped.png)
+
+## Metabarcoding
+
+### Data tables
+
+::: {.panel-tabset}
+### ASVs
+
+![](img/table_taxo.png)
+
+### Abundance
+
+![](img/table_otu.png)
+
+### Metadata
+
+![](img/table_sample.png)
+
+### Merged
+
+![](img/metabarcoding_table.png)
+
+:::
+
+## Factors affecting protist communities {.scrollable}
+:::: columns
+::: {.column width="50%"}
+### Substrate
+* Water
+* Ice
+* Sediment
+* Soil
+* Microbiome
+
+### Ecosystem
+* Oceanic
+* Coastal
+* Rivers
+* Lakes
+* Terrestrial
+:::
+::: {.column width="50%"}
+### Size fraction
+* Total (0.2 µm -> 100 µm)
+* Pico (0.2 µm -> 2-3 µm)
+* Nano (2-3 µm -> 20 µm)
+* Micro (20 µm -> 100-200 µm)
+* Meso (100 µm -> 1000 µm) 
+:::
+::::
+
+## Factors affecting protist communities
+### Environmental conditions
+:::: columns
+::: {.column width="40%"}
+
+In oceanic waters:
+
+-   temperature
+-   salinity
+-   light
+-   nutrients
+
+... which depend on:
+
+-   substrate (water vs.ice)
+-   latitude
+-   time of the year
+-   depth
+-   oceanic currents
+-   proximity of coast
+
+:::
+
+::: {.column width="60%"}
+![](img/currents-03.png)
+:::
+::::
+
+## Diversity
+
+Microbial species in a sample
+
+-   [species richness]{style="color: blue;font-weight: bold;"}: total number of species
+-   [species abundance]{style="color: blue;font-weight: bold;"}: proportion of each species
+
+![](img/diversity-butterflies.png){.absolute height="350" bottom=20 left=100}
+
+Richness vs. Evenness
+
+## Diversity
+
+### Alpha diversity - Diversity within a given sample
+
+- [Chao 1]{style="color: blue;font-weight: bold;"} is a non-parametric estimator of the number of species in a community. 
+
+. . . 
+
+- [Shannon index]{style="color: blue;font-weight: bold;"}^[Shannon's diversity index quantifies the uncertainty in predicting the species identity of an individual that is taken at random from the dataset.]
+
+$H = - \sum_{i=1}^{S} p_i \cdot \log{p_i}$
+
+Where:
+
+$p_i$ = fraction of the entire population made up of species $i$ (proportion of a species i relative to total number of species present) 
+
+$S$ = numbers of species encountered
+
+A high value of $H$ would be a representative of a diverse and equally distributed community and lower values represent less diverse community. A value of 0 would represent a community with just one species.
+
+## Diversity
+
+### Alpha diversity - Effect of latitude
+
+![](img/diversity-latitude-02.png){.absolute left="200"}
+
+## Diversity
+
+### Beta diversity - Compare diversity between samples
+
+* Compute **distance** between samples:
+
+  * [Bray-Curtis]{style="color: blue;font-weight: bold;"} dissimilarity: use abundance information
+    * Varies between 0 and 1:
+    * 0 means the two samples have the same composition
+    * 1 means the two samples do not share any species
+    
+     $BC_{jk} = 1 - \frac{2\sum_{i=1}^{p}min(N_{ij},N_{ik})}{\sum_{i=1}^{p}(N_{ij} + N_{ik})}$ 
+
+     where $N_{ij}$ is the abundance of species $i$ in sample $j$ and $p$ the total number of species
+
+     
+  * [Jaccard similarity]{style="color: blue;font-weight: bold;"} index
+    * Number of common species between samples divided by total number of species in the two samples
+    $J(A,B) = \frac{|A \cap B|}{|A \cup B|}$
+  
+
+. . . 
+     
+* **Ordinate** the samples
+  * [NMDS]{style="color: blue;font-weight: bold;"}: Non-Metric Multidimensional Scaling
+
+## Diversity
+
+### Beta diversity - Effect of depth on Stramenopiles communities
+
+![](img/diversity-nmds.png){.absolute left="200"}
+
+
+
+## MetaPR2 - Datasets
+
+::: {.panel-tabset}
+### OSD
+
+![](img/OSD.png){.absolute height="500" right=150}
+
+### Tara Oceans
+
+![](img/Tara-expedition-samples.png){.absolute height="500" right=150}
+
+### Malaspina
+
+![](img/Malaspina.png){.absolute height="500" right=150}
+
+### Others (41 total)
+
+![](img/metapr2_fig_shiny_datasets.png)
+
+:::
+
+
+## MetaPR2 - Taxonomy
+
+:::: columns
+::: {.column width="30%"}
+
+### Eight levels:
+
+* Kingdom: Eukaryota
+* Supergroup: Archaeplastida
+* Division: Chloro[phyta]{style="color: blue"}
+* Class: Mamiello[phyceae]{style="color: blue"}
+* Order: Mamielli[ales]{style="color: blue"}
+* Family: Bathycocc[aceae]{style="color: blue"}
+* Genus: _Bathycococcus_
+* Species: _B. prasinos_
+
+:::
+
+::: {.column width="70%"}
+
+![](img/OSD_treemap_Mamiello.png)
+:::
+::::
+
+
+## MetaPR2 - Visualization
+
+::: {.panel-tabset}
+### Barplots
+
+![](img/OSD_Mamiello_barplot.png){.absolute height="500" right=150}
+
+### Maps - Dominant
+
+![](img/OSD_Mamiello_map_01.png){.absolute height="500" right=150}
+
+### Maps - Pie charts
+
+![](img/OSD_Mamiello_map_02.png){.absolute height="500" right=150}
+
+### Diversity
+
+![](img/metapr2_fig_shiny_diversity.png){.absolute height="500" right=150}
+
+:::
+
+## MetaPR2 - In practice
+
+:::: columns
+::: {.column width="50%"}
+### Help
+* Read in detail
+
+### Sample table
+* dataset_name
+* paper (can be useful to read)
+* number of samples
+* number of ASVs
+* number of reads per sample (coverage)
+
+:::
+
+::: {.column width="50%"}
+
+### Sample selection
+* Major datasets: OSD, Tara, Malaspina
+* By habitat: oceanic, coastal etc...
+  * Start by "marine global V4"
+  * Extend to other habitats/datasets
+* V4 vs V9
+* DNA vs. RNA
+* Ecosystems
+* Sustrate: water, ice, soil...
+* Size fractions: total, pico...
+* Depth level: surface, euphotic...
+* Minimum ASV: will filter out rare ASVs (e.g. 1000)
+* Selection can be saved (yaml file)
+:::
+::::
+
+## MetaPR2 - In practice
+
+:::: columns
+::: {.column width="70%"}
+
+### Taxonomy
+
+* Can select several taxa within one level
+* Press validate every time you need to refresh
+* Can exclude taxa to remove fungi, metazoa...
+* Can save taxonomy and reload taxonomy (yaml file)
+
+:::
+
+::: {.column width="30%"}
+
+![](img/metapr2_fig_shiny_taxonomy.png){.absolute height="550"}
+:::
+::::
+
+## MetaPR2 - In practice
+
+:::: columns
+::: {.column width="50%"}
+### Treemaps
+* Left panel: abundance (number of reads)
+  * Reads are "normalized" to 100
+* Right panel: diversity (number of ASVs)
+
+### Maps
+* Read information at top
+  * Taxo level
+  * Number of samples with/without taxa
+* Crosses where taxa absent
+* Map types
+  * Dominant
+  * Pie chart
+* Circle scale
+  * Moving right increases size
+
+:::
+
+::: {.column width="50%"}
+### Barplots
+* taxonomy vs. function
+* variables to use (but this depends on samples selected !)
+  * fraction name
+  * ecosystem
+  * substrate
+  * depth level
+  * DNA_RNA
+  * latitude
+  * temperature
+  * salinity
+  * year, month, day for time series
+:::
+::::
+
+## MetaPR2 - In practice
+
+
+:::: columns
+::: {.column width="50%"}
+
+### Diversity
+* Hit "Compute..." after refreshing taxonomy
+* Time proportional to N samples and taxa
+* Information about
+  * Number of samples
+  * Number of taxa (ASVs)
+
+:::
+
+::: {.column width="50%"}
+### Alpha diversity
+* X: Chao1, Shannon, Simpson (compare)
+* Discretize continuous Y
+* Change Y (see barplots)
+* Change shape
+* Change color
+
+### Beta diversity
+* Ordination method (difference ?)
+* Ordination distance (Bray, Jaccard...)
+* Change color and shape
+:::
+::::
+
+## MetaPR2 - In practice
+### Download
+* Download
+  * datasets
+  * samples
+  * asv list with taxonomy
+  * asv sequences
+
+Only for those with extensive experience with data processing.
+
+## Final presentation
+### Taxonomic groups
+
+::: {.fragment .fade-in-then-semi-out}
+#### Green algae
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+  * _Prasinoderma_
+:::
+::: {.fragment .fade-in-then-out}
+![](img/Prasinoderma_RCC1959.jpg ){.absolute right="100" bottom="200" width="500"}
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+  * _Ostreococcus_
+:::
+::: {.fragment .fade-in-then-out}
+![](img/Ostreococcus_tauri.png){.absolute right="100" bottom="250" width="500"}
+:::
+
+
+::: {.fragment  .fade-in-then-semi-out}
+#### Ochrophyta (Stramenopiles)
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+* _Pelagomonas_, _Aureococcus_
+:::
+::: {.fragment .fade-in-then-out}
+![](img/pelagomonas_andersen_93.png){.absolute right="100" bottom="150" width="500"}
+:::
+
+
+::: {.fragment .fade-in-then-semi-out}
+* _Florenciella_
+:::
+::: {.fragment .fade-in-then-out}
+![](img/Florenciella.jpg){.absolute right="100" bottom="100" width="400"}
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+* Pinguiophyceae
+:::
+::: {.fragment .fade-in-then-out}
+![](img/Pinguiophyceae.jpg){.absolute right="100" bottom="250" width="500"}
+:::
+
+
+## Final presentation
+### Taxonomic groups
+
+::: {.fragment .fade-in-then-semi-out}
+#### Diatoms
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+* _Pseudo-nitzschia_
+:::
+::: {.fragment .fade-in-then-out}
+![](img/Pseudonitzschia.jpg){.absolute right="100" bottom="200" width="500"}
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+* _Fragiliaropsis_
+:::
+::: {.fragment .fade-in-then-out}
+![](img/Fragiliaropsis.png){.absolute right="100" bottom="200" width="500"}
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+* _Minidiscus_
+:::
+::: {.fragment .fade-in-then-out}
+![](img/Minidiscus.png){.absolute right="100" bottom="100" width="300"}
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+* _Rhizosolenia_
+:::
+::: {.fragment .fade-in-then-out}
+![](img/Rhizolenia_imbricata.jpg){.absolute right="100" bottom="150" width="500"}
+:::
+
+::: {.fragment  .fade-in-then-semi-out}
+#### Dinoflagellates
+::: 
+
+::: {.fragment .fade-in-then-semi-out}
+  * _Dinophysis_
+:::
+::: {.fragment .fade-in-then-out}
+![](img/Dinophysis_acuminata.jpg){.absolute right="100" bottom="150" width="500"}
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+  * _Ceratium, Tripos_
+:::
+::: {.fragment .fade-in-then-out}
+![](img/Ceratium_sp.jpg){.absolute right="50" bottom="100" width="450"}
+:::
+
+
+
+
+## Final presentation
+
+### Key points
+
+::: incremental
+
+* Look for key papers on this group
+* What are the dominant species?
+* What is the microdiversity [diversity within dominant species (ASVs)]?
+* What is distribution ?
+  * Substrate (water, ice...)
+  * Ecosystems (marine, freshwater, terrestrial)
+  * Size fraction
+  * Depth layers (euphotic zone vs. meso and bathypelagic)
+  * Latitudinal bands (polar, temperate, tropical)
+  * Coastal vs Pelagic
+* Alpha diversity
+* Beta diversity
+
+:::
+
+## Final presentation
+
+### In practice
+
+::: incremental
+
+* Each group will have **max of 15’** to present their results.  Your time will be cut after 15’.
+* **Don’t overload** your presentation and run when talking. This will decrease the clarity of your presentation.
+* **Share** equally time between group members.
+* Introduce very briefly the main biological characteristics and ecological importance of your taxonomic group.
+* Explain which **hypotheses/questions** your group were interested in.
+* Explain the results you have observed. Focus on main points.
+* Each group will have **5’ to answer questions**.
+
+:::
+
+## Final presentation{.smaller}
+
+### Evaluation
+
+. . . 
+ 
+* Profs, TAs and PhD’s students will be judging your presentation (Only Profs will grade!):
+  * **Grade scale**:  0 = unacceptable; 1 = poor; 2 = fair; 3 = good; 4 = outstanding 
+
+. . . 
+
+#### Criteria
+
+::: incremental
+* **Quality of presentation**
+  * Slides (font size, amount on slide, legible and clear, references, no errors, etc).
+  * Organization of presentation (outline, logical sequence, good transitions, easy to follow, etc).
+  * Quality of oral presentation (well paced, projected voice, face audience, eye contact, confident, etc).
+  * Did the group keep the audience interested? (show enthusiasm, command attention, did you learn something new?)
+  * Was the presentation within the 15 minutes in length?
+
+* **Content of presentation**
+  * Was the presentation well structured ? 
+  * Did the group show an overall understanding of the topic? (background, objectives and significance thoroughly explained?).
+  * Did the presentation cited the relevant material from the litterature?
+  * Did the group answered questions accurately? Did the group possess good understanding of topic based on answers?
+
+:::
+
