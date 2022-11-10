@@ -58,7 +58,7 @@ enableGitInfo = false
 
   # Your details.
   name = "Daniel Vaulot"
-  role = "Visiting Professor (NTU) - Emeritus Senior Scientist (CNRS)"
+  role = "Emeritus Senior Scientist (CNRS)"
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
