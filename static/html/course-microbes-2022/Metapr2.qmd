@@ -11,6 +11,7 @@ format:
     margin: 0
     height: 700
     width: 1200
+    self-contained: false
 ---
 
 # Microbes {.title-slide background-image="img/course_background.png" background-size="100%" background-opacity=0.3}
