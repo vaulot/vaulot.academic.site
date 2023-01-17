@@ -24,6 +24,7 @@ caption = "The ASIAME 2 course in Port Blair, Andaman Islands (nov 2019)"
 * 2013 - Co-organizer of the UPMC Daniel-Jouvance School in Marine-Biology - Arraial do Cabo, Brasil -  March 2013
 
 ## Courses taught
+* 2023 [ECODIM]({{< ref "/teaching/2023-ecodim.md">}}) - Ecology and Diversity of Marine Microorganisms, coordinated by Osvaldo Ulloa (University of Concepcion, Chile): Protist diversity, Introduction to R, Metabarcoding analysis.
 * 2022 [Metabarcoding data analysis]({{< ref "/teaching/2022-microbes.md">}}) - ES2304/ES7027: Microbes on Natural Ecosystems, coordinated by A. Lopes dos Santos, ASE, Nanyang Technological University, Singapore - 3 h + final presentations
 * 2021 [R for Microbial Ecology]({{< ref "/teaching/2021-microbes.md">}}) - ES2304/ES7027: Microbes on Natural Ecosystems, coordinated by A. Lopes dos Santos, ASE, Nanyang Technological University, Singapore - 6 h + final presentations
 * 2021 [Scales in Plankton Ecology]({{< ref "/teaching/2021-ecology.md">}}) - ES3305/ES7022: Currents Issues in Ecology, coordinated by D. Wardle, ASE, Nanyang Technological University, Singapore - 3 h

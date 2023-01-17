@@ -11,13 +11,15 @@ tags: ["R", "microbes"]
 summary: "ECODIM classes - eukaryotes, R, metabarcoding"
 ---
 
-__Course__: ECODIM
+__Course__: ECODIM - Ecology and Diversity of Marine Microorganisms
+
+__Organizer__: coordinated by Osvaldo Ulloa (University of Concepcion, Chile)
+
+__Localisation__: Dichato Marine Station (Chile)
 
 
-
-### Lectures
+## Lectures
 * [Protist diversity](https://daniel-vaulot.fr/html/course-ecodim-2023/Metapr2.html) 
-  * [pdf](https://daniel-vaulot.fr/html/course-microbes-2022/Metapr2.pdf) 
 
 ### Download and Install
 
