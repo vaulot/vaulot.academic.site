@@ -18,7 +18,7 @@ __Organizer__: coordinated by Osvaldo Ulloa (University of Concepcion, Chile)
 __Localisation__: Dichato Marine Station (Chile)
 
 ### Installation and reading material
-* [Installation and reading](https://daniel-vaulot.fr/html/course-ecodim-2023/00-syllabus.html)
+* [Instructions](https://daniel-vaulot.fr/html/course-ecodim-2023/00-syllabus.html)
 
 ### Lectures
 
@@ -26,6 +26,8 @@ __Localisation__: Dichato Marine Station (Chile)
 * [Protist diversity](https://daniel-vaulot.fr/html/course-ecodim-2023/protist-diversity.html) 
   
 #### R
+
+_Will be uploaded later_
 
 
 
