@@ -21,20 +21,13 @@ __Localisation__: Dichato Marine Station (Chile)
 * [Installation and reading](https://daniel-vaulot.fr/html/course-ecodim-2023/00-syllabus.html)
 
 ### Lectures
-* [01-Protist diversity](https://daniel-vaulot.fr/html/course-ecodim-2023/01-protist-diversity.html) 
+
+#### Diversity of plankton
+* [Protist diversity](https://daniel-vaulot.fr/html/course-ecodim-2023/protist-diversity.html) 
+  
+#### R
 
 
-### metapr2
 
-* [Web site](https://shiny.metapr2.org)
-
-* Installing as an R package
-
-```
-install.packages(devtools)
-
-devtools::install_github("pr2database/metapr2-shiny")
-metapr2::run_app()
-```
 
 
