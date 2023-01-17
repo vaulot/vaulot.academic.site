@@ -11,6 +11,8 @@ tags: ["R", "microbes"]
 summary: "ECODIM classes - eukaryotes, R, metabarcoding"
 ---
 
+{{< figure src="img/logo_ecodim.png" title="" lightbox="false" width="400" >}}
+
 __Course__: [ECODIM](https://ecodim.imo-chile.cl) - Ecology and Diversity of Marine Microorganisms
 
 __Organizer__: coordinated by Osvaldo Ulloa (University of Concepcion, Chile)
