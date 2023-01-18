@@ -28,8 +28,15 @@ __Localisation__: Dichato Marine Station (Chile)
 * [Protist diversity](https://daniel-vaulot.fr/html/course-ecodim-2023/protist-diversity.html) 
   
 #### R
-
-_Will be uploaded later_
+* [01 - Introduction to R]
+* [02 - Data wrangling]
+* [03 - Data visualisation]
+* [O4 - Markdown and Quarto]
+* [O5 - Metabarcode processing with dada2]
+* [06 - Metabarcode analysis with Phyloseq]
+* [07 - MetaPR2]
+* 
+_Links will be uploaded later_
 
 
 
