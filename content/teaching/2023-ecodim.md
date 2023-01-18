@@ -32,7 +32,8 @@ __Localisation__: Dichato Marine Station (Chile)
 * [02 - Data wrangling]
 * [03 - Data visualisation]
 * [O4 - Markdown and Quarto]
-* [O5 - Metabarcode processing with dada2]
+* [O5 - Metabarcode processing with dada2](https://daniel-vaulot.fr/html/course-ecodim-2023/R_dada2_tutorial.html)
+  * [Download tutorial material](https://github.com/vaulot/metabarcodes_tutorials_2023)
 * [06 - Metabarcode analysis with Phyloseq]
 * [07 - MetaPR2]
 * 
