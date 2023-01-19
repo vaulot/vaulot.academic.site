@@ -29,14 +29,16 @@ __Localisation__: Dichato Marine Station (Chile)
   
 #### R
 * [01 - Introduction to R](https://daniel-vaulot.fr/html/course-ecodim-2023/01-R-intro.html) 
-* [02 - Data wrangling]
+* [02 - Data wrangling](https://daniel-vaulot.fr/html/course-ecodim-2023/02-R-data-wrangling.html)
 * [03 - Data visualisation]
 * [O4 - Markdown and Quarto]
 * [O5 - Metabarcode processing with dada2](https://daniel-vaulot.fr/html/course-ecodim-2023/R_dada2_tutorial.html)
   * [Download tutorial material](https://github.com/vaulot/metabarcodes_tutorials_2023)
 * [06 - Metabarcode analysis with Phyloseq]
 * [07 - MetaPR2]
-* 
+
+
+* [Data and R scripts](https://github.com/vaulot/data.zip)
 _Links will be uploaded later_
 
 
