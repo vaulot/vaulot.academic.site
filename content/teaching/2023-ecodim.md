@@ -39,9 +39,4 @@ __Localisation__: Dichato Marine Station (Chile)
 
 
 * [Data and R scripts](https://github.com/vaulot/data.zip)
-_Links will be uploaded later_
-
-
-
-
-
+  
