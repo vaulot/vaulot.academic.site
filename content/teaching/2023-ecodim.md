@@ -38,5 +38,7 @@ __Localisation__: Dichato Marine Station (Chile)
 * [07 - MetaPR2]
 
 
-* [Data and R scripts](https://github.com/vaulot/data.zip)
+* [Data and R scripts](https://daniel-vaulot.fr/html/course-ecodim-2023/data.zip)
   
+### Final report
+* [Quarto template](https://daniel-vaulot.fr/html/course-ecodim-2023/report_ecodim.zip)
