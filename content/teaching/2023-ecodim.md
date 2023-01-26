@@ -27,15 +27,16 @@ __Localisation__: Dichato Marine Station (Chile)
 #### Diversity of plankton
 * [Protist diversity](https://daniel-vaulot.fr/html/course-ecodim-2023/protist-diversity.html) 
   
-#### R
+#### R and Metabarcoding
 * [01 - Introduction to R](https://daniel-vaulot.fr/html/course-ecodim-2023/01-R-intro.html) 
 * [02 - Data wrangling](https://daniel-vaulot.fr/html/course-ecodim-2023/02-R-data-wrangling.html)
-* [03 - Data visualisation]
+* [03 - Data visualisation](https://daniel-vaulot.fr/html/course-ecodim-2023/03-R-data-visualization.html)
 * [O4 - Markdown and Quarto](https://daniel-vaulot.fr/html/course-ecodim-2023/04-R-markdown.html)
-* [O5 - Metabarcode processing with dada2](https://daniel-vaulot.fr/html/course-ecodim-2023/R_dada2_tutorial.html)
+* [O5 - Introduction to metabarcoding](https://daniel-vaulot.fr/html/course-ecodim-2023/05-Metabarcoding-intro.html)
+* [O6 - Metabarcode processing with dada2](https://daniel-vaulot.fr/html/course-ecodim-2023/R_dada2_tutorial.html)
   * [Download tutorial material](https://github.com/vaulot/metabarcodes_tutorials_2023)
-* [06 - Metabarcode analysis with Phyloseq](https://daniel-vaulot.fr/html/course-ecodim-2023/05-R-phyloseq.html)
-* [07 - MetaPR2]
+* [07 - Metabarcode analysis with Phyloseq](https://daniel-vaulot.fr/html/course-ecodim-2023/07-R-phyloseq.html)
+* [08 - MetaPR2](https://daniel-vaulot.fr/html/course-ecodim-2023/08-MetaPR2.html)
 
 
 * [Data and R scripts](https://daniel-vaulot.fr/html/course-ecodim-2023/data.zip)
