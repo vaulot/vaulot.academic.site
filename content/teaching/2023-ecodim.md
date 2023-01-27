@@ -11,14 +11,13 @@ tags: ["R", "microbes"]
 summary: "ECODIM classes - eukaryotes, R, metabarcoding"
 ---
 
-{{< figure src="img/logo_ecodim.png" title="" lightbox="false" width="400" >}}
-{{< figure src="img/ecodim_2023.jpg" title="The Huinay Station" lightbox="true" width="600" >}}
+{{< figure src="img/logo_ecodim.png" title="" lightbox="false" width="250" >}} {{< figure src="img/ecodim_2023.jpg" title="The Huinay Station" lightbox="true" width="600" >}}
 
 __Course__: [ECODIM](https://ecodim.imo-chile.cl) - Ecology and Diversity of Marine Microorganisms
 
 __Organizer__: coordinated by Osvaldo Ulloa (University of Concepcion, Chile)
 
-__Localisation__: Dichato Marine Station and [Huinay Marine Laboratory](https://www.enel.cl/en/sustainability/our-commitment/commitments-in-partnerships/san-ignacio-del-huinay-foundation.html) (Chile)
+__Localisation__: Dichato Marine Station and [Scientific Station San Ignacio del Huinay](https://www.enel.cl/en/sustainability/our-commitment/commitments-in-partnerships/san-ignacio-del-huinay-foundation.html) (Chile)
 
 ### Installation and reading material
 * [Instructions](https://daniel-vaulot.fr/html/course-ecodim-2023/00-R-syllabus.html)
