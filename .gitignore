@@ -1,4 +1,4 @@
-.Rproj.user/*
+.Rproj.user
 hugo.exe
 README.md
 *.Rproj
@@ -13,3 +13,6 @@ static/files/pdf_clean
 static/files/citations/bib_to_md_v2.R
 Readme_quarto.md
 /.quarto/
+static/html/course-microbes-2022
+static/html/course-data-science-2021
+static/html/course-ecology-2021

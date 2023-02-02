@@ -1,3 +1,5 @@
+# File need to be saved in BibTex (not Biblatex)
+
 bib2acad <- function(bibfile = "",
                      copybib = TRUE,
                      abstract = TRUE,
@@ -241,7 +243,7 @@ cleanStr <- function(str) {
 }
 
 setwd("c:/daniel.vaulot@gmail.com/web site/vaulot.academic.site/static/files/citations/")
-bibfile <- "Amundsen.bib"
+bibfile <- "Mia.bib"
 
 mypubs <- bib2acad(bibfile  = bibfile,
                  copybib   = FALSE,
