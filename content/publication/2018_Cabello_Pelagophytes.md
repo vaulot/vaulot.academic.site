@@ -2,9 +2,8 @@
 title = "Pelagophyte assemblages of the global ocean display low intraspecific diversity"
 date = "2022-12-01"
 authors = ["Ana Maria Cabello", "Ramiro Logares", "Raquel Rodriguez-Martinez", "Sarah Romac", "Daniel Vaulot", "Ramon Massana"]
-publication_types = ["3"]
-publication = "Environmental Microbiology (**submitted**)"
-publication_short = "Environmental Microbiology (**submitted**)"
+publication_types = ["0"]
+publication = "**In preparation**"
 abstract = ""
 abstract_short = ""
 image_preview = ""

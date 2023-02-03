@@ -182,11 +182,11 @@ enableGitInfo = false
   #   For multilingual sites, `publication_types` can be copied to each language section at the end of this file and
   #   translated.
   publication_types = [
-    'Uncategorized',  # 0
+    'In preparation',  # 0
     'Conference paper',  # 1
     'Journal article',  # 2
     'Submitted',  # 3
-    'Other article',  # 4
+    'Preprint',  # 4
     'Book',  # 5
     'Book section'  # 6
   ]
