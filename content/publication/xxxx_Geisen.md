@@ -1,6 +1,6 @@
 +++
 title = "A user guide to environmental protistology: primers, metabarcoding, sequencing, and analyses"
-date = "2022-12-01"
+date = "2025-12-01"
 authors = ["Stefan Geisen", "Daniel Vaulot", "Frédéric Mahe", "Enrique Lara", "Colomban de Vargas", "David Bass"]
 publication_types = ["4"]
 publication = "BioRxiv (**preprint**)"

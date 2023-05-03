@@ -1,6 +1,6 @@
 +++
 title = "Transcriptomes from the Diatoms Thalassiosira and Minidiscus from the English Channel and Antarctica."
-date = "2022-12-01"
+date = "2025-12-01"
 authors = ["Mariela Guajardo", "Valeria Jimenez", "Daniel Vaulot", "Nicole Trefault"]
 publication_types = ["0"]
 publication = "**In preparation**"
