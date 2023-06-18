@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="Microbes-02-protist-diversity_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Microbes-02-protist-diversity_files/libs/quarto-html/tabby.min.js"></script>
+<script src="Microbes-02-protist-diversity_files/libs/quarto-html/popper.min.js"></script>
+<script src="Microbes-02-protist-diversity_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="Microbes-02-protist-diversity_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Microbes-02-protist-diversity_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="Microbes-02-protist-diversity_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="Microbes-02-protist-diversity_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.3.353">
+
+  <title>microbes-02-protist-diversity</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="Microbes-02-protist-diversity_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="Microbes-02-protist-diversity_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="Microbes-02-protist-diversity_files/libs/revealjs/dist/theme/quarto.css">
+  <link href="Microbes-02-protist-diversity_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="Microbes-02-protist-diversity_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="Microbes-02-protist-diversity_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="Microbes-02-protist-diversity_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    margin-bottom: 0.5rem;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+
+<section id="section" class="slide level2" data-background-image="img/protists/plankton_chronicles.jpg" data-background-size="100%" data-background-opacity="0.3">
+<h2></h2>
+<p><span class="presenter absolute" style="bottom: 300px; "><strong>Daniel Vaulot and Adriana Lopes dos Santos</strong></span></p>
+<p><img data-src="img/institutions/logo-asiame-2023.jpg" class="absolute" style="bottom: 0px; right: 0px; height: 120px; "></p>
+<p><img data-src="img/institutions/logo_SBR.png" class="absolute" style="left: 0px; bottom: 0px; height: 70px; "></p>
+<p><img data-src="img/institutions/logo-university-of-oslo.png" class="absolute" style="left: 300px; bottom: 0px; height: 70px; "></p>
+<p><span class="title absolute" style="bottom: 400px; ">Protist diversity</span></p>
+<p><span class="absolute smaller" style="bottom: 200px; ">2023-06-20</span></p>
+</section>
+<section id="outline" class="slide level2 outline-slide" data-background="DarkBlue">
+<h2>Outline</h2>
+<div>
+<ul>
+<li class="fragment"><p>Eukaryote phylogeny before the molecular era - a brief history</p></li>
+<li class="fragment"><p>Eukaryote phylogeny in the molecular era - 2000s</p></li>
+<li class="fragment"><p><strong>Supergroups</strong></p>
+<ul>
+<li class="fragment">Amorphea – Opisthokonts and Amoebozoa</li>
+<li class="fragment">Orphan Taxa – Metamonada and Discoba</li>
+<li class="fragment">Archaeplastida – Glaucophytes and Rhodophyta</li>
+<li class="fragment">Haptista – Centrohelida, Rappemonads and Haptophytes</li>
+<li class="fragment">TSAR – The secret rulers of our world</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="phylogenetic-diversity" class="slide level2">
+<h2>Phylogenetic diversity</h2>
+
+<img data-src="img/protists/tree_01.png" class="r-stretch"></section>
+<section id="cell-forms-apparatus-and-lifestyle-diversity" class="slide level2">
+<h2>Cell forms, apparatus and lifestyle diversity</h2>
+
+<img data-src="img/protists/protist-diversity.png" class="r-stretch"></section>
+<section>
+<section id="eukaryote-phylogeny-before-the-molecular-era---a-brief-history" class="title-slide slide level1 center" data-background-image="img/protists/tree_darwin.png" data-background-size="100%" data-background-opacity="0.5">
+<h1>Eukaryote phylogeny before the molecular era - a brief history</h1>
+
+</section>
+<section id="darwin-tree-of-life" class="slide level2">
+<h2>Darwin tree of life</h2>
+<p><img data-src="img/protists/tree_darwin.png" class="absolute" style="top: 100px; right: 50px; width: 600px; "></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p>Since the end of the 19th century, we know that the observed diversity of life reflects the evolutionary history of the organisms</p>
+</div>
+</div>
+</section>
+<section id="haeckel" class="slide level2">
+<h2>Haeckel</h2>
+<p><img data-src="img/protists/Haeckel.png" class="absolute" style="left: 50px; height: 400px; "></p>
+<p><img data-src="img/protists/Haeckel_kunst_forms.png" class="absolute" style="left: 450px; height: 500px; "></p>
+</section>
+<section id="haeckel-1" class="slide level2">
+<h2>Haeckel</h2>
+<h3 id="generelle-morphologie-der-organismen---1866">Generelle Morphologie der Organismen - 1866</h3>
+<p><img data-src="img/protists/tree_haeckel_01.png" class="absolute" style="top: 0px; right: 50px; height: 600px; "></p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>Ernst Haeckel believed that the “natural system”, proposed by Darwin (1859), should be represented as a <strong>genealogical tree</strong>.</li>
+<li>Haeckel’s book Generelle Morphologie der Organismen (1866) provided major improvements to the theory of descent, including:
+<ul>
+<li>a large vocabulary of neologisms, some of which became successful, such as <strong>phylogeny, monophyletic, and polyphyletic</strong></li>
+<li>the term <strong>protists</strong> (“the first of all or primordial”) to distinguish unicellular organisms</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="haeckel-2" class="slide level2">
+<h2>Haeckel</h2>
+<h3 id="pedigree-of-man---1874">Pedigree of man - 1874</h3>
+<p><img data-src="img/protists/tree_haeckel_02.png" class="absolute" style="top: 0px; right: 50px; height: 600px; "></p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li><p>Based on the characteristic of eight different main organs (muscles, nerves, coelom, genital organs, etc.) Haeckel proposed the name <strong>Metazoa</strong> (today used to describe multicellular animals).</p></li>
+<li><p>He used phylogeny to establish series of <strong>ancestral</strong> morphological characters.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="five-kingdoms" class="slide level2">
+<h2>Five kingdoms</h2>
+<h3 id="whittaker---1969">Whittaker - 1969<sup>1</sup></h3>
+<p><img data-src="img/protists/tree_whitaker.png" class="absolute" style="top: 0px; right: 50px; height: 500px; "></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li><p>Recognition of the distinction between <strong>bacteria</strong> and <strong>protists</strong>, and between <strong>plants</strong> and <strong>fungi</strong>.</p></li>
+<li><p>Classification based on morphology and nutrition style.</p></li>
+</ul>
+</div>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Whittaker, R. H. New concepts of kingdoms of organisms. Science, 163, 150–160 (1969).</p></li></ol></aside></section>
+<section id="ultrastructural-data" class="slide level2">
+<h2>Ultrastructural data</h2>
+<p><img data-src="img/protists/alveoli.png" class="absolute" style="top: 10px; right: 50px; width: 400px; "> <img data-src="img/protists/mastigoneme.png" class="absolute" style="bottom: 10px; right: 50px; width: 400px; "></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Hypotheses of relationships among unicellular eukaryotes emerged in 60s from ultrastructural data (electron microscopy). Some would be corroborated a few years later by molecular data</li>
+</ul>
+<p><strong>Examples</strong></p>
+<ul>
+<li><p>Presence of <strong>alveoli</strong> (membrane bond sacs that form a continuous layer under the plasma membrane) in Alveolates lineage (ciliates,dinoflagellates and apicomplexans).</p></li>
+<li><p>Presence of <strong>tripartite tubular hairs</strong> (straminipilous) in Stramenopiles lineage (bicosoecids, labyrinthulids, oomycetes, diatoms, brown algae, silicoflagellates</p></li>
+</ul>
+</div>
+</div>
+</section></section>
+<section>
+<section id="eukaryote-phylogeny-in-the-molecular-era---super-groups" class="title-slide slide level1 center" data-background-image="img/protists/tree_baldauf.png" data-background-size="100%" data-background-opacity="0.5">
+<h1>Eukaryote phylogeny in the molecular era - super groups</h1>
+
+</section>
+<section id="molecular-phylogeny" class="slide level2">
+<h2>Molecular phylogeny</h2>
+<p><img data-src="img/protists/18S_S_cerevisiae_Shannon_Entropy_2_small.png" class="absolute" style="top: 100px; right: 0px; width: 450px; "></p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>With the advent of molecular phylogeny came high hopes to quickly resolve eukaryote relationships</li>
+<li><strong>18S rRNA gene</strong> became the first golden standard for eukaryote phylogeny. Significant hypotheses were confirmed / revealed for the first time:
+<ul>
+<li>Most protists groups identified by morphology and physiology do not represent evolutionarily coherent entities.</li>
+<li><strong>Algae, protozoa, protists are names without taxonomic value</strong>. They do not represent any evolutionary relationship among the organisms.</li>
+<li>Fungi were shown to be more closely related to animals than to plants (“opisthokonts”)</li>
+<li>Some lineages stablished based on of ultrastructural data (alveolates and stramenopiles) were confirmed</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="baldaufs-tree" class="slide level2">
+<h2>Baldauf’s tree</h2>
+<p><img data-src="img/protists/tree_baldauf.png" class="absolute" style="top: 150px; right: 50px; width: 650px; "> <img data-src="img/protists/Baldauf.png" class="absolute" style="top: 25px; right: 25px; height: 150px; "></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li>In 2000, Sandra (“Sandie”) Baldauf’s<sup>1</sup> divided all of known eukaryotes into eight major taxonomic groups usually referred to as <strong>‘supergroups’</strong>.</li>
+<li>Supergroups represent a set of eukaryotic species for which there are reasonable evidence that they form a <strong>monophyletic</strong> group.<br>
+</li>
+<li>The supergroup model for the eToL became widely popular in both the primary literature and textbooks.</li>
+<li>The model represents an efficient summary of eukaryotic lineages.</li>
+</ul>
+</div>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>Baldauf, S. L. The Deep Roots of Eukaryotes. Science. 300, 1703–1706 (2003)</p></li></ol></aside></section>
+<section id="the-tree-in-2020" class="slide level2">
+<h2>The tree in 2020<sup>1</sup></h2>
+<p><img data-src="img/protists/tree_burki.png" class="absolute" style="top: 150px; right: 50px; width: 650px; "> <img data-src="img/protists/burki.png" class="absolute" style="top: 25px; right: 25px; height: 150px; "></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li>Most of supergroups have at least one distinctive biological characteristic that seems to define them ancestrally<sup>2</sup>.</li>
+<li>The precise number and membership of the supergroups has varied, reflecting the rapid pace with which important taxa are being discovered and added to tree (broad molecular phylogenetic analyses).</li>
+</ul>
+</div>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn3"><p>Burki, F., Roger, A. J., Brown, M. W. &amp; Simpson, A. G. B. The New Tree of Eukaryotes. Trends Ecol. Evol. 35, 43–55 (2020)</p></li><li id="fn4"><p>morphological <strong>synapomorphy</strong>: a characteristic present in an ancestral species and shared exclusively by its evolutionary descendants.</p></li></ol></aside></section></section>
+<section>
+<section id="amorphea" class="title-slide slide level1 center" data-background-image="img/protists/tree_burki_amorphea.png" data-background-size="100%" data-background-opacity="0.5">
+<h1>Amorphea</h1>
+
+</section>
+<section id="amorphea-1" class="slide level2">
+<h2>Amorphea</h2>
+<h3 id="opisthokonts---fungi-holomycota-or-nucletmycea">Opisthokonts - Fungi (Holomycota or Nucletmycea)</h3>
+<p><img data-src="img/protists/fungi_01.png" class="absolute" style="top: 100px; right: 50px; height: 600px; "> <img data-src="img/protists/fungi_02.png" class="absolute" style="top: 100px; left: 50px; height: 600px; "></p>
+</section>
+<section id="amorphea-2" class="slide level2">
+<h2>Amorphea</h2>
+<h3 id="opisthokonts---holozoa-animals">Opisthokonts - Holozoa (Animals)</h3>
+<p><img data-src="img/protists/tree_holozoa.png" class="absolute" style="top: 10px; right: 10px; width: 500px; "> <img data-src="img/protists/choanoflagellates.png" class="absolute" style="bottom: 50px; right: 10px; height: 450px; "></p>
+<p><img data-src="img/protists/multicellularity.png" class="absolute" style="left: 50px; bottom: 50px; height: 300px; "></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Ichtyosporea (parasites)</li>
+<li>Sister groups of Metazoa, <strong>Choanoflagellates</strong>, share a common ancestor with animals and may hold clues to how early animals evolve (multicellularity).</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="amorphea-3" class="slide level2">
+<h2>Amorphea</h2>
+<h3 id="amoebozoa">Amoebozoa</h3>
+<p><img data-src="img/protists/amoeboa_free_living.png" class="absolute" style="bottom: 50px; right: 50px; height: 600px; "></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Amoebozoa include:
+<ul>
+<li>free-living amoeboid forms with lobose pseudopodia (tubular, finger shape)</li>
+<li>filose amoebae</li>
+<li>flagellates</li>
+<li>various slime molds.</li>
+</ul></li>
+<li>Abundant in soils</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="amorphea-4" class="slide level2">
+<h2>Amorphea</h2>
+<h3 id="amoebozoa---testate-amoebae">Amoebozoa - Testate amoebae</h3>
+<p><img data-src="img/protists/amoeboa_testate_01.png" class="absolute" style="top: 50px; right: 50px; width: 500px; "></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Testate Amoeba with algae symbionts play a very important role in nutrient cycling in peat bogs</p>
+</div>
+</div>
+</section>
+<section id="amorphea-5" class="slide level2">
+<h2>Amorphea</h2>
+<h3 id="amoebozoa---slime-molds">Amoebozoa - Slime molds</h3>
+<p><img data-src="img/protists/slime_mold.png" class="absolute" style="bottom: 50px; right: 50px; width: 550px; "></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li>Slime molds are not fungi.</li>
+<li>They are enormous single cells with thousands of nuclei.</li>
+<li>They are formed when individual flagellated cells swarm together and fuse.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="amorphea-6" class="slide level2">
+<h2>Amorphea</h2>
+<h3 id="amoebozoa---slime-molds-1">Amoebozoa - Slime molds</h3>
+<iframe data-external="1" src="https://www.youtube.com/embed/K8HEDqoTPgk" width="80%" height="80%" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</section></section>
+<section>
+<section id="orphan-taxa" class="title-slide slide level1 center" data-background-image="img/protists/tree_burki_excavates.png" data-background-size="100%" data-background-opacity="0.5">
+<h1>Orphan taxa</h1>
+
+</section>
+<section id="orphan-taxa---metamonada" class="slide level2">
+<h2>Orphan taxa - Metamonada</h2>
+<p><img data-src="img/protists/metamonada.png" class="absolute" style="bottom: 0px; right: 150px; width: 1000px; "></p>
+<div class="columns">
+<div class="column" style="width:100%;">
+<p>Metamonada entirely comprises anaerobic protists, including various free-living flagellates, intestinal symbionts (especially of wood-eating insects), and many parasites (e.g., <em>Giardia</em>, <em>Trichomonas</em>).</p>
+</div>
+</div>
+</section>
+<section id="orphan-taxa---metamonada-1" class="slide level2">
+<h2>Orphan taxa - Metamonada</h2>
+<p><img data-src="img/protists/Monocercomonoides.png" class="absolute" style="top: 50px; right: 50px; width: 550px; "></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><em>Monocercomonoides</em> sp, a protist isolated from the guts of <em>Chinchilla</em> has been reported as first eukaryotic cell that never had a mitochondria (2016).</li>
+<li>Support the hypothesis that the nuclei might have appeared before the acquisition of mitochondria.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="orphan-taxa---discoba" class="slide level2">
+<h2>Orphan taxa - Discoba</h2>
+<h3 id="euglenoids">Euglenoids</h3>
+<p><img data-src="img/protists/euglenids.png" class="absolute" style="top: 50px; right: 50px; width: 550px; "></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Ubiquitous flagellates especially common in terrestrial systems.</li>
+<li>Covered with rigid pellicle allowing euglenoid specific motion (metaboly).</li>
+<li>Secondary endosymbiosis with chlorophyta alga (<em>Euglena</em>, <em>Phacus</em>)</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="orphan-taxa---discoba-1" class="slide level2">
+<h2>Orphan taxa - Discoba</h2>
+<h3 id="euglenoids-1">Euglenoids</h3>
+<iframe data-external="1" src="https://www.youtube.com/embed/OmoL8LlQwWQ" width="80%" height="80%" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</section>
+<section id="orphan-taxa---discoba-2" class="slide level2">
+<h2>Orphan taxa - Discoba</h2>
+<h3 id="kinetoplastids">Kinetoplastids</h3>
+<p><img data-src="img/protists/kinetoplastids.png" class="absolute" style="bottom: 50px; right: 100px; width: 900px; "></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Ubiquitous flagellates.</li>
+<li>Free living: <em>Bodo</em></li>
+<li>Parasitic: <em>Trypanosoma</em>, <em>Leishmania</em></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="orphan-taxa---discoba-3" class="slide level2">
+<h2>Orphan taxa - Discoba</h2>
+<h3 id="symbiotids">Symbiotids</h3>
+<p><img data-src="img/protists/symbiontids.png" class="absolute" style="top: 50px; right: 50px; width: 550px; "></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Anaerobic deep sea microbial eukaryotes</li>
+<li>Sulfur or sulfide-oxidizing epsilon proteobacteria epibionts</li>
+</ul>
+</div>
+</div>
+</section></section>
+<section>
+<section id="archaeplastida" class="title-slide slide level1 center" data-background-image="img/protists/tree_burki_archaeplastida.png" data-background-size="100%" data-background-opacity="0.5">
+<h1>Archaeplastida</h1>
+
+</section>
+<section id="archaeplastida-1" class="slide level2">
+<h2>Archaeplastida</h2>
+<h3 id="primary-endosymbiosis">Primary endosymbiosis</h3>
+<p><img data-src="img/protists/endosymbiosis_primery.png" class="absolute" style="bottom: 50px; right: 50px; width: 800px; "></p>
+<div class="columns">
+<div class="column" style="width:100%;">
+<ul>
+<li>The first one occurred ~1.6 billion years ago and gave rise to glaucophytes, red algae and green algae (the ancestors of all plants).</li>
+<li>The second one occurred ~90–140 million years ago, establishing a permanent photosynthetic compartment (the chromatophore) in amoebae in the genus&nbsp;<em>Paulinella</em>.&nbsp;</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="archaeplastida-2" class="slide level2">
+<h2>Archaeplastida</h2>
+<h3 id="glaucophytes">Glaucophytes</h3>
+<p><img data-src="img/protists/glaucophytes.png" class="absolute" style="top: 50px; right: 50px; width: 550px; "></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Tiny group, only 9 genera and about 15 species.</li>
+<li>Freshwater and terrestrial environments</li>
+<li>Contain blue-green plastids often called <strong>cyanelles</strong>
+<ul>
+<li>Contain two types of phycobilins</li>
+<li>Phycobilins occur in phycobilisomes on the surface of thylakoids (like in cyanobacteria)</li>
+<li>Thylakoids are not stacked</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="archaeplastida-3" class="slide level2">
+<h2>Archaeplastida</h2>
+<h3 id="rhodophytes-red-algae">Rhodophytes (Red algae)</h3>
+<p><img data-src="img/protists/rhodophyta.png" class="absolute" style="bottom: 50px; right: 50px; width: 800px; "></p>
+<div class="columns">
+<div class="column" style="width:100%;">
+<ul>
+<li>Mostly multicellular (but unicellular forms too).</li>
+<li>~ 700 genera described with more than 5000 species described.</li>
+<li>98% marine.</li>
+<li>Contain phycobiliproteins (phycoerythrin) that masks the green color of the Chlorophyll.</li>
+<li>Diversity of <strong>unicellular</strong> red algae has been underappreciated, both in their taxonomic classiﬁcation and the number of genera described.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="archaeplastida-4" class="slide level2">
+<h2>Archaeplastida</h2>
+<h3 id="chloroplastidaviridiplantae">Chloroplastida/Viridiplantae</h3>
+<p><img data-src="img/protists/tree_chloroplastida.png" class="absolute" style="top: 50px; right: 50px; width: 550px; "></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li>Two evolutionary branches:
+<ul>
+<li><strong>Chlorophyta</strong> (which dominated Proterozoic oceans): form a large and morphologically diverse clade of marine, freshwater and terrestrial green algae.</li>
+<li><strong>Streptophyta</strong>: include a paraphyletic assemblage of green algae (charophytes) and the land plants</li>
+</ul></li>
+<li>One of the main groups of photosynthetic eukaryotes</li>
+</ul>
+</div>
+</div>
+</section></section>
+<section>
+<section id="cryptista" class="title-slide slide level1 center" data-background-image="img/protists/tree_burki_cryptista.png" data-background-size="100%" data-background-opacity="0.5">
+<h1>Cryptista</h1>
+
+</section>
+<section id="cryptista-1" class="slide level2">
+<h2>Cryptista</h2>
+<h3 id="katablepharids">Katablepharids</h3>
+<p><img data-src="img/protists/katablepharida_02.png" class="absolute" style="bottom: 100px; right: 50px; width: 450px; "></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Katablepharids<sup>1</sup> and <em>Palpitomonas</em> are both enigmatic heterotrophic flagellates recently (~2010) discovered.</p>
+</div>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn5"><p>Okamoto et al.&nbsp;(2009) Molecular Phylogeny and Description of the Novel Katablepharid <em>Roombia truncata</em> gen. et sp. nov., and Establishment of the Hacrobia Taxon nov. PLoS ONE 4(9): e7080.</p></li></ol></aside></section>
+<section id="cryptista-2" class="slide level2">
+<h2>Cryptista</h2>
+<h3 id="cyptophytes">Cyptophytes</h3>
+<p><img data-src="img/protists/cryptophyta.png" class="absolute" style="top: 50px; right: 50px; width: 550px; "></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Cryptophytes have been central to the study of secondary origin of Chloroplasts.</li>
+<li>Cryptophytes plastids (red algal origin) is surrounded by four membranes; presence of a <strong>nucleomorph</strong> (NM) = residual nucleus of the red algal endosymbiont.</li>
+<li>They are ubiquitous in marine, brackish, and freshwater habitats.</li>
+<li>Mostly photosynthetic with some <strong>mixotrophic</strong> species</li>
+<li>Because they produce <strong>PUFA</strong> are used as food for copepods in fish farming.</li>
+<li>Chloroplast contains <strong>phycobiliprotein</strong> (phycoerythrin).</li>
+</ul>
+</div>
+</div>
+</section></section>
+<section>
+<section id="haptista" class="title-slide slide level1 center" data-background-image="img/protists/tree_burki_haptista.png" data-background-size="100%" data-background-opacity="0.5">
+<h1>Haptista</h1>
+
+</section>
+<section id="haptista-1" class="slide level2">
+<h2>Haptista</h2>
+<p><img data-src="img/protists/haptonema_03.png" class="absolute" style="top: 10px; right: 50px; width: 400px; "> <img data-src="img/protists/haptonema_02.jpg" class="absolute" style="bottom: 10px; right: 50px; width: 400px; "></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Haptista are characterized by the <strong>haptonema</strong>, a third appendage used for attachment and food handling.</li>
+<li>Three groups:
+<ul>
+<li>Haptophytes</li>
+<li>Centrohelida</li>
+<li>Rappemonads</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="haptista-2" class="slide level2">
+<h2>Haptista</h2>
+<h3 id="centrohelida">Centrohelida</h3>
+<p><img data-src="img/protists/centrohelida.png" class="absolute" style="top: 10px; right: 50px; width: 400px; "></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Heterotrophic, free-living species that are found in most aquatic <strong>benthic</strong> environments where they feed on bacteria and other protists, including algae.</li>
+<li>Found primarily in <strong>freshwater</strong> but have also been observed in brackish or marine water in the euphotic zone.</li>
+<li>Some cells have organic spicules and <strong>siliceous</strong> scales.</li>
+<li>Cells possess ray-like projections called <strong>axopodia</strong> covered in a sticky mucilage to trap prey.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="haptista-3" class="slide level2">
+<h2>Haptista</h2>
+<h3 id="rappemonads">Rappemonads</h3>
+<p><img data-src="img/protists/rappemonads.png" class="absolute" style="top: 10px; right: 50px; width: 400px; "></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Was identified as a new group in 1998 based on rRNA sequences (plastid 16S rRNA).</li>
+<li>Morphology remained unknown until 2021.</li>
+<li>A strain (NIES-3900) established in 1991 from a sample obtained at a seaport in Japan turned out to match the environmental sequences.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="haptista-4" class="slide level2">
+<h2>Haptista</h2>
+<h3 id="haptophyta">Haptophyta</h3>
+<p><img data-src="img/protists/haptophyta.png" class="absolute" style="top: 10px; right: 50px; width: 500px; "></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Predominantly planktonic and phototrophic.</li>
+<li>Some cells are covered of calcified plates, the <strong>coccoliths</strong>.</li>
+<li>Marine environments worldwide.</li>
+<li>Major component of the marine microbial ecosystem.</li>
+<li>Play a significant role in the global carbonate cycle through photosynthesis and calcification</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="haptista-5" class="slide level2">
+<h2>Haptista</h2>
+<h3 id="haptophyta-1">Haptophyta</h3>
+<p><img data-src="img/protists/bloom_ehux.png" class="absolute" style="top: 10px; right: 50px; width: 420px; "> <img data-src="img/protists/hapto_cliffs.png" class="absolute" style="bottom: 10px; right: 50px; width: 420px; "></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Blooms of Calcihaptophycidae can be seen from space. The turquoise color is a result of the light getting scattered by their calcium carbonate coccoliths (scales)</li>
+<li>Diversified in the Mesozoic to become a significant component of the phytoplankton (todays evidence white cliff of Dover).</li>
+</ul>
+</div>
+</div>
+</section></section>
+<section>
+<section id="tsar---the-secret-rulers-of-the-world" class="title-slide slide level1 center" data-background-image="img/protists/tree_burki_tsar.png" data-background-size="100%" data-background-opacity="0.5">
+<h1>TSAR - The secret rulers of the world</h1>
+
+</section>
+<section id="tsar" class="slide level2">
+<h2>TSAR</h2>
+<h3 id="the-secret-rulers-of-the-world">The secret rulers of the world</h3>
+<p><img data-src="img/protists/tsar_got.png" class="absolute" style="top: 10px; right: 100px; height: 600px; "></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>It is a gigantic assemblage of eukaryote lineages and possibly a rival to Opisthokonta in diversity</li>
+<li>It includes:</li>
+<li>major groups of microbial <strong>algae</strong> (e.g., diatoms, dinoflagellates),</li>
+<li>large <strong>seaweeds</strong> (e.g., kelps),</li>
+<li>ecologically important free-living <strong>heterotrophic</strong> microbial eukaryotes (e.g., ciliates, foraminiferans, radiolarians),</li>
+<li>many well-studied <strong>parasites</strong> (e.g., apicomplexans, oomycetes)</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="tsar-1" class="slide level2">
+<h2>TSAR</h2>
+<h3 id="rhizaria---foraminifera">Rhizaria - Foraminifera</h3>
+<p><img data-src="img/protists/forams.png" class="absolute" style="top: 10px; right: 50px; width: 500px; "></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>More than 12.000 species.</li>
+<li>Mostly benthic.</li>
+<li>Several live in symbiosis with the dinoflagellates <em>Symbiodinium</em> (same found in corals).</li>
+<li>Main group with microfossil record.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="tsar-2" class="slide level2">
+<h2>TSAR</h2>
+<h3 id="rhizaria---radiolaria">Rhizaria - Radiolaria</h3>
+<p><img data-src="img/protists/radiolaria.png" class="absolute" style="bottom: 10px; right: 100px; width: 700px; "></p>
+<div class="columns">
+<div class="column" style="width:100%;">
+<ul>
+<li>The favorite protists of artists</li>
+<li>Great carbon sinkers</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="tsar-3" class="slide level2">
+<h2>TSAR</h2>
+<h3 id="stramenopiles">Stramenopiles</h3>
+<p><img data-src="img/protists/mastigoneme.png" class="absolute" style="left: 100px; bottom: 10px; width: 350px; "> <img data-src="img/protists/tree_stramenopiles.png" class="absolute" style="bottom: 10px; right: 10px; width: 500px; "></p>
+<div class="columns">
+<div class="column" style="width:55%;">
+<ul>
+<li>Major clade supported by both molecular and morphological data (flagella with tripartite tubular hair – <strong>mastigonemes</strong>)</li>
+<li>Diatoms and brown algae are the best-known members of Stramenopiles, but the group also comprises heterotrophic protists, including parasites / commensals of plants &amp; animals and lineages known only from environmental DNA.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="tsar-4" class="slide level2">
+<h2>TSAR</h2>
+<h3 id="stramenopiles---diatoms">Stramenopiles - Diatoms</h3>
+<p><img data-src="img/protists/diatoms.png" class="absolute" style="bottom: 10px; right: 100px; width: 400px; "></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>The jewels of the sea</li>
+<li>Enclosed in a <strong>siliceous frustule</strong></li>
+<li>Heterokont flagella present during sexual reproduction</li>
+<li>250 genera, &gt; 10,000 species</li>
+<li>~ 20% of the phytoplankton primary production</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="alveolata" class="slide level2">
+<h2>Alveolata</h2>
+<h3 id="secondary-endosymbiosis">Secondary endosymbiosis</h3>
+<p><img data-src="img/protists/endosymbiosis_secondary.png" class="absolute" style="top: 10px; right: 10px; width: 550px; "></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><strong>Apicomplexa</strong>: derived non-photosynthetic plastid called apicomplast.</li>
+<li><strong>Ciliates</strong>: multiple genes of apparent algal origin present in the macronuclei.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="alveolata-1" class="slide level2">
+<h2>Alveolata</h2>
+<h3 id="ciliophora">Ciliophora</h3>
+<p><img data-src="img/protists/ciliates.png" class="absolute" style="bottom: 10px; right: 10px; width: 400px; "></p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>More than 8000 described species</li>
+<li><strong>Nnuclear dualism</strong>:
+<ul>
+<li>Micronucleus (2N, “germ line”)</li>
+<li>Macronucleus (&gt; 2N, “somatic line”)</li>
+</ul></li>
+<li>Macronucleus polyploid and undergo direct division without mitosis. It controls the non-reproductive cell functions, such as metabolism.<br>
+</li>
+<li>Sexual reproduction by “conjugation”</li>
+<li><strong>Cilia</strong> covering most of the cell, sometimes arranged in dense patches (e.g.&nbsp;cirri)</li>
+<li>Perfectly adapted to life in soil / sediments, but also present in the plankton (e.g.&nbsp;tintinnids)</li>
+<li>All heterotrophic species (<strong>kleptoplasty</strong> of cryptophytes)</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="alveolata-2" class="slide level2">
+<h2>Alveolata</h2>
+<h3 id="ciliophora---tintinnids">Ciliophora - Tintinnids</h3>
+<p><img data-src="img/protists/ciliates_tintinnids.png" class="absolute" style="top: 10px; right: 10px; width: 600px; "></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Form a lorica with debris</li>
+<li>They feed primarily on photosynthetic algae and bacteria.</li>
+<li>They are an important part of the fossil record.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="alveolata-3" class="slide level2">
+<h2>Alveolata</h2>
+<h3 id="apicomplexa">Apicomplexa</h3>
+<p><img data-src="img/protists/apicomplexa.png" class="absolute" style="top: 10px; right: 100px; height: 600px; "></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Very successful group of Endoparasites or endocommensals of animals, from corals to humans.</p>
+<ul>
+<li><strong>Coccidiomorphea</strong>: contain well known vertebrate parasites like <em>Plasmodium</em> (malaria) and <em>Toxoplasma</em> which means that these parasites evolved from free leaving algae!</li>
+<li><strong>Gregarinomorphea</strong>: contain mostly invertebrate parasites.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="alveolata-4" class="slide level2">
+<h2>Alveolata</h2>
+<h3 id="dinophyta">Dinophyta</h3>
+<p><img data-src="img/protists/dinoflagellates.png" class="absolute" style="top: 10px; right: 100px; height: 600px; "></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Atypical nucleus (dinokaryon) with high DNA content and permanently <strong>condensed chromosomes</strong>.</li>
+<li>550 genera with &gt; 2000 species (~ 50% photosynthetic)</li>
+<li><strong>Athecate</strong> (naked) or <strong>Thecate</strong> (cellulose wall)</li>
+<li>Many cases of <strong>plastid loss</strong> (and re-acquisitions from various donors: haptophytes, chlorophytes, cryptophytes by <strong>kleptoplastidy</strong>)</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="outline-1" class="slide level2 outline-slide" data-background="DarkBlue">
+<h2>Outline</h2>
+<div>
+<ul>
+<li class="fragment"><p>Taxonomy is critical science</p></li>
+<li class="fragment"><p>Importance of cultures</p></li>
+<li class="fragment"><p>Molecular phylogeny</p></li>
+<li class="fragment"><p>Novel groups to discover</p></li>
+</ul>
+</div>
+</section></section>
+<section id="questions" class="title-slide slide level1 center" data-background="black">
+<h1>Questions ?</h1>
+<div class="footer footer-default">
+
+</div>
+</section>
+
+
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="Microbes-02-protist-diversity_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="Microbes-02-protist-diversity_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="Microbes-02-protist-diversity_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="Microbes-02-protist-diversity_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="Microbes-02-protist-diversity_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="Microbes-02-protist-diversity_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="Microbes-02-protist-diversity_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="Microbes-02-protist-diversity_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="Microbes-02-protist-diversity_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="Microbes-02-protist-diversity_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'smaller': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: true,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1240,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+      });
+      clipboard.on('success', function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      });
+      function tippyHover(el, contentFn) {
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        };
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          return note.innerHTML;
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>
