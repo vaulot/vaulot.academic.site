@@ -22,9 +22,6 @@ __Organizer__: coordinated by Jean-Christophe Auguet (CNRS, MARBEC, Montpellier 
 
 __Localisation__: Quy Nhon, Vietnam
 
-### Installation and reading material
-* [Instructions](https://daniel-vaulot.fr/html/course-asiame-2023/00-R-syllabus.html)
-
 ### Lectures
 
 ### Diversity of eukaryotic plankton
