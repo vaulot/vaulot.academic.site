@@ -22,8 +22,6 @@ __Organizer__: coordinated by Jean-Christophe Auguet (CNRS, MARBEC, Montpellier 
 
 __Localisation__: Quy Nhon, Vietnam
 
-### Lectures
-
 ### Diversity of eukaryotic plankton
 * [Origin of Eukaryotes](https://daniel-vaulot.fr/html/course-asiame-2023/Microbes-01-origin-eukaryotes.html)
 * [Protist diversity](https://daniel-vaulot.fr/html/course-asiame-2023/Microbes-02-protist-diversity.html) 
