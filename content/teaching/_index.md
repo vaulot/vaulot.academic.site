@@ -16,6 +16,7 @@ caption = "The ASIAME 2 course in Port Blair, Andaman Islands (nov 2019)"
 
 ## Courses organized
 
+* 2023 - Co-organizer of [ASIAME 3](https://sites.google.com/view/asiame3) (South and South-East Asia Workshop in Aquatic Microbial Ecology) in Quy Nhon, Vietnam - 10 days - June 2023
 * 2019 - Co-organizer of APC 12 ([Advanced Phytoplankton Course](https://sites.google.com/view/apc12/home)) in Roscoff, France - 3 weeks - May-June 2019
 * 2017 - Co-organizer of [ASIAME 2](https://sites.google.com/view/asiame2) (South Asia Workshop in Aquatic Microbial Ecology) in Andaman Islands, India - 15 days - November 2017
 * 2015-2017 - Metagenomics of marine microbes (6 h lecture, 4 h practical session) - Organizing Committee.  Marine Ecological and Evolutionary Genomics, Roscoff, June 2015
@@ -24,6 +25,7 @@ caption = "The ASIAME 2 course in Port Blair, Andaman Islands (nov 2019)"
 * 2013 - Co-organizer of the UPMC Daniel-Jouvance School in Marine-Biology - Arraial do Cabo, Brasil -  March 2013
 
 ## Courses taught
+* 2023 [ASIAME 3]({{< ref "/teaching/2023-asiame.md">}}) - South and South-EAst Asia Workshop in Aquatic Microbial Ecology, Vietnam, coordinated by J-C Auguet (CNRS Montpellier): Evolution and Diversity of Protists, Introduction to R.
 * 2023 [ECODIM]({{< ref "/teaching/2023-ecodim.md">}}) - Ecology and Diversity of Marine Microorganisms, coordinated by Osvaldo Ulloa (University of Concepcion, Chile): Protist diversity, Introduction to R, Metabarcoding analysis.
 * 2022 [Metabarcoding data analysis]({{< ref "/teaching/2022-microbes.md">}}) - ES2304/ES7027: Microbes on Natural Ecosystems, coordinated by A. Lopes dos Santos, ASE, Nanyang Technological University, Singapore - 3 h + final presentations
 * 2021 [R for Microbial Ecology]({{< ref "/teaching/2021-microbes.md">}}) - ES2304/ES7027: Microbes on Natural Ecosystems, coordinated by A. Lopes dos Santos, ASE, Nanyang Technological University, Singapore - 6 h + final presentations

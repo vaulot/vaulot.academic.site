@@ -11,7 +11,7 @@ tags: ["R", "microbes"]
 summary: "ASIAME classes - eukaryotes and intro to R"
 ---
 
-{{< figure src="img/ASIAME_2023_group_picture.jpg" title="Participants to ASIAME 3." lightbox="true" width="600" >}}
+{{< figure src="img/ASIAME_2023_group_picture.jpg" title="Participants to ASIAME 3." lightbox="true" width="900" >}}
 
 
 __Course__: [ASIAME 3](https://sites.google.com/view/asiame3/home) - Third South Asia Workshop in Aquatic Microbial Ecology
@@ -35,7 +35,7 @@ __Localisation__: Quy Nhon, Vietnam
 ### Introduction to R
 
 #### Installation and material
-* [Instructions](https://daniel-vaulot.fr/html/course-asiame-2023/00-R-syllabus.html)
+* [Instructions](https://daniel-vaulot.fr/html/course-asiame-2023/R-00-syllabus.html)
 * [Data and R scripts](https://daniel-vaulot.fr/html/course-asiame-2023/data.zip)
 
 #### Sessions
@@ -46,4 +46,4 @@ __Localisation__: Quy Nhon, Vietnam
 
 ### Phytoplankton distribution tutorial
 
-  
+ _Will come later_ 
