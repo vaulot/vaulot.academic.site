@@ -27,7 +27,7 @@ __Localisation__: Quy Nhon, Vietnam
 * [Protist diversity](https://daniel-vaulot.fr/html/course-asiame-2023/Microbes-02-protist-diversity.html) 
 * [Plankton distribution](https://daniel-vaulot.fr/html/course-asiame-2023/Microbes-03-phytopk-distribution.html) 
 
-### Phytoplankton distribution tutorial - metaPR2
+### Phytoplankton distribution tutorial - metaPR2 (not done)
 
 * [metaPR2 tutorial](https://daniel-vaulot.fr/html/course-asiame-2023/Microbes-04-metaPR2.html) 
 * [Report template](https://daniel-vaulot.fr/html/course-asiame-2023/report_metapr2.zip)
@@ -36,7 +36,7 @@ __Localisation__: Quy Nhon, Vietnam
 
 #### Installation and material
 * [Instructions](https://daniel-vaulot.fr/html/course-asiame-2023/R-00-syllabus.html)
-* [Data and R scripts](https://daniel-vaulot.fr/html/course-asiame-2023/data.zip)
+* [Data and R scripts](https://daniel-vaulot.fr/html/course-asiame-2023/students.zip)
 
 #### Sessions
 * [01 - Introduction to R](https://daniel-vaulot.fr/html/course-asiame-2023/R-01-intro.html) 
