@@ -11,7 +11,7 @@ tags: ["R", "microbes"]
 summary: "ASIAME classes - eukaryotes and intro to R"
 ---
 
-{{< figure src="img/ASIAME_2023_group_picture.jpg" title="Participants to ASIAME 3." lightbox="true" width="900" >}}
+{{< figure src="img/ASIAME_2023_group_picture_03.jpg" title="Participants to ASIAME 3." lightbox="true" width="900" >}}
 
 
 __Course__: [ASIAME 3](https://sites.google.com/view/asiame3/home) - Third South Asia Workshop in Aquatic Microbial Ecology
