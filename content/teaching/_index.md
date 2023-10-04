@@ -25,6 +25,8 @@ caption = "The ASIAME 2 course in Port Blair, Andaman Islands (nov 2019)"
 * 2013 - Co-organizer of the UPMC Daniel-Jouvance School in Marine-Biology - Arraial do Cabo, Brasil -  March 2013
 
 ## Courses taught
+* 2023 [Culture Collection Data Management](https://daniel-vaulot.fr/html/course-uio-cultures-2023/rcc-data-management.html) - BIOS-5313 Toxic Algae, University of Oslo, coordinated by B. Edvardsen, Oslo, Norway
+* 2023 [Culture Collection Data Management](https://daniel-vaulot.fr/html/course-cultures-2023/rcc-data-management.html) - Marine Phytoplankton Culturing Training Course, coordinated by P. Gourvil, Roscoff, France
 * 2023 [ASIAME 3]({{< ref "/teaching/2023-asiame.md">}}) - South and South-EAst Asia Workshop in Aquatic Microbial Ecology, Vietnam, coordinated by J-C Auguet (CNRS Montpellier): Evolution and Diversity of Protists, Introduction to R.
 * 2023 [ECODIM]({{< ref "/teaching/2023-ecodim.md">}}) - Ecology and Diversity of Marine Microorganisms, coordinated by Osvaldo Ulloa (University of Concepcion, Chile): Protist diversity, Introduction to R, Metabarcoding analysis.
 * 2022 [Metabarcoding data analysis]({{< ref "/teaching/2022-microbes.md">}}) - ES2304/ES7027: Microbes on Natural Ecosystems, coordinated by A. Lopes dos Santos, ASE, Nanyang Technological University, Singapore - 3 h + final presentations
