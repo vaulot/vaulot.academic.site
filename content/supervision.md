@@ -53,7 +53,9 @@ weight = 40
 
 ## PhD Committee or Jury
 
-*  2021-2024 Clarence Sim, NTU ASE, Singapore, PhD committee
+* 2023 & Javier Florenza Garcia, Uppsala University, Sweden, PhD examiner
+* 2023-2025 & Margaux Crédeville, Université Paris-Saclay, PhD committee
+* 2021-2024 Clarence Sim, NTU ASE, Singapore, PhD committee
 * 2021 Ina Jungersen Andresen, University of Oslo, PhD jury
 * 2015 [Shruti Malviya](https://tel.archives-ouvertes.fr/tel-01340859/document), Université de Paris 11 - PhD Jury
 * 2014-2018 [Solenn Mordret](http://oro.open.ac.uk/55552/1/Thesis_SolennMordret_June2018_corrected_final.pdf), Statione Zoologica di Napoli & Open University - PhD committee

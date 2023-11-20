@@ -10,7 +10,7 @@ title = "Daniel Vaulot"
 
 # Your copyright notice - appears in site footer.
 # To display a copyright symbol, type `&copy;`.
-copyright = "&copy; 2021"
+copyright = "&copy; 2023"
 
 theme = "hugo-academic"
 enableEmoji = true
@@ -65,13 +65,14 @@ enableGitInfo = false
   organizations = [ 
   { name = "Station Biologique de Roscoff", url = "http://www.sb-roscoff.fr/en/team-ecomap" },
   { name = "CNRS", url = "http://www.cnrs.fr" },
-  { name = "Sorbonne Université", url = "http://www.sorbonne-universite.fr/" }
+  { name = "Sorbonne Université", url = "http://www.sorbonne-universite.fr/" },
+  { name = "University of Oslo", url = "https://www.mn.uio.no/ibv/english/research/sections/aqua" },  
   ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "daniel_antarctica_2015_square.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
   email = "vaulot@gmail.com"
-  address = "Station Biologique, Roscoff, France"
+  address = "University of Oslo, Blindern, Norway"
   phone = "+33 6 75 54 20 41"
 #  phone = "+65 9149 9049"
 #  skype = "danielguip"
@@ -107,8 +108,8 @@ enableGitInfo = false
   #  latitude = "48.726819"
   #  longitude = "-3.987543"
 
-  latitude = "1.3466988998368865"
-  longitude = "103.67916451228079"
+  latitude = "59.93846760837979"
+  longitude = "10.721875884324309"
   zoom = 15
 
   # Date and time format (refer to Go's date format: http://fuckinggodateformat.com )
@@ -237,20 +238,20 @@ enableGitInfo = false
     icon_pack = "fa"
     link = "mailto:vaulot@gmail.com"
 
-  [[params.social]]
-    icon = "twitter"
-    icon_pack = "fa"
-    link = "//twitter.com/daniel_vaulot"
+#  [[params.social]]
+#    icon = "twitter"
+#    icon_pack = "fa"
+#    link = "//twitter.com/daniel_vaulot"
   
   [[params.social]]
   icon = "google-scholar"
   icon_pack = "ai"
   link = "https://scholar.google.com/citations?hl=fr&user=kcwZqRwAAAAJ"
 
-  [[params.social]]
-    icon = "researchgate"
-    icon_pack = "ai"
-    link = "https://www.researchgate.net/profile/Daniel_Vaulot"
+#  [[params.social]]
+#    icon = "researchgate"
+#    icon_pack = "ai"
+#    link = "https://www.researchgate.net/profile/Daniel_Vaulot"
 
   [[params.social]]
     icon = "zotero"
