@@ -25,6 +25,7 @@ caption = "The ASIAME 2 course in Port Blair, Andaman Islands (nov 2019)"
 * 2013 - Co-organizer of the UPMC Daniel-Jouvance School in Marine-Biology - Arraial do Cabo, Brasil -  March 2013
 
 ## Courses taught
+* 2024 [ABIMS cluster](https://daniel-vaulot.fr/html/course-uio-server-2024/server-intro.html) - Master teaching
 * 2023 [Culture Collection Data Management](https://daniel-vaulot.fr/html/course-uio-cultures-2023/rcc-data-management.html) - BIOS-5313 Toxic Algae, University of Oslo, coordinated by B. Edvardsen, Oslo, Norway
 * 2023 [Culture Collection Data Management](https://daniel-vaulot.fr/html/course-cultures-2023/rcc-data-management.html) - Marine Phytoplankton Culturing Training Course, coordinated by P. Gourvil, Roscoff, France
 * 2023 [ASIAME 3]({{< ref "/teaching/2023-asiame.md">}}) - South and South-EAst Asia Workshop in Aquatic Microbial Ecology, Vietnam, coordinated by J-C Auguet (CNRS Montpellier): Evolution and Diversity of Protists, Introduction to R.
