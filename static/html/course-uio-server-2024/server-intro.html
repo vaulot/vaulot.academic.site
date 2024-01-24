@@ -390,7 +390,7 @@
 <section id="section" class="slide level2" data-background-image="img/server/ABIMS.png" data-background-size="60%" data-background-opacity="0.1">
 <h2></h2>
 <p><span class="presenter absolute" style="bottom: 200px; "><strong>Daniel Vaulot</strong></span></p>
-<p><span class="absolute" style="bottom: 150px; ">2023-10-05</span></p>
+<p><span class="absolute" style="bottom: 150px; ">2024-01-24</span></p>
 <p><img data-src="img/institutions/logo_SBR.png" class="absolute" style="left: 0px; bottom: 0px; height: 70px; "></p>
 <p><img data-src="img/institutions/logo-university-of-oslo.png" class="absolute" style="bottom: 0px; right: 0px; height: 70px; "></p>
 <p><span class="title absolute" style="bottom: 400px; "><strong>Introduction to Roscoff ABIMS server</strong></span></p>
@@ -509,7 +509,7 @@
 <li>Linux is case sensitive</li>
 <li>No space into file names, always cause problem</li>
 <li>Directories are separated by “/” (not “" like in Windows)</li>
-<li>Keep yoursellf organized because Linux programs create lots of output files</li>
+<li>Keep everything organized because Linux programs create lots of output files</li>
 </ul>
 </section>
 <section id="navigate-the-file-system-1" class="slide level2">
@@ -716,10 +716,7 @@
 <li class="fragment">vsearch: clustering, sequence manipulation</li>
 <li class="fragment">emu: metabarcode assignment</li>
 </ul></li>
-<li class="fragment">Must always be located in project folder
-<ul>
-<li class="fragment">Still do not have</li>
-</ul></li>
+<li class="fragment">Must always be located in project folder</li>
 </ul>
 </div>
 <div class="fragment">
@@ -734,6 +731,30 @@
 </div>
 </div>
 </section>
+<section id="move-to-project-folder---always" class="slide level2">
+<h2>Move to project folder - ALWAYS</h2>
+<p>Our project are located in <code>/shared/projects/geek_simple_laby</code></p>
+<div class="cell" data-hash="server-intro_cache/revealjs/unnamed-chunk-18_f9f5205fd5ef4f5d2a878702a1e521ef">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /shared/projects/geek_simple_laby/daniel</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<ul>
+<li>Only three folders are backed up.</li>
+<li>You can copy your scripts to the <code>script</code> folder under your directory (<code>script/sandra</code>).</li>
+<li>Always do your own backup on your PC (download files/folder)</li>
+</ul>
+<div class="cell" data-hash="server-intro_cache/revealjs/unnamed-chunk-19_8b055c3833cf2dc0e658f682aefdc54d">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Project working directory usage at ABiMS</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="ex">ABiMS</span> provides a backup on your project directory.</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="ex">To</span> take advantage of this process, you have to follow some rules:</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a> <span class="ex">-</span> Only the subdirectories ‘archive’, ‘script’ and ‘finalresult’ are backed up.</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a> <span class="ex">-</span> You must place these subdirectories at the root of your project folder.</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a> <span class="ex">-</span> Please be smart in your backups for our finances and the planet.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
 <section id="interactive-mode---srun" class="slide level2">
 <h2>Interactive mode - srun</h2>
 <ul>
@@ -742,34 +763,50 @@
 <li>Do not forget to quit when done (CPU time)</li>
 </ul>
 <div class="fragment">
-<div class="cell" data-hash="server-intro_cache/revealjs/unnamed-chunk-18_18075d357376781079ab34cb0a5c8571">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load module and specific version (no need)</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load r/4.2.1</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Run with default values for memory and processors</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="ex">srun</span> R <span class="at">--vanilla</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co"># srun: job 36256512 queued and waiting for resources</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Run with 4 processors and 32G of mem</span></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="co"># pty is for "pseudo-terminal"</span></span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="ex">srun</span> <span class="at">-c</span> 4 <span class="at">--mem</span><span class="op">=</span>32G <span class="at">--pty</span> R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="server-intro_cache/revealjs/unnamed-chunk-20_00fcbc8a1c08c6a85750d940e2b7e4f8">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load module and specific version (no need)</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load r/4.2.1</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Run with default values for memory and processors</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="ex">srun</span> R <span class="at">--vanilla</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="co"># srun: job 36256512 queued and waiting for resources</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Run with 4 processors and 32G of mem</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="co"># pty is for "pseudo-terminal"</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="ex">srun</span> <span class="at">-c</span> 4 <span class="at">--mem</span><span class="op">=</span>32G <span class="at">--pty</span> R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
 <section id="batch-mode---sbatch" class="slide level2">
 <h2>Batch mode - sbatch</h2>
 <ul>
-<li>Move to project directory</li>
 <li>Copy the necessary files</li>
 </ul>
-<h5 id="copy-necessary-files">Copy necessary files</h5>
-<div class="cell" data-hash="server-intro_cache/revealjs/unnamed-chunk-19_d4bb8550b5d0bd3e35fe240905ea9e95">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> /shared/home/csim/training/Labyrinthulomycetes.pacbio.fasta Labyrinthulomycetes.pacbio.fasta</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> /shared/home/csim/training/sbatch_cluster_01.sh sbatch_cluster_01.sh</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> /shared/home/csim/training/sbatch_cluster_02.sh sbatch_cluster_02.sh</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="server-intro_cache/revealjs/unnamed-chunk-21_fefb8df094bd7463f07be7dfddd952c3">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> /shared/home/csim/training/Labyrinthulomycetes.pacbio.fasta Labyrinthulomycetes.pacbio.fasta</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> /shared/home/csim/training/sbatch_cluster_01.sh sbatch_cluster_01.sh</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> /shared/home/csim/training/sbatch_cluster_02.sh sbatch_cluster_02.sh</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p>What we are going to do:</p>
+<ul>
+<li>Singapore time series ASVs for Labyrinthulomycetes</li>
+<li>289 sequences, but some are very similar</li>
+<li>Clusterize using 99% similarity</li>
+<li>Use vsearch program</li>
+<li>Final: 78 sequences</li>
+</ul>
+<h5 id="input-file">Input file</h5>
+<div class="cell" data-hash="server-intro_cache/revealjs/unnamed-chunk-22_b41e8b5aded2e8e0d8a71a93dc2e21bd">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>pacbio<span class="kw">;</span><span class="ex">3d4a51f4d1</span><span class="kw">;</span><span class="ex">Aplanochytrium_sp.</span><span class="kw">;</span><span class="va">size</span><span class="op">=</span>120<span class="kw">;</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="ex">AGCTCCAATAGCGTATATTAAAGTTGTTGCAGTTAAAAAGCTCGTAGTTGGATTTCTGGTAGGAGCGACCGTGCCGAACTTGATTGTTCGTGTATTGTGTTGTCTTCAGCCATCCTCGT</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="ex">GGAGAACTTTTCTAACATTAACTTGTTGGGATTGGGACCCGCGTCGTTTACTGTGAAAAAATTAGAGTGTTTAAAGCAGGCATTAGCTTGAATACATTAGCATGGAATAATAAGATAGG</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="ex">ACTTTGGTACTATTTTGTTGGTTTGCATACCAAATTAATGATCAACAGGAACAGTTTGAGGATATTCGTATGAACATGTCAGAGGTGAAATTCTTGGATTTTGATCAGACGAACTACTG</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="ex">CGAAAGCATTTATCAAGGATGTTTTCATTAATCAAGAACGAAAGTTAGGGGATCGAA...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </section>
 <section id="batch-mode---sbatch-1" class="slide level2">
@@ -780,98 +817,212 @@
 <li>Header (very strict formatting)</li>
 <li>Command to Run</li>
 </ul>
-<div class="cell" data-hash="server-intro_cache/revealjs/unnamed-chunk-20_d8049af41b1ff4e93606dc68e30034d3">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH -p fast                      # Partition can be also fast, long, bigmem</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --cpus-per-task 4</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --mem-per-cpu 4GB                    # mémoire vive pour l'ensemble des cœurs</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH -t 6-0:00                    # durée maximum du travail (D-HH:MM)</span></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH -o slurm.%N.%j.out           # STDOUT</span></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH -e slurm.%N.%j.err           # STDERR</span></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --mail-user=vaulot@sb-roscoff.fr # ! Replace with uio email</span></span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --mail-type=</span><span class="re">BEGIN</span><span class="co">,</span><span class="re">END</span><span class="co">, FAIL</span></span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Submitted with </span></span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="co"># cd /shared/home/csim/daniel # ! Change to your directory</span></span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="co"># sbatch sbatch_cluster_01.sh</span></span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load vsearch</span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /shared/home/csim/daniel <span class="co"># ! Change to your directory</span></span>
-<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a><span class="st">"</span><span class="va">${VSEARCH}</span><span class="st">"</span> <span class="at">--cluster_fast</span> <span class="st">"Labyrinthulomycetes.pacbio.fasta"</span> <span class="dt">\</span></span>
-<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">--threads</span> 4 <span class="dt">\</span></span>
-<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">--id</span> 0.99 <span class="dt">\</span></span>
-<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">--uc</span> clusters_0.99_Labyrinthulomycetes.pacbio.tsv <span class="dt">\</span></span>
-<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">--sizeout</span> <span class="dt">\</span></span>
-<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">--centroids</span> clusters_0.99_Labyrinthulomycetes.pacbio.centroids.fasta <span class="dt">\</span></span>
-<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">--clusterout_sort</span> <span class="dt">\</span></span>
-<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">--clusterout_id</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="server-intro_cache/revealjs/unnamed-chunk-23_e3e80416d3ca5f0346fed114ecd1ecb0">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH -p fast                      # Partition can be also fast, long, bigmem</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --cpus-per-task 4</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --mem-per-cpu 4GB                    # mémoire vive pour l'ensemble des cœurs</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH -t 6-0:00                    # durée maximum du travail (D-HH:MM)</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH -o slurm.%N.%j.out           # STDOUT</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH -e slurm.%N.%j.err           # STDERR</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --mail-user=vaulot@sb-roscoff.fr # ! Replace with uio email</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --mail-type=</span><span class="re">BEGIN</span><span class="co">,</span><span class="re">END</span><span class="co">,FAIL</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Submitted with </span></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a><span class="co"># cd /shared/home/csim/daniel # ! Change to your directory</span></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a><span class="co"># sbatch sbatch_cluster_01.sh</span></span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load vsearch</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /shared/home/csim/daniel <span class="co"># ! Change to your directory</span></span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a><span class="st">"</span><span class="va">${VSEARCH}</span><span class="st">"</span> <span class="at">--cluster_fast</span> <span class="st">"Labyrinthulomycetes.pacbio.fasta"</span> <span class="dt">\</span></span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">--threads</span> 4 <span class="dt">\</span></span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">--id</span> 0.99 <span class="dt">\</span></span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">--uc</span> clusters_0.99_Labyrinthulomycetes.pacbio.tsv <span class="dt">\</span></span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">--sizeout</span> <span class="dt">\</span></span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">--centroids</span> clusters_0.99_Labyrinthulomycetes.pacbio.centroids.fasta <span class="dt">\</span></span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">--clusterout_sort</span> <span class="dt">\</span></span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">--clusterout_id</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>Need to edit: email and directories</p>
 </section>
 <section id="batch-mode---sbatch-2" class="slide level2">
 <h2>Batch mode - sbatch</h2>
-<h5 id="sbatch_cluster_01.sh-1">sbatch_cluster_01.sh</h5>
-<p>Need to edit:</p>
-<ul>
-<li>email</li>
-<li>directories</li>
-</ul>
-<div class="cell" data-hash="server-intro_cache/revealjs/unnamed-chunk-21_f47bdeffe0bdbc135185b8e7ec3a494f">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sbatch</span> sbatch_cluster_01.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="server-intro_cache/revealjs/unnamed-chunk-24_033876b8ed62dc9145f85d79009e3f2a">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sbatch</span> sbatch_cluster_01.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <!-- -->
 <h5 id="get-status-of-your-run">Get status of your run</h5>
-<div class="cell" data-hash="server-intro_cache/revealjs/unnamed-chunk-22_da2037d89dc97c8fefd3378fcbd939cd">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sacct</span> <span class="at">--format</span><span class="op">=</span>JobID,JobName,User%15,Partition,ReqCPUS,ReqMem,State,CPUTime,MaxVMSize%15</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="server-intro_cache/revealjs/unnamed-chunk-25_9f0788bfa6f2095e5ae64b2572eab683">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sacct</span> <span class="at">--format</span><span class="op">=</span>JobID,JobName,User%15,Partition,ReqCPUS,ReqMem,State,CPUTime,MaxVMSize%15</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="fragment">
-<div class="cell" data-hash="server-intro_cache/revealjs/unnamed-chunk-23_ef7add47ae77ba1756c3a42bdea15050">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">JobID</span>           JobName            User  Partition  ReqCPUS     ReqMem      State    CPUTime       MaxVMSize</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="ex">------------</span> <span class="at">----------</span> <span class="at">---------------</span> <span class="at">----------</span> <span class="at">--------</span> <span class="at">----------</span> <span class="at">----------</span> <span class="at">----------</span> <span class="at">---------------</span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="ex">36256512</span>              R            csim       fast        1      2000M     FAILED   00:00:02         213256K</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="ex">36256540</span>              R            csim       fast        4        32G  COMPLETED   00:08:56         531304K</span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="ex">36256613</span>              R            csim       fast        1      2000M  COMPLETED   00:00:11         213256K</span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="ex">36263030</span>     sbatch_cl+            csim       fast        4        16G    PENDING   00:00:00</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="server-intro_cache/revealjs/unnamed-chunk-26_7de5aea2371b611e482b7cc6dae96575">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="ex">JobID</span>           JobName            User  Partition  ReqCPUS     ReqMem      State    CPUTime       MaxVMSize</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="ex">------------</span> <span class="at">----------</span> <span class="at">---------------</span> <span class="at">----------</span> <span class="at">--------</span> <span class="at">----------</span> <span class="at">----------</span> <span class="at">----------</span> <span class="at">---------------</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="ex">36263527</span>     sbatch_cl+            csim       fast        4        16G  COMPLETED   00:01:32</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Three states:</p>
+<ul>
+<li>PENDING</li>
+<li>RUNNING</li>
+<li>COMPLETED</li>
+</ul>
+</div>
+<div class="fragment">
+<!-- -->
+<h5 id="squeue">squeue</h5>
+<div class="cell" data-hash="server-intro_cache/revealjs/unnamed-chunk-27_eea0fdf4dff244f5bd0df4ec9b0a2f32">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">squeue</span> <span class="at">-u</span> csim</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>             <span class="ex">JOBID</span> PARTITION     NAME     USER ST       TIME  NODES NODELIST<span class="er">(</span><span class="ex">REASON</span><span class="kw">)</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>          <span class="ex">36263527</span>      fast sbatch_c     csim  R       0:14      1 cpu-node-050</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment">
+<p>You should also get two emails:</p>
+<ul>
+<li>Slurm Job_id=36263527 Name=sbatch_cluster_01.sh Began, Queued time 00:00:01</li>
+<li>Slurm Job_id=36263527 Name=sbatch_cluster_01.sh Ended, Run time 00:00:23, COMPLETED, ExitCode 0</li>
+</ul>
+</div>
+</section>
+<section id="batch-mode---sbatch-3" class="slide level2">
+<h2>Batch mode - sbatch</h2>
+<h5 id="files-produced">Files produced</h5>
+<ul>
+<li><p>slurm.cpu-node-050.36263527.err</p></li>
+<li><p>slurm.cpu-node-050.36263527.out</p></li>
+<li><p>clusters_0.99_Labyrinthulomycetes.pacbio.centroids.fasta</p></li>
+<li><p>clusters_0.99_Labyrinthulomycetes.pacbio.tsv</p></li>
+</ul>
+<div class="fragment">
+<!-- -->
+<h5 id="slurm.cpu-node-050.36263527.err">slurm.cpu-node-050.36263527.err</h5>
+<p>Output of the program vsearch</p>
+<div class="cell" data-hash="server-intro_cache/revealjs/unnamed-chunk-28_5d58f1161585e8437daf7b310016cf9f">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="ex">vsearch</span> v2.22.1_linux_x86_64, 251.3GB RAM, 256 cores</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="ex">https://github.com/torognes/vsearch</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Reading</span> file Labyrinthulomycetes.pacbio.fasta 100%</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="ex">1327126</span> nt in 289 seqs, min 4174, max 5443, avg 4592</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="ex">Masking</span> 100%</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="ex">Sorting</span> by length 100%</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="ex">Counting</span> k-mers 100%</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a><span class="ex">Clustering</span> 100%</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="ex">Sorting</span> clusters 100%</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a><span class="ex">Writing</span> clusters 100%</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a><span class="ex">Clusters:</span> 78 Size min 1, max 29, avg 3.7</span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a><span class="ex">Singletons:</span> 41, 14.2% of seqs, 52.6% of clusters</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="batch-mode---sbatch-4" class="slide level2">
+<h2>Batch mode - sbatch</h2>
+<h5 id="clusters_0.99_labyrinthulomycetes.pacbio.centroids.fasta">clusters_0.99_Labyrinthulomycetes.pacbio.centroids.fasta</h5>
+<div class="cell" data-hash="server-intro_cache/revealjs/unnamed-chunk-29_dff6548ec598db5733fdcf091ae92ecd">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>pacbio<span class="kw">;</span><span class="ex">1a9244a2e6</span><span class="kw">;</span><span class="ex">Thraustochytriaceae_X_sp.</span><span class="kw">;</span><span class="va">clusterid</span><span class="op">=</span>74<span class="kw">;</span><span class="va">size</span><span class="op">=</span>29</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="ex">AGCTTCAATAGCATATACTAACGTTGTCGCAGTTAAAAAGTTCGTAGTTGAATTTCTGGTAGGAGTGACCTGGCCTTTTA</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="ex">CGTTTGTAATTGTATGCTGTGTGTTATCTCTGGCCATCCTGAATCTGCTTTGTTGTAGATTCTCACATACTGTAAAAAAA</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="ex">TTAGAGTGTTTAAAGCATTTCGTATGAAAAGAATACATCTTATGGGATATCAAAATAGGATTTTGGTGCTATTTTGTTGG</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="ex">TTTGCACACCAAAATAATGATTAACAGGGACAGTTGGGGGTATTTGTATTTAATTGTCAGAGGTGAAATTCTTGGATTTA</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="ex">TGAAAGACAAACTACTGCGAAAGCATTTATCAAGGATGTTTTCATTAATCATGAACGAAAGTTAGGGGATCGAAGATGAT</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="ex">CAGATACCATCGTAGTCTTAACAGTAAACTATACCAACTTGCGATTATTCCATGGTGTTTTTTGCCAGGAGTAGCAGCAC</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<h5 id="clusters_0.99_labyrinthulomycetes.pacbio.tsv">clusters_0.99_Labyrinthulomycetes.pacbio.tsv</h5>
+<div class="cell" data-hash="server-intro_cache/revealjs/unnamed-chunk-30_e9b7214292a42369cf738ad09fbe025d">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="ex">S</span>   0   5443    <span class="pp">*</span>   <span class="pp">*</span>   <span class="pp">*</span>   <span class="pp">*</span>   <span class="pp">*</span>   pacbio<span class="kw">;</span><span class="ex">4b0f43a6e4</span><span class="kw">;</span><span class="ex">Labyrinthulomycetes_LAB8_sp.</span><span class="kw">;</span><span class="va">size</span><span class="op">=</span>3<span class="kw">;</span>  <span class="ex">*</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="ex">H</span>   0   5436    99.4    +   0   0   1120MI12M7I673MI289M3D174M2D1534M3I1629M    pacbio<span class="kw">;</span><span class="ex">e3f28aa0af</span><span class="kw">;</span><span class="ex">Labyrinthulomycetes_LAB8_sp.</span><span class="kw">;</span><span class="va">size</span><span class="op">=</span>4<span class="kw">;</span>  <span class="ex">pacbio</span><span class="kw">;</span><span class="ex">4b0f43a6e4</span><span class="kw">;</span><span class="ex">Labyrinthulomycetes_LAB8_sp.</span><span class="kw">;</span><span class="va">size</span><span class="op">=</span>3<span class="kw">;</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="ex">H</span>   0   5436    99.4    +   0   0   1120MI12M7I673MI289M3D174M2D1534M3I1629M    pacbio<span class="kw">;</span><span class="ex">70ee1479b8</span><span class="kw">;</span><span class="ex">Labyrinthulomycetes_LAB8_sp.</span><span class="kw">;</span><span class="va">size</span><span class="op">=</span>3<span class="kw">;</span>  <span class="ex">pacbio</span><span class="kw">;</span><span class="ex">4b0f43a6e4</span><span class="kw">;</span><span class="ex">Labyrinthulomycetes_LAB8_sp.</span><span class="kw">;</span><span class="va">size</span><span class="op">=</span>3<span class="kw">;</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="ex">S</span>   1   5230    <span class="pp">*</span>   <span class="pp">*</span>   <span class="pp">*</span>   <span class="pp">*</span>   <span class="pp">*</span>   pacbio<span class="kw">;</span><span class="ex">86192ef156</span><span class="kw">;</span><span class="ex">Labyrinthulomycetes_LAB8_sp.</span><span class="kw">;</span><span class="va">size</span><span class="op">=</span>15<span class="kw">;</span> <span class="ex">*</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="ex">H</span>   1   5229    99.8    +   0   0   1267MI530MD301MI3130M   pacbio<span class="kw">;</span><span class="ex">e54d7a85c5</span><span class="kw">;</span><span class="ex">Labyrinthulomycetes_LAB8_sp.</span><span class="kw">;</span><span class="va">size</span><span class="op">=</span>4<span class="kw">;</span>  <span class="ex">pacbio</span><span class="kw">;</span><span class="ex">86192ef156</span><span class="kw">;</span><span class="ex">Labyrinthulomycetes_LAB8_sp.</span><span class="kw">;</span><span class="va">size</span><span class="op">=</span>15<span class="kw">;</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="ex">H</span>   1   5227    99.5    +   0   0   1120MI12M7I634M3D24MD305MD3127M pacbio<span class="kw">;</span><span class="ex">970a95784e</span><span class="kw">;</span><span class="ex">Labyrinthulomycetes_LAB8_sp.</span><span class="kw">;</span><span class="va">size</span><span class="op">=</span>7<span class="kw">;</span>  <span class="ex">pacbio</span><span class="kw">;</span><span class="ex">86192ef156</span><span class="kw">;</span><span class="ex">Labyrinthulomycetes_LAB8_sp.</span><span class="kw">;</span><span class="va">size</span><span class="op">=</span>15<span class="kw">;</span></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="ex">H</span>   1   5227    99.5    +   0   0   1120MI12M7I634M3D24MD305MD3127M pacbio<span class="kw">;</span><span class="ex">d23a7e7d59</span><span class="kw">;</span><span class="ex">Labyrinthulomycetes_LAB8_sp.</span><span class="kw">;</span><span class="va">size</span><span class="op">=</span>2<span class="kw">;</span>  <span class="ex">pacbio</span><span class="kw">;</span><span class="ex">86192ef156</span><span class="kw">;</span><span class="ex">Labyrinthulomycetes_LAB8_sp.</span><span class="kw">;</span><span class="va">size</span><span class="op">=</span>15<span class="kw">;</span></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a><span class="ex">H</span>   1   5226    99.7    +   0   0   1267MI555MI275MI39MI3090M   pacbio<span class="kw">;</span><span class="ex">abfdcca79c</span><span class="kw">;</span><span class="ex">Labyrinthulomycetes_LAB8_sp.</span><span class="kw">;</span><span class="va">size</span><span class="op">=</span>9<span class="kw">;</span>  <span class="ex">pacbio</span><span class="kw">;</span><span class="ex">86192ef156</span><span class="kw">;</span><span class="ex">Labyrinthulomycetes_LAB8_sp.</span><span class="kw">;</span><span class="va">size</span><span class="op">=</span>15<span class="kw">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="batch-mode---sbatch-5" class="slide level2">
+<h2>Batch mode - sbatch</h2>
+<p>If something goes wrong:</p>
+<ul>
+<li>Always PENDING: Problem with the SLURM instructions at top of file</li>
+<li>Script error check CAREFULLY .err file</li>
+</ul>
+<div class="fragment">
+<!-- -->
+<h5 id="error-in-file-names">Error in file names</h5>
+<div class="cell" data-hash="server-intro_cache/revealjs/unnamed-chunk-31_93eac558305b29f53c4e9b7e12f7cee4">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sacct</span> <span class="at">--format</span><span class="op">=</span>JobID,JobName,User%15,Partition,ReqCPUS,ReqMem,State,CPUTime,MaxVMSize%15</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="ex">36263532</span>     sbatch_cl+            csim       fast        4        16G     FAILED   00:00:04</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="ex">36263532.ba+</span>      batch                                   4                FAILED   00:00:04         146608K</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment">
+<p>slurm.cpu-node-050.36263532.err</p>
+<div class="cell" data-hash="server-intro_cache/revealjs/unnamed-chunk-32_72bf2e10295fd828c1ec4b7fc05806a3">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="ex">vsearch</span> v2.22.1_linux_x86_64, 251.3GB RAM, 256 cores</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="ex">https://github.com/torognes/vsearch</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Fatal</span> error: Unable to open file for reading <span class="er">(</span><span class="ex">Labyrinthulomycete.pacbio.fasta</span><span class="kw">)</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>                                 <span class="ex">4</span>                FAILED   00:00:04         146608K</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="fragment">
 <!-- -->
 <h5 id="cancel">Cancel</h5>
-<div class="cell" data-hash="server-intro_cache/revealjs/unnamed-chunk-24_095c3872f269658c8f5c073a6eb487bc">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">scancel</span> 36263030</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="server-intro_cache/revealjs/unnamed-chunk-33_6d2830d234392238679c7aff9c27a2c9">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="ex">scancel</span> 36263527</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
-<section id="batch-mode---sbatch-3" class="slide level2">
+<section id="batch-mode---sbatch-6" class="slide level2">
 <h2>Batch mode - sbatch</h2>
 <h5 id="sbatch_cluster_02.sh">sbatch_cluster_02.sh</h5>
 <ul>
 <li>Replace strings by variables</li>
+<li>Can re-use script for different files and parameters</li>
+<li>Easier to track errors</li>
 </ul>
-<div class="cell" data-hash="server-intro_cache/revealjs/unnamed-chunk-25_9c1f50c701addaab89fcadb872c2dd4c">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load vsearch</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="va">DIR</span><span class="op">=</span><span class="st">"/shared/home/csim/daniel/"</span> <span class="co"># ! Change to your directory</span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="va">FILE_HEAD</span><span class="op">=</span><span class="st">"Labyrinthulomycetes.pacbio"</span></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="va">IDENTITY</span><span class="op">=</span><span class="st">"0.99"</span></span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="va">THREADS</span><span class="op">=</span>4</span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="va">$DIR</span></span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="ex">vsearch</span> <span class="at">--cluster_fast</span> <span class="st">"</span><span class="va">${FILE_HEAD}</span><span class="st">.fasta"</span> <span class="dt">\</span></span>
-<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">--threads</span> <span class="st">"</span><span class="va">${THREADS}</span><span class="st">"</span> <span class="dt">\</span></span>
-<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">--id</span> <span class="st">"</span><span class="va">${IDENTITY}</span><span class="st">"</span> <span class="dt">\</span></span>
-<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">--uc</span> clusters_<span class="va">${IDENTITY}</span>_<span class="va">$FILE_HEAD</span>.tsv <span class="dt">\</span></span>
-<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">--msaout</span> clusters_<span class="va">${IDENTITY}</span>_<span class="va">${FILE_HEAD}</span>.align.fasta <span class="dt">\</span></span>
-<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">--sizeout</span> <span class="dt">\</span></span>
-<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">--centroids</span> clusters_<span class="va">${IDENTITY}</span>_<span class="va">${FILE_HEAD}</span>.centroids.fasta <span class="dt">\</span></span>
-<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">--clusterout_sort</span> <span class="dt">\</span></span>
-<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">--clusterout_id</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="server-intro_cache/revealjs/unnamed-chunk-34_47b0014c1da54d11329d9df250d66178">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load vsearch</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="va">DIR</span><span class="op">=</span><span class="st">"/shared/home/csim/daniel/"</span> <span class="co"># ! Change to your directory</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="va">FILE_HEAD</span><span class="op">=</span><span class="st">"Labyrinthulomycetes.pacbio"</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="va">IDENTITY</span><span class="op">=</span><span class="st">"0.99"</span></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="va">THREADS</span><span class="op">=</span>4</span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="va">$DIR</span></span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a><span class="ex">vsearch</span> <span class="at">--cluster_fast</span> <span class="st">"</span><span class="va">${FILE_HEAD}</span><span class="st">.fasta"</span> <span class="dt">\</span></span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">--threads</span> <span class="st">"</span><span class="va">${THREADS}</span><span class="st">"</span> <span class="dt">\</span></span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">--id</span> <span class="st">"</span><span class="va">${IDENTITY}</span><span class="st">"</span> <span class="dt">\</span></span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">--uc</span> clusters_<span class="va">${IDENTITY}</span>_<span class="va">$FILE_HEAD</span>.tsv <span class="dt">\</span></span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">--msaout</span> clusters_<span class="va">${IDENTITY}</span>_<span class="va">${FILE_HEAD}</span>.align.fasta <span class="dt">\</span></span>
+<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">--sizeout</span> <span class="dt">\</span></span>
+<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">--centroids</span> clusters_<span class="va">${IDENTITY}</span>_<span class="va">${FILE_HEAD}</span>.centroids.fasta <span class="dt">\</span></span>
+<span id="cb28-17"><a href="#cb28-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">--clusterout_sort</span> <span class="dt">\</span></span>
+<span id="cb28-18"><a href="#cb28-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">--clusterout_id</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="more-advanced-processing" class="slide level2">
+<h2>More advanced processing</h2>
+<ul>
+<li><p>Loop through files</p></li>
+<li><p>Loop through parameters</p></li>
+<li><p>Work directly on files</p>
+<ul>
+<li>grep: search (regular expression)</li>
+<li>sed: edit text</li>
+</ul></li>
+<li><p>tar/zip/unzip: compress files/rectories</p></li>
+<li><p>wget: download files from internet</p></li>
+</ul>
+<p><a href="https://www.digitalocean.com/community/tutorials/linux-commands">List of useful Linux programs</a></p>
 <div class="footer footer-default">
 
 </div>
