@@ -23,9 +23,7 @@ math = true
 highlight = true
 [[url_custom]]
     name = "Supplementary material"
-    url = ""
-math = true
-highlight = true
+    url = "https://github.com/catherine-gerikas/GE_Amundsen_18S_metaB_supplementary_material"
 [header]
 image = "paper_amundsen_2022.png"
 caption = "The Amundsen cruise in Baffin Bay (2016)"
