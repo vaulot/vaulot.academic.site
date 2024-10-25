@@ -25,6 +25,7 @@ caption = "The ASIAME 2 course in Port Blair, Andaman Islands (nov 2019)"
 * 2013 - Co-organizer of the UPMC Daniel-Jouvance School in Marine-Biology - Arraial do Cabo, Brasil -  March 2013
 
 ## Courses taught
+* 2024 [Metabarcoding for Phytoplankton](https://daniel-vaulot.fr/files/courses/2024-apc-naples/metabarcoding.pdf) - Advanced Phytoplankton Course 13, Stazione Zoologica, Naples, coordinated by A. Zingone, M. Montresor, D. Sarno
 * 2024 [Phytoplankton - Oceanic scales](https://daniel-vaulot.fr/files/courses/2024-uio-bios3300/marine-bio-05-phytopk-scales.pdf) - BIOS-3300 Marine Biology, University of Oslo, coordinated by A. Lopes dos Santos, Oslo, Norway
 * 2024 [Phytoplankton - Diversity](https://daniel-vaulot.fr/files/courses/2024-uio-bios3300/marine-bio-03-phytopk-diversity.pdf) - BIOS-3300 Marine Biology, University of Oslo, coordinated by A. Lopes dos Santos, Oslo, Norway
 * 2024 [ABIMS cluster](https://daniel-vaulot.fr/html/course-uio-server-2024/server-intro.html) - Master teaching
