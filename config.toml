@@ -239,9 +239,9 @@ enableGitInfo = false
     link = "mailto:vaulot@gmail.com"
 
 #  [[params.social]]
-#    icon = "twitter"
+#    icon = "bluesky"
 #    icon_pack = "fa"
-#    link = "//twitter.com/daniel_vaulot"
+#    link = "https://bsky.app/profile/daniel-vaulot.bsky.social"
   
   [[params.social]]
   icon = "google-scholar"
