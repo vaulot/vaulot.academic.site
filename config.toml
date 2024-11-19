@@ -240,7 +240,7 @@ enableGitInfo = false
 
   [[params.social]]
     icon = "bluesky"
-    icon_pack = "fa"
+    icon_pack = "fab"
     link = "https://bsky.app/profile/daniel-vaulot.bsky.social"
   
   [[params.social]]
