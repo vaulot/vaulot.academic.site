@@ -23,7 +23,7 @@ math = true
 highlight = true
 [header]
 image = "chapter_diatoms_2024.jpg"
-caption = "Examples of marine diatoms. (a) Chaetoceros peruvianus RCC2023. (b) Thalassiosira delicatula RCC2560. (c) Chaetoceros bulbosus from a natural sample off New Zealand. (d) Corethron pennatum from a natural sample off New Zealand. (e) Shionodiscus bioculatus RCC1991."
+caption = "Examples of marine diatoms."
 +++
 
 Vaulot, D., Bilcke, G., Chaerle, P., Falciatore, A., Gourvil, P., Lomas, M.W., Probert, I. et al. 2024. Culturing Diatoms. In Goessling, J., Serodio, J. & Lavaud, J. [Eds.] Diatom Photosynthesis: From Primary Production to High-Value Molecules. Wiley-Scrivener, pp. 409–48.
