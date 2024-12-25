@@ -6,10 +6,10 @@ date = 2016-04-27T00:00:00
 weight = 4
 
 # Project title.
-title = "Collaborations 2017-2019"
+title = "Collaborations (2017-2019)"
 
 # Project summary to display on homepage.
-summary = "International collaborative projects 2017-2019."
+summary = "International collaborative projects (2017-2019)."
 
 # Optional image to display on homepage (relative to `static/img/` folder).
 image_preview = "carbom_cruise_small.png"
