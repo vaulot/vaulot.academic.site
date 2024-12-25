@@ -6,17 +6,17 @@ date = 2016-04-27T00:00:00
 weight = 4
 
 # Project title.
-title = "Collaborations"
+title = "Collaborations 2017-2019"
 
 # Project summary to display on homepage.
-summary = "International collaborative projects."
+summary = "International collaborative projects 2017-2019."
 
 # Optional image to display on homepage (relative to `static/img/` folder).
 image_preview = "carbom_cruise_small.png"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["phytoplankton", "current_projects", "Arctic", "taxonomy", "Antarctic", "New Zealand", "Brazil", "Chile"]
+tags = ["phytoplankton", "Arctic", "taxonomy", "Antarctic", "New Zealand", "Brazil", "Chile"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = ""
