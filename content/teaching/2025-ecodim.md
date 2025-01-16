@@ -34,8 +34,8 @@ __Localisation__: [Scientific Station San Ignacio del Huinay](https://www.enel.c
 #### Metabarcoding
 * [MetaPR2](https://daniel-vaulot.fr/files/courses/2025-ecodim/MetaPR2.pdf)
 
-#### Data
+### Data
 * [Data and R scripts](https://daniel-vaulot.fr/files/courses/2025-ecodim/data.zip)
   
-### Final report
+### Report template
 * [Quarto template](https://daniel-vaulot.fr/files/courses/2025-ecodim/report_ecodim.zip)
