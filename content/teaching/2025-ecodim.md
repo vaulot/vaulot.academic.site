@@ -21,18 +21,18 @@ __Organizer__: coordinated by Osvaldo Ulloa (University of Concepcion, Chile)
 __Localisation__: [Scientific Station San Ignacio del Huinay](https://www.enel.cl/en/sustainability/our-commitment/commitments-in-partnerships/san-ignacio-del-huinay-foundation.html) (Chile)
 
 ### Installation and reading material
-* [Instructions](https://daniel-vaulot.fr/files/courses/2025-ecodim/00-R-syllabus.pdf)
+* [Instructions](https://daniel-vaulot.fr/files/courses/2025-ecodim/r-00-syllabus.pdf)
 
 ### Lectures
 
 #### R
-* [01 - Introduction to R](https://daniel-vaulot.fr/files/courses/2025-ecodim/01-R-intro.pdf) 
-* [02 - Data wrangling](https://daniel-vaulot.fr/files/courses/2025-ecodim/02-R-data-wrangling.pdf)
-* [03 - Data visualisation](https://daniel-vaulot.fr/files/courses/2025-ecodim/03-R-data-visualization.pdf)
-* [04 - Markdown and Quarto](https://daniel-vaulot.fr/files/courses/2025-ecodim/04-R-markdown.pdf)
+* [01 - Introduction to R](https://daniel-vaulot.fr/files/courses/2025-ecodim/r-01-intro.pdf) 
+* [02 - Data wrangling](https://daniel-vaulot.fr/files/courses/2025-ecodim/r-02-data-wrangling.pdf)
+* [03 - Data visualisation](https://daniel-vaulot.fr/files/courses/2025-ecodim/r-03-data-visualization.pdf)
+* [04 - Markdown and Quarto](https://daniel-vaulot.fr/files/courses/2025-ecodim/r-04-markdown.pdf)
 
 #### Metabarcoding
-* [05 - MetaPR2](https://daniel-vaulot.fr/files/courses/2025-ecodim/05-MetaPR2.pdf)
+* [MetaPR2](https://daniel-vaulot.fr/files/courses/2025-ecodim/MetaPR2.pdf)
 
 #### Data
 * [Data and R scripts](https://daniel-vaulot.fr/files/courses/2025-ecodim/data.zip)
