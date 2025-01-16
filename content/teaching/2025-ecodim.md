@@ -1,8 +1,8 @@
 ---
 title: "ECODIM - 2025"
 
-date: 2025-01-20
-lastmod: 2025-01-20
+date: 2022-10-20
+lastmod: 2022-10-02
 
 draft: false
 categories: ["courses"]
@@ -25,17 +25,16 @@ __Localisation__: [Scientific Station San Ignacio del Huinay](https://www.enel.c
 
 ### Lectures
 
-#### Diversity of plankton
-* [Protist diversity](https://daniel-vaulot.fr/html/course-ecodim-2025/protist-diversity.html) 
-  
-#### R and Metabarcoding
+#### R
 * [01 - Introduction to R](https://daniel-vaulot.fr/html/course-ecodim-2025/01-R-intro.html) 
 * [02 - Data wrangling](https://daniel-vaulot.fr/html/course-ecodim-2025/02-R-data-wrangling.html)
 * [03 - Data visualisation](https://daniel-vaulot.fr/html/course-ecodim-2025/03-R-data-visualization.html)
 * [04 - Markdown and Quarto](https://daniel-vaulot.fr/html/course-ecodim-2025/04-R-markdown.html)
-* [05 - MetaPR2](https://daniel-vaulot.fr/html/course-ecodim-2025/05-MetaPR2.html)
 
 * [Data and R scripts](https://daniel-vaulot.fr/html/course-ecodim-2025/data.zip)
+
+#### Metabarcoding
+* [05 - MetaPR2](https://daniel-vaulot.fr/html/course-ecodim-2025/05-MetaPR2.html)
   
 ### Final report
 * [Quarto template](https://daniel-vaulot.fr/html/course-ecodim-2025/report_ecodim.zip)
