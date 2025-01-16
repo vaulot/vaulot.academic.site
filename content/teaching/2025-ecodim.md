@@ -12,7 +12,7 @@ summary: "ECODIM classes - eukaryotes, R, metabarcoding"
 ---
 
 {{< figure src="img/logo_ecodim.png" title="" lightbox="false" width="250" >}} 
-{{< figure src="img/ecodim_2025.jpg" title="Scientific Station San Ignacio del Huinay" lightbox="true" width="600" >}}
+{{< figure src="img/ecodim_2023.jpg" title="Scientific Station San Ignacio del Huinay" lightbox="true" width="600" >}}
 
 __Course__: [ECODIM](https://ecodim.imo-chile.cl) - Ecology and Diversity of Marine Microorganisms
 
