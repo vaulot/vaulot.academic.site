@@ -25,7 +25,7 @@ caption = "The ASIAME 2 course in Port Blair, Andaman Islands (nov 2019)"
 * 2013 - Co-organizer of the UPMC Daniel-Jouvance School in Marine-Biology - Arraial do Cabo, Brasil -  March 2013
 
 ## Courses taught
-* 2025 BIOS-9905 Bioinformatics for metabarcoding, coordinated by Havard Kauseryd (University of Oslo): [The Protist Ribosomal Reference Databases]((https://daniel-vaulot.fr/files/courses/2025-04-10 PR2-UiO course.pdf) - 1 h.
+* 2025 BIOS-9905 Bioinformatics for metabarcoding, coordinated by Havard Kauseryd (University of Oslo): [The Protist Ribosomal Reference Databases]((https://daniel-vaulot.fr/files/courses/2025-04-10_PR2_UiO_course.pdf) - 1 h.
 * 2025 [ECODIM]({{< ref "/teaching/2025-ecodim.md">}}) - Ecology and Diversity of Marine Microorganisms, coordinated by Osvaldo Ulloa (University of Concepcion, Chile): Introduction to R, Metabarcoding analysis.
 * 2024 BIOS-3300 Marine Biology, University of Oslo, coordinated by A. Lopes dos Santos, Oslo, Norway
   * [Phytoplankton - Diversity](https://daniel-vaulot.fr/files/courses/2024-uio-bios3300/marine-bio-03-phytopk-diversity.pdf) - 2 h
